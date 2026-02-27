@@ -1,0 +1,143 @@
+/* Performance Optimizations */
+
+/* Ensure all animations use GPU-accelerated properties only */
+.animate-pulse, 
+.animate-spin,
+.animate-bounce {
+  will-change: transform, opacity;
+}
+
+/* Optimize hover effects to use transform/opacity only */
+.hover\\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+.hover\\:scale-110:hover {
+  transform: scale(1.1);
+}
+
+/* Smooth transitions for better performance */
+.transition-colors {
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.transition-transform {
+  transition: transform 0.15s ease-in-out;
+}
+
+.transition-opacity {
+  transition: opacity 0.15s ease-in-out;
+}
+
+/* Prevent layout thrashing with proper contain */
+.performance-optimized {
+  contain: layout style paint;
+}
+
+/* Critical rendering optimization */
+.above-fold {
+  contain: layout;
+}
+
+/* Image optimization utilities */
+.lazy-img {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.lazy-img.loaded {
+  opacity: 1;
+}
+
+/* Reduce paint for animations */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+/* Clean up will-change after animations */
+.animation-complete {
+  will-change: auto;
+}
+
+/* Fix potential layout thrashing animations */
+.hover\:-translate-y-1:hover {
+  transform: translateY(-0.25rem);
+}
+
+.hover\:-translate-y-2:hover {
+  transform: translateY(-0.5rem);
+}
+
+/* Optimize card hover effects */
+.card-hover-optimized {
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.card-hover-optimized:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Fonts loaded optimization */
+.fonts-loaded {
+  font-display: swap;
+}
+
+/* Critical WebP image preloading utility */
+.critical-image {
+  will-change: auto;
+  content-visibility: auto;
+}
+
+/* Intersection observer optimization */
+.lazy-load-trigger {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 500px;
+}
+
+/* Override Tailwind animations to use only transform/opacity */
+@keyframes performance-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes performance-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes performance-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-25%); }
+}
+
+/* Performance-optimized animation classes */
+.animate-pulse {
+  animation: performance-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  will-change: opacity;
+}
+
+.animate-spin {
+  animation: performance-spin 1s linear infinite;
+  will-change: transform;
+}
+
+.animate-bounce {
+  animation: performance-bounce 1s infinite;
+  will-change: transform;
+}
+
+/* Critical above-the-fold content */
+.hero-section {
+  contain: layout style;
+}
+
+/* Reduce repaints for scrolling elements */
+.scroll-optimized {
+  transform: translateZ(0);
+  will-change: scroll-position;
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "question": "What's included in the 30-day free trial?",
+    "answer": "Your free trial includes full access to all features in your chosen plan - unlimited quotes, AI-powered scheduling, payment processing, and customer management. No credit card required to start, and you can cancel anytime during the trial period."
+  },
+  {
+    "question": "Can I import my existing customer and job data?",
+    "answer": "Yes! We provide easy import tools for customer lists, job history, and pricing data from Excel, CSV files, or other contractor software. Our onboarding team will help migrate your data seamlessly so you don't lose any work history."
+  },
+  {
+    "question": "Can I cancel my subscription anytime?", 
+    "answer": "Absolutely. You can cancel your subscription at any time from your account settings with no cancellation fees or penalties. If you cancel during your billing cycle, you'll retain access until the end of your paid period."
+  },
+  {
+    "question": "What are your customer support hours?",
+    "answer": "We provide email and chat support Monday-Friday 8AM-6PM EST for all plans. Pro and Enterprise customers get priority response times (within 4 hours). Enterprise customers also have access to phone support and a dedicated success manager."
+  }
+]

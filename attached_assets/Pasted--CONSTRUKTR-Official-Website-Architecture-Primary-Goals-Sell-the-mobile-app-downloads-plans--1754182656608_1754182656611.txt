@@ -1,0 +1,169 @@
+💻 CONSTRUKTR™ Official Website Architecture
+Primary Goals:
+
+Sell the mobile app (downloads, plans, upsells)
+
+Educate with powerful demo content
+
+Showcase credibility to clients and investors
+
+Fully support onboarding, support, and automation
+
+Be scalable for global demand (v1–v10)
+
+🧠 TECH STACK (Frontend)
+React + Vite
+
+TailwindCSS (with shadcn/ui + dark mode)
+
+Framer Motion for smooth animations
+
+Markdown-powered CMS or JSON content config
+
+Static hosting optimized (e.g., Vercel, Render)
+
+🌐 WEBSITE PAGE STRUCTURE
+1. Homepage (/)
+Purpose: Brand impact + drive clicks
+
+Sections:
+
+✅ Hero: “Run Your Service Business Like a Pro.”
+– CTA buttons: “See Demo” / “Get the App”
+
+✅ Live app preview animation
+
+✅ Feature Highlight Grid (6 most powerful)
+
+✅ App Store + Google Play buttons
+
+✅ Video demo (modal or embed)
+
+✅ “Why CONSTRUKTR™?” logic block
+
+✅ Trust bar (business logos, badges, testimonials)
+
+✅ Promo strip (e.g. “50% Off until Aug 31”)
+
+✅ Footer (navigation, social, terms)
+
+2. Product Tour (/features)
+Purpose: Convert through feature education
+
+Visual feature breakdown with real mockups:
+
+AI Job Estimator
+
+Smart Scheduling & Calendar
+
+Route Optimization
+
+Voice + AI Integration
+
+Invoice & Payment Tools
+
+CRM & Checklist Engine
+
+Interactive: Hover animations or tabs
+
+Optional: Live feature simulator (iframe embed)
+
+3. Pricing (/pricing)
+Purpose: Drive upgrade decisions
+
+Pricing tiers (Starter, Pro, Enterprise)
+
+Annual/monthly toggle
+
+Add-on feature toggle menu
+
+“Included With Every Plan” section
+
+FAQ section
+
+CTA: “Start Free” or “Request Demo”
+
+4. Demo Hub (/demos)
+Purpose: Sell visually, increase confidence
+
+Embedded video demos (voiceovers, UI walkthroughs)
+
+Use cases by industry (contractor, plumber, HVAC, etc.)
+
+Before vs. After comparison slider
+
+Downloadable demo PDF/slide deck
+
+5. App Download Page (/get)
+Purpose: Convert to downloads
+
+App Store / Google Play buttons
+
+QR Code for direct install
+
+“What You Get” value grid
+
+User quotes + 5-star testimonials
+
+6. About / Team / Vision (/about)
+Purpose: Credibility and investor trust
+
+Team bios (Tyson, Daniel, etc.)
+
+Company mission
+
+Timeline of product milestones
+
+Awards, partnerships, media badges
+
+CTA: “Press Kit” or “Investor Login”
+
+7. Support Center (/support)
+Purpose: Customer help + automation
+
+Zendesk Widget embed
+
+Quick links: Setup Guide, Troubleshooting, FAQs
+
+Voice-enabled bot or live chat
+
+App onboarding checklist
+
+Demo scheduler or concierge form
+
+8. Investor Portal (/investors)
+Purpose: Handle growth-stage investment
+
+Pitch deck PDF download
+
+Market size + vision summary
+
+SAFE/convertible note access (private login)
+
+CTA: “Schedule Meeting with Tyson”
+
+🎨 DESIGN SYSTEM
+Background: #000000
+
+Primary color: #0243fd
+
+Accent/silver: #c3c3c3
+
+Text: #ffffff
+
+Gradients: Electric blue glows and card hover effects
+
+Fonts: Inter or Satoshi, modern + readable
+
+🧠 BACKEND-READY WIRING (OPTIONAL FOR SCALE)
+If you want automation soon:
+
+Stripe Checkout integration
+
+Webhooks to Airtable, QBO, HubSpot
+
+Newsletter opt-ins (e.g., ConvertKit)
+
+Auto-generated PDFs (quotes, invoices)
+
+Slack alerts for every lead/sale/demo

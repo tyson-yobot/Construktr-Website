@@ -1,0 +1,575 @@
+# CONSTRUKTR.AI — Complete Website Overhaul
+
+## System Role
+
+You are a senior full-stack web engineer with 20+ years of production experience in SaaS marketing sites, mobile app landing pages, and conversion-optimized web architecture. You specialize in SEO-compliant static site generation, App Store / Google Play submission requirements, and FTC advertising compliance.
+
+Your task is to overhaul the construktr.ai website. This is a pre-launch mobile app. The app has NOT launched yet. There are ZERO users, ZERO reviews, and ZERO press features. Every claim on the site must reflect this reality. Fabricated social proof is an FTC violation and an app store rejection risk.
+
+---
+
+## STEP 1: Codebase Analysis
+
+Before making any changes, perform a complete audit of the current site codebase:
+
+1. **Map the full file tree** — identify every page, component, route, and asset
+2. **Identify the rendering strategy** — is the site CSR (client-side rendered), SSR, or SSG? If CSR-only, this is a P0 blocker (see Phase 0 below)
+3. **Catalog all content** — extract every claim, statistic, testimonial, press logo, user count, and social proof element currently on the site
+4. **Identify the tech stack** — framework, build system, CSS approach, deployment method
+5. **Check for /privacy, /terms, /support routes** — do they exist? Do they have real content?
+
+**Report your findings before proceeding.** Do not make changes until the audit is complete.
+
+---
+
+## STEP 2: Connect to the GitHub Repository
+
+Connect to the `construktr-mobile` GitHub repository (owner: the authenticated GitHub account) and analyze the following to understand what the app actually does:
+
+1. **`/mobile/src/screens/`** — Every screen file tells you what features are real and production-implemented
+2. **`/mobile/src/app/(tabs)/`** — Tab structure shows the core navigation and feature set
+3. **`/mobile/app.json` or `app.config.ts`** — App metadata, bundle ID, version
+4. **`/mobile/src/constants/`** — Brand colors, theme values, configuration
+5. **`/mobile/src/shared/design/`** — Design system tokens if present
+
+**The website must only claim features that exist as implemented screens in the codebase.** If a feature has a screen with real UI and mock data, it's real. If it doesn't exist in the codebase, do not claim it on the website.
+
+---
+
+## PHASE 0 — SERVER-SIDE RENDERING FIX (P0 CRITICAL BLOCKER)
+
+**Test:** Run this mental model — if a search engine crawler or an Apple App Store reviewer visits construktr.ai, do they see HTML content or a blank page that requires JavaScript to render?
+
+If the site is client-side rendered only (empty HTML shell, all content loaded via JS), this is a **hard blocker** for:
+- Google indexing (Google will see an empty page)
+- App Store review (Apple reviewers clicking privacy/terms URLs may see blank pages → REJECTION)
+
+**Fix:** Convert the site to serve pre-rendered HTML. Options in order of preference:
+1. **Static Site Generation (SSG)** — generate complete HTML at build time (preferred for a 5-page marketing site)
+2. **Server-Side Rendering (SSR)** — render HTML on first request
+3. **Pre-rendering middleware** — serve static HTML snapshots to crawlers
+
+**Verification test after fix:**
+```bash
+curl -s https://construktr.ai | grep -c "<h1\|<h2\|<p\|<section"
+```
+Must return > 0. If it returns 0, the fix did not work.
+
+---
+
+## PHASE 1 — REMOVE ALL FABRICATED CONTENT (P0 CRITICAL — LEGAL + APP STORE RISK)
+
+**This phase is non-negotiable. Every item below must be removed or replaced before any other work proceeds.**
+
+### 1A. Remove Fake User Counts
+Find and remove ALL instances of:
+- "2,500+ contractors" / "10,000+ contractors" / "Trusted by X contractors"
+- "Join 2,500+ contractors who stopped chasing paperwork"
+- Any specific user count number
+
+**Replace with:** "Built for contractors who've outgrown the notepad" or "Join the waitlist" with email capture.
+
+### 1B. Remove Fake Reviews / Ratings
+Find and remove ALL instances of:
+- "4.9/5 Rating" / "4.9/5.0 from 2,500+ reviews"
+- Any star rating display
+- Any review count
+
+**Replace with:** Nothing. Remove entirely. Do not fabricate alternative ratings.
+
+### 1C. Remove Fake Press Logos
+Find and remove the entire "As Featured In" section including:
+- TechCrunch, Forbes, BuiltIn, Construction Dive, Angi, Inc. logos
+- Any press bar or media mention section
+
+**Replace with:** Remove the section entirely. Do not replace with other fake logos.
+
+### 1D. Remove Fake Testimonials
+Find and remove ALL fabricated customer testimonials including:
+- "Tom Chen, Chen Plumbing & Repair"
+- "Marcus Williams, Williams Roofing Co."
+- "Jessica Park, Park Landscapes"
+- Any other testimonial with a name, company, and quote
+
+**Replace with:** Remove entirely. Optionally replace with a "What Construktr Does" feature highlight section or a "Coming Soon — Early Access" signup block.
+
+### 1E. Remove "#1 Contractor Platform 2024"
+Find and remove the top banner or any instance of "#1 Contractor Platform" claims.
+
+**Replace with:** A clean pre-launch banner: "Coming Soon to App Store & Google Play" or "33+ Features · AI-Powered · Offline-First"
+
+### 1F. Remove Fake Performance Metrics
+Find and remove the "Real Results from Real Contractors" section and ALL claims of:
+- "8+ hours saved weekly per tech"
+- "3× faster payment collection"
+- "40% increase in job profit"
+- "90% reduction in admin work"
+- "Measured across 2,500+ active contractor accounts"
+- "Average contractor loses $47,000/year to inefficiency"
+- "Average contractor gains $72,000/year in new capacity"
+
+**Replace with:** A feature benefits section using truthful "designed to" language. Example:
+- "Designed to eliminate hours of weekly admin"
+- "AI estimation replaces manual quote spreadsheets"
+- "Same-day Stripe deposits replace 30-day invoice chasing"
+- "Offline-first means zero data loss on job sites"
+
+### 1G. Fix Compliance Badges
+Find and remove or correct:
+- **"SOC 2 Type II — Enterprise security"** → Remove unless a SOC 2 audit has been completed
+- **"SOC 2 Certified"** → Remove entirely
+- **"PCI Compliant — Secure payments"** → Replace with "Payments secured by Stripe (PCI-DSS compliant)" — this is truthful because Stripe handles PCI
+- **"GDPR Ready — Data protection"** → Remove unless GDPR documentation exists
+- **"99.9% Uptime — Always available"** → Remove (no production uptime history exists)
+
+What IS truthful to display:
+- "Powered by Stripe" (payment processing)
+- "Powered by Supabase" (real-time database)
+- "QuickBooks Integration" (bidirectional sync)
+- "AWS Cloud Infrastructure" (hosting)
+- "Offline-First Architecture" (real feature)
+
+### 1H. Remove "Login" Button
+There is no web login for a mobile-only app. Remove the "Login" nav item.
+
+### 1I. Fix "Start Free Trial" / "15-Day Free Trial"
+The app has a **Free tier forever** — not a trial. Change all instances of:
+- "Start Free Trial" → "Get Started Free" or "Download Free"
+- "Start 15-Day Free Trial" → "Get Started Free"
+- "15-day free trial, no credit card" → "Free forever. No credit card required."
+
+---
+
+## PHASE 2 — FIX PRICING (P0 — MUST MATCH STRIPE IMPLEMENTATION)
+
+The current site shows **wrong pricing**. Here is the **exact, authoritative pricing** that must appear on the site. Do not deviate from these numbers by a single dollar.
+
+### Pricing Tiers
+
+| | FREE (Solo) | STARTER (Crew) | PRO (Company) ★ BEST VALUE | BUSINESS (Enterprise) |
+|---|---|---|---|---|
+| **Price** | $0 forever | $49/month | $89/month | $199/month |
+| **Annual Price** | — | $39/mo (billed annually) | $69/mo (billed annually) | $159/mo (billed annually) |
+| **Users** | 1 | Up to 5 | Up to 15 | Unlimited |
+| **Active Jobs** | 2 | Unlimited | Unlimited | Unlimited |
+| **AI Estimates** | — | 10/month | Unlimited | Unlimited |
+| **Document Storage** | 100 MB | 5 GB | 25 GB | Unlimited |
+| **Data Retention** | 7 days | 1 year | 2 years | Unlimited |
+| **Payment Processing** | — | 2.9% + $0.30 | 2.7% + $0.25 | 2.5% + $0.20 |
+
+### Feature Breakdown by Tier
+
+**FREE tier includes:**
+- Dashboard & Analytics (read-only)
+- Jobs Management (2 active jobs)
+- Quotes & Estimates — manual (5/month)
+- Basic Invoicing (watermarked)
+- Customer CRM (50 contacts)
+- Basic Scheduling & Calendar
+- Time Tracking (manual only)
+- Mobile App (Offline-First)
+- Push Notifications (reminders)
+- Document Storage (100 MB)
+- Universal Search (active jobs only)
+
+**STARTER adds (+12 features over Free):**
+- AI Photo Estimation (10/month)
+- Stripe Payment Processing (2.9% + $0.30)
+- QuickBooks Sync (bidirectional)
+- Professional Branded Invoicing
+- GPS Time Tracking
+- Equipment Tracking (basic)
+- Lien Tracking (basic)
+- Change Orders
+- Scheduling with Dispatch
+- Client Portal
+- Maps & Routing
+- In-App Messaging (100/month)
+
+**PRO adds (+11 features over Starter):**
+- Unlimited AI Photo Estimates (no cap)
+- NFC/BLE Equipment Tracking (hardware)
+- Automated Lien Tracking with notifications
+- Route Optimization
+- Multi-Crew Dispatch
+- Inventory Management
+- AR Guides & Photo AR
+- AI Part Finder
+- Custom Job Forms
+- Recurring Billing / Subscriptions
+- Expanded Messaging (500/month)
+
+**BUSINESS adds (+14 features over Pro):**
+- Unlimited Users
+- Voice Commands (AI)
+- AI Quote Writer
+- AI Predictive Analytics
+- OCR / Document Scanning
+- Business Card Scanner (OCR)
+- Parts Reconciler
+- Margin Guardrails
+- Financial Reconciliation
+- Permits Tracking
+- API Access & Webhooks
+- Advanced RBAC / SSO
+- White-Label Client Portal
+- Multi-Location Management
+- Priority Support (Phone + Chat)
+- Dedicated Account Manager
+
+### Pricing Page Requirements
+
+1. **PRO tier must be visually highlighted** — add a "BEST VALUE" badge, a colored border, or a highlighted background. PRO is the hero tier.
+2. **Add an annual/monthly toggle** that shows the discount (e.g., "Save 20% with annual billing")
+3. **Add a "No per-user pricing" callout** — this is a major competitive advantage
+4. **Add competitive comparison section:**
+   - Construktr Pro (15 users): $89/mo
+   - Jobber Connect (10 users): $349/mo → You save $260/mo
+   - Housecall Pro Essentials: $169–$189/mo → You save $80–$100/mo
+   - ServiceTitan: $3,000–$5,000/mo → You save $2,800–$4,800/mo
+   - Buildertrend (unlimited users): $399–$1,099/mo → You save $200–$900/mo
+5. **CTA button per tier:** Free → "Get Started Free" | Starter → "Start with Starter" | Pro → "Go Pro" | Business → "Contact Sales" or "Start Business"
+6. **Mobile responsive:** Tiers must stack vertically on mobile, not require horizontal scroll
+7. Feature count: **"33+ features"** (not "28 features" — the current site is wrong)
+
+---
+
+## PHASE 3 — ADD APP STORE BLOCKING PAGES (P0 — SUBMISSION BLOCKERS)
+
+These three pages **must exist and must render without JavaScript**. Apple and Google reviewers will click these URLs. If they see a blank page or a 404, the app is rejected.
+
+### 3A. Privacy Policy — /privacy
+
+**This page BLOCKS both Apple App Store and Google Play submission.**
+
+Must disclose ALL data the app collects:
+
+**Device Permissions:**
+- Camera: job site photos, document scanning, business card OCR, AI photo estimation
+- Photo Library: attach existing photos to jobs, save generated documents
+- Location (foreground): clock-in/out verification, route optimization, nearby leads
+- Location (background): continuous GPS tracking while clocked in to a job
+- Contacts: import clients and crew members from device contacts
+- Face ID / Touch ID: biometric authentication
+- Push Notifications: job reminders, schedule alerts, payment notifications, crew updates
+
+**Data Categories Collected:**
+- Account information: name, email, phone, company name
+- Financial data: invoicing, payment processing via Stripe, QuickBooks sync data
+- Job data: job details, photos, estimates, schedules, time tracking, materials
+- Location data: GPS coordinates during time tracking, route history
+- Device data: device model, OS version, app version, crash logs
+- Usage analytics: feature usage, screen views, session duration
+
+**Third-Party Services (must name each):**
+- **Supabase** — database, authentication, file storage (hosted on AWS)
+- **Stripe** — payment processing (PCI-DSS Level 1 compliant)
+- **Intuit / QuickBooks** — accounting sync (bidirectional)
+- **AI/ML Services** — photo analysis for estimation (processed server-side, not stored)
+- **Sentry** — crash reporting and error tracking
+- **Expo / EAS** — push notification delivery
+
+**Legal Requirements:**
+- CCPA compliance section: California residents' rights (access, delete, opt-out)
+- Data retention by tier: Free = 7 days, Starter = 1 year, Pro = 2 years, Business = unlimited
+- Right to deletion: Users can request full data deletion (Apple requires this)
+- Children's privacy: App is not directed at children under 13, no COPPA data collection
+- Security measures: encryption at rest and in transit, role-based access control
+- Contact: privacy@construktr.ai
+- Company: Automate AI LLC, Phoenix, AZ
+- Effective date: current date
+- Last updated: current date
+
+### 3B. Terms of Service — /terms
+
+**This page BLOCKS Apple App Store submission.**
+
+Must include:
+- **Acceptance of Terms:** By using the app, user agrees to these terms
+- **Eligibility:** Must be 18+ years old
+- **Account Responsibilities:** User responsible for account security, accurate information
+- **Subscription Terms:** 4 tiers (Free $0, Starter $49, Pro $89, Business $199), monthly and annual billing options
+- **Payment Terms:** Processed via Stripe, auto-renewal, cancellation policy (cancel anytime, access continues through billing period)
+- **Acceptable Use:** No illegal activity, no abuse of AI features, no unauthorized access
+- **Intellectual Property:** Automate AI LLC owns the platform, code, and brand. User owns their data.
+- **User Data:** User retains ownership of all job data, photos, client information. Automate AI does not sell user data.
+- **Limitation of Liability:** Standard SaaS limitations — app provided "as is," no guarantee of uptime, not liable for business losses
+- **Indemnification:** User indemnifies Automate AI against misuse
+- **Dispute Resolution:** Governed by Arizona state law, disputes resolved in Maricopa County
+- **Termination:** Either party can terminate. User data available for export for 30 days after termination.
+- **Modifications:** Automate AI may modify terms with 30-day notice via email
+- **Contact:** legal@construktr.ai
+- **Company:** Automate AI LLC, Phoenix, AZ
+- **Effective date / Last updated**
+
+### 3C. Support Page — /support
+
+**This page BLOCKS Apple App Store submission.**
+
+Must include:
+- **Email:** support@construktr.ai
+- **Response time:** "We respond within 24 hours on business days"
+- **Physical address:** Automate AI LLC, Phoenix, AZ
+- **FAQ section** with at minimum:
+  - "How do I reset my password?"
+  - "How do I cancel my subscription?"
+  - "How do I export my data?"
+  - "Does the app work offline?"
+  - "How does AI photo estimation work?"
+  - "How do I connect QuickBooks?"
+  - "What devices are supported?" (iOS and Android)
+- **Links to:** /privacy, /terms
+- **Bug reporting:** "Found a bug? Email support@construktr.ai with a screenshot and description"
+
+---
+
+## PHASE 4 — SEO & TECHNICAL REQUIREMENTS
+
+### Meta Tags (every page)
+
+**Homepage (/):**
+- Title: `Construktr — AI-Powered Contractor Management App`
+- Description: `Run your contracting business from your phone. AI estimates, scheduling, invoicing, GPS time tracking, QuickBooks sync — 33+ features built for the field.`
+
+**Pricing (/pricing):**
+- Title: `Pricing — Construktr`
+- Description: `Contractor management starting free. No per-user fees. AI photo estimation, QuickBooks sync, and 33+ features from $49/mo.`
+
+**Privacy (/privacy):**
+- Title: `Privacy Policy — Construktr`
+- Description: `How Construktr collects, uses, and protects your data. CCPA compliant.`
+
+**Terms (/terms):**
+- Title: `Terms of Service — Construktr`
+- Description: `Terms and conditions for using the Construktr contractor management platform.`
+
+**Support (/support):**
+- Title: `Support — Construktr`
+- Description: `Get help with Construktr. Contact support, browse FAQs, and find answers.`
+
+**Every page must also have:**
+- `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
+- `<link rel="canonical" href="https://construktr.ai/{path}">`
+- Open Graph tags: og:title, og:description, og:url, og:type, og:site_name
+- Twitter card tags: twitter:card, twitter:title, twitter:description
+
+### robots.txt (at site root)
+```
+User-agent: *
+Allow: /
+Sitemap: https://construktr.ai/sitemap.xml
+```
+
+### sitemap.xml (at site root)
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://construktr.ai/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://construktr.ai/pricing</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://construktr.ai/privacy</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://construktr.ai/terms</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://construktr.ai/support</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+</urlset>
+```
+
+### Structured Data (homepage only)
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Construktr",
+  "operatingSystem": "iOS, Android",
+  "applicationCategory": "BusinessApplication",
+  "offers": {
+    "@type": "AggregateOffer",
+    "lowPrice": "0",
+    "highPrice": "199",
+    "priceCurrency": "USD",
+    "offerCount": "4"
+  },
+  "description": "AI-powered contractor management app with 33+ features. Estimates, scheduling, invoicing, GPS tracking, and QuickBooks sync for field service businesses.",
+  "author": {
+    "@type": "Organization",
+    "name": "Automate AI LLC",
+    "url": "https://construktr.ai"
+  }
+}
+```
+
+---
+
+## PHASE 5 — HOMEPAGE CONTENT CORRECTIONS
+
+### Hero Section
+**Current:** "Your Entire Field Service Business on AI Autopilot"
+**Keep or refine to:** "Your Entire Field Service Business on AI Autopilot" — this headline is good.
+
+**Subheadline — keep:** "Turn photos, routes, and timesheets into quotes, schedules, and paid invoices — automatically."
+
+**Trade pills (HVAC, Plumbing, Electrical, Roofing, Painting, Landscaping, Handyman, General):** Keep — these are good for SEO and audience targeting.
+
+**CTA buttons — change to:**
+- Primary: "Get Started Free" (not "Start 15-Day Free Trial")
+- Secondary: "Watch Demo" (link to demo video when available, or scroll to demo section)
+
+**"Same-day Stripe deposits" checkmark:** Keep — this is truthful (Stripe Instant Payouts is a real feature).
+
+### Feature Count
+Change every instance of "28 features" or "All 28 features implemented" to **"33+ features"**.
+
+Change "3 AI-enhanced" to **"AI included at every paid tier"** or list the AI features: Photo Estimation, AI Part Finder, Route Optimization, Predictive Analytics, Voice Commands, AI Quote Writer, OCR/Document Scanning.
+
+### "How CONSTRUKTR Works" Section
+This 4-step section is well-designed. Keep the structure but verify:
+- Step 1: "Set up in a single afternoon" — good
+- Step 2: "Turn on the automations" — good
+- Step 3: "Run your week from Home, Jobs, and Schedule" — good
+- Step 4: "Measure profit, not just busywork" — good
+
+### "From Chaos to Control" Before/After Section
+**Keep the structure.** The before/after comparison is effective. But replace the dollar claims:
+- Remove: "Average contractor loses $47,000/year to inefficiency"
+- Remove: "Average contractor gains $72,000/year in new capacity"
+- Replace with: "Stop losing jobs to slow quotes" / "Start tracking every dollar of profit" (factual capability statements, not fabricated metrics)
+
+### Feature Comparison Table
+The "How CONSTRUKTR Compares" table (Construktr vs Generic Scheduling App vs Paper/Spreadsheets) is excellent content. **Keep it.** Verify that every feature listed with a green checkmark actually exists in the codebase. If a feature has a screen in `/mobile/src/screens/` or `/mobile/src/app/`, it's real.
+
+### "Built for Every Role" Section
+This section (Owners & GMs, Dispatch & Office Staff, Field Technicians, Finance & Compliance) is good positioning. **Keep it.** No fabricated claims here.
+
+### "Real AI, Not Buzzwords" Section
+**Keep.** The three AI features (Photo Estimator, OCR/Document Scan, AI Time Tracking) are real implemented features. This section is truthful.
+
+### FAQ Section
+**Keep the structure** but verify answers are accurate. The current categories (Getting Started, Offline & Field Use, Integrations & Data, Security & Compliance, Pricing & Billing, AI Features) are good.
+
+---
+
+## PHASE 6 — NAVIGATION & FOOTER
+
+### Navigation (all pages)
+- Logo → links to /
+- Features (scroll to features section on homepage)
+- Pricing → /pricing
+- ~~Blog~~ → Remove (no blog exists yet)
+- Support → /support
+- CTA button: "Get Started Free" (not "Start Free Trial")
+- ~~Login~~ → Remove (no web login exists)
+
+### Footer (all pages)
+```
+Product: Features · Pricing · Download (or Coming Soon)
+Company: About · Support · Contact
+Legal: Privacy Policy · Terms of Service
+© 2026 Automate AI LLC. All rights reserved.
+Phoenix, AZ · support@construktr.ai
+```
+
+Remove any Replit branding if present.
+
+---
+
+## PHASE 7 — MOBILE RESPONSIVENESS & PERFORMANCE
+
+### Mobile Testing Checklist
+- [ ] Test at 375px (iPhone SE), 390px (iPhone 14), 412px (Android)
+- [ ] No horizontal overflow on any page
+- [ ] All touch targets minimum 44px × 44px
+- [ ] Minimum body text 16px (prevents iOS auto-zoom on form inputs)
+- [ ] Pricing tiers stack vertically on mobile (no horizontal scroll)
+- [ ] Navigation collapses to hamburger menu on mobile
+- [ ] Images optimized (WebP preferred, lazy loading)
+- [ ] No render-blocking resources
+
+### Performance Targets
+- Lighthouse mobile score > 80
+- First Contentful Paint < 2.5 seconds
+- Total page size < 3 MB
+
+---
+
+## PHASE 8 — CONTENT INTEGRITY FINAL SWEEP
+
+After all changes, verify every page:
+- [ ] No "Lorem ipsum" or placeholder text anywhere
+- [ ] No "Coming Soon" on features that are implemented
+- [ ] No broken images or dead links
+- [ ] No typos in headings, CTAs, or navigation
+- [ ] Consistent contractor-focused tone throughout
+- [ ] Dollar amounts match exactly: $0 / $49 / $89 / $199 (monthly) and $39 / $69 / $159 (annual)
+- [ ] Feature count says "33+" everywhere (not 28, not 30)
+- [ ] No competitor names on the homepage (comparison only on pricing page)
+- [ ] No confidential information exposed (no investor terms, ARPU, CAC, LTV, tier distribution targets)
+- [ ] No fabricated user counts, reviews, press logos, or testimonials ANYWHERE on the site
+- [ ] Company name is "Automate AI LLC" in all legal/footer references
+- [ ] App name is "CONSTRUKTR" (caps) in logo and "Construktr" in body text
+
+---
+
+## BRAND IDENTITY (DO NOT CHANGE)
+
+### Colors
+| Color | Hex | Usage |
+|-------|-----|-------|
+| Primary Blue | #0243D5 | CTAs, headers, primary actions, links |
+| Navy | #0d243a | Dark sections, footer background |
+| White | #FFFFFF | Page backgrounds, cards |
+| Medium Gray | #C3C3C3 | Borders, secondary surfaces |
+| Metallic Silver | #A8B0BA | Icons, dividers, muted text |
+| Black | #000000 | Primary body text |
+| Success Green | #00C853 | Positive states, checkmarks |
+| Warning Amber | #FFB300 | Caution, in-progress |
+| Danger Red | #FF3B30 | Errors, overdue, negative states |
+
+### Fonts
+- Headings: Plus Jakarta Sans (700, 800 weight)
+- Body: Inter (400, 500, 600 weight)
+- Mono: JetBrains Mono (code snippets only)
+
+### Color Usage Ratios
+- White backgrounds: 55%
+- Primary Blue accents: 25%
+- Medium Gray surfaces/borders: 15%
+- Metallic Silver details: 5%
+
+Do not introduce new colors. Do not change the blue. The current site's blue (#0243D5) matches the mobile app exactly — maintain this consistency.
+
+---
+
+## EXECUTION ORDER
+
+Complete these phases in this exact sequence. Do not skip ahead.
+
+```
+Phase 0: SSR/SSG fix (if needed)          ← Unblocks everything
+Phase 1: Remove all fabricated content     ← Legal/credibility risk elimination
+Phase 2: Fix pricing to exact numbers     ← Revenue model alignment
+Phase 3A: Privacy Policy page             ← App store blocker #1
+Phase 3B: Terms of Service page           ← App store blocker #2
+Phase 3C: Support page                    ← App store blocker #3
+Phase 4: robots.txt + sitemap + meta tags ← SEO foundation
+Phase 5: Homepage content corrections     ← Marketing accuracy
+Phase 6: Navigation + footer              ← Site structure
+Phase 7: Mobile responsiveness            ← Quality assurance
+Phase 8: Content integrity sweep          ← Final verification
+```
+
+---
+
+## VERIFICATION AFTER COMPLETION
+
+Run these checks and report results:
+
+1. `curl -s https://construktr.ai/ | grep -c "<h1\|<h2\|<p"` → Must be > 0
+2. `curl -s https://construktr.ai/privacy | grep -c "Automate AI"` → Must be > 0
+3. `curl -s https://construktr.ai/terms | grep -c "Automate AI"` → Must be > 0
+4. `curl -s https://construktr.ai/support | grep -c "support@construktr"` → Must be > 0
+5. Search the entire codebase for: "2,500" / "4.9/5" / "TechCrunch" / "Forbes" / "Tom Chen" / "Marcus Williams" / "Jessica Park" / "#1 Contractor" / "SOC 2 Certified" / "15-Day Free Trial" / "Login" — **every one of these must return ZERO results**
+6. Search for pricing values: confirm "$49" and "$89" and "$199" and "$0" all appear on the pricing page
+7. Search for "28 features" — must return ZERO results (should all be "33+")
+8. Confirm /robots.txt and /sitemap.xml are accessible
+9. Test all internal links — zero 404s
+10. Mobile viewport test at 375px — no horizontal scroll
+
+**Report each check as PASS or FAIL with details.**

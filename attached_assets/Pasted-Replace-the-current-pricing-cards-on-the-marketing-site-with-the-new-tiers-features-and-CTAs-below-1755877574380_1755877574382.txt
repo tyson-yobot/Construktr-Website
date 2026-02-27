@@ -1,0 +1,117 @@
+Replace the current pricing cards on the marketing site with the new tiers, features, and CTAs below. Keep design identical to existing page, just update data + copy. Add an optional “Founders Launch” price override we can toggle on/off.
+
+Files to touch
+
+src/data/pricing.ts (new central config)
+
+src/components/Pricing.tsx (read from config, no inline values)
+
+src/components/FeatureList.tsx (small component for checkmarks)
+
+src/pages/index.tsx or src/sections/PricingSection.tsx (ensure it imports from src/components/Pricing.tsx)
+
+public/site.webmanifest / SEO meta (update pricing keywords)
+
+Optional JSON‑LD: src/components/Seo.tsx
+
+1) Pricing & Features (Source of Truth)
+
+Pricing (default / premium positioning):
+
+Starter — $49/mo
+
+Pro — $99/mo
+
+Enterprise — $199/mo
+
+Founders Launch (optional display override only):
+
+Starter — $29/mo
+
+Pro — $49/mo
+
+Enterprise — $99/mo
+
+Implementation: FOUNDERS_PROMO_ENABLED = false by default. When true, the UI shows the lower prices, but Stripe will still use the real prices.
+
+Feature Allocation
+
+Starter – $49/mo (Solo contractors)
+
+Up to 50 quotes/month
+
+Basic scheduling
+
+Card & wallet payments (Stripe Checkout; Apple/Google Pay)
+
+Digital invoices (email)
+
+Photo attachments on jobs/quotes
+
+Two‑Way SMS (basic): reminders, “On My Way”
+
+Client portal (basic): approvals & invoice payment
+
+Email support
+
+Offline capture (notes/photos; sync later)
+
+Pro – $99/mo (Growing businesses)
+
+Everything in Starter, plus:
+
+Unlimited quotes & jobs
+
+AI Quoting (full): SLTs, local wage data, materials DB
+
+Smart Scheduling + Weather AI
+
+Route optimization + crew GPS ETA
+
+Same‑day payments (Stripe fast payouts; subject to Stripe)
+
+Customer management (CRM‑lite)
+
+Two‑Way SMS (full): replies threaded in inbox, review requests
+
+Client portal (full): magic links, live updates (SSE), chat
+
+Inventory tracking (barcode/QR), Auto‑reorder
+
+AI/AR Part Finder™ (flagship) with cross‑vendor pricing & reserve
+
+Universal Search (clients, jobs, parts, messages)
+
+Offline‑first sync (deterministic conflict resolution)
+
+AI Owner’s Briefing (weekly) via email/Slack with PDF archive
+
+Enterprise – $199/mo (Teams & agencies)
+
+Everything in Pro, plus:
+
+Team management & RBAC (Owner / Dispatcher / Tech)
+
+Field‑level masking for sensitive data
+
+Advanced analytics dashboard
+
+Append‑only audit log with hash chain + Merkle checkpoints
+
+AR Training & Troubleshooting overlays
+
+Custom integrations (QuickBooks Online, vendors, Twilio, maps)
+
+Priority support (accelerated SLA)
+
+Dedicated onboarding & API access (where applicable)
+
+Global
+
+30‑day free trial
+
+No setup fees
+
+Cancel anytime
+
+Uptime & compliance badges as currently displayed

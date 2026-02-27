@@ -1,0 +1,251 @@
+You are a senior front-end engineer responsible for making the CONSTRUKTR marketing site accurate to the REAL product.
+
+Project: konstrukt-site-tyson44 (this Replit project)
+Product truth source: CONSTRUKTR mobile repo (canonical feature list below)
+
+Business requirement:
+- The marketing site must exactly represent the real product features.
+- No mock/placeholder features.
+- All references to feature count, AI, and capabilities must match the repo.
+- The UI must be readable (cards not tiny, boxes not cramped, clear hierarchy).
+
+You MUST:
+1. Inspect the current marketing site code in this Replit project.
+2. Find all sections that describe features, capabilities, or product modules.
+3. Replace any mock/placeholder features with the real 28 features listed below.
+4. Fix any inaccurate counts or vague copy that contradict the repo.
+5. Improve layout where cards/boxes are too small or cramped so they are readable on desktop and mobile.
+
+Do NOT:
+- Change core branding or overall structure.
+- Invent new features that aren’t in the list below.
+- Claim more than 28 features or more AI features than are actually present.
+
+==================================================
+CANONICAL FEATURE SPEC (FROM CONSTRUKTR REPO)
+==================================================
+
+This list comes from FEATURES.md and ALL_28_FEATURES_COMPLETE.md in the construktr-mobile repo (this is the source of truth). :contentReference[oaicite:3]{index=3} :contentReference[oaicite:4]{index=4}
+
+There are **28 features total**, with **16 AI-powered** features. :contentReference[oaicite:5]{index=5}
+
+For each feature, use:
+- name
+- short 1–2 sentence description
+- optional 2–3 bullet benefits on the site
+
+1. Business Card OCR & CRM  
+   Scan business cards with the camera and automatically extract contact info using AI OCR, with duplicate detection and CRM-style management.  
+   - AI text extraction, tags, vCard export, device contacts sync, semantic search.
+
+2. Photo/AR/Map Estimating  
+   Use job-site photos, AR measurements, and maps to generate estimates automatically.  
+   - Photo-based measurement, AR ruler, map integration, automated quote generation.
+
+3. AI Quoting (Stripe + QuickBooks)  
+   Generate professional quotes with AI-assisted pricing tied directly to Stripe and QuickBooks.  
+   - AI cost estimation, templates, PDFs, email, Stripe payments, QuickBooks sync.
+
+4. Client Portal (Magic Links)  
+   Magic link client portal for viewing quotes, approving work, paying invoices, and tracking job status.  
+   - Passwordless auth, approvals, payments, status tracking, document sharing.
+
+5. Marketing & Reviews  
+   Automated review request and marketing automation for contractors.  
+   - Auto review requests, multi-platform reviews, campaigns, reputation tracking.
+
+6. Subscriptions & Plans  
+   Stripe-backed subscription and plan management for your SaaS billing.  
+   - Multiple tiers, usage tracking, renewals, upgrades/downgrades, trials, usage alerts.
+
+7. Smart Scheduling & Routing  
+   AI-powered calendar and routing engine for crews and jobs.  
+   - Drag-and-drop calendar, crew assignment, route optimization, weather-aware, conflict detection.
+
+8. AI Time Tracking & Geofencing  
+   Automatic time tracking with GPS/geofenced job sites.  
+   - Auto clock-in/out, geofencing, overtime, corrections, weekly timesheets.
+
+9. Field Checklists with PPE  
+   Digital safety and QA checklists with PPE tracking and photo documentation.  
+   - Custom checklists, PPE compliance, signatures, safety reports.
+
+10. AI Change Orders  
+    Intelligent change-order management with AI cost/time estimation and approvals.  
+    - AI cost estimation, approval workflow, budget updates, attachments, history.
+
+11. Inventory & Auto-Reorder  
+    Real-time inventory tracking with auto-reorder.  
+    - Barcode scanning, low-stock alerts, automatic reorders, supplier integration.
+
+12. AR Part Finder  
+    AR-based part identification and lookup for techs in the field.  
+    - AR visual search, AI part ID, specs, supplier info, price comparison.
+
+13. Equipment Tracking (BLE/NFC)  
+    Tool and equipment tracking via BLE beacons and NFC tags.  
+    - Checkout/return workflow, real-time location, maintenance scheduling, lost-equipment alerts.
+
+14. Permits & Inspections  
+    Full lifecycle permit and inspection tracking.  
+    - Permit applications, inspection scheduling, deficiencies, pass/fail, expiration alerts.
+
+15. Two-Way Messaging (SMS/WhatsApp)  
+    Centralized SMS/WhatsApp messaging with clients and team.  
+    - Threaded conversations, attachments, read receipts, push notifications.
+
+16. Voice Commands  
+    Voice-driven control and note-taking for hands-free use.  
+    - Voice commands, speech-to-text notes, multilingual, custom commands.
+
+17. Universal Search  
+    Global search across jobs, customers, invoices, equipment, etc.  
+    - Full-text + semantic search, filters, history, quick actions.
+
+18. Offline-First Sync  
+    Offline-first database with background sync and conflict resolution.  
+    - Offline access, queue management, sync indicators, conflict resolution.
+
+19. Onboarding Wizard  
+    Guided setup to configure the org, invite team, and connect integrations.  
+    - Step-by-step setup, team invites, integrations, tutorials, sample data.
+
+20. AI Operations Dashboard  
+    Real-time AI-driven business dashboard (revenue, jobs, team performance, forecasts).  
+    - Revenue/profit tracking, job pipeline, team metrics, predictive forecasts.
+
+21. PDF Reports  
+    Branded PDF report generation and scheduling.  
+    - Custom templates, branding, email delivery, scheduled exports.
+
+22. Est→Actual Reconciler  
+    Compare estimated vs actual costs and highlight variance.  
+    - Variance analysis, historical comparisons, recommendations, budget alerts.
+
+23. Margin Guardrails  
+    Rules and alerts to prevent low-margin jobs from slipping through.  
+    - Minimum margins, real-time margin checks, approval workflows, pricing recommendations.
+
+24. QuickBooks Sync  
+    Two-way QuickBooks Online sync for customers, invoices, and payments.  
+    - OAuth, invoice export, expense tracking, chart-of-accounts mapping.
+
+25. Stripe Payments  
+    Full Stripe payment center for card/ACH, links, recurring billing, and refunds.  
+    - Card + ACH, payment links, subscriptions, refunds, payment methods.
+
+26. RBAC & Permissions  
+    Role-based access control with six roles and 25+ permissions.  
+    - Roles for owner/admin/manager/field/office/client, granular permissions, access policies.
+
+27. Security & Audit Trails  
+    Comprehensive audit logging and security monitoring.  
+    - Activity logs, security events, anomaly detection, compliance reports, exports.
+
+28. Webhooks & Integrations  
+    Webhook platform for connecting Construktr to other tools.  
+    - 20+ event types, configurable endpoints, retries, signature verification, delivery logs.
+
+==================================================
+TASKS FOR THIS REPLIT PROJECT
+==================================================
+
+1) AUDIT THE CURRENT SITE CONTENT
+---------------------------------
+- Inspect all pages/sections in this Replit project:
+  - Hero, feature sections, AI sections, “Why Contractors Choose…”, “Built for Every Trade”, and any “Features” grids or bullet lists.
+- Identify:
+  - Any feature names NOT listed in the canonical 28 above (these are mock/placeholder).
+  - Any claims about number of features, AI usage, or capabilities that do not match the list (e.g., wrong counts, generic or invented features).
+
+2) REPLACE MOCK/PLACEHOLDER FEATURES WITH REAL ONES
+---------------------------------------------------
+- Find the data structures that define feature cards (e.g., arrays like `features = [...]`, JSON configs, or JSX card lists).
+- Replace them with objects based on the canonical 28 features above.
+  - You do NOT need to show all 28 in one grid; you can group or summarize.
+  - But: any “feature detail” list, “All features” section, or “AI tools list” must only use these 28.
+- Ensure:
+  - Names are accurate.
+  - Descriptions are consistent with the repo summaries above.
+  - AI features are clearly labeled where appropriate (e.g., “AI” tag or copy).
+
+3) FIX INACCURATE CLAIMS / NUMBERS
+----------------------------------
+- Search the site for claims like:
+  - “X features”, “only 10 tools”, “some AI features”, etc.
+- Align them with the repo reality:
+  - 28 total features.
+  - 16 AI-powered features (do not over-claim). :contentReference[oaicite:6]{index=6}
+- If there are vague or inaccurate statements (“full accounting suite” that goes beyond QuickBooks + Stripe + reporting), tighten them to match the actual capabilities described in the list above.
+
+4) IMPROVE LAYOUT & BOX SIZING (CARDS TOO SMALL)
+------------------------------------------------
+The current feedback from the product owner:
+- “There are boxes that are too small.”
+- Cards / feature boxes feel cramped or visually weak.
+
+Changes to make:
+- For all feature cards, stat boxes, trade boxes, etc.:
+  - Ensure a **minimum width** at common breakpoints (no narrow slivers on desktop).
+  - Use consistent padding (e.g., 16–24px internally).
+  - Use a consistent border radius (e.g., 12–16px) across all cards.
+  - Add a subtle border and shadow so they stand out against the background:
+    - border: 1px solid rgba(15, 23, 42, 0.08);
+    - box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08), 0 2px 8px rgba(15, 23, 42, 0.04);
+- On desktop:
+  - Ensure cards line up in clean grids (e.g., 2–3 columns) with consistent gutters.
+- On mobile:
+  - Cards should stack to full-width with comfortable vertical spacing (no tiny cramped boxes).
+
+5) CHECK EACH MAJOR SECTION AGAINST THE FEATURE LIST
+----------------------------------------------------
+For each major marketing section that talks about functionality:
+
+- Hero:
+  - Make sure the hero subheadline and bullets don’t invent features.
+  - They should reference real capabilities like photo/AR estimating, AI quoting, smart scheduling, offline mode, etc.
+
+- Core feature section(s):
+  - Map at least 6–8 of the strongest features directly:
+    - Photo/AR Estimating
+    - AI Quoting
+    - Smart Scheduling
+    - Offline-First Sync
+    - AI Operations Dashboard
+    - Stripe + QuickBooks integrations
+    - Field Checklists + Permits
+    - Time Tracking (with geofencing)
+
+- AI section (if present):
+  - Only call out AI where it truly exists (photo, voice, search, scheduling, change orders, dashboard, etc.), according to the feature list.
+
+- Integrations section:
+  - Mention Stripe and QuickBooks explicitly.
+  - Any “webhooks/integrations” copy should match the Webhooks feature above.
+
+- Compliance / security / roles:
+  - Use RBAC & Permissions and Security & Audit Trails descriptions instead of generic “enterprise-grade security” fluff.
+
+6) ENSURE RESPONSIVE & READABLE UI
+----------------------------------
+- After updating content and resizing cards, test at mobile, tablet, and desktop widths.
+- Fix any:
+  - Overly narrow columns.
+  - Overflow/wrapped text in buttons.
+  - Cards that collapse to awkward sizes.
+
+7) CLEANUP
+----------
+- Remove any old constants, data structures, or components that describe the previous mock feature set.
+- Keep a single source-of-truth for feature data (e.g., one `FEATURES` array or similar).
+- Add comments in the feature data file explaining that the list is derived from the construktr-mobile FEATURES.md / ALL_28_FEATURES_COMPLETE.md and must stay in sync.
+
+==================================================
+OUTPUT EXPECTATIONS
+==================================================
+
+- The marketing site content now only refers to the 28 real features defined above.
+- All “feature” cards/sections are using the correct names and accurate descriptions.
+- Any numeric claims (28 features, 16 AI-powered, etc.) are consistent with the repo.
+- Boxes/cards are visually clear and not too small, with consistent padding, radius, and spacing.
+- The site feels like a truthful, UI-polished reflection of the actual CONSTRUKTR mobile product.

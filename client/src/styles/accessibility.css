@@ -1,0 +1,160 @@
+/* Accessibility Enhancement Styles */
+
+/* Enhanced Focus Visibility - WCAG AA Compliant */
+*:focus {
+  outline: none;
+  box-shadow: var(--ring);
+}
+
+*:focus-visible {
+  outline: none;
+  box-shadow: var(--ring);
+}
+
+*:focus:not(:focus-visible) {
+  box-shadow: none;
+}
+
+/* High contrast focus for interactive elements */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[role="button"]:focus-visible,
+[role="tab"]:focus-visible,
+[role="menuitem"]:focus-visible,
+[tabindex]:focus-visible {
+  box-shadow: var(--ring) !important;
+  border-radius: var(--radius-md);
+}
+
+/* Enhanced focus for icon buttons */
+button[aria-label]:focus-visible {
+  box-shadow: var(--ring-blue) !important;
+}
+
+/* Skip to main content link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--color-brand-600);
+  color: var(--color-text-inverse);
+  padding: 8px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 9999;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Enhanced button accessibility */
+.btn:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Card hover states for keyboard navigation */
+.card:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Video controls accessibility */
+.video-controls button:focus {
+  outline: 2px solid var(--color-primary);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Form field error states */
+.form-field-error {
+  border-color: var(--color-error);
+  color: var(--color-error);
+}
+
+.error-message {
+  color: var(--color-error);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Loading state accessibility */
+.loading-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .btn-primary {
+    border: 2px solid currentColor;
+  }
+  
+  .card {
+    border: 1px solid currentColor;
+  }
+  
+  /* Enhanced contrast for all interactive elements */
+  button, 
+  [role="button"],
+  a {
+    border: 1px solid currentColor;
+  }
+}
+
+/* WCAG AA Contrast fixes */
+.contrast-enhanced {
+  color: var(--color-text-tertiary) !important;
+}
+
+/* Focus trap styles */
+[data-focus-trap-setup] {
+  position: relative;
+}
+
+/* Live region for screen readers */
+#sr-live-region {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

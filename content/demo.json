@@ -1,0 +1,35 @@
+[
+  {
+    "id": "quoting",
+    "title": "Quoting",
+    "bullets": [
+      "Add job details",
+      "AI prices materials & labor",
+      "Send branded PDF from phone"
+    ],
+    "video": "/media/quote.mp4",
+    "image": "/img/quote-demo.webp"
+  },
+  {
+    "id": "scheduling", 
+    "title": "Scheduling",
+    "bullets": [
+      "Smart route optimization",
+      "Prevent double-booking",
+      "Auto client updates"
+    ],
+    "video": "/media/schedule.mp4",
+    "image": "/img/schedule-demo.webp"
+  },
+  {
+    "id": "payments",
+    "title": "Payments", 
+    "bullets": [
+      "Charge on‑site • Same‑day deposits",
+      "Accept all payment types",
+      "Auto‑invoice delivery"
+    ],
+    "video": "/media/pay.mp4",
+    "image": "/img/payments-demo.webp"
+  }
+]

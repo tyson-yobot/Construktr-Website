@@ -1,0 +1,207 @@
+CONSTRUKTR — SEO + CONTENT GENERATION PROMPT (USE ATTACHED KEYWORDS)
+
+Input artifact: the keyword list provided in this file 
+
+Construktr Website Keywords
+
+.
+Goal: produce a complete, production-ready SEO content plan and draft website copy for Construktr (AI-native app for contractors/field service), maximizing coverage of the provided keywords while keeping copy human-sounding, conversion-oriented, and technically accurate.
+
+0) Read & Normalize
+
+Parse every line from 
+
+Construktr Website Keywords
+
+ into a deduped set (case-fold, trim, singularize/pluralize families).
+
+Expand obvious variants (word order swaps, plural vs. singular, gerunds) only when natural; do not invent new topics.
+
+Deliver: a JSON list of normalized keywords and their raw frequency.
+
+1) Semantic Clustering & Search Intent
+
+Cluster keywords by topic + intent using these buckets:
+
+Homepage / Brand Awareness
+
+Feature Pages (Estimates, Scheduling, Dispatch, Offline, NFC/BLE, Invoicing/Payments, QuickBooks, Photo AI, Lien Tracking, Reporting, Mobile App, Integrations)
+
+Solutions Pages (Residential Contractors, Commercial Contractors, HVAC/Plumbing/Electrical/General, Field Service Ops)
+
+Comparison Pages (“Construktr vs <category/competitor>” if present in list)
+
+Blog / Long-Tail / How-To / Checklists / Trends
+
+Support / Docs / FAQ (if present)
+
+Programmatic SEO (repeatable templates like “AI Estimating for <Trade>”)
+
+For each cluster: give search intent (informational, commercial, transactional, navigational), difficulty level (low/med/high), and priority (P1–P3).
+
+2) Page Map (Keyword → URL)
+
+Create a site map and keyword-to-URL mapping:
+
+/: Homepage
+
+/features/ai-estimates
+
+/features/scheduling
+
+/features/dispatch
+
+/features/offline
+
+/features/nfc-ble
+
+/features/integrations/quickbooks
+
+/features/payments-stripe
+
+/solutions/field-service + trades as needed
+
+/blog/ (plus 24 posts to start)
+
+/pricing/, /demo/, /about/, /security/, /faq/
+
+For each URL provide:
+
+Primary keyword + 3–6 secondary keywords
+
+Target intent and success metric (signup/demo/CTA click)
+
+3) On-Page Specs (Titles, Meta, H1–H3, Slugs)
+
+For every page (homepage, all feature pages, and 12 highest-value blog posts):
+
+Title (≤60 chars) using the primary keyword near the front
+
+Meta description (140–160 chars) with value prop + soft CTA
+
+Slug (kebab-case)
+
+H1 with the primary keyword
+
+H2/H3 outline covering secondaries, FAQs, and objection handling
+
+URL canonical and internal link targets (2–4 per page)
+
+4) Draft Copy (Human, Conversion-First)
+
+Generate draft copy for:
+
+Homepage (≈600–900 words):
+
+Value prop hero, proof bar (metrics), feature highlights, integrations (Stripe/QuickBooks/NFC/BLE), testimonials, CTAs (Get Demo / Talk to Sales).
+
+Each Feature Page (≈500–800 words):
+
+What it is → How it works → Benefits → Proof → CTA.
+
+Include 3–5 benefit bullets with the keyword once naturally.
+
+12 Blog Posts (≈900–1,200 words each):
+
+Problem → Framework/Steps → Checklist/Table → CTA.
+
+Provide working titles, intro, H2s/H3s, and conclusion.
+
+Guardrails
+
+No keyword stuffing; ≤1.2% density for primaries.
+
+Use plain language; explain AI features in “job-site” terms.
+
+Always end pages with a clear CTA (“Get a Demo,” “Start Free Trial,” or “Talk to Sales”).
+
+5) FAQ + Snippets
+
+For each feature page create 4–6 FAQs phrased to win People Also Ask:
+
+Questions should mirror long-tail keywords.
+
+Provide concise answers (40–60 words).
+
+Mark as FAQPage in schema (see §7).
+
+6) Internal Linking Plan
+
+From Homepage → all feature pages + 2 top blog posts.
+
+From each Feature → 2 relevant blogs + Pricing + Demo.
+
+From each Blog → 1 feature page + 1 solution page + next blog.
+
+Provide an anchor-text table (exact/partial/semantic) to rotate naturally.
+
+7) Technical SEO Artifacts
+
+Generate:
+
+OpenGraph/Twitter titles & descriptions per page (+ suggested OG image text)
+
+Schema.org JSON-LD:
+
+Organization (Construktr)
+
+SoftwareApplication (product pages)
+
+FAQPage (feature pages)
+
+Article (blog posts)
+
+BreadcrumbList (sitewide)
+
+robots.txt and sitemap.xml (list all URLs)
+
+8) Programmatic SEO (Optional but Powerful)
+
+If the keyword list supports it, propose a template for scalable pages — e.g.,
+/solutions/<trade>/ai-estimating and /solutions/<trade>/scheduling
+Inputs: <trade>, pain points, before/after bullets, testimonial placeholder.
+Output 10–20 instantiations using keywords from 
+
+Construktr Website Keywords
+
+.
+
+9) Measurement Plan
+
+Map each page to a primary KPI: demo form starts, pricing clicks, time on page, scroll depth.
+
+Provide event names for GA4 (e.g., cta_demo_click, pricing_view, faq_expand).
+
+10) Delivery Format
+
+Output three artifacts:
+
+/plan/keyword-clusters.md — clusters, intent, priority, page map
+
+/plan/onpage-specs.md — titles, metas, H1–H3, internal links, schema types
+
+/drafts/ — Markdown drafts for homepage, all feature pages, and 12 blog posts (filenames = slugs)
+
+Include a README with implementation notes (how to paste metas into Next.js/Head, where to inject schema, and how to wire the internal links).
+
+Example (apply to every page)
+
+Feature Page – AI Estimates
+
+Primary: ai estimating software for contractors
+
+Secondaries: photo-based estimates, contractor estimate app, mobile estimating
+
+Title: AI Estimating Software for Contractors | Construktr
+
+Meta: Create accurate, photo-based estimates in minutes. Construktr helps contractors win more jobs with AI-powered estimating on mobile. Get a demo.
+
+H1: AI Estimating for Contractors
+
+H2s: Snap → Analyze → Estimate, Faster Quotes, Higher Win Rate, Works Offline, Syncs Later
+
+FAQ (JSON-LD ready): 4–6 Q&As using long-tails from the cluster.
+
+Internal links: /features/scheduling, /features/dispatch, /pricing
+
+CTA: Get a Demo

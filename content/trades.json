@@ -1,0 +1,82 @@
+[
+  {
+    "id": "hvac",
+    "title": "HVAC",
+    "bullets": [
+      "AI sizes equipment & calculates load",
+      "Route optimized for emergency calls",
+      "Same‑day deposits on completed work"
+    ],
+    "img": "/img/hvac.webp"
+  },
+  {
+    "id": "plumbing", 
+    "title": "Plumbing",
+    "bullets": [
+      "Emergency pricing automatically applied",
+      "Parts markup calculated in real‑time",
+      "Before/after photos for insurance"
+    ],
+    "img": "/img/plumbing.webp"
+  },
+  {
+    "id": "electrical",
+    "title": "Electrical", 
+    "bullets": [
+      "Code compliance checks by location",
+      "Load calculations for panel upgrades",
+      "Safety inspection reports with photos"
+    ],
+    "img": "/img/electrical.webp"
+  },
+  {
+    "id": "roofing",
+    "title": "Roofing",
+    "bullets": [
+      "Weather‑based scheduling optimization",
+      "Material calculations from satellite",
+      "Insurance claim documentation"
+    ],
+    "img": "/img/roofing.webp"
+  },
+  {
+    "id": "painting",
+    "title": "Painting", 
+    "bullets": [
+      "Surface area calculations from photos",
+      "Paint coverage & primer recommendations",
+      "Color matching & material ordering"
+    ],
+    "img": "/img/painting.webp"
+  },
+  {
+    "id": "landscaping",
+    "title": "Landscaping",
+    "bullets": [
+      "Seasonal scheduling & maintenance",
+      "Plant selection based on climate", 
+      "Equipment rental coordination"
+    ],
+    "img": "/img/landscaping.webp"
+  },
+  {
+    "id": "handyman",
+    "title": "Handyman",
+    "bullets": [
+      "Multi‑trade pricing in one quote",
+      "Flexible scheduling for small jobs",
+      "Before/after documentation workflow"
+    ],
+    "img": "/img/handyman.webp"
+  },
+  {
+    "id": "general",
+    "title": "General Contractor",
+    "bullets": [
+      "Multi‑phase project management",
+      "Subcontractor coordination & payments",
+      "Progress tracking with photo updates"
+    ],
+    "img": "/img/general.webp"
+  }
+]

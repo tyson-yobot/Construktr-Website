@@ -1,0 +1,191 @@
+You are a senior front-end engineer working on the CONSTRUKTR marketing site in THIS Replit project.
+
+You DO NOT have access to GitHub here.  
+You MUST treat the product spec below (taken from the real construktr-mobile README.md) as the SINGLE SOURCE OF TRUTH about what the product actually does.
+
+Your responsibilities:
+1) Make the marketing site factually match the real product capabilities listed below.
+2) Fix known visual bugs (especially in the “Most Popular” pricing section).
+3) Clean up card sizing/spacing so boxes are readable and not cramped.
+
+==================================================
+PRODUCT TRUTH (FROM CONSTRUKTR README.md)
+==================================================
+
+Platform:
+- Construktr is an all-in-one contractor management platform for small-to-mid-sized home service businesses.
+- It’s mobile-first: contractors quote jobs, get paid, manage projects, communicate with clients, and keep work organized from one mobile dashboard. :contentReference[oaicite:6]{index=6}
+
+Core Mobile Features (must appear accurately on the site) :contentReference[oaicite:7]{index=7}:
+
+Use these names & meanings:
+
+- Photo Estimator – Take job photos, apply AI-enhanced annotations, convert to line-item estimates.
+- Job Quotes – Custom quotes with line items, costs, markup, and terms.
+- Smart Scheduling – Calendar-based job tracking, auto-collision checks, weather integration.
+- Invoicing + Payments – Generate invoices and accept payments via Stripe.
+- OCR / Document Scan – Scan receipts and documents into searchable PDFs.
+- Parts Reconciler – Match job receipts to quoted materials and parts.
+- Customer CRM – Track customers, notes, jobs, activity, and locations.
+- Push Notifications – Job status and schedule updates to the field.
+- Offline Work – All job information is cached offline and syncs when online.
+- AI Time Tracking – GPS-based automatic clock in/out with geofencing.
+- QuickBooks Integration – Bi-directional sync for invoices and customers.
+
+Production Infrastructure (optional marketing “Proof” section) :contentReference[oaicite:8]{index=8}:
+
+- Analytics service (40+ event types).
+- Performance monitoring (FPS, memory, API metrics).
+- Feature flags (25+ flags for rollouts and experiments).
+- Enhanced error boundary and crash reporting.
+- Build optimization: pre-build validation, bundle analysis, asset optimization.
+
+Status & Feature Count (for any “features” stats) :contentReference[oaicite:9]{index=9}:
+
+- All 28 features implemented, with AI enhancements.
+- mobile/ builds + tests pass, zero TypeScript and ESLint errors.
+
+You MUST NOT contradict any of the above on the marketing site.
+
+==================================================
+PART 1 – AUDIT AND FIX FEATURE CONTENT
+==================================================
+
+1. In this Replit project, locate ALL sections that describe product functionality:
+   - Hero headline/subheadline bullet points.
+   - Any “Features” or “Why Contractors Choose CONSTRUKTR” sections.
+   - Any “AI” sections.
+   - Any Integrations / Security / Operations / Dashboard sections.
+
+2. For each feature card, bullet, or claim:
+   - If it does NOT map cleanly to one of the real features above, REWRITE it so that it DOES.
+   - Replace any mock or generic feature names like “Task Automation”, “Magic Something”, etc., with real, repo-backed concepts:
+     - Photo Estimator
+     - Job Quotes
+     - Smart Scheduling
+     - Invoicing + Payments (Stripe)
+     - OCR / Document Scan
+     - Parts Reconciler
+     - Customer CRM
+     - Push Notifications
+     - Offline Work
+     - AI Time Tracking
+     - QuickBooks Integration
+     - Analytics, Performance Monitoring, Feature Flags, etc.
+
+3. Feature counts:
+   - If the site mentions a number of features or AI features, align that with:
+     - “All 28 Features Implemented – Complete feature set with AI enhancements.”
+   - DO NOT claim more than 28 features or invent extra AI modules.
+
+4. AI references:
+   - Only call something “AI” if it is clearly AI-enhanced per the spec:
+     - Photo Estimator
+     - OCR/Docs
+     - AI Time Tracking
+     - Possibly analytics/insights if the README states that (do not invent).
+
+Goal: After this step, every feature card and feature statement on the marketing site is directly traceable to the feature set above.
+
+==================================================
+PART 2 – FIX “MOST POPULAR” PRICING SECTION BUGS
+==================================================
+
+The owner reported two specific bugs:
+
+- Under “Most Popular”, the numbers are clipped – you can see the bottom of the digits cut off.
+- The middle pricing card is missing its package name (no plan label/title).
+
+Your tasks:
+
+1. Locate the pricing / plans component:
+   - Search for the “Most Popular” label in the codebase.
+   - It will likely be a Pricing, Plans, or similar component where plan cards are defined.
+
+2. Fix number clipping:
+   - Inspect the price text element and its container.
+   - Check for:
+     - Fixed height that is too short.
+     - `overflow: hidden` with insufficient padding.
+     - Too small `line-height`.
+   - Adjust styles so:
+     - The entire price text is visible.
+     - There is at least a few pixels of padding below the price, so the digits are not touching the bottom edge.
+
+3. Fix missing middle package name:
+   - Find the data structure for plans (e.g. an array of plan objects).
+   - Ensure EVERY plan object has a `name`/`title` property (e.g., “Starter”, “Most Popular”, “Scale”).
+   - Ensure the JSX/template renders the name for all plans, including the middle card.
+   - If the name is present in data but not rendered due to a bug, fix the JSX.
+   - If the name is simply missing from data for the middle card, add it following the existing naming scheme (e.g., “Pro” or whatever the other cards suggest).
+
+4. Card sizing in pricing:
+   - Increase vertical padding inside each plan card so content doesn’t feel crammed.
+   - Ensure cards have consistent height at desktop widths (if intended) and enough space to show:
+     - Plan name
+     - Price
+     - Description/features
+     - CTA button
+   - On mobile, ensure cards stack vertically with full width and clear spacing between them.
+
+VISUALLY VALIDATE in the Replit preview:
+- No clipping of numbers.
+- All plans have visible names.
+- Cards feel balanced and readable.
+
+==================================================
+PART 3 – GLOBAL “BOXES TOO SMALL” + CARD SYSTEM
+==================================================
+
+Across the site, the owner has said some boxes/cards are too small or cramped.
+
+1. Identify all card-like UI:
+   - Feature tiles.
+   - Stats/metrics boxes.
+   - Any “who it’s for” / trade boxes.
+   - Any other frosted/box components.
+
+2. Normalize card styling:
+   - Padding:
+     - At least 16px all around on mobile.
+     - 20–24px on desktop.
+   - Border radius:
+     - Consistent (e.g., 12–16px) across all cards.
+   - Border:
+     - Subtle but visible (e.g., `1px solid rgba(15, 23, 42, 0.08)`).
+   - Shadow:
+     - Soft elevation so cards stand off the background (not heavy, but clearly visible).
+
+3. Grid layout:
+   - On desktop:
+     - Cards should have a reasonable minimum width (no super narrow slivers).
+     - Use 2–3 columns as appropriate so cards look intentional.
+   - On tablet/mobile:
+     - Cards stack to 1–2 columns, full width, with comfortable vertical spacing.
+
+4. Text behavior:
+   - Ensure headings and descriptions don’t wrap awkwardly because of overly narrow cards.
+   - Adjust responsive breakpoints if needed so cards resize gracefully.
+
+==================================================
+PART 4 – FINAL TRUTH + UI QA PASS
+==================================================
+
+Before you stop:
+
+1. Truth Check:
+   - Re-scan the site and verify:
+     - Hero copy describes CONSTRUKTR as a mobile-first contractor OS with quoting, payments, project management, client comms, and a dashboard, in line with the README summary.
+     - Feature sections reference only the real features listed above.
+     - Any mention of feature counts uses the “All 28 Features Implemented” framing.
+
+2. Visual Check:
+   - Re-open the live preview and inspect:
+     - “Most Popular” pricing section: prices not clipped, package names present on all cards, comfortable sizing.
+     - Feature/stats/other cards: not cramped, readable, nice spacing on desktop and mobile.
+     - No obvious overflow/clipping anywhere.
+
+3. Code Clean-Up:
+   - If there were old mock feature arrays/constants, remove them and consolidate onto a single, typed data source for features that matches the spec above.
+
+When all of the above is satisfied, your changes are complete.

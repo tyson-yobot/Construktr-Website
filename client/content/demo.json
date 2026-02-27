@@ -1,0 +1,32 @@
+[
+  {
+    "id": "quote",
+    "title": "Quoting",
+    "bullets": [
+      "AI prices materials & labor automatically",
+      "Send branded PDF quotes from phone", 
+      "Close deals on-site with instant approval"
+    ],
+    "video": "/media/quote.mp4"
+  },
+  {
+    "id": "schedule", 
+    "title": "Scheduling",
+    "bullets": [
+      "Save 2.5 hours daily with AI route optimization",
+      "Prevent double-booking with smart calendar sync",
+      "Auto-send reminders to keep clients updated"
+    ],
+    "video": "/media/schedule.mp4"
+  },
+  {
+    "id": "pay",
+    "title": "Payments", 
+    "bullets": [
+      "Accept payments on-site • Same-day deposits",
+      "Process cards & digital wallets instantly",
+      "Auto-generate invoices with payment links"
+    ],
+    "video": "/media/pay.mp4"
+  }
+]

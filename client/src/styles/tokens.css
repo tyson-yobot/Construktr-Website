@@ -1,0 +1,396 @@
+/* CONSTRUKTR Design Tokens - Complete System */
+/* CEO Directive: Dark, modern, zero clutter. One blue family, one yellow CTA, mono trust icons. */
+
+:root {
+  /* === DESIGN TOKENS - COMPLETE SYSTEM === */
+  
+  /* Color Tokens - Brand Blue Family (#0243D5) */
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-200: #bfdbfe;
+  --color-brand-300: #93c5fd;
+  --color-brand-400: #60a5fa;
+  --color-brand-500: #0243D5; /* Primary Brand Blue - 25% usage for buttons, links, icons */
+  --color-brand-600: #0239bd;
+  --color-brand-700: #022fa5;
+  --color-brand-800: #02258d;
+  --color-brand-900: #011b75;
+  --color-brand-950: #01155d;
+  
+  /* Color Tokens - Primary CTA uses Brand Blue */
+  --color-primary: #0243D5; /* Primary Brand Blue for CTAs */
+  --color-primary-hover: #0355f0; /* 6% lighter for hover state */
+  --color-primary-disabled: rgba(2, 67, 213, 0.4); /* 40% opacity for disabled */
+  --color-primary-light: #eff6ff;
+  
+  /* Color Tokens - Light Theme Foundation with Visible Silver-Blue Tints */
+  --color-bg: #D8DCE8;        /* Darker silver - base background for strong card contrast */
+  --color-bg-mid: #CDD2E0;    /* Mid silver-blue - gradient mid-point */
+  --color-bg-outer: #BCC3D6;  /* Outer silver-blue - gradient outer edge */
+  --color-surface: #FFFFFF;   /* Pure white for cards/content sections */
+  --color-surface-alt: #F9FAFB; /* Very light gray for alternating sections */
+  --color-section-band: #F3F4F8; /* Stats band and feature sections */
+  --color-elevated: #FFFFFF;  /* White for elevated components */
+  --color-medium-gray: #C3C3C3;  /* Medium gray - 15% usage for card outlines/backgrounds */
+  --color-border: rgba(15, 23, 42, 0.08); /* Visible border for cards - strengthened */
+  --color-border-card: rgba(15, 23, 42, 0.08); /* Card-specific border */
+  --color-border-light: #D7DBE6;  /* Silver-blue tinted border */
+  
+  /* Hero-Specific Gradient Colors */
+  --color-hero-start: #DDE3EF;  /* Hero gradient start - visible blue tint */
+  --color-hero-end: #C5CFDF;    /* Hero gradient end - deeper blue-silver */
+  
+  /* Global Page Gradient - Visibly darker than white so cards stand out */
+  --gradient-page: linear-gradient(to bottom, #D8DCE8 0%, #CDD2E0 40%, #BCC3D6 100%);
+  --gradient-page-linear: linear-gradient(to bottom, #D8DCE8 0%, #CDD2E0 40%, #BCC3D6 100%);
+  
+  /* Hero Gradient */
+  --gradient-hero-rich: linear-gradient(135deg, #E6EBF7 0%, #C9D3F2 100%);
+  
+  /* Final CTA Gradient - bolder */
+  --gradient-cta: linear-gradient(135deg, #0243D5 0%, #0355f0 100%);
+  
+  /* Color Tokens - Text Hierarchy (WCAG AA+ Compliant on blue-tinted backgrounds) */
+  --color-text-primary: #1C1C1C;    /* Near-black text for optimal readability (Task 2) */
+  --color-text-secondary: #374151;  /* Darker gray for better contrast on blue backgrounds */
+  --color-text-tertiary: #6b7280;   /* Medium gray - tertiary content */
+  --color-text-inverse: #ffffff;    /* White text for dark backgrounds (buttons) */
+  --color-text-on-brand: #ffffff;   /* White text on brand blue */
+  
+  /* Focus Ring - WCAG AA Focus Indicator */
+  --ring: 0 0 0 2px var(--color-primary), 0 0 0 4px rgba(2, 67, 213, 0.3);
+  --ring-blue: 0 0 0 2px var(--color-brand-500), 0 0 0 4px rgba(2, 67, 213, 0.3);
+  --ring-offset: 2px;
+  --ring-color: var(--color-primary);
+  
+  /* Color Tokens - Semantic Colors (WCAG AA Compliant on Light Backgrounds) */
+  --color-success: #047857;     /* Dark green - 4.53:1 contrast on white */
+  --color-success-light: #d1fae5;
+  --color-success-text: #065f46; /* Even darker for text - 7.37:1 */
+  --color-warning: #b45309;     /* Dark amber - 4.51:1 contrast on white */
+  --color-warning-light: #fef3c7;
+  --color-warning-text: #92400e; /* Even darker for text - 7.03:1 */
+  --color-error: #dc2626;       /* Dark red - 4.53:1 contrast on white */
+  --color-error-light: #fee2e2;
+  --color-error-text: #991b1b;  /* Even darker for text - 8.59:1 */
+  --color-info: #1d4ed8;        /* Dark blue - 5.88:1 contrast on white */
+  --color-info-light: #dbeafe;
+  --color-info-text: #1e40af;   /* Even darker for text - 7.73:1 */
+  
+  /* Spacing Tokens */
+  --space-xs: 0.25rem;    /* 4px */
+  --space-sm: 0.5rem;     /* 8px */
+  --space-md: 0.75rem;    /* 12px */
+  --space-lg: 1rem;       /* 16px */
+  --space-xl: 1.5rem;     /* 24px */
+  --space-2xl: 2rem;      /* 32px */
+  --space-3xl: 2.5rem;    /* 40px */
+  --space-4xl: 3rem;      /* 48px */
+  --space-5xl: 4rem;      /* 64px */
+  --space-6xl: 5rem;      /* 80px */
+  
+  /* Border Radius Tokens */
+  --radius-none: 0;
+  --radius-sm: 0.25rem;    /* 4px */
+  --radius-md: 0.375rem;   /* 6px */
+  --radius-lg: 0.5rem;     /* 8px - Brand spec for buttons */
+  --radius-xl: 0.75rem;    /* 12px - Brand spec for larger containers */
+  --radius-2xl: 1rem;      /* 16px */
+  --radius-3xl: 1.25rem;   /* 20px */
+  --radius-full: 9999px;
+  
+  /* Shadow Tokens - Enhanced for card visibility on darker backgrounds */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-glow-blue: 0 0 20px rgba(2, 67, 213, 0.15);
+  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.08);
+  /* Card-specific shadow - enhanced visibility on darker background */
+  --shadow-card: 0 10px 25px rgba(15, 23, 42, 0.08), 0 2px 8px rgba(15, 23, 42, 0.04);
+  --shadow-card-hover: 0 16px 32px rgba(15, 23, 42, 0.12), 0 4px 12px rgba(15, 23, 42, 0.06);
+  --shadow-card-elevated: 0 20px 40px rgba(15, 23, 42, 0.10), 0 8px 16px rgba(15, 23, 42, 0.05);
+  
+  /* Typography Tokens */
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+  --font-size-5xl: 3rem;      /* 48px */
+  --font-size-6xl: 3.75rem;   /* 60px */
+  
+  /* Font Weight Tokens */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+  
+  /* Line Height Tokens */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  
+  /* Component-Specific Tokens */
+  --button-height: 3rem;       /* 48px - Standard button height */
+  --button-height-sm: 2.5rem;  /* 40px */
+  --button-height-lg: 3.25rem; /* 52px */
+  --button-radius: var(--radius-lg); /* 8px - Brand spec for buttons */
+  --chip-height: 2rem;         /* 32px */
+  --chip-height-sm: 1.75rem;   /* 28px */
+  --card-radius: var(--radius-xl); /* 12px - Brand spec for cards */
+  --phone-width-min: 26.25rem; /* 420px */
+  --input-border-color: var(--color-border); /* Metallic silver #A8B0BA */
+  
+  /* Z-Index Tokens */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-toast: 1080;
+}
+
+/* Typography Scale - Light Theme */
+.h1 { 
+  font-weight: 800; 
+  letter-spacing: -.02em; 
+  line-height: 1.05;
+  font-size: clamp(2.25rem, 1.6rem + 2.2vw, 3.75rem); /* ~36–60 */
+  color: var(--color-text-primary);
+}
+.subhead { 
+  color: var(--color-text-secondary); /* Dark gray for readability */
+  line-height: 1.4;
+  font-size: clamp(1rem, .9rem + .5vw, 1.25rem); /* ~16–20 */
+}
+.proof { 
+  color: var(--color-text-tertiary); /* Medium gray for supporting text */
+  font-size: clamp(.875rem, .8rem + .2vw, .95rem); /* ~14–15 */
+}
+.chip { 
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+.btn { 
+  font-size: clamp(.9rem, .85rem + .2vw, 1rem); /* 14–16 */
+}
+
+/* Typography Ramp - Light Theme Specifications */
+/* Ensures consistent type scale across headline, subhead, proof, chips, CTAs */
+.hero .h1 {
+  font-size: clamp(36px, 5vw, 60px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--color-text-primary);
+}
+
+.hero .subhead {
+  font-size: clamp(16px, 2.5vw, 20px);
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--color-text-secondary);
+}
+
+.hero .proof {
+  font-size: clamp(14px, 2vw, 15px);
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: center;
+  color: var(--color-text-tertiary);
+}
+
+.hero .chip {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-text-primary);
+}
+
+.hero .btn {
+  font-size: clamp(14px, 2vw, 16px);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background-color: var(--color-bg);
+  padding: 60px 24px;
+}
+
+/* Light Theme - Clean and Modern */
+body, html {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+}
+
+/* Ensure light backgrounds throughout */
+.page-canvas {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+}
+
+/* Mockup-Caption Alignment System */
+.mockup-caption-pair {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mockup-caption-pair[data-mockup-id] {
+  /* Ensures every caption has a specific screenshot ID */
+}
+
+.mockup-caption-pair .caption {
+  text-align: center;
+  max-width: 420px;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+/* Header Consistency */
+.unified-header-enforced {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+/* Feature List Layout - CEO Specs */
+.feature-grid-container {
+  padding: 88px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .feature-grid-container {
+    padding: 56px 24px;
+  }
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* Section Dividers - Subtle brand blue line separators */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+  opacity: 0.15;
+  margin: 4rem 0;
+}
+
+.section-divider-solid {
+  height: 1px;
+  background-color: var(--color-primary);
+  opacity: 0.1;
+  margin: 3rem 0;
+}
+
+/* Standardized Card System - Enhanced visibility on darker backgrounds */
+.card {
+  background: #FFFFFF;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+}
+
+.feature-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  padding: 20px 24px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.feature-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+.feature-card.active {
+  border-color: var(--color-primary);
+  background: #FFFFFF;
+  box-shadow: var(--shadow-card-hover), 0 0 0 2px var(--color-primary);
+}
+
+.feature-panel {
+  background: #FFFFFF;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  padding: 32px;
+  min-height: 500px;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .feature-panel {
+    flex-direction: column;
+    padding: 24px;
+    text-align: center;
+  }
+}
+
+/* Hero Watermark Positioning - Enhanced */
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/img/construktr-wordmark.svg');
+  background-repeat: no-repeat;
+  background-size: 60vw auto;
+  background-position: 65% 35%;
+  opacity: .08;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .hero::after {
+    background-size: 75vw auto;
+    background-position: 50% 30%;
+    opacity: .10;
+  }
+}

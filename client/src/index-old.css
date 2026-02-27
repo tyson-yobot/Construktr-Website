@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satoshi:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Import Design Tokens First */
+@import './styles/tokens.css';
+/* Import Design System Components */  
+@import './styles/design-system.css';
+/* Import Component Styles */
+@import './styles/skip-link.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Legacy variable mappings for backward compatibility */
+:root {
+  /* Map legacy variables to new design tokens */
+  --clr-brand-900: var(--color-brand-900);
+  --clr-brand-800: var(--color-brand-800);
+  --clr-brand-700: var(--color-brand-700);
+  --clr-brand-600: var(--color-brand-600);
+  --clr-brand-500: var(--color-brand-500);
+  --clr-brand-400: var(--color-brand-400);
+  --clr-brand-300: var(--color-brand-300);
+  --clr-bg: var(--color-bg);
+  --clr-surface: var(--color-surface);
+  --clr-elev: var(--color-elevated);
+  --clr-border: var(--color-border);
+  --clr-text: var(--color-text-primary);
+  --clr-text-2: var(--color-text-secondary);
+  --clr-primary: var(--color-primary);
+  --clr-success: var(--color-success);
+  --clr-warning: var(--color-warning);
+  --clr-danger: var(--color-error);
+  
+  /* Shadcn UI compatibility */
+  --background: var(--color-bg);
+  --foreground: var(--color-text-primary);
+  --card: var(--color-surface);
+  --card-foreground: var(--color-text-primary);
+  --popover: var(--color-surface);
+  --popover-foreground: var(--color-text-primary);
+  --primary: var(--color-primary);
+  --primary-foreground: var(--color-text-inverse);
+  --secondary: var(--color-elevated);
+  --secondary-foreground: var(--color-text-secondary);
+  --muted: var(--color-elevated);
+  --muted-foreground: var(--color-text-secondary);
+  --accent: var(--color-brand-400);
+  --accent-foreground: var(--color-text-primary);
+  --destructive: var(--color-error);
+  --destructive-foreground: var(--color-text-primary);
+  --border: var(--color-border);
+  --input: var(--color-border);
+  --ring: var(--color-brand-500);
+  --radius: var(--radius-3xl);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', 'Satoshi', system-ui, sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
+    font-family: 'Satoshi', 'Inter', system-ui, sans-serif;
+    letter-spacing: -0.025em;
+  }
+
+  *:focus-visible {
+    outline: 2px solid var(--color-brand-500);
+    outline-offset: 2px;
+    border-radius: var(--radius-md);
+  }
+}
+
+/* Custom gradient utilities */
+@layer utilities {
+  .bg-gradient-radial {
+    background-image: radial-gradient(var(--tw-gradient-stops));
+  }
+}
+}

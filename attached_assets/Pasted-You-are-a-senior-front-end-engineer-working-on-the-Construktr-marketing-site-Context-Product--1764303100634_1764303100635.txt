@@ -1,0 +1,111 @@
+You are a senior front-end engineer working on the Construktr marketing site.
+
+Context
+- Product: Construktr – AI-native field service OS for contractors.
+- Goal: Reduce the “too much white” feel and introduce a modern, light silver/blue gradient background, while preserving readability and SaaS polish.
+- Tech: Inspect the project to determine whether it’s using plain CSS, Tailwind, or a CSS-in-JS solution, then apply the changes in the idiomatic way for this codebase.
+
+High-level design direction
+1. The gradient should live primarily in the *page shell* and a few key sections (hero, possibly “Built for every trade”, final CTA).
+2. Cards, content blocks, and feature sections should mostly stay solid (white or near-white) so typography remains crisp and contrast stays high.
+3. Avoid “gradient on gradient” – the gradient is atmospheric, not a texture everywhere.
+
+Target look and feel
+- Overall vibe: light, cool, and slightly metallic (silver leaning toward blue), similar to modern SaaS / Apple-style backgrounds.
+- No heavy or dark gradients; this should still feel bright.
+- Maintain WCAG AA contrast for all body text and buttons.
+
+Concrete visual specs
+
+A. Global/page background
+- Apply a subtle radial or linear gradient to the main page background (e.g. `html`, `body`, or the main layout container).
+- Suggested colors (feel free to slightly tune within the same family if needed for contrast):
+  - Very light silver: `#F7F9FC`
+  - Mid silver-blue: `#E2E6F3`
+  - Optional third stop: `#DDE2F0` for the outer edge
+- Suggested CSS version:
+
+  Radial:
+  `background: radial-gradient(circle at 20% 0%, #F7F9FC 0, #E2E6F3 55%, #DDE2F0 100%);`
+
+  or
+
+  Linear:
+  `background: linear-gradient(135deg, #F7F9FC 0%, #E2E6F3 50%, #DDE2F0 100%);`
+
+- Implement this once at the top-level layout so all sections inherit the atmosphere without needing per-section gradients.
+
+B. Hero section
+- The hero can use a slightly richer version of the gradient to frame the phone mock and hero copy.
+- Suggested colors:
+  - Start: `#E6EBF7`
+  - End: `#C9D3F2`
+- Keep hero text in a dark slate color (or pure white on darker areas) with sufficient contrast.
+- Ensure the phone mock and key CTAs stand out clearly against the gradient surface.
+
+C. Section backgrounds
+- For content-heavy sections (feature grids, FAQs, pricing, etc.), use flat backgrounds:
+  - Primary: `#FFFFFF`
+  - Alternate band: `#F9FAFB` or a very light cool gray.
+- Use banding like:
+  - Hero: gradient
+  - Credibility/Problem section: white
+  - Feature grid: very light gray (`#F9FAFB`)
+  - Trade-specific / Built for every trade: optional VERY subtle gradient variant or flat light gray
+  - FAQ: white
+  - Final CTA: bolder solid color or a tighter gradient
+
+D. Cards and components
+- Cards should be flat, not gradient:
+  - Background: `#FFFFFF` or `#F9FAFB`
+  - Border: `1px solid rgba(15, 23, 42, 0.04)` or equivalent very light border
+  - Shadow: soft elevation to distinguish from the gradient background
+- Ensure there is clear separation between cards and the outer gradient to avoid a washed-out feel.
+
+Implementation tasks
+
+1. Identify the layout root
+   - Locate the top-level layout/container for the marketing site (e.g. `Layout`, `App`, or main page wrapper).
+   - Apply the global light silver/blue gradient there using the project’s styling approach:
+     - If Tailwind: consider a custom utility via `@layer utilities` or a `bg-[radial-gradient(...)]` class on the main wrapper.
+     - If plain CSS: add a class (e.g. `.page-shell`) with the gradient background and apply it to the root container.
+     - If CSS-in-JS: define a themed background style and apply to the main layout.
+
+2. Hero section update
+   - Find the hero section component.
+   - Replace any flat white/gray background with the richer hero gradient specified above.
+   - Verify that:
+     - Heading, subheading, and CTAs maintain strong contrast.
+     - The phone mock and any imagery sit cleanly on this gradient (no overlapping gradients inside the phone frame).
+   - Ensure the hero remains performant (no large background images, pure CSS gradients only).
+
+3. Normalize other sections
+   - Audit all sections for existing gradients. Remove or simplify them so only:
+     - Global background has the subtle gradient.
+     - Hero (and optionally one other key section + final CTA) have slightly stronger or variant gradients.
+   - Set content-heavy sections to flat white or very light gray backgrounds.
+   - Ensure spacing between sections is consistent (vertical rhythm unchanged or improved).
+
+4. Contrast and accessibility
+   - After applying gradients, review:
+     - Body text on all backgrounds (aim for dark slate text on light backgrounds).
+     - Button labels on primary CTAs (e.g., white text on brand blue, or dark text on lighter CTA surfaces).
+   - Adjust text color tokens (if necessary) to hit at least AA contrast against the new backgrounds.
+
+5. Responsive behavior
+   - Test the updated gradient behavior on mobile:
+     - Make sure gradients don’t create banding or harsh edges on tall mobile screens.
+     - Ensure that on smaller viewports the gradient doesn’t make the hero text hard to read (e.g., by concentrating the lightest area behind the text block).
+
+6. Clean up
+   - Remove any unused background-related classes or CSS declarations that are now redundant.
+   - Keep all changes well-scoped and consistent with existing design tokens (colors, radii, spacing). Do not introduce random new colors unrelated to the existing brand palette other than the silver/blue shades defined above.
+
+Deliverables
+- Updated layout and hero backgrounds implementing the new light silver/blue gradient strategy.
+- Consistent, mostly flat backgrounds for feature/FAQ sections with strong text contrast.
+- No visual regressions on mobile and desktop (spacing, readability, and card separation preserved).
+- A brief summary (as comments or a short note) in the diff explaining:
+  - Where the gradient is applied,
+  - Which sections use flat backgrounds,
+  - Any color token or utility additions.

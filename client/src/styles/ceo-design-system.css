@@ -1,0 +1,231 @@
+/* CONSTRUKTR™ CEO Design System - Complete Implementation */
+/* CEO Directive: Dark, modern, zero clutter. One blue family, one yellow CTA, mono trust icons. */
+
+:root {
+  /* === CEO-SPECIFIED COLOR SYSTEM === */
+  
+  /* Brand Blue Family - ONLY Blue Family Allowed */
+  --clr-brand-900: #0B1531;   /* deep navy (headers/nav) */
+  --clr-brand-800: #0E1F47;
+  --clr-brand-700: #122B63;   /* hero outer ring */
+  --clr-brand-600: #1B3C88;   /* hero mid */
+  --clr-brand-500: #2A5BD7;   /* CONSTRUKTR blue */
+  --clr-brand-400: #5B84FF;   /* accent glow */
+  --clr-brand-300: #7EA2FF;
+
+  /* Neutrals - Dark Foundation */
+  --clr-bg:        #0E1732;   /* page background */
+  --clr-surface:   #121B3B;   /* cards/sections */
+  --clr-elev:      #1A2447;   /* elevated blocks */
+  --clr-border:    #293253;
+  --clr-text:      #EAF1FF;   /* primary text */
+  --clr-text-2:    #B9C6E3;   /* secondary text */
+
+  /* Functional - Yellow CTA Only */
+  --clr-primary:   #FFCE2E;   /* yellow CTA */
+  --clr-primary-600:#E8B800;
+  --clr-success:   #24C16B;
+  --clr-info:      #2A5BD7;
+  --clr-warning:   #FF8A1E;
+  --clr-danger:    #FF4D4D;
+
+  /* CEO Component Standards */
+  --radius-lg: 20px;           /* cards */
+  --radius-md: 14px;
+  --radius-sm: 10px;           /* buttons */
+  --shadow-soft: 0 8px 30px rgba(0,0,0,.35);
+  --glow-blue:  0 0 40px rgba(91,132,255,.35);
+
+  /* CEO Button Standards - EXACT SPECS */
+  --btn-height: 3rem;          /* 48px - CEO Standard */
+  --btn-height-lg: 3.25rem;    /* 52px - CEO Standard */
+  --chip-height: 2rem;         /* 32px - CEO Standard */
+  --chip-height-sm: 1.75rem;   /* 28px */
+  
+  /* CEO Typography Scale - EXACT CLAMP FUNCTIONS */
+  --type-h1: clamp(2.25rem, 1.6rem + 2.2vw, 3.75rem);  /* ~36–60px */
+  --type-subhead: clamp(1rem, .9rem + .5vw, 1.25rem);   /* ~16–20px */
+  --type-proof: clamp(.875rem, .8rem + .2vw, .95rem);   /* ~14–15px */
+  --type-chip: .8rem;                                    /* 12–13px */
+  --type-btn: clamp(.9rem, .85rem + .2vw, 1rem);        /* 14–16px */
+
+  /* CEO Phone Mockup Standard */
+  --phone-min-width: 26.25rem; /* 420px - CEO Standard */
+}
+
+/* === CEO TYPOGRAPHY SYSTEM === */
+/* Single type ramp - no jitter allowed */
+
+.h1 { 
+  font-weight: 800; 
+  letter-spacing: -.02em; 
+  line-height: 1.05;
+  font-size: var(--type-h1);
+}
+
+.subhead { 
+  color: var(--clr-text-2); 
+  line-height: 1.4;
+  font-size: var(--type-subhead);
+}
+
+.proof { 
+  color: var(--clr-text-2);
+  font-size: var(--type-proof);
+}
+
+.chip { 
+  font-size: var(--type-chip);
+  font-weight: 600;
+  height: var(--chip-height);
+  padding: 0 .7rem;
+  border-radius: 999px;
+  background: rgba(42,91,215,.12);
+  color: #AFC6FF;
+  border: 1px solid rgba(91,132,255,.35);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn { 
+  font-size: var(--type-btn);
+  font-weight: 700;
+  height: var(--btn-height);
+  padding: 0 1.25rem;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+/* === CEO BUTTON SYSTEM === */
+/* Primary: yellow, 48–52px tall, bold 14–16px, radius 10px */
+.btn-primary { 
+  background: var(--clr-primary); 
+  color: #142030;
+  height: var(--btn-height);
+}
+
+.btn-primary:hover { 
+  background: var(--clr-primary-600); 
+  box-shadow: var(--glow-blue);
+}
+
+/* Secondary: dark surface + border */
+.btn-secondary { 
+  background: #182142; 
+  color: var(--clr-text); 
+  border: 1px solid var(--clr-border);
+  height: var(--btn-height);
+}
+
+/* Ghost: transparent + border */
+.btn-ghost { 
+  background: transparent; 
+  color: var(--clr-text); 
+  border: 1px solid var(--clr-border);
+  height: var(--btn-height);
+}
+
+/* === CEO CARD SYSTEM === */
+.card { 
+  background: var(--clr-surface); 
+  border: 1px solid var(--clr-border); 
+  border-radius: var(--radius-lg); 
+  box-shadow: var(--shadow-soft);
+}
+
+/* === CEO HERO SYSTEM === */
+.hero {
+  background:
+    radial-gradient(1200px 600px at 70% 20%, rgba(91,132,255,.25), transparent 60%),
+    radial-gradient(900px 500px at 25% 70%, rgba(42,91,215,.18), transparent 60%),
+    linear-gradient(180deg, var(--clr-brand-700) 0%, var(--clr-brand-600) 35%, var(--clr-brand-800) 100%);
+  color: var(--clr-text);
+  position: relative;
+  isolation: isolate;
+}
+
+.hero .phone-frame { 
+  box-shadow: var(--glow-blue); 
+  border-radius: 38px;
+  min-width: var(--phone-min-width);
+}
+
+.hero .stars {
+  position: absolute; 
+  inset: 0; 
+  pointer-events: none;
+  background-image: radial-gradient(rgba(255,255,255,.15) 1px, transparent 1px);
+  background-size: 2px 2px; 
+  opacity: .14; 
+  mix-blend-mode: screen;
+}
+
+/* === CEO WATERMARK SYSTEM === */
+/* Goal: brand presence you "feel," not a logo screaming at you */
+.hero::after {
+  content: "";
+  position: absolute; 
+  inset: 0;
+  background: url("/attached_assets/CONSTRUKTR Transparent Logo White_1755375117162.png") no-repeat;
+  background-size: min(38vw, 520px) auto;
+  background-position: 72% 14%;
+  opacity: .06; 
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+@media (max-width: 768px) {
+  .hero::after {
+    background-size: 82vw auto;
+    background-position: 50% 6%;
+    opacity: .08;
+  }
+}
+
+/* === CONTRAST ENFORCEMENT === */
+/* Ensure text contrast ≥ 4.5:1 on all chips and captions */
+.chip {
+  color: rgba(255, 255, 255, 0.95); /* Enhanced contrast */
+  font-weight: 600; /* Increased weight for better contrast */
+}
+
+.proof {
+  color: rgba(255, 255, 255, 0.9); /* Enhanced contrast */
+}
+
+.subhead {
+  color: rgba(255, 255, 255, 0.85); /* Enhanced contrast */
+}
+
+/* === PHONE MOCKUP ENFORCEMENT === */
+.phone-mockup {
+  min-width: var(--phone-min-width); /* ≥420px enforced */
+}
+
+.phone-mockup .real-app-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(42, 91, 215, 0.9);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* === NO DEVIATIONS ALLOWED === */
+/* Single source of truth enforcement */
+.btn:not(.btn-primary):not(.btn-secondary):not(.btn-ghost) {
+  display: none !important; /* Hide non-approved button variants */
+}
+
+.chip:not([style*="background"]) {
+  background: rgba(42,91,215,.12) !important; /* Force brand blue family */
+}

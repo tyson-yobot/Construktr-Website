@@ -1,0 +1,82 @@
+[
+  {
+    "id": "hvac",
+    "title": "HVAC",
+    "bullets": [
+      "AI sizes HVAC systems instantly",
+      "Save 2.5 hours daily with smart routing", 
+      "Get paid same-day on-site"
+    ],
+    "screenshot": "/img/hvac.webp"
+  },
+  {
+    "id": "plumbing",
+    "title": "Plumbing", 
+    "bullets": [
+      "Quote emergency repairs instantly",
+      "Never double-book with smart sync",
+      "Accept payments on-site"
+    ],
+    "screenshot": "/img/plumbing.webp"
+  },
+  {
+    "id": "electrical",
+    "title": "Electrical",
+    "bullets": [
+      "Auto-calculate electrical loads",
+      "Optimize routes & prevent conflicts", 
+      "Invoice with code compliance"
+    ],
+    "screenshot": "/img/electrical.webp"
+  },
+  {
+    "id": "roofing",
+    "title": "Roofing",
+    "bullets": [
+      "Schedule around weather automatically",
+      "Calculate materials accurately",
+      "Format insurance claims instantly"
+    ],
+    "screenshot": "/img/roofing.webp"
+  },
+  {
+    "id": "painting", 
+    "title": "Painting",
+    "bullets": [
+      "Calculate paint quantities instantly",
+      "Match colors & get client approval",
+      "Track progress with photos"
+    ],
+    "screenshot": "/img/painting.webp"
+  },
+  {
+    "id": "landscaping",
+    "title": "Landscaping",
+    "bullets": [
+      "Schedule seasonal services automatically",
+      "Track equipment & automate maintenance", 
+      "Map properties for recurring jobs"
+    ],
+    "screenshot": "/img/landscaping.webp"
+  },
+  {
+    "id": "handyman",
+    "title": "Handyman",
+    "bullets": [
+      "Bundle jobs with auto-discounts",
+      "Track tools & auto-reorder supplies",
+      "Estimate repairs from photos"
+    ],
+    "screenshot": "/img/handyman.webp"
+  },
+  {
+    "id": "general",
+    "title": "General Contracting",
+    "bullets": [
+      "Manage projects with milestone tracking",
+      "Coordinate subs with shared calendars", 
+      "Auto-generate payment schedules"
+    ],
+    "screenshot": "/img/general.webp"
+  }
+]

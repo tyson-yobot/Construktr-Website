@@ -1,0 +1,323 @@
+1) Automate AI — Replit Script (paste into the Automate AI website project)
+
+What this does:
+
+Creates a single source-of-truth config (/seo/ecosystem.json) using your provisional domain.
+
+Wires a schema component (JSON-LD), an ecosystem footer, and a product grid.
+
+Uses your actual logo after you upload it to the repo.
+
+Before you run:
+Upload this file from your Windows share into the repo at:
+/public/brand/automate-ai-logo.png
+(from I:\Shared drives\Automate AI LLC\Company-Wide Design & Branding\01 Logos, Fonts, Colors\Automate AI Logos\automate-ai-logo.png)
+
+A) Create /seo/ecosystem.json
+{
+  "organization": {
+    "name": "Automate AI LLC",
+    "url": "https://automateai.bot",
+    "sameAs": [
+      "https://construktr.ai",
+      "https://inspectone.ai"
+    ],
+    "logo": "/brand/automate-ai-logo.png"
+  },
+  "products": [
+    {
+      "name": "Construktr",
+      "url": "https://construktr.ai",
+      "tagline": "AI field operations platform for contractors",
+      "anchors": [
+        "AI-powered contractor app",
+        "field-operations platform"
+      ]
+    },
+    {
+      "name": "InspectOne",
+      "url": "https://inspectone.ai",
+      "tagline": "AI inspection & compliance suite",
+      "anchors": [
+        "AI inspection and compliance suite",
+        "EHS automation"
+      ]
+    }
+  ],
+  "crossLinks": [
+    {
+      "from": "https://automateai.bot",
+      "to": "https://construktr.ai",
+      "anchor": "AI-powered contractor app",
+      "placements": ["home.hero", "home.productsGrid", "footer.products"]
+    },
+    {
+      "from": "https://automateai.bot",
+      "to": "https://inspectone.ai",
+      "anchor": "AI inspection and compliance suite",
+      "placements": ["home.productsGrid", "solutions.ehs", "footer.products"]
+    }
+  ]
+}
+
+B) Add components
+
+/components/JsonLd.tsx
+
+import Head from "next/head";
+import ecosys from "@/seo/ecosystem.json";
+
+export default function JsonLd() {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": ecosys.organization.name,
+    "url": ecosys.organization.url,
+    "logo": ecosys.organization.logo,
+    "sameAs": ecosys.organization.sameAs,
+    "brand": ecosys.products.map(p => ({
+      "@type": "Brand",
+      "name": p.name,
+      "url": p.url
+    }))
+  };
+  return (
+    <Head>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
+    </Head>
+  );
+}
+
+
+/components/ProductGrid.tsx
+
+import Link from "next/link";
+import ecosys from "@/seo/ecosystem.json";
+
+export default function ProductGrid() {
+  return (
+    <div className="grid sm:grid-cols-2 gap-6">
+      {ecosys.products.map(p => (
+        <div key={p.url} className="rounded-xl p-6 border border-white/10">
+          <h3 className="text-xl font-semibold">{p.name}</h3>
+          <p className="opacity-80">{p.tagline}</p>
+          <Link href={p.url} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block underline">
+            {p.anchors[0]}
+          </Link>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+
+/components/EcosystemFooter.tsx
+
+import Link from "next/link";
+import ecosys from "@/seo/ecosystem.json";
+
+export default function EcosystemFooter() {
+  return (
+    <footer aria-label="Ecosystem" className="border-t border-white/10 mt-16 pt-10">
+      <div className="grid gap-4 sm:grid-cols-3">
+        <div>
+          <p className="text-sm opacity-75">{ecosys.organization.name}</p>
+          <ul className="mt-2 space-y-1">
+            {ecosys.products.map(p => (
+              <li key={p.url}>
+                <Link href={p.url} target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">
+                  {p.name} – {p.tagline}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <p className="text-sm opacity-75">Products</p>
+          <ul className="mt-2 space-y-1">
+            {ecosys.products.map(p => (
+              <li key={p.name}>
+                <Link href={p.url} target="_blank" rel="noopener noreferrer">
+                  {p.anchors?.[0] ?? p.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <p className="text-sm opacity-75">Company</p>
+          <ul className="mt-2 space-y-1">
+            <li>
+              <Link href={ecosys.organization.url} className="underline" target="_blank" rel="noopener noreferrer">
+                Automate AI
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p className="mt-8 text-xs opacity-60">© {new Date().getFullYear()} {ecosys.organization.name}</p>
+    </footer>
+  );
+}
+
+C) Wire into your layout
+
+In app/layout.tsx (or _app.tsx if using pages router):
+
+import "./globals.css";
+import JsonLd from "@/components/JsonLd";
+import EcosystemFooter from "@/components/EcosystemFooter";
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en">
+      <head>
+        <JsonLd />
+      </head>
+      <body>
+        {children}
+        <EcosystemFooter />
+      </body>
+    </html>
+  );
+}
+
+2) Construktr — Replit Script (paste into the Construktr website project)
+
+What this does:
+
+Uses Construktr’s domain.
+
+Cross-links to Automate AI (provisional) and InspectOne.
+
+References a Construktr-specific logo path you’ll provide.
+
+Before you run:
+Upload your Construktr logo into the repo at:
+/public/brand/construktr-logo.png
+
+A) Create /seo/ecosystem.json
+{
+  "organization": {
+    "name": "Construktr",
+    "url": "https://construktr.ai",
+    "sameAs": [
+      "https://automateai.bot",
+      "https://inspectone.ai"
+    ],
+    "logo": "/brand/construktr-logo.png"
+  },
+  "products": [
+    {
+      "name": "Construktr",
+      "url": "https://construktr.ai",
+      "tagline": "AI field operations platform for contractors",
+      "anchors": [
+        "AI contractor app",
+        "contractor scheduling software"
+      ]
+    },
+    {
+      "name": "InspectOne",
+      "url": "https://inspectone.ai",
+      "tagline": "AI inspection & compliance suite",
+      "anchors": [
+        "AI inspection software",
+        "EHS compliance software"
+      ]
+    }
+  ],
+  "crossLinks": [
+    {
+      "from": "https://construktr.ai",
+      "to": "https://automateai.bot",
+      "anchor": "part of the Automate AI ecosystem",
+      "placements": ["about.org", "footer.brand"]
+    },
+    {
+      "from": "https://construktr.ai",
+      "to": "https://inspectone.ai",
+      "anchor": "AI inspection and compliance suite",
+      "placements": ["features.reporting", "footer.products"]
+    }
+  ]
+}
+
+B) Add components (same code as above)
+
+Use the same JsonLd.tsx, ProductGrid.tsx, and EcosystemFooter.tsx files.
+
+C) Wire into layout
+
+Same app/layout.tsx wiring as Automate AI.
+
+When Automate AI’s final domain changes, update the "sameAs" and any crossLinks[].to URLs here once.
+
+3) InspectOne — Replit Script (paste into the InspectOne website project)
+
+What this does:
+
+Uses InspectOne’s domain.
+
+Cross-links to Automate AI (provisional) and Construktr.
+
+References an InspectOne-specific logo path you’ll provide.
+
+Before you run:
+Upload your InspectOne logo into the repo at:
+/public/brand/inspectone-logo.png
+
+A) Create /seo/ecosystem.json
+{
+  "organization": {
+    "name": "InspectOne",
+    "url": "https://inspectone.ai",
+    "sameAs": [
+      "https://automateai.bot",
+      "https://construktr.ai"
+    ],
+    "logo": "/brand/inspectone-logo.png"
+  },
+  "products": [
+    {
+      "name": "InspectOne",
+      "url": "https://inspectone.ai",
+      "tagline": "AI inspection & compliance suite",
+      "anchors": [
+        "AI inspection software",
+        "defect detection AI"
+      ]
+    },
+    {
+      "name": "Construktr",
+      "url": "https://construktr.ai",
+      "tagline": "AI field operations platform for contractors",
+      "anchors": [
+        "AI contractor app",
+        "photo-based estimation app"
+      ]
+    }
+  ],
+  "crossLinks": [
+    {
+      "from": "https://inspectone.ai",
+      "to": "https://automateai.bot",
+      "anchor": "AI innovation by Automate AI",
+      "placements": ["about.org", "footer.brand"]
+    },
+    {
+      "from": "https://inspectone.ai",
+      "to": "https://construktr.ai",
+      "anchor": "AI field operations platform",
+      "placements": ["solutions.construction", "footer.products"]
+    }
+  ]
+}
+
+B) Add components (same code as above)
+
+Use the same JsonLd.tsx, ProductGrid.tsx, and EcosystemFooter.tsx files.
+
+C) Wire into layout
+
+Same app/layout.tsx wiring as Automate AI.

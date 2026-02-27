@@ -1,0 +1,150 @@
+/* CONSTRUKTR Design Token System - Single Source of Truth */
+
+:root{
+  --blue:#0243fd; --yellow:#f6c945;
+  --bg-dark:#000; --bg-elev:#0b1220; --bg-light:#f5f7fb;
+  --text-on-dark:#fff; --text-on-light:#0c1220; --muted:#98a2b3;
+  --card-stroke:rgba(255,255,255,.08); --radius:16px;
+  --ring:0 0 0 4px rgba(2,67,253,.25); --shadow-card:0 8px 24px rgba(0,0,0,.35);
+}
+
+body{background:var(--bg-dark);color:var(--text-on-dark);font-synthesis-weight:none}
+
+.section--light h1,.section--light h2,.section--light h3{color:var(--text-on-light)}
+.section--light p{color:var(--muted)}
+.floating-label{color:#fff;background:linear-gradient(90deg,rgba(2,67,253,.95),rgba(2,67,253,.6));padding:.5rem .75rem;border-radius:999px;box-shadow:0 4px 18px rgba(2,67,253,.25)}
+
+.button-primary{background:var(--blue);color:#fff;border-radius:var(--radius);padding:.9rem 1.2rem;font-weight:700;box-shadow:0 8px 24px rgba(2,67,253,.25)}
+/* WCAG AA Focus States - Unified across all interactive elements */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[role="button"]:focus-visible,
+[role="tab"]:focus-visible {
+  outline: none;
+  box-shadow: var(--ring);
+}
+
+.button-primary:focus-visible{outline:none;box-shadow:var(--ring)}
+
+.button-secondary{background:var(--bg-elev);color:#fff;border:1px solid var(--card-stroke);border-radius:var(--radius);padding:.8rem 1.1rem}
+.badge{background:var(--yellow);color:#000;border-radius:999px;padding:.25rem .6rem;font-weight:600}
+
+/* Sticky Mobile CTA Styles */
+.sticky-cta {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Safe area insets for mobile devices */
+.pb-safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0.75rem);
+}
+
+/* Touch optimization for mobile CTAs */
+.touch-manipulation {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.button-primary {
+  background: var(--blue);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(2, 67, 253, 0.25);
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.button-primary:hover {
+  background: #0239e8;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 32px rgba(2, 67, 253, 0.35);
+}
+
+.button-secondary {
+  background: transparent;
+  color: #fff;
+  border: 1px solid var(--card-stroke);
+  border-radius: var(--radius);
+  padding: 0.65rem 0.9rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.button-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* WCAG AA Keyboard Navigation Support */
+.keyboard-focus-visible:focus-visible {
+  box-shadow: var(--ring) !important;
+  outline: none;
+  z-index: 1;
+}
+
+/* Skip to main content for screen readers */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--blue);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 9999;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .button-primary, .button-secondary {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Responsive breakpoints for xs screens */
+@media (min-width: 380px) {
+  .xs\:inline {
+    display: inline;
+  }
+}
+

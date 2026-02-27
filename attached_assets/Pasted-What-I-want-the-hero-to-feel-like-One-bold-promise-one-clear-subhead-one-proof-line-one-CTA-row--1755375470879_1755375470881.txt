@@ -1,0 +1,75 @@
+What I want the hero to feel like
+
+One bold promise, one clear subhead, one proof line, one CTA row. All on a single type ramp so it reads as one system.
+
+Brand present but subtle: the CONSTRUKTR mark as a faint watermark inside the starfield, plus the small “Real App” bubble on the device.
+
+Fix the typography (the root issue)
+
+Lock the hero to a simple, shared scale so the chips, proof, and CTAs don’t “jitter.”
+
+/* Type scale (desktop→mobile via clamp) */
+.h1 { font-weight: 800; letter-spacing:-.02em; line-height:1.05;
+  font-size: clamp(2.25rem, 1.6rem + 2.2vw, 3.75rem); /* ~36–60 */
+}
+.subhead { color: var(--clr-text-2); line-height:1.4;
+  font-size: clamp(1rem, .9rem + .5vw, 1.25rem);       /* ~16–20 */
+}
+.proof { color: var(--clr-text-2);
+  font-size: clamp(.875rem, .8rem + .2vw, .95rem);     /* ~14–15 */
+}
+.chip { font-size: .8rem; }                             /* 12–13 */
+.btn { font-size: clamp(.9rem, .85rem + .2vw, 1rem); }  /* 14–16 */
+
+
+Content adjustments:
+
+Keep the headline text exactly: “Quote, Schedule, Get Paid” (add the space in “Get Paid”).
+
+Only one color accent in the H1 (brand yellow on Get Paid is fine); avoid multiple sizes within the line.
+
+Add a tasteful CONSTRUKTR watermark (without clutter)
+
+Goal: brand presence you “feel,” not a logo screaming at you.
+
+Option A (recommended): large faint wordmark behind the phone
+
+.hero {
+  position: relative;
+  isolation: isolate; /* keep watermark under content */
+}
+.hero::after{
+  content:"";
+  position:absolute; inset:0;
+  background: url("/img/construktr-wordmark.svg") no-repeat;
+  background-size: min(38vw, 520px) auto;
+  background-position: 72% 14%; /* near the device */
+  opacity:.06; pointer-events:none;
+  mix-blend-mode: screen; /* plays nicely with starfield */
+}
+@media (max-width: 768px){
+  .hero::after{
+    background-size: 82vw auto;
+    background-position: 50% 6%;
+    opacity:.08;
+  }
+}
+
+
+Option B (more subtle): logomark “embossed” in the starfield
+
+.stars::after{
+  content:"";
+  position:absolute; inset:0;
+  -webkit-mask: url("/img/construktr-logomark.svg") center/32vw no-repeat;
+  mask: url("/img/construktr-logomark.svg") center/32vw no-repeat;
+  background: radial-gradient(closest-side, rgba(91,132,255,.18), transparent 70%);
+  opacity:.12; pointer-events:none;
+}
+
+
+Guardrails:
+
+Keep opacity between .05–.10 so WCAG contrast on text remains ≥4.5:1.
+
+Don’t tile the logo; no repeating patterns; no spinning/fancy motion.

@@ -1,0 +1,911 @@
+P0 – Clarity & Messaging
+
+1. “Autopilot with AI” is vague
+
+Hero promises “Run Your Field Service Business on Autopilot with AI” but never spells out how the AI works (photo/AR estimating, AI quoting, AI scheduling, AI variance analysis, etc.).
+
+In reality you have 28 concrete features, 16 of them AI-powered (photo estimating, business card OCR, AI quoting, AR part finder, predictive scheduling, margin guardrails, etc.). 
+
+FEATURES
+
+ 
+
+PRODUCTION_READY_STATUS
+
+None of that specificity shows up above the fold; it feels like a generic “AI for contractors” site rather than a very opinionated operating system for field businesses.
+
+2. Feature breadth is massively under-sold
+
+Repo shows modules for offline-first sync, BLE/NFC equipment tracking, QuickBooks + Stripe, webhooks, RBAC, audit trails, universal search, AI dashboard, reconciliation, permits, checklists, messaging, voice commands. 
+
+FEATURES
+
+ 
+
+ALL_28_FEATURES_COMPLETE
+
+Site only surfaces quotes / scheduling / payments + some vague “profit analytics”. You’re leaving ~80% of the product invisible.
+
+3. Claims with no proof
+
+“The only contractor app that pays for itself in the first week” and “2,500+ contractors” are strong claims but there are no:
+
+testimonials,
+
+case studies,
+
+quantified before/after examples,
+
+or even logos.
+
+For a skeptical roofer who has been burned by software before, this reads like marketing fluff.
+
+4. App vs back-office roles are unclear
+
+Product clearly supports multiple roles via RBAC (6 role types, 24+ permissions). 
+
+PRODUCTION_READY_STATUS
+
+Website doesn’t show how owners, dispatchers, field techs, estimators, office staff each use the app. There’s no “For Owners / For Dispatch / For Field Techs” story.
+
+P0 – Visual/UI Design
+
+5. The phone mock is a blank void
+
+Hero phone is basically an empty grey screen. That’s the most valuable real estate you have and the repo literally says the UI is screenshot-ready across all 5 tabs. 
+
+PRODUCTION_CHECKLIST
+
+You’re losing a huge trust and “this is real software” moment. It should show actual Home / Jobs / Schedule / AI Tools screens.
+
+6. Hierarchy is good, but everything is “medium loud”
+
+The page has strong typography and spacing, but:
+
+Hero headline, secondary benefits, and CTAs are similar weight.
+
+Stat band (“8+ hours saved, 3x faster payments…”) fights visually with hero instead of reinforcing it just below.
+
+7. Components feel modern but slightly generic
+
+Cards, tabs, and CTAs look like generic SaaS patterns; they don’t visually encode the field context (photos, routes, trucks, checklists, PPE).
+
+You already have a design system in-app (Construktr blue, card/button radii, spacing tokens). 
+
+UI_REBUILD_PROGRESS
+
+
+The website doesn’t obviously mirror those specs, which weakens brand coherence between marketing and product.
+
+P0 – Conversion Funnel
+
+8. Funnel is “hero → feature blur → trial”, with no proof
+
+Current flow:
+
+Hero CTA
+
+“See in action” demo slider
+
+Stats band
+
+Features grid (“30-second quotes, Smart Scheduling…”)
+
+Trade-specific block
+
+Missing anchor sections:
+
+Credibility (logos, testimonials)
+
+Before/after “chaos to control” story
+
+Clear pricing expectations (even if it’s “Simple per-seat pricing. No hidden fees.”)
+
+“How it works” 3-step sequence (Install → Import jobs → Turn on AI automations).
+
+9. CTAs are slightly scattered
+
+Nav has Download and Start Free Trial; hero has Try AI Business Manager Free and Watch Demo.
+
+No persistent sticky CTA on scroll (e.g., “Start Free Trial” pinned in nav for mobile).
+
+No targeted CTAs per section (e.g., after “Built for Every Trade” there isn’t a “Book HVAC demo” style CTA).
+
+P1 – Content Gaps
+
+10. No dedicated AI capabilities section
+
+Repo: AI is doing heavy lifting (vision, NLP, predictive analytics, automation). 
+
+PRODUCTION_READY_STATUS
+
+Site: “with AI” appears in hero and a few bullets, but there’s no explicit “What the AI actually does” section.
+
+11. No integrations story
+
+Product integrates with Stripe, QuickBooks Online, Supabase, PostHog, Sentry, Google Maps, plus webhooks for extensibility. 
+
+FEATURES
+
+Website doesn’t show “Plays nice with your stack” or logos of Stripe/QuickBooks/etc.
+
+12. No operations/compliance story
+
+You have Field checklists with PPE, Permits & Inspections, Security & Audit Trails, RBAC, and full security/compliance positioning. 
+
+FEATURES
+
+ 
+
+PRODUCTION_READY_STATUS
+
+Site barely mentions compliance, safety, or audits—yet those are killer differentiators versus simple scheduling tools.
+
+P2 – Misc / Polish
+
+No FAQ, so objections (“What about my existing system?”, “Does it work offline?”, “Do techs need training?”) are unanswered.
+
+Blog/support are in nav but not tied into funnel (e.g., no link from hero to a “See how contractors add 40% more profit” article).
+
+Microcopy like “Watch demo” and “See how it works” is fine but generic; doesn’t echo the field context (e.g., “Watch a job go from photo → paid in 60 seconds”).
+
+Feature_Inventory_From_Repo
+
+Grounded in FEATURES.md, ALL_28_FEATURES_COMPLETE.md, and PRODUCTION_READY_STATUS.md. 
+
+FEATURES
+
+ 
+
+ALL_28_FEATURES_COMPLETE
+
+ 
+
+PRODUCTION_READY_STATUS
+
+(Keeping each entry tight so this stays readable.)
+
+Business Card OCR & CRM 
+
+FEATURES
+
+what_it_does: Scans business cards, uses AI OCR to extract text, detects duplicates, syncs to contacts/CRM, supports semantic search.
+
+who_it_helps: Owners, sales reps, estimators.
+
+how_to_surface_it_on_the_website: Feature block under “Win more jobs” and an AI-specific tile (“Snap a card, auto-build CRM”). Also part of an AI Tools grid.
+
+Photo/AR/Map Estimating 
+
+FEATURES
+
+ 
+
+ALL_28_FEATURES_COMPLETE
+
+what_it_does: Photo-based measurement, AR ruler, map-aware estimating, auto quote generation.
+
+who_it_helps: Estimators, sales techs, roofing/painting crews.
+
+how_to_surface_it_on_the_website: Hero secondary visual + deep-dive “From photo to price in 60 seconds” section with animated flow.
+
+AI Quoting (Stripe + QuickBooks) 
+
+FEATURES
+
+what_it_does: AI cost estimation, pricing recommendations, PDF quotes, Stripe payments, QuickBooks sync.
+
+who_it_helps: Owners, estimators, office managers.
+
+how_to_surface_it_on_the_website: Top-row feature card and “Get Paid Faster” section tied to 3× faster payments stat.
+
+Client Portal (Magic Links) 
+
+FEATURES
+
+what_it_does: Passwordless portal where clients approve quotes, pay invoices, track job status.
+
+who_it_helps: Business owners (less back-and-forth), end customers.
+
+how_to_surface_it_on_the_website: “Delight your customers” slice with a portal screenshot and bullet “No login, just magic links”.
+
+Marketing & Reviews 
+
+FEATURES
+
+what_it_does: Automated review requests post-job, multi-platform review capture, marketing campaigns.
+
+who_it_helps: Owners, marketing admins.
+
+how_to_surface_it_on_the_website: Social proof meta-section (“Collect 5-star reviews automatically”).
+
+Subscriptions & Plans 
+
+FEATURES
+
+what_it_does: Stripe-backed subscription billing, usage tracking, tiered plans.
+
+who_it_helps: You as vendor; also customers by making seat/usage pricing clear.
+
+how_to_surface_it_on_the_website: Pricing page + “Usage-based protections (no surprise bills)” blurb.
+
+Smart Scheduling & Routing 
+
+FEATURES
+
+ 
+
+ALL_28_FEATURES_COMPLETE
+
+what_it_does: Drag-and-drop calendar, crew assignment, route optimization, conflict detection, recurring jobs, weather-aware planning.
+
+who_it_helps: Dispatchers, operations managers.
+
+how_to_surface_it_on_the_website: Major section “Your dispatcher’s AI co-pilot” with calendar + route map imagery.
+
+AI Time Tracking & Geofencing 
+
+FEATURES
+
+what_it_does: GPS-based auto clock in/out, geofenced job sites, overtime calculations, weekly timesheets.
+
+who_it_helps: Field techs, payroll, HR.
+
+how_to_surface_it_on_the_website: Feature card under “Stop chasing timesheets” and one line in AI Capabilities.
+
+Field Checklists with PPE 
+
+FEATURES
+
+what_it_does: Digital safety/quality checklists, PPE tracking, photo documentation, signatures, compliance reports.
+
+who_it_helps: Safety officers, foremen, QA.
+
+how_to_surface_it_on_the_website: “Stay compliant, every job” section + industry verticals (EHS-heavy trades).
+
+AI Change Orders 
+
+FEATURES
+
+what_it_does: AI estimates scope/time/cost for change orders, approval workflows, budget updates.
+
+who_it_helps: Project managers, owners, estimators.
+
+how_to_surface_it_on_the_website: Deep-dive mini block in “Protect your profit” area.
+
+Inventory & Auto-Reorder 
+
+FEATURES
+
+what_it_does: Real-time inventory tracking, barcode scanning, low-stock alerts, auto reorders.
+
+who_it_helps: Warehouse managers, ops.
+
+how_to_surface_it_on_the_website: Feature tile in “Back-office automation” with “Never run out mid-job”.
+
+AR Part Finder 
+
+FEATURES
+
+what_it_does: AR-based part identification and lookup with supplier and price data.
+
+who_it_helps: Techs in the field diagnosing equipment.
+
+how_to_surface_it_on_the_website: Animated GIF or illustration in AI section (“Point your camera, find the part”).
+
+Equipment Tracking (BLE/NFC) 
+
+FEATURES
+
+what_it_does: Tool tracking via Bluetooth beacons and NFC tags, checkout/return, maintenance, lost alerts.
+
+who_it_helps: Owners, fleet/tool managers.
+
+how_to_surface_it_on_the_website: Feature row “Know where every tool is” with NFC/BLE badges.
+
+Permits & Inspections 
+
+FEATURES
+
+what_it_does: Permit tracking, inspection scheduling, pass/fail, deficiencies, expiration alerts.
+
+who_it_helps: Admins, compliance roles.
+
+how_to_surface_it_on_the_website: Compliance section (paired with checklists and audit trails).
+
+Two-Way Messaging (SMS/WhatsApp) 
+
+FEATURES
+
+what_it_does: Threaded SMS/WhatsApp with clients/team, attachments, read receipts.
+
+who_it_helps: Dispatch, techs, customers.
+
+how_to_surface_it_on_the_website: “Keep everyone in the loop” feature card with chat UI.
+
+Voice Commands 
+
+FEATURES
+
+what_it_does: Voice-activated commands, speech-to-text notes, multilingual support.
+
+who_it_helps: Techs with gloves on, drivers, inspectors.
+
+how_to_surface_it_on_the_website: AI capabilities list + visual in “For field technicians” use-case.
+
+Universal Search 
+
+FEATURES
+
+what_it_does: Full-text + semantic search across jobs, clients, invoices, equipment.
+
+who_it_helps: Everyone, especially admins and owners.
+
+how_to_surface_it_on_the_website: Search bar demo (“Type ‘leak on Elm St’ → jump into job, photos, invoices”).
+
+Offline-First Sync (WatermelonDB + Supabase) 
+
+FEATURES
+
+what_it_does: Local database, conflict resolution, background sync, queue management.
+
+who_it_helps: Any crew with spotty connectivity (rural jobs, basements).
+
+how_to_surface_it_on_the_website: Dedicated “Works offline, by design” section with badge.
+
+Onboarding Wizard 
+
+FEATURES
+
+ 
+
+PRODUCTION_READY_STATUS
+
+what_it_does: Guided setup (org, team invites, integrations, sample data).
+
+who_it_helps: Owners adopting the system; CSMs.
+
+how_to_surface_it_on_the_website: How-it-works step 1 (“Launch, answer 6 questions, get a pre-configured account”).
+
+AI Operations Dashboard 
+
+FEATURES
+
+what_it_does: Revenue, profit, pipeline, performance metrics, cash-flow projections.
+
+who_it_helps: Owners, finance, operations.
+
+how_to_surface_it_on_the_website: “See your business on one screen” with a rich dashboard screenshot.
+
+PDF Reports 
+
+FEATURES
+
+what_it_does: Branded PDF report templates, scheduled emails, exports.
+
+who_it_helps: Owners, accountants, inspectors.
+
+how_to_surface_it_on_the_website: Part of “Reporting & compliance” area.
+
+Est→Actual Reconciler 
+
+FEATURES
+
+what_it_does: Compares estimated vs actual costs, variance analysis, recommendations.
+
+who_it_helps: Owners, project managers, finance.
+
+how_to_surface_it_on_the_website: Strong “Protect your margins” block with before/after chart.
+
+Margin Guardrails 
+
+FEATURES
+
+what_it_does: Enforces minimum margins, real-time profitability checks, pricing recommendations.
+
+who_it_helps: Owners, estimators.
+
+how_to_surface_it_on_the_website: Same profitability section, explicit promise: “Quotes can’t go out below your target margin.”
+
+QuickBooks Sync 
+
+FEATURES
+
+what_it_does: OAuth, syncing customers, invoices, payments & expenses.
+
+who_it_helps: Bookkeepers, owners.
+
+how_to_surface_it_on_the_website: Integrations row with QuickBooks logo and simple explainer.
+
+Stripe Payments 
+
+FEATURES
+
+what_it_does: Payment intents, subscriptions, payment methods, refunds, webhooks.
+
+who_it_helps: Owners, accounting.
+
+how_to_surface_it_on_the_website: Hero metric “Same-day deposits” backed by this; also integrations row.
+
+RBAC & Permissions 
+
+FEATURES
+
+ 
+
+PRODUCTION_READY_STATUS
+
+what_it_does: 6 roles, 25+ permissions, org-level access control.
+
+who_it_helps: Owners, admins, compliance.
+
+how_to_surface_it_on_the_website: Security/trust section (“Everyone sees exactly what they should. Nothing more.”).
+
+Security & Audit Trails 
+
+FEATURES
+
+ 
+
+PRODUCTION_READY_STATUS
+
+what_it_does: Detailed audit logs, security events, anomaly detection, compliance reports.
+
+who_it_helps: Owners, auditors, insurers, legal.
+
+how_to_surface_it_on_the_website: Trust & compliance section and a line in “Why large contractors choose Construktr”.
+
+Webhooks & Integrations 
+
+FEATURES
+
+what_it_does: 20+ event types, signed webhooks, retries, delivery tracking, integration extensibility.
+
+who_it_helps: Larger shops with internal tools, agencies/integrators.
+
+how_to_surface_it_on_the_website: Developer/integrations footer section (“Connect to anything in your stack”).
+
+Improvement_Plan
+1. Information Architecture (single-page, scroll)
+
+Proposed flow
+
+Hero – “Autopilot OS for Field Contractors” (P0)
+
+Purpose: Instant clarity; who it’s for & core outcome.
+
+Key message: “Turn photos, routes, and timesheets into money—automatically.”
+
+Content: New hero copy (see below), real product screenshots (Home + AI Tools), primary CTA “Start Free Trial”, secondary “Watch 2-min demo”.
+
+Credibility Strip (P0)
+
+Purpose: Reduce “is this real?” anxiety.
+
+Content: Contractor logos, “Trusted by ___ crews”, trust badges (Stripe, QuickBooks, Supabase, AWS, SOC2/PCI via partners).
+
+Rationale: Support bold “pays for itself in first week” claim with social proof.
+
+Problem → Outcome Narrative (P0)
+
+Purpose: Mirror the contractor’s daily chaos.
+
+Content: Short before/after: “Before: calls, texts, paper quotes, missed payments. After: Construktr routes, quotes, and gets you paid automatically.”
+
+Placement: Immediately under credibility.
+
+Product Solution Overview (5-tab structure) (P0)
+
+Purpose: Map to your real app structure (Home, Jobs, Schedule, Payments, AI Tools). 
+
+UI_REBUILD_PROGRESS
+
+Content: Horizontal nav with mini-screenshot + 1-line explanation per tab.
+
+Rationale: Align marketing with actual in-app mental model.
+
+Feature Grid (Top 6–8 core outcomes) (P0)
+
+Purpose: Show breadth without overwhelming.
+
+Content: 6 tiles: AI Estimating, Smart Scheduling, Same-Day Payments, Offline Field App, Compliance & Safety, Profit Guardrails.
+
+Rationale: Replace current generic cards with features tied directly to business results.
+
+Use Cases / Roles (“Who this is for”) (P0)
+
+Purpose: Speak to Owners, Dispatch, Field Techs, Office/Finance.
+
+Content: 3–4 columns, each with 3 bullet outcomes and relevant features.
+
+AI Capabilities Deep Dive (P0)
+
+Purpose: Explain “Autopilot with AI” concretely.
+
+Content: Group AI features into buckets: Vision, Language, Predictions, Automation, Analytics. 
+
+PRODUCTION_READY_STATUS
+
+Rationale: Moves you from buzzword to “here’s the exact intelligence you’re buying.”
+
+Proof & Comparisons (P1)
+
+Purpose: De-risk decision.
+
+Content: Testimonials, ROI stats, “Spreadsheet & whiteboard vs Construktr” comparison table, before/after graphs (hours saved, profit lift).
+
+Rationale: Back up “8+ hours saved weekly, 40% more profit, 3× faster payments” with narrative.
+
+Pricing & Plans (P1)
+
+Purpose: Set expectations without necessarily listing full matrix.
+
+Content: “Per tech per month” style overview, sample tiers, link to full pricing. Connect to Subscriptions feature. 
+
+FEATURES
+
+FAQ (P1)
+
+Purpose: Handle objections: data ownership, offline mode, existing tools, training, contract length.
+
+Rationale: Increase confidence for trial signups.
+
+Final CTA Strip (P0)
+
+Purpose: Reinforce primary action.
+
+Content: “Launch your AI field office this week” + Start Trial / Book Demo.
+
+2. Copywriting (examples)
+
+Hero
+
+Headline:
+“Your Entire Field Service Business on AI Autopilot.”
+
+Subheadline:
+Construktr turns photos, routes, and timesheets into quotes, schedules, and paid invoices—across 28 AI-powered tools for contractors.
+
+Primary CTA:
+“Start 14-Day Free Trial”
+
+Secondary CTA:
+“Watch 2-Minute Workflow Demo”
+
+Hero supporting bullets (small, under CTAs):
+
+“Photo → quote in under 60 seconds”
+
+“Smart routing & geofenced time tracking”
+
+“Stripe + QuickBooks built in”
+
+3–6 Feature Blocks (sample set)
+
+AI Photo Estimating
+
+Headline: “Turn job-site photos into priced quotes.”
+
+Body: “Snap a few photos and let Construktr measure, calculate materials, and build a professional quote—using AI vision, AR measuring, and your pricing rules.” 
+
+FEATURES
+
+Smart Scheduling & Routing
+
+Headline: “Dispatch a full day in minutes, not hours.”
+
+Body: “Drag jobs onto the calendar and Construktr auto-optimizes routes, avoids conflicts, and balances crew load—so techs spend more time working and less time driving.” 
+
+FEATURES
+
+Same-Day Payments & Client Portal
+
+Headline: “Send quotes, get approvals, and get paid—without chasing.”
+
+Body: “Clients get a magic-link portal to approve work and pay via Stripe. Invoices sync back to QuickBooks so your books stay clean automatically.” 
+
+FEATURES
+
+Offline-First Field App
+
+Headline: “Works in basements, barns, and dead zones.”
+
+Body: “Construktr’s offline-first sync keeps jobs, checklists, and photos available with or without signal, then syncs safely in the background when you’re back online.” 
+
+FEATURES
+
+Safety & Compliance Toolkit
+
+Headline: “Every job passes the clipboard test.”
+
+Body: “Digital checklists, PPE tracking, permits, inspection logs, and PDF reports give you a clean trail for inspectors, insurers, and auditors.” 
+
+FEATURES
+
+Profit Guardrails & Analytics
+
+Headline: “Quotes that protect your margins by default.”
+
+Body: “Construktr watches every quote and change order for margin risk, compares estimated vs actual costs, and highlights the jobs that need attention.” 
+
+FEATURES
+
+“How it works” sequence
+
+Set up in a single afternoon
+
+“Walk through the onboarding wizard to add your company, crew, and price book. Connect Stripe and QuickBooks with a few clicks.” 
+
+FEATURES
+
+Turn on the automations that match your workflow
+
+“Enable AI photo estimating, smart scheduling, review requests, and margin guardrails. Start with one or two, expand as your team gets comfortable.”
+
+Run your week from the Home, Jobs, and Schedule tabs
+
+“Owners see KPIs, dispatchers work from Schedule, techs live in Jobs and Checklists, and finance lives in Payments and the AI dashboard.” 
+
+UI_REBUILD_PROGRESS
+
+ 
+
+PRODUCTION_READY_STATUS
+
+Measure profit, not just busywork
+
+“Use the AI Operations Dashboard and Est→Actual Reconciler to see exactly where you’re winning or leaking profit.” 
+
+FEATURES
+
+“Who this is for” section
+
+Columns like:
+
+Owners & GMs
+
+“See jobs, cash, and profit in one place.”
+
+“Enforce margins and approvals without being the bottleneck.”
+
+“Know which crews and services are most profitable.”
+
+Dispatch & Office Staff
+
+“Drag-and-drop schedule with AI-optimized routes.”
+
+“Automatic reminders, messaging, and review requests.”
+
+“Client portal handles approvals and payments.”
+
+Field Technicians
+
+“Simple job views, checklists, and photo capture.”
+
+“Auto time tracking with geofencing.”
+
+“Works offline, with voice commands when hands are full.”
+
+Finance & Compliance
+
+“QuickBooks sync, Stripe payouts, PDF reports.”
+
+“Audit trails, RBAC, and safety inspection history.”
+
+3. UI / Visual Recommendations
+
+P0
+
+Swap the blank hero phone for actual Home tab + AI Tools tab screenshots (with real-looking sample data). Repo confirms these screens are screenshot-ready. 
+
+PRODUCTION_CHECKLIST
+
+Make one primary CTA in nav and hero (“Start Free Trial”), keep “Download” for a secondary link in header or footer.
+
+Use the real design tokens (colors, radius, spacing) from brandSystem.ts on the web for brand unity: primary blue #0243D5, 12px card radius, 8px button radius, 8pt spacing grid. 
+
+UI_REBUILD_PROGRESS
+
+P1
+
+Introduce a section background rhythm: white / light gray / white to segment content and avoid gradient fatigue.
+
+Use iconography that reflects field work (tools, trucks, checklists) not just generic finance icons.
+
+On mobile, compress hero (less padding, single-line CTA) so the phone screenshot is visible without scrolling.
+
+P2
+
+Add micro-interactions: hover states on feature cards, subtle parallax on hero background, scroll-triggered fade-ins.
+
+Consider trade-specific color accents in “Built for Every Trade” tabs to make each vertical feel tailored.
+
+4. Trust & Conversion Enhancements
+
+P0
+
+2–3 testimonial quotes with headshots and trade labels (“HVAC, 12 techs”) anchored near pricing.
+
+“Before vs After” chart: Week of manual operations vs Week with Construktr (calls, hours scheduling, ARPU, profit).
+
+P1
+
+Simple comparison table: “Construktr vs Generic scheduling app vs Paper/Spreadsheets”, mapped to columns like AI estimating, offline, compliance, integrations, equipment tracking.
+
+Security & compliance band: RBAC, audit trails, Stripe PCI, Supabase/SOC2, offline safety. 
+
+PRODUCTION_READY_STATUS
+
+P2
+
+Add subtle urgency: “Next 250 downloads get 1st month free” is already there; tie it into the main CTA with a small badge and more explicit copy.
+
+Implementation_Guidance
+Component Architecture (React, Next/Vite + Tailwind-ish)
+
+components/layout/PageShell.tsx – layout, header, footer.
+
+components/sections/Hero.tsx
+
+components/sections/CredibilityStrip.tsx
+
+components/sections/ProductTabs.tsx
+
+components/sections/FeatureGrid.tsx
+
+components/sections/UseCases.tsx
+
+components/sections/AICapabilities.tsx
+
+components/sections/ProofSection.tsx
+
+components/sections/PricingTeaser.tsx
+
+components/sections/FinalCTA.tsx
+
+Each section stays visually self-contained and is easily reorderable.
+
+Example: Hero Section Component
+// cd C:\Users\tlerf\Documents\CONSTRUKTR\construktr-mobile\marketing-site
+import Image from 'next/image';
+
+export function Hero() {
+  return (
+    <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-20 lg:flex-row lg:items-center">
+        <div className="flex-1 space-y-6">
+          <p className="inline-flex items-center rounded-full bg-slate-800/70 px-3 py-1 text-xs font-medium uppercase tracking-wide text-sky-300">
+            28 AI tools for field service contractors
+          </p>
+
+          <h1 className="text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">
+            Run your field service business on{' '}
+            <span className="text-sky-400">AI autopilot</span>.
+          </h1>
+
+          <p className="max-w-xl text-sm text-slate-200/80 sm:text-base">
+            Construktr turns photos, routes, and timesheets into quotes,
+            schedules, and paid invoices—across crews, trades, and territories.
+          </p>
+
+          <div className="flex flex-wrap items-center gap-4">
+            <button className="rounded-lg bg-sky-500 px-5 py-3 text-sm font-semibold text-white shadow-lg hover:bg-sky-400">
+              Start 14-Day Free Trial
+            </button>
+            <button className="rounded-lg border border-slate-600 px-5 py-3 text-sm font-semibold text-slate-100 hover:border-sky-400">
+              Watch 2-Minute Demo
+            </button>
+          </div>
+
+          <div className="mt-4 flex flex-wrap gap-6 text-xs text-slate-300/80">
+            <span>8+ hours saved per tech each week</span>
+            <span>3× faster payments</span>
+            <span>40% more profit from the same crews</span>
+          </div>
+        </div>
+
+        <div className="relative flex-1">
+          <div className="pointer-events-none absolute -inset-8 rounded-[32px] bg-sky-500/20 blur-3xl" />
+          <div className="relative mx-auto max-w-xs rounded-[32px] bg-slate-950/80 p-3 shadow-2xl ring-1 ring-slate-700/70">
+            <div className="rounded-3xl bg-black/90 p-3">
+              <Image
+                src="/screenshots/home-and-ai-tools.png"
+                alt="Construktr mobile app – Home and AI Tools tabs"
+                width={400}
+                height={800}
+                className="h-auto w-full rounded-2xl object-cover"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+Example: Feature Grid Component
+// cd C:\Users\tlerf\Documents\CONSTRUKTR\construktr-mobile\marketing-site
+const FEATURES = [
+  {
+    title: 'AI Photo Estimating',
+    body: 'Snap job-site photos and let Construktr price materials and labor automatically.',
+  },
+  {
+    title: 'Smart Scheduling & Routing',
+    body: 'Drag jobs onto the calendar and auto-optimize routes and crews in one view.',
+  },
+  {
+    title: 'Same-Day Payments',
+    body: 'Send quotes, collect signatures, and get paid through Stripe in a single flow.',
+  },
+  {
+    title: 'Offline-First Field App',
+    body: 'Field techs can work fully offline with background sync when signal returns.',
+  },
+  {
+    title: 'Safety & Compliance',
+    body: 'Digital checklists, permits, and audit trails keep every job inspection-ready.',
+  },
+  {
+    title: 'Profit Guardrails',
+    body: 'Margin rules, Est→Actual comparison, and AI alerts keep every job profitable.',
+  },
+];
+
+export function FeatureGrid() {
+  return (
+    <section className="bg-slate-950 text-slate-50">
+      <div className="mx-auto max-w-6xl px-6 py-16">
+        <div className="mb-10 max-w-2xl">
+          <h2 className="text-2xl font-semibold sm:text-3xl">
+            Everything your crews need, powered by AI.
+          </h2>
+          <p className="mt-3 text-sm text-slate-300">
+            28 tightly integrated tools cover estimating, scheduling, payments,
+            safety, and profitability—so nothing falls through the cracks.
+          </p>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {FEATURES.map((f) => (
+            <div
+              key={f.title}
+              className="flex flex-col rounded-2xl border border-slate-800 bg-slate-900/70 p-5 shadow-sm"
+            >
+              <h3 className="mb-2 text-sm font-semibold">{f.title}</h3>
+              <p className="text-xs text-slate-300">{f.body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+Example: CTA Panel
+// cd C:\Users\tlerf\Documents\CONSTRUKTR\construktr-mobile\marketing-site
+export function FinalCTA() {
+  return (
+    <section className="bg-sky-500 text-slate-900">
+      <div className="mx-auto flex max-w-4xl flex-col items-center gap-4 px-6 py-14 text-center">
+        <h2 className="text-2xl font-semibold sm:text-3xl">
+          Ready to put your field business on autopilot?
+        </h2>
+        <p className="max-w-xl text-sm text-sky-950/80">
+          Launch Construktr with your team this week and let 28 AI tools handle
+          estimating, scheduling, and getting you paid—while you focus on
+          growing the business.
+        </p>
+        <div className="flex flex-wrap justify-center gap-4">
+          <button className="rounded-lg bg-slate-950 px-6 py-3 text-sm font-semibold text-slate-50 shadow-lg hover:bg-slate-900">
+            Start Free Trial
+          </button>
+          <button className="rounded-lg border border-slate-900/40 bg-sky-400/40 px-6 py-3 text-sm font-semibold text-slate-950">
+            Book Live Demo
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+}

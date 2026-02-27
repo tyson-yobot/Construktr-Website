@@ -1,0 +1,67 @@
+/* Contrast & Visibility Fixes - CEO Requirements */
+/* Ensure all text meets WCAG AA contrast ratios (≥4.5:1) on dark canvas */
+
+/* Override any pale gray text on white backgrounds */
+.pale-gray-override {
+  color: rgba(255, 255, 255, 0.9) !important;
+  background-color: var(--color-bg) !important;
+}
+
+/* Enhanced chip contrast */
+.chip-enhanced {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.375rem 0.75rem;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+}
+
+.chip-enhanced:hover {
+  background-color: var(--color-brand-500);
+  color: white;
+  border-color: var(--color-brand-500);
+}
+
+/* Force dark canvas throughout */
+.force-dark-canvas {
+  background-color: var(--color-bg) !important;
+  color: var(--color-text-primary) !important;
+}
+
+.force-dark-canvas * {
+  color: inherit;
+}
+
+/* Small label contrast fixes */
+.small-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Ensure all sections use dark theme */
+section {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+}
+
+/* Fix any remaining white backgrounds */
+.bg-white, .bg-gray-50, .bg-gray-100 {
+  background-color: var(--color-bg) !important;
+  color: var(--color-text-primary) !important;
+}
+
+/* Subtext contrast improvements */
+.subtext-enhanced {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+}
+
+/* Button text contrast */
+.btn-text-enhanced {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}

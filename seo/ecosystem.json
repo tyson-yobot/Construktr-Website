@@ -1,0 +1,45 @@
+{
+  "organization": {
+    "name": "Construktr",
+    "url": "https://construktr.ai",
+    "sameAs": [
+      "https://automateai.bot",
+      "https://inspectone.ai"
+    ],
+    "logo": "/brand/construktr-logo.png"
+  },
+  "products": [
+    {
+      "name": "Construktr",
+      "url": "https://construktr.ai",
+      "tagline": "AI field operations platform for contractors",
+      "anchors": [
+        "AI contractor app",
+        "contractor scheduling software"
+      ]
+    },
+    {
+      "name": "InspectOne",
+      "url": "https://inspectone.ai",
+      "tagline": "AI inspection & compliance suite",
+      "anchors": [
+        "AI inspection software",
+        "EHS compliance software"
+      ]
+    }
+  ],
+  "crossLinks": [
+    {
+      "from": "https://construktr.ai",
+      "to": "https://automateai.bot",
+      "anchor": "part of the Automate AI ecosystem",
+      "placements": ["about.org", "footer.brand"]
+    },
+    {
+      "from": "https://construktr.ai",
+      "to": "https://inspectone.ai",
+      "anchor": "AI inspection and compliance suite",
+      "placements": ["features.reporting", "footer.products"]
+    }
+  ]
+}

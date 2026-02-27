@@ -1,0 +1,175 @@
+You are a senior front-end engineer working on the Construktr marketing site hosted at:
+https://konstrukt-site-tyson44.replit.app
+
+The primary UX problem:
+- The current page background is too light and too close to white.
+- Cards/boxes (feature sections, panels, etc.) visually blend into the background.
+- There is not enough contrast or separation between sections.
+
+Your task:
+- Darken and refine the background gradient.
+- Strengthen card/box contrast (borders/shadows).
+- Keep the overall aesthetic clean, modern, and SaaS-y.
+
+Do NOT change the core content or copy; this is primarily a visual pass.
+
+------------------------------------------------
+1. Inspect the current implementation
+------------------------------------------------
+
+1. Identify:
+   - The main layout/root container (e.g., `body`, `main`, or top-level React component).
+   - Where the current background gradient/colors are defined (CSS, Tailwind classes, or CSS-in-JS).
+   - The primary card/box components (feature cards, stat boxes, sections that look like panels).
+
+2. Confirm what styling system is used:
+   - Plain CSS?
+   - TailwindCSS?
+   - CSS modules or styled-components/emotion?
+   Apply changes in the idiomatic way for this codebase.
+
+------------------------------------------------
+2. New background gradient (global/page shell)
+------------------------------------------------
+
+Goal: The page background should be **visibly darker than white** but still light and professional, so white/near-white cards clearly stand out.
+
+1. On the top-level layout (html/body/root container), replace the existing ultra-light gradient with a slightly deeper cool silver/blue gradient.
+
+Use a gradient in this approximate range (you can adapt syntax to the project):
+
+Option A – Linear:
+
+background: linear-gradient(
+  to bottom,
+  #E4E7F1 0%,
+  #D7DBE6 40%,
+  #C9CEDA 100%
+);
+
+Option B – Radial (if more fitting for the design):
+
+background: radial-gradient(
+  circle at top,
+  #E6E9F3 0%,
+  #D2D7E4 50%,
+  #C1C7D5 100%
+);
+
+Requirements:
+- Do NOT keep the background nearly white; this gradient should be visibly darker than pure white so white cards have clear separation.
+- Keep it smooth and subtle (no harsh bands).
+- Apply it at the **page shell** level so individual sections don’t each define their own heavy gradient.
+
+------------------------------------------------
+3. Section banding & flat content areas
+------------------------------------------------
+
+We still want clear section banding and readable text:
+
+1. Hero section:
+   - It can sit directly on the global gradient or use a slightly tweaked variant as its background.
+   - Ensure hero text and CTAs have excellent contrast:
+     - If text is dark: ensure the hero’s gradient behind the text is on the lighter side.
+     - If text is light: ensure the area behind it is darker.
+
+2. Content-heavy sections (feature grids, FAQs, etc.):
+   - Prefer flat backgrounds:
+     - White:     #FFFFFF
+     - Or very light gray: #F9FAFB
+   - These sections should appear as clear bands over the global gradient (e.g., a full-width white section with cards inside).
+
+3. Maintain a clear vertical rhythm:
+   - Each section should have consistent top & bottom padding (e.g., 64–96px desktop, 40–56px mobile).
+
+------------------------------------------------
+4. Card / box styling (contrast boost)
+------------------------------------------------
+
+Right now, boxes are hard to see. Fix that by:
+
+1. Card backgrounds:
+   - Use solid white or near-white for cards/panels:
+     - background: #FFFFFF;
+   - Avoid gradients inside the cards themselves.
+
+2. Borders:
+   - Add a subtle but noticeable border to all cards/panels:
+     - border: 1px solid rgba(15, 23, 42, 0.08);
+   - Adjust the exact rgba value if needed, but it should be clearly visible on the new gradient.
+
+3. Shadows:
+   - Add a soft shadow for depth, e.g.:
+
+     box-shadow:
+       0 8px 20px rgba(15, 23, 42, 0.08),
+       0 2px 6px rgba(15, 23, 42, 0.04);
+
+   - Cards should clearly “sit” on top of the gradient background.
+
+4. Radius & padding:
+   - Keep consistent corner radii for all cards (e.g., 12–16px).
+   - Make sure internal padding is consistent (e.g., 20–24px).
+
+5. Check all areas where boxes exist:
+   - Stats band cards
+   - Feature grid cards
+   - Trade-specific panels (“Built for Every Trade”, etc.)
+   - Any other panel-like section
+
+Ensure **every** such card has:
+   - Clear border
+   - Subtle shadow
+   - Sufficient contrast against the new background
+
+------------------------------------------------
+5. Typography & contrast checks
+------------------------------------------------
+
+After changing backgrounds and card styling, re-check contrast:
+
+1. Text on gradient:
+   - Any text directly on the global gradient or hero gradient must meet at least AA contrast.
+   - Prefer dark slate text on lighter portions of the gradient:
+     - e.g., #0F172A or #111827
+
+2. Text on cards:
+   - Body text on white cards: keep a strong neutral (e.g., #111827, #1F2933).
+   - Avoid mid-gray text that would look washed out against the new gradient bleed.
+
+3. Buttons:
+   - Ensure button labels are highly legible (white text on brand-colored buttons, or dark text on light buttons).
+   - Maintain consistent button styles (border radius, padding, hover states).
+
+------------------------------------------------
+6. Responsive behavior
+------------------------------------------------
+
+Verify the updated design at common breakpoints:
+
+1. Mobile:
+   - Gradients should not band or create weird sharp edges.
+   - Cards should still look clearly separated (border + shadow).
+   - If the gradient looks too strong on small screens, slightly lighten or reduce its intensity for small breakpoints (if the project’s styling system supports responsive variants).
+
+2. Tablet / Desktop:
+   - Sections and cards should have enough breathing room and separation from the edges.
+
+------------------------------------------------
+7. Clean-up & consistency
+------------------------------------------------
+
+1. Remove unused or overridden background-color/gradient rules that are no longer needed.
+2. Make sure:
+   - There is a single, consistent global gradient definition (or at most one for the hero if needed).
+   - All cards share a common card style (via shared class or component).
+   - Color values are consistent with the brand (no random new colors beyond the silver/blue gradient family and existing brand colors).
+
+------------------------------------------------
+Deliverables
+------------------------------------------------
+
+- A darker, more defined global background gradient so that cards clearly stand out.
+- Cards/panels with visible borders and soft shadows, clearly separated from the background.
+- All text and CTAs remain highly readable and accessible.
+- No functional changes — strictly visual improvements to address “background too light; I can hardly see the boxes on the page.”

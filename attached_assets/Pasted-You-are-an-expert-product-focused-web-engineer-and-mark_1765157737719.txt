@@ -1,0 +1,702 @@
+You are an expert, product-focused web engineer and marketing/branding specialist working inside a Replit project that contains the Construktr marketing site.
+
+Your job in this session is to audit and upgrade the marketing/landing experience so that far more visitors:
+
+Clearly understand what Construktr is and how it works, and
+
+Are strongly motivated to download the mobile app (App Store / Google Play) and start a free trial.
+
+You cannot see the original private GitHub repo, so use the product brief and design direction below as your source of truth. Treat this prompt as the product spec.
+
+1. Product Brief – What Construktr Actually Is
+
+Construktr is a mobile-first operating system for field service contractors (HVAC, plumbing, electrical, handyman, roofing, landscaping, etc.).
+
+It is not a generic scheduling app. It is a full AI-assisted job management platform that lives primarily in a React Native + Expo mobile app (iOS and Android).
+
+Key capabilities (all already implemented in the mobile app):
+
+Jobs Management
+
+Create, view, and manage jobs with status (pending / in progress / completed).
+
+Store customer, location, photos, notes, and job history.
+
+Quotes, AI Estimating & Invoicing
+
+Photo/AR/map-based estimating (take photos, measure with AR, auto-build estimates).
+
+AI-assisted quote pricing; line items, labor & materials.
+
+Professional PDF quotes and invoices.
+
+Send via email/SMS, track status (draft/sent/accepted/overdue).
+
+Smart Scheduling & Routing
+
+Calendar views (day/week/month) with drag-and-drop scheduling.
+
+Route optimization using maps.
+
+Weather-aware planning and conflict detection.
+
+Crew assignment and recurring jobs.
+
+Time Tracking & Geofencing
+
+GPS-based automatic clock-in/out at job sites.
+
+Timesheets and labor cost summaries.
+
+Overtime calculations and exports.
+
+CRM & Business Card OCR
+
+Scan business cards → auto-create contacts with AI OCR.
+
+Tag contacts, view job history, search.
+
+Client Portal & Payments
+
+Magic-link client portal for approving quotes, viewing invoices, and paying securely.
+
+Stripe-powered payments; same-day deposits.
+
+QuickBooks sync for accounting.
+
+Marketing & Reviews
+
+Automated review requests after job completion.
+
+Review tracking and basic campaign tools.
+
+Subscriptions & Plans
+
+Multiple pricing tiers, free trial, Stripe billing.
+
+All 28 advertised features in the mobile app are real and implemented. Your marketing copy must not invent new features or promise things the app cannot reasonably do, but you may tighten/clarify wording.
+
+2. Brand & Visual Direction
+
+Use this visual direction throughout the site. You don’t have to implement every token exactly, but stay close.
+
+Color Palette (from Construktr brand system)
+
+Primary blue: #0243D5 (main CTA / highlights)
+
+Dark navy / background accents: #030712, #020617
+
+Light grey backgrounds: #F3F4F6, #E5E7EB
+
+Mid greys for text & UI: #4B5563, #6B7280, #9CA3AF
+
+Success/positive: #22C55E
+
+Warning/attention: #F97316
+
+Accent purple for “AI” labels: #8B5CF6
+
+Shape & Layout
+
+Card radius: 12px
+
+Button radius: 8px, with pill-like feel for primary CTAs.
+
+Use subtle shadows for cards, not heavy drop shadows.
+
+Plenty of breathing room: consistent vertical spacing scale (e.g. 24 / 40 / 64px).
+
+Brand Feel
+
+Confident, clear, and modern.
+
+Blue gradient hero background.
+
+Clean white or very light grey cards on slightly tinted backgrounds.
+
+Rounded, pill badges (for AI, tiers, statuses).
+
+Visual style should resemble a polished SaaS like the screenshots: mobile device mockups, clean grids, and strong hierarchy.
+
+3. High-Level Website Goals
+
+Rework the existing marketing site in this Replit project so that it:
+
+Explains Construktr fast and clearly
+
+What it is, who it’s for, and the problems it solves.
+
+Shows real workflows: quote from a photo in seconds, schedule jobs, track time, get paid.
+
+Drives concrete actions
+
+Primary: Tap App Store / Google Play buttons to download the mobile app.
+
+Secondary: Start a free trial and/or watch a short demo video.
+
+Builds trust
+
+Stripe, QuickBooks, Google Maps, Supabase, AWS, Twilio.
+
+SOC 2, PCI, GDPR, uptime.
+
+Real testimonials, ROI and “before vs after” transformation.
+
+Feels cohesive and premium
+
+Consistent typography, spacing, and component system.
+
+Mobile-first layouts that still look great on desktop.
+
+Accessible color contrast and semantic HTML.
+
+4. Information Architecture & Navigation
+4.1 Scan the Project First
+
+Find the main marketing pages – likely something like:
+
+/ (landing)
+
+/features
+
+/pricing
+
+/support or /faq
+
+Identify any shared layout components (e.g. Layout, Header, Footer, Button, Card) and any styling system (Tailwind, CSS Modules, styled-components, etc.).
+
+Do not change frameworks, bundler, or routing library. Work with what exists.
+
+4.2 Navigation Requirements
+
+Update the top nav to roughly:
+
+Logo (Construktr)
+
+Features
+
+Pricing
+
+Support (or Help/Docs)
+
+(Optional) Blog if present and active
+
+Primary CTA button: Start Free Trial
+
+Small supporting text near CTA: iOS & Android or Mobile app • iOS & Android.
+
+On mobile, use a hamburger menu plus a persistent primary CTA.
+
+4.3 Global CTA Strategy
+
+Hero:
+
+Primary: Start 14-Day Free Trial
+
+Secondary: Watch 2-Minute Demo
+
+App Store + Google Play badges.
+
+Repeated CTAs:
+
+At least once per scroll-depth: e.g., after “How it works”, after “Feature set”, at pricing, and in the footer.
+
+Final section: strong Download the App + app store badges.
+
+4.4 Mobile-Specific Hooks
+
+On small screens, implement a sticky bottom bar:
+
+Left: short benefit text like “Save 8+ hours/week with AI automations”.
+
+Right: App Store and Google Play icons/buttons.
+
+This bar should not appear on large desktop widths.
+
+5. Design System & Components
+
+Create or standardize a small, opinionated component set. Use existing primitives where possible; don’t replatform.
+
+Buttons
+
+PrimaryButton – solid #0243D5, white text, 8px radius, bold label.
+
+SecondaryButton – white or light background, blue border & text.
+
+GhostButton – minimal chrome, blue text, used for less important actions like “Learn more”.
+
+Standardize sizes (sm/md/lg) and padding.
+
+Cards
+
+Card base component with:
+
+border-radius: 12px
+
+Soft shadow
+
+Padding (e.g. 24px)
+
+Variants: feature card, pricing card, testimonial card, comparison column, AI-feature highlight.
+
+Layout
+
+Section component that:
+
+Handles max-width and consistent vertical padding.
+
+Optionally supports background variations: white, light-grey, or gradient.
+
+Typography
+
+Define consistent heading & text styles in one place (CSS or tokens):
+
+h1 – large hero headline (e.g. 40–48px desktop, 32px mobile).
+
+h2 – section titles.
+
+h3 – card titles.
+
+body-lg, body, body-sm.
+
+6. Section-by-Section UX & Copy Direction
+
+Use the 14 screenshots as structural reference. Implement or refine the following sections on the main pages.
+
+6.1 Hero – “Your Entire Field Service Business on AI Autopilot”
+
+Layout: 2-column on desktop (text left, device mockup right), stacked on mobile.
+
+Content:
+
+H1:
+Your Entire Field Service Business on AI Autopilot
+
+Subheadline (tight and concrete):
+Turn photos, routes, and timesheets into quotes, schedules, and paid invoices—automatically. One mobile app for estimating, dispatch, payments, and profit protection.
+
+Chip row for trades: HVAC, Plumbing, Electrical, Roofing, Painting, Landscaping, Handyman, General.
+
+Bullets (or small icons) for outcomes:
+
+Smart routing saves 2+ hours daily
+
+30-second AI photo estimates
+
+Same-day deposits with Stripe
+
+CTAs:
+
+Primary: Start 14-Day Free Trial
+
+Secondary: Watch 2-Minute Demo
+
+App Store + Google Play badges.
+
+Social proof below CTAs:
+
+Trusted by 2,500+ field service contractors
+
+Ratings snippet like 4.9/5 from 2,500+ reviews (if this exists in your current copy; if not, keep wording more general like “top-rated by contractors nationwide”).
+
+Device mockup:
+
+Use a real screenshot from the active jobs dashboard / home screen of the mobile app, not a blank device.
+
+Add 1–2 little floating cards near the device showing:
+
+AI Estimate • 30 seconds
+
+Quote accepted • $4,250 deposited
+
+6.2 Infrastructure & Trust
+
+Create a section titled something like “Enterprise-Grade Infrastructure, Built for the Field”.
+
+Two rows:
+
+Powered by:
+
+Stripe, QuickBooks, Google Maps, Supabase, AWS, Twilio.
+
+Microcopy e.g. “Same-day deposits with Stripe”, “Route optimization with Google Maps”, “Real-time data with Supabase”.
+
+Security & Compliance:
+
+SOC 2 Type II, PCI DSS, GDPR, Uptime %.
+
+Microcopy like: SOC 2 Type II • Enterprise security, GDPR Ready • Data protection.
+
+Use consistent cards/badges for these, not ad-hoc styles.
+
+6.3 “From Chaos to Control” Before/After
+
+Two-column comparison section:
+
+Left column: “Before CONSTRUKTR” (red-ish accent).
+
+Bullet problems: endless phone calls to schedule, paper quotes that take hours, chasing invoices for 30+ days, double-bookings, jobs that lose money.
+
+Right column: “After CONSTRUKTR” (green accent).
+
+Opposite outcomes: AI scheduling, photo → quote in under 60 seconds, same-day deposits, conflict detection, margin guardrails.
+
+Tie items to the real features described in the product brief.
+
+Bottom strip summarizing outcome, e.g.:
+Average contractor unlocks 8+ hours/week and 30% faster payments with Construktr.
+If you can’t assert specific percentages with confidence, use safer phrasing like “Contractors report saving hours every week and getting paid faster.”
+
+6.4 Demo Tabs – Quoting / Scheduling / Payments
+
+Implement a tabbed section (3 tabs) with:
+
+Tab labels: Quoting, Scheduling, Payments.
+
+Each tab shows:
+
+Short h3 and bullets describing that flow.
+
+Device screenshot/GIF of that part of the app.
+
+Small contextual CTA: See it in the app → store badges or deep-link.
+
+Example for Quoting tab:
+
+Title: Quoting Demo
+
+Bullets:
+
+Add job details and photos
+
+AI prices materials & labor
+
+Send branded PDF from your phone
+
+6.5 “How CONSTRUKTR Works” (4 Steps)
+
+4-step process in two rows (2 cards per row):
+
+Set up in a single afternoon
+
+Import existing clients & jobs
+
+Add your crew & labor rates
+
+Connect Stripe and QuickBooks
+
+Sync your price book
+
+Turn on the automations that match your workflow
+
+AI photo estimating
+
+Smart scheduling & route optimization
+
+Automated client communications
+
+Profit margin guardrails
+
+Run your week from Home, Jobs, and Schedule
+
+Owners see KPIs and cash from Home
+
+Dispatchers work from Schedule
+
+Techs see routes and jobs from Jobs tab
+
+Finance works from Payments & AI dashboards (if applicable)
+
+Measure profit, not just busywork
+
+Real-time revenue and profit tracking
+
+Job-by-job margin analysis
+
+Cash-flow projections and crew performance
+
+Keep time estimates aspirational but not unrealistic (e.g. “Typically under an hour” instead of hard promises if you don’t have data).
+
+6.6 Feature Catalog
+
+On the /features page (or a major section on the homepage), implement tabbed feature categories:
+
+Core Features
+
+Customer Management
+
+Field Operations
+
+Integrations & Payments
+
+Operations & Security
+
+Each tab shows a grid of feature cards. Use real features from the product brief and your existing copy. Example core features:
+
+Photo Estimator (AI)
+
+Job Quotes
+
+Smart Scheduling
+
+Invoicing & Payments
+
+OCR / Document Scan (AI)
+
+Parts Reconciler
+
+AI Time Tracking & Geofencing
+
+Client Portal (Magic Links)
+
+Business Card OCR & CRM
+
+Marketing & Reviews
+
+Each card should have:
+
+Icon
+
+Short title
+
+1–2 line benefit description.
+
+6.7 Role-Based Sections
+
+Add a section “Built for Every Role in Your Operation” with tabs or row of chips:
+
+Owners & GMs
+
+Dispatch & Office Staff
+
+Field Technicians
+
+Finance & Compliance
+
+For each persona (e.g., via tabs or separate sections):
+
+Small description of what they care about.
+
+3 bullets mapping Construktr features to their outcomes.
+
+Optional mini-CTA like See how it works for owners → anchor to How-It-Works or Features.
+
+6.8 AI Features – “Real AI, Not Buzzwords”
+
+Three cards for:
+
+Photo Estimator (AI-enhanced)
+
+Input: job photos.
+
+AI: identifies materials, measures, suggests quantities.
+
+Output: line-item estimate ready to review & send.
+
+OCR / Document Scan (AI-enhanced)
+
+Input: receipts, paper quotes, PDFs.
+
+AI: extracts text, categorizes expenses, matches to jobs.
+
+Output: searchable records and cost breakdowns.
+
+AI Time Tracking (GPS-based)
+
+Input: crew location and schedule.
+
+AI: clocks people in/out automatically at job geofences, flags anomalies.
+
+Output: accurate timesheets and labor cost summaries.
+
+Add a short paragraph under the cards explaining guardrails, e.g.:
+
+“AI suggests prices and quantities, but you always review before anything goes to the customer.”
+
+6.9 Comparison Table
+
+Keep or implement a 3-column comparison:
+
+Construktr (AI-powered)
+
+Generic scheduling app
+
+Paper / spreadsheets
+
+Rows grouped under headings:
+
+Estimating & Quoting
+
+Scheduling & Dispatch
+
+Payments & Accounting
+
+Field Operations
+
+Operations & Security
+
+Use checkmarks/x/dashes but keep them organized and honest. Don’t claim a capability if the app doesn’t have it.
+
+6.10 Testimonials & Logos
+
+Implement a testimonial carousel or grid with:
+
+Quote text (practical, not fluffy).
+
+Measurable result where possible: Admin work reduced 90%, Quotes in 30 seconds, Grew from 2 to 12 employees in a year (or similar outcomes from your existing copy).
+
+Name, company, trade.
+
+Below, show integration logos (QuickBooks, Stripe, Google Calendar, etc.) with 1-line benefit each.
+
+6.11 FAQ & Pricing
+
+On /pricing (and/or a section on the homepage):
+
+Pricing cards for Starter, Pro (Most Popular), and Enterprise.
+
+Clear bullets focused on value:
+
+Starter: AI quotes, on-site payments, smart scheduling basics.
+
+Pro: AI routing, same-day deposits, CRM, more automation.
+
+Enterprise: team management, advanced analytics, custom integrations.
+
+Make the Pro tier visually highlighted with a badge (“Most Popular”).
+
+Under pricing, add FAQ accordions grouped by:
+
+Getting started
+
+Data migration & integrations
+
+Training & onboarding
+
+Billing & contracts
+
+Include questions like:
+
+“How quickly can I generate quotes with CONSTRUKTR?”
+
+“Does CONSTRUKTR work for all types of contractors?”
+
+“Can I get paid the same day?”
+
+“What happens after the free trial?”
+
+6.12 Final CTA & Download Section
+
+Create a bold, high-contrast section near the bottom:
+
+H2: e.g. Download the App – Start Building Smarter
+
+Subtext: Join contractors saving 8+ hours every week with AI-powered quotes, smart scheduling, and same-day payments.
+
+Centered App Store and Google Play buttons, plus a Start Free Trial web CTA.
+
+Small row of trust badges: SOC 2, 256-bit SSL, uptime, etc.
+
+Footer should include:
+
+Short Construktr description.
+
+Links: Features, Pricing, Mobile App, Integrations, Support, Legal (Privacy, Terms).
+
+Social icons if relevant.
+
+Tiny text clarifying availability and supported trades.
+
+7. SEO, Performance, Accessibility
+
+Within the current tech stack (do not replatform):
+
+Ensure every page has:
+
+A single <h1>.
+
+Descriptive <title> and meta description including terms like construction management, contractor app, job scheduling, field service software.
+
+Add alt text to all key images (describe what’s happening in the UI, not just “screenshot”).
+
+Check color contrast for CTAs and body text; adjust if needed.
+
+Where possible, lazy-load below-the-fold images and use modern formats (webp/avif) supported by the stack.
+
+8. Implementation Style & Constraints
+
+Do not change frameworks, router, or bundler.
+
+Do not remove working routes or components.
+
+Work incrementally:
+
+Extract shared components (Buttons, Cards, Section layouts).
+
+Replace copy in-place rather than tearing pages down.
+
+Keep existing styles where they’re reasonable; unify them over time into the design system.
+
+9. How I Want Your Output Structured
+
+When you respond, do not just dump code. Follow this structure so I can implement changes step by step:
+
+Summary
+
+3–6 bullets explaining what you’re going to adjust in the existing project (IA, sections, visual system, copy).
+
+Audit Findings
+
+Per existing page (/, /features, /pricing, /support or equivalent), list the key IA, visual, and copy problems affecting conversion (e.g. unclear hero messaging, weak CTAs, inconsistent buttons).
+
+Proposed Site Structure
+
+Outline the main pages and, for each page, list the planned sections in scroll order with a one-line purpose and the primary CTA for that page/section.
+
+Component & Design System Changes
+
+List new or updated shared components (with indicative file paths, e.g., components/ui/Button.tsx, components/layout/Section.tsx) and what each does.
+
+Include any design tokens / CSS variables you want to add or standardize.
+
+Page-by-Page Implementation Plan
+
+For each major page, describe:
+
+Copy changes (key headings, subheadings, bullets).
+
+Layout / structural changes.
+
+Which components to use or create.
+
+Include representative code snippets or diffs for at least:
+
+The hero section.
+
+One feature grid.
+
+Pricing cards.
+
+Sticky mobile download bar.
+
+Conversion & Measurement Enhancements
+
+Suggest event hooks for analytics (e.g. IDs or data attributes on Start Free Trial, store badges, demo-tabs, comparison table interactions).
+
+Describe how to name these events so I can later wire them into analytics.
+
+Risks & Edge Cases
+
+Call out any places where changes might impact responsiveness, routing, or existing components, and how to check for regressions.
+
+Next Steps Checklist
+
+A short, ordered set of steps I can follow (e.g. “1) Implement Button & Card components; 2) Refactor hero; 3) Build How-It-Works section; 4) Update pricing page; 5) Add sticky mobile download bar; 6) QA on mobile and desktop”).
+
+Stay within the current project’s tech stack and structure. Focus relentlessly on making the site:
+
+Clear about what Construktr does,
+
+Honest about what’s already implemented in the mobile app, and
+
+Optimized to drive App Store / Google Play downloads and free trial starts.

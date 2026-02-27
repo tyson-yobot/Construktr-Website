@@ -1,0 +1,241 @@
+/* Fonts are preloaded in HTML head for better performance */
+
+/* Import Design Tokens First */
+@import './styles/tokens.css';
+@import './styles/global.css';
+/* Import Design System Components */  
+@import './styles/design-system.css';
+@import './styles/button-system.css';
+@import './styles/form-system.css';
+@import './styles/spacing-system.css';
+/* Import Component Styles */
+@import './styles/skip-link.css';
+@import "./styles/accessibility.css";
+@import './styles/contrast-fixes.css';
+/* @import './styles/ceo-design-system.css'; */ /* REMOVED: Dark theme - using light theme from tokens.css */
+@import './styles/performance.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Legacy variable mappings for backward compatibility */
+:root {
+  /* Map legacy variables to new design tokens */
+  --clr-brand-900: var(--color-brand-900);
+  --clr-brand-800: var(--color-brand-800);
+  --clr-brand-700: var(--color-brand-700);
+  --clr-brand-600: var(--color-brand-600);
+  --clr-brand-500: var(--color-brand-500);
+  --clr-brand-400: var(--color-brand-400);
+  --clr-brand-300: var(--color-brand-300);
+  --clr-bg: var(--color-bg);
+  --clr-surface: var(--color-surface);
+  --clr-elev: var(--color-elevated);
+  --clr-border: var(--color-border);
+  --clr-text: var(--color-text-primary);
+  --clr-text-2: var(--color-text-secondary);
+  --clr-primary: var(--color-primary);
+  --clr-success: var(--color-success);
+  --clr-warning: var(--color-warning);
+  --clr-danger: var(--color-error);
+  
+  /* Light Silver-Blue Gradient System (Darker for card contrast) */
+  --gradient-primary: linear-gradient(to bottom, #E4E7F1 0%, #D7DBE6 40%, #C9CEDA 100%);
+  --gradient-surface: linear-gradient(145deg, #FFFFFF 0%, #F9FAFB 100%); /* White to very light gray */
+  --gradient-hero: linear-gradient(135deg, #DDE3EF 0%, #C5CFDF 100%); /* Hero gradient */
+  --gradient-card: none; /* Cards should be flat white */
+  --gradient-card-hover: none; /* Cards stay flat on hover */
+  
+  /* Accent Dividers - Brand Colors */
+  --divider-silver: linear-gradient(90deg, transparent 0%, #A8B0BA 30%, #0243D5 50%, #A8B0BA 70%, transparent 100%);
+  --divider-blue: linear-gradient(90deg, transparent 0%, #0243D5 20%, #0355f0 50%, #0243D5 80%, transparent 100%);
+  
+  /* Shadcn UI compatibility */
+  --background: var(--color-bg);
+  --foreground: var(--color-text-primary);
+  --card: var(--color-surface);
+  --card-foreground: var(--color-text-primary);
+  --popover: var(--color-surface);
+  --popover-foreground: var(--color-text-primary);
+  --primary: var(--color-primary);
+  --primary-foreground: var(--color-text-on-brand);
+  --secondary: var(--color-elevated);
+  --secondary-foreground: var(--color-text-secondary);
+  --muted: var(--color-elevated);
+  --muted-foreground: var(--color-text-secondary);
+  --accent: var(--color-brand-400);
+  --accent-foreground: var(--color-text-primary);
+  --destructive: var(--color-error);
+  --destructive-foreground: var(--color-text-primary);
+  --border: var(--color-border);
+  --input: var(--color-border);
+  --ring: var(--color-brand-500);
+  --radius: var(--radius-3xl);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', 'Satoshi', system-ui, sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
+    font-family: 'Satoshi', 'Inter', system-ui, sans-serif;
+    letter-spacing: -0.02em; /* Task 10: Tighter letter-spacing for modern feel */
+    color: var(--color-text-primary); /* Ensure #1C1C1C dark text */
+  }
+
+  h1 { letter-spacing: -0.03em; } /* Tighter for large headlines */
+  h2 { letter-spacing: -0.025em; }
+  h3 { letter-spacing: -0.02em; }
+
+  p, li, span {
+    color: var(--color-text-secondary); /* #374151 for body text - WCAG AA compliant */
+  }
+
+  *:focus-visible {
+    outline: 2px solid var(--color-brand-500);
+    outline-offset: 2px;
+    border-radius: var(--radius-md);
+  }
+}
+
+/* Custom gradient utilities and modern SaaS styling */
+@layer utilities {
+  .bg-gradient-radial {
+    background-image: radial-gradient(var(--tw-gradient-stops));
+  }
+  
+  .bg-gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .bg-gradient-surface {
+    background: var(--gradient-surface);
+  }
+  
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .bg-gradient-card {
+    background: #FFFFFF;
+    border: 1px solid rgba(15, 23, 42, 0.04);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+  }
+  
+  .bg-gradient-card:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  /* Section background utilities - flat bands for card contrast */
+  .section-bg-white {
+    background: #FFFFFF;
+  }
+  
+  .section-bg-alt {
+    background: #F9FAFB;
+  }
+  
+  .section-bg-band {
+    background: #F3F4F8;
+  }
+  
+  .section-bg-gradient {
+    background: var(--gradient-page);
+  }
+  
+  /* Enhanced card styling utility */
+  .card-enhanced {
+    background: #FFFFFF;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-card);
+    transition: all 0.2s ease;
+  }
+  
+  .card-enhanced:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-2px);
+    border-color: rgba(15, 23, 42, 0.12);
+  }
+  
+  .divider-silver {
+    height: 1px;
+    background: var(--divider-silver);
+  }
+  
+  .divider-blue {
+    height: 2px;
+    background: var(--divider-blue);
+  }
+  
+  /* Enhanced card hover effects */
+  .card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.1), 0 10px 10px -5px rgba(59, 130, 246, 0.04);
+  }
+  
+  /* Device mockup styling */
+  .device-mockup {
+    position: relative;
+    background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+    border: 2px solid #404040;
+    border-radius: 2rem;
+    box-shadow: 
+      0 25px 50px -12px rgba(0, 0, 0, 0.5),
+      0 0 0 1px rgba(255, 255, 255, 0.05),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  
+  .device-screen {
+    background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .device-screen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 49%, rgba(255, 255, 255, 0.03) 50%, transparent 51%);
+    pointer-events: none;
+  }
+  
+  /* Floating animation */
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  /* Glow effects */
+  .glow-blue {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+  
+  .glow-blue:hover {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+  }
+}

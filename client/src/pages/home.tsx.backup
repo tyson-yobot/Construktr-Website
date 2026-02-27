@@ -1,0 +1,253 @@
+
+import EnhancedHero from "@/components/enhanced-hero";
+import AppPreviewDemo from "@/components/app-preview-demo";
+import WhatItDoes from "@/components/what-it-does";
+import FeatureCarousel from "@/components/feature-carousel";
+import FeatureListLayout from "@/components/feature-list-layout";
+import MobileAppPreview from "@/components/mobile-app-preview";
+import WhyConstruktr from "@/components/why-construktr";
+import EnhancedTestimonials from "@/components/enhanced-testimonials";
+import TrustBar from "@/components/trust-bar";
+import PricingCTA from "@/components/pricing-cta";
+import SEOFooter from "@/components/seo-footer";
+import SectionDivider from "@/components/section-divider";
+import AIChatbot from "@/components/ai-chatbot";
+import SocialProofBar from "@/components/social-proof-bar";
+import MobileAppShowcase from "@/components/mobile-app-showcase";
+import AppFeaturesShowcase from "@/components/app-features-showcase";
+import ComparisonChart from "@/components/comparison-chart";
+import FloatingCTA from "@/components/floating-cta";
+import ScreenshotCarousel from "@/components/screenshot-carousel";
+import TestimonialsSlider from "@/components/testimonials-slider";
+import SocialProofBadges from "@/components/social-proof-badges";
+import FeaturedInLogos from "@/components/featured-in-logos";
+import TrustSnippet from "@/components/trust-snippet";
+import EnhancedStickyMobileFooter from "@/components/enhanced-sticky-mobile-footer";
+import EnhancedExitIntentPopup from "@/components/enhanced-exit-intent-popup";
+import AIBusinessAuditForm from "@/components/ai-business-audit-form";
+import FreeDemoBooking from "@/components/free-demo-booking";
+import PainPoints from "@/components/pain-points";
+import ContractorTestimonials from "@/components/contractor-testimonials";
+import TradeLogos from "@/components/trade-logos";
+import EnhancedVideoDemo from "@/components/enhanced-video-demo";
+import InteractiveVideoExplainer from "@/components/interactive-video-explainer";
+import LocalSEOSection from "@/components/local-seo-section";
+import LeadMagnetHero from "@/components/lead-magnet-hero";
+import UrgencyBanner from "@/components/urgency-banner";
+import SimplifiedBenefits from "@/components/simplified-benefits";
+import ContractorBenefits from "@/components/contractor-benefits";
+import ContractorSocialProof from "@/components/contractor-social-proof";
+import WorkflowInAction from "@/components/workflow-in-action-clean";
+import StickyMobileCTA from "@/components/sticky-mobile-cta";
+import ChatContactBubble from "@/components/chat-contact-bubble";
+import StateTradeGrids from "@/components/state-trade-landing-grids";
+import ContractorBlogSection from "@/components/contractor-blog-section";
+import EarlyPricingHighlight from "@/components/early-pricing-highlight";
+import PricingTeaserBanner from "@/components/pricing-teaser-banner";
+import MobileAppMockups from "@/components/mobile-app-mockups";
+import VideoDemoSection from "@/components/video-demo-section";
+import BookDemoForm from "@/components/book-demo-form";
+import AppQuotesDemo from "@/components/app-quotes-demo";
+import SmartSchedulingDemo from "@/components/smart-scheduling-demo";
+import InstantPaymentsDemo from "@/components/instant-payments-demo";
+import ConversionOptimization from "@/components/conversion-optimization";
+import SEOEnhancement from "@/components/seo-enhancement";
+import { OptimizedSection } from "@/components/performance-optimization";
+import ThreePhoneShowcase from "@/components/three-phone-showcase";
+import StateGridShowcase from "@/components/state-grid-showcase";
+import TradeGridShowcase from "@/components/trade-grid-showcase";
+import NewsletterStickyBar from "@/components/newsletter-sticky-bar";
+import NewsletterBar from "@/components/newsletter-bar";
+import SectionCTA from "@/components/section-cta";
+import TradeSpecificSections from "@/components/trade-specific-sections";
+import SecurityBadges from "@/components/security-badges";
+import StructuredData from "@/components/structured-data";
+import SEOMeta from "@/components/seo-meta";
+import StickyNavCTA from "@/components/sticky-nav-cta";
+import UnifiedEducationFlow from "@/components/unified-education-flow";
+import CEOHero from "@/components/ceo-hero";
+import CEOEducationFlow from "@/components/ceo-education-flow";
+import CEOPromoBar from "@/components/ceo-promo-bar";
+import CEOProofSection from "@/components/ceo-proof-section";
+import CEOPricing from "@/components/ceo-pricing";
+import PromoBarSlim from "@/components/promo-bar-slim";
+import StickyNavEnhanced from "@/components/sticky-nav-enhanced";
+import HowItWorksSection from "@/components/how-it-works-section";
+import EnhancedFeaturesSection from "@/components/enhanced-features-section";
+import EnhancedPricingCards from "@/components/enhanced-pricing-cards";
+import ContractorTestimonialsEnhanced from "@/components/contractor-testimonials-enhanced";
+import MultipleCTAsSection from "@/components/multiple-ctas-section";
+import AppInActionSection from "@/components/app-in-action-section";
+import RealResultsSection from "@/components/real-results-section";
+import TradeSections from "@/components/trade-sections";
+import SecurityBadgesFooter from "@/components/security-badges-footer";
+import SEOHead from "@/components/seo-head";
+import PerformanceMonitor from "@/components/performance-monitor";
+import SkipLink from "@/components/skip-link";
+import { initializeAnalytics } from "@/lib/analytics-events";
+import React from "react";
+
+
+export default function Home() {
+  // Initialize analytics on component mount
+  React.useEffect(() => {
+    initializeAnalytics();
+  }, []);
+
+  // Enhanced Structured Data is now handled in SEOHead component
+
+  return (
+    <div className="min-h-screen bg-[var(--clr-bg)]">
+      {/* Accessibility Skip Link */}
+      <SkipLink />
+      
+      {/* Enhanced SEO Head with Complete Schema */}
+      <SEOHead />
+      
+      {/* Performance Monitoring */}
+      <PerformanceMonitor />
+      
+      {/* Slim Promo Bar - Non-sticky */}
+      <PromoBarSlim />
+      
+      {/* Sticky Nav with Trial Tooltip */}
+      <StickyNavEnhanced />
+      
+      {/* Main Content Area for Accessibility */}
+      <main id="main-content">
+        {/* CEO Hero - Dark, Modern, Zero Clutter */}
+        <CEOHero />
+        
+        {/* App In Action - Interactive Demo Section */}
+        <AppInActionSection />
+        
+        {/* Enhanced Features Section with Product Screenshots */}
+        <EnhancedFeaturesSection />
+        
+        {/* Feature List Layout - 2-Column Grid */}
+        <FeatureListLayout />
+        
+        {/* Enhanced Pricing Cards with Hover Effects */}
+        <EnhancedPricingCards />
+        
+        {/* Contractor Testimonials & Integrations */}
+        <ContractorTestimonialsEnhanced />
+        
+        {/* Multiple CTAs Section */}
+        <MultipleCTAsSection />
+        
+        {/* How It Works - 45-sec Workflow with Timeline */}
+        <HowItWorksSection />
+        
+        {/* Real Results - 3 Cards with Before → After */}
+        <RealResultsSection />
+        
+        {/* Trade Sections - Anchor Targets with Overlays */}
+        <TradeSections />
+        
+        {/* CEO Proof Section - Results & Trust */}
+        <CEOProofSection />
+        
+        {/* DUPLICATE_REMOVED: CEO Pricing - keeping EnhancedPricingCards as canonical */}
+        {/* <CEOPricing /> */}
+        
+        {/* Security Badges - Near Footer */}
+        <SecurityBadgesFooter />
+      </main>
+      
+      {/* DUPLICATE_REMOVED: Three Phone Showcase - keeping AppInActionSection as canonical demo */}
+      {/* <ThreePhoneShowcase /> */
+      
+      {/* Book Demo Form Section */}
+      <section id="demo-form" className="section-spacing bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <BookDemoForm />
+        </div>
+      </section>
+      
+      {/* Early Trust Building - Strategic placement after hero */}
+      <TrustSnippet />
+      
+      {/* Contractor Benefits - Organized feature benefits */}
+      <ContractorBenefits />
+      
+      {/* DUPLICATE_REMOVED: Workflow In Action - keeping AppInActionSection as canonical demo */}
+      {/* <WorkflowInAction /> */
+      
+      {/* DUPLICATE_REMOVED: Pricing Teaser Banner - keeping EnhancedPricingCards as canonical pricing */}
+      {/* <PricingTeaserBanner /> */}
+      
+      {/* DUPLICATE_REMOVED: Interactive Video Explainer - keeping AppInActionSection as canonical demo */}
+      {/* <InteractiveVideoExplainer /> */
+      
+      {/* Contractor Social Proof - Enhanced testimonials & metrics */}
+      <ContractorSocialProof />
+      
+      {/* CTA Break - After Social Proof */}
+      <SectionCTA compact className="py-16 bg-yellow-50" />
+      
+      {/* DUPLICATE_REMOVED: Trade-Specific Sections - keeping TradeSections as canonical */}
+      {/* <TradeSpecificSections /> */
+      
+      {/* Conversion Optimization - Real results metrics */}
+      <ConversionOptimization />
+      
+      {/* DUPLICATE_REMOVED: Early Pricing Highlight - keeping EnhancedPricingCards as canonical */}
+      {/* <EarlyPricingHighlight /> */
+      
+      {/* DUPLICATE_REMOVED: Trade Logos - keeping TradeSections as canonical trade content */}
+      {/* <TradeLogos /> */
+      
+      {/* DUPLICATE_REMOVED: Enhanced Video Demo - keeping AppInActionSection as canonical demo */}
+      {/* <div id="video-demo">
+        <EnhancedVideoDemo />
+      </div> */
+      
+      {/* DUPLICATE_REMOVED: Demo Booking Section - keeping BookDemoForm as canonical */}
+      {/* <div id="demo-booking">
+        <FreeDemoBooking />
+      </div> */
+      
+      {/* DUPLICATE_REMOVED: Mobile App Mockups - keeping AppInActionSection as canonical demo */}
+      {/* <MobileAppMockups /> */
+      
+      {/* DUPLICATE_REMOVED: Mobile App Screenshots - keeping AppInActionSection as canonical demo */}
+      {/* <MobileAppShowcase /> */
+      
+      {/* State Grid Showcase - Best Contractor App by State */}
+      <StateGridShowcase />
+      
+      {/* CTA Break - Before Final Section */}
+      <SectionCTA showSecondary className="py-20 bg-gradient-to-br from-slate-50 to-blue-50" />
+      
+      {/* DUPLICATE_REMOVED: Trade Grid Showcase - keeping TradeSections as canonical trade content */}
+      {/* <TradeGridShowcase /> */
+      
+      {/* State & Trade Landing Grids - SEO coverage */}
+      <StateTradeGrids showStates={true} showTrades={true} maxItems={8} />
+      
+      {/* Contractor Blog Section */}
+      <ContractorBlogSection />
+      
+      {/* Newsletter Bar - Get Weekly Tips */}
+      <NewsletterBar />
+      
+      {/* Local SEO Section */}
+      <LocalSEOSection />
+      
+      {/* Security & Reliability Badges - Above Footer */}
+      <SecurityBadges />
+      
+      {/* DUPLICATE_REMOVED: PricingCTA - keeping EnhancedPricingCards as canonical pricing */}
+      {/* <PricingCTA /> */
+      <SEOFooter />
+      
+      {/* Contact & Conversion Elements */}
+      <StickyMobileCTA />
+      <ChatContactBubble />
+
+      {/* Structured Data for SEO */}
+      <StructuredData />
+    </div>
+  );
+}

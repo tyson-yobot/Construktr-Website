@@ -1,0 +1,117 @@
+PROMPT CONTINUATION (Final Sections)
+📞 Support Section (Live Chat / Phone / Email Cards)
+
+Fix Text Contrast:
+
+The white text on light gray backgrounds is barely readable.
+
+Use dark text (#121212 or #1a1a1a) for all body copy in support cards.
+
+Make Contact Options More Prominent:
+
+Increase padding and elevate the cards slightly with a soft shadow.
+
+Make sure the “Start Live Chat”, Phone Number, and Email Address are all clickable/tap-to-call on mobile and hover-enhanced on desktop.
+
+Add Icons:
+
+Each contact method should have a clear visual icon (chat bubble, phone, envelope, book).
+
+Use brand blue or monochrome to match theme.
+
+Knowledge Base:
+
+Currently looks like a dead card or disabled.
+
+Add a “Visit Help Center” CTA.
+
+Optionally link to a /support subpage or open in modal.
+
+Accordion FAQ Section:
+
+Style is visually too light. Consider darkening the titles or placing in collapsible cards.
+
+Add animation on expand (simple slide-down or fade).
+
+🧾 Newsletter Signup Section
+
+Text ("Stay Updated") is too faint and hard to read.
+
+Increase contrast and heading weight.
+
+CTA button ("Subscribe") needs to stand out more (consider brand blue background + white text).
+
+Add small privacy assurance text: “We never spam. Unsubscribe anytime.”
+
+🦶 Footer (Bottom of Site)
+
+Consolidate Repetitive Footers:
+
+Two footers are visible. Collapse into a single branded footer.
+
+Alignment & Readability:
+
+Current columns are not well aligned.
+
+Reduce vertical spacing and group Product / Company / Legal together.
+
+Footer Branding:
+
+“Construktr is part of the Automate AI ecosystem” is excellent – increase prominence and hyperlink it to Automate AI site.
+
+Consider adding a small Automate AI logo (greyscale) for visual context.
+
+Legal:
+
+Terms, Privacy, and Cookie Policy should use uniform text size and spacing.
+
+Add hover state for all links.
+
+Confirm all legal links point to live policy docs.
+
+📦 Additional Optional Improvements
+🛠️ SEO / Performance / Microcopy Suggestions
+
+Meta tags are not visible, ensure:
+
+og:image is defined and attractive.
+
+meta description is concise and focused on automation for field contractors.
+
+All images should use alt text (especially app previews and integrations).
+
+Add JSON-LD schema for local business or software product.
+
+🌈 Visual Theme Suggestion
+
+To replace all-white but stay clean:
+
+Use a light-to-light gradient background:
+
+Example: linear-gradient(to bottom, #f6f8fc, #e6e9f2)
+
+Accent brand blue #0243D5 for:
+
+Links
+
+CTA buttons
+
+Icon highlights
+
+Section dividers (thin blue lines)
+
+Secondary highlight color: consider a light desaturated orange or green from the app UI.
+
+📌 Final Notes for Replit
+
+Do not revert to full white theme.
+
+Avoid boxed cards unless they are used for specific blocks (support, pricing).
+
+Use full-width, edge-to-edge sections for major content.
+
+Match branding closely to the Construktr app (via screenshots and palette).
+
+Use real device preview sizes for app renders (not mockups that don’t match Construktr UI).
+
+Treat this site as the public-facing sales engine. Focus on clarity, trust, and conversion.

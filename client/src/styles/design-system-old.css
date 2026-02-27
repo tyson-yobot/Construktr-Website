@@ -1,0 +1,409 @@
+/* CONSTRUKTR Design System - Component Classes */
+/* CEO Directive: Dark, modern, zero clutter. One blue family, one yellow CTA, mono trust icons. */
+
+/* Performance Critical Styles - Loaded First */
+:root {
+  /* Critical rendering path optimizations */
+  font-display: swap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Legacy Color Mapping - Map old variables to new design tokens */
+:root {
+  /* Legacy brand colors mapped to new tokens */
+  --clr-brand-900: var(--color-brand-900);
+  --clr-brand-800: var(--color-brand-800);
+  --clr-brand-700: var(--color-brand-700);
+  --clr-brand-600: var(--color-brand-600);
+  --clr-brand-500: var(--color-brand-500);
+  --clr-brand-400: var(--color-brand-400);
+  --clr-brand-300: var(--color-brand-300);
+  
+  /* Surface Colors */
+  --clr-bg: #0E1732;
+  --clr-surface: #121B3B;
+  --clr-elev: #1A2549;
+  --clr-border: #293253;
+  
+  /* Text Colors */
+  --clr-text: #EAF1FF;
+  --clr-text-2: #B9C6E3;
+  
+  /* Primary Yellow CTA */
+  --clr-primary: #FFCE2E;
+  --clr-primary-600: #E8B800;
+  
+  /* Semantic Colors */
+  --clr-success: #10B981;
+  --clr-info: #3B82F6;
+  --clr-warning: #F59E0B;
+  --clr-danger: #EF4444;
+  
+  /* Radius - Exact Tokens */
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --radius-sm: 10px;
+  
+  /* Shadows */
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --glow-blue: 0 0 20px rgba(42, 91, 215, 0.3);
+  
+  /* Button Specs - CEO Directive */
+  --btn-height: 48px;
+  --btn-height-lg: 52px;
+  --btn-font-size: 16px;
+  --btn-font-weight: 700;
+  --btn-radius: 10px;
+  
+  /* Chip Specs */
+  --chip-height: 32px;
+  --chip-height-sm: 28px;
+  --chip-radius: 9999px;
+  
+  /* Card Specs */
+  --card-radius: 20px;
+  --card-border: 1px solid var(--clr-border);
+  --card-bg: var(--clr-surface);
+}
+
+/* Component Classes - Exact CEO Specifications */
+
+/* High Contrast Chip Styles - WCAG AA Compliant */
+.chip-brand {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+}
+
+.chip-brand-sm {
+  font-size: 13px;
+  padding: 6px 12px;
+  font-weight: 600;
+}
+
+.chip-brand:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: white;
+}
+
+/* Standardized Button Classes - Exact CEO Specifications */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  border-radius: var(--radius-xl);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  font-family: 'Inter', system-ui, sans-serif;
+  min-height: var(--button-height);
+  white-space: nowrap;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  font-weight: 700;
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-dark {
+  background: var(--color-elevated);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+}
+
+.btn-dark:hover {
+  background: var(--color-border);
+  border-color: var(--color-brand-500);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-text-secondary);
+  border: 1px solid transparent;
+}
+
+.btn-ghost:hover {
+  background: var(--color-elevated);
+  color: var(--color-text-primary);
+  border-color: var(--color-border);
+}
+
+/* Button size variants */
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 14px;
+  min-height: var(--button-height-sm);
+}
+
+.btn-lg {
+  padding: 16px 32px;
+  font-size: 18px;
+  min-height: var(--button-height-lg);
+}
+
+  color: var(--clr-text-2);
+  border: 1px solid var(--clr-border);
+  height: var(--btn-height);
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: var(--btn-radius);
+  padding: 0 20px;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-ghost:hover {
+  background: var(--clr-surface);
+  color: var(--clr-text);
+}
+
+/* Cards & Chips - CEO Specifications */
+.card-default {
+  background: var(--clr-surface);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow-soft);
+  padding: 24px;
+}
+
+.chip-brand {
+  background: rgba(42, 91, 215, 0.12);
+  color: #AFC6FF;
+  border: 1px solid rgba(91, 132, 255, 0.35);
+  border-radius: var(--chip-radius);
+  height: var(--chip-height);
+  padding: 0 12px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chip-brand-sm {
+  height: var(--chip-height-sm);
+  font-size: 12px;
+  padding: 0 10px;
+}
+
+/* Phone Mockup - Real App Styling */
+.phone-frame {
+  background: var(--clr-brand-800);
+  border-radius: 38px;
+  box-shadow: var(--glow-blue);
+  padding: 8px;
+  min-height: 420px;
+}
+
+.phone-screen {
+  background: var(--clr-brand-900);
+  border-radius: 30px;
+  overflow: hidden;
+  height: 100%;
+}
+
+/* Real App Badge */
+.real-app-badge {
+  background: var(--clr-primary);
+  color: var(--clr-brand-900);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 12px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 10;
+}
+
+/* Trust Icons - Mono Only */
+.trust-icon {
+  color: var(--clr-text-2);
+  opacity: 0.6;
+}
+
+.trust-icon:hover {
+  opacity: 1;
+  color: var(--clr-text);
+}
+
+/* Education Flow Styling */
+.education-step {
+  background: var(--clr-surface);
+  border: var(--card-border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  transition: all 0.2s ease;
+}
+
+.education-step:hover {
+  background: var(--clr-elev);
+  border-color: var(--clr-brand-500);
+}
+
+.education-step.active {
+  background: var(--clr-elev);
+  border-color: var(--clr-brand-500);
+  box-shadow: var(--glow-blue);
+}
+
+/* Promo Bar - CEO Directive: Small, Classy */
+.promo-bar {
+  background: linear-gradient(90deg, var(--clr-brand-500), var(--clr-brand-400));
+  color: white;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  position: relative;
+  z-index: 50;
+}
+
+/* Zero Clutter Utilities */
+.zero-clutter {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.minimal-spacing {
+  gap: 12px;
+}
+
+.clean-grid {
+  display: grid;
+  gap: 20px;
+}
+
+/* Animation - Confidence + Speed */
+.confidence-enter {
+  animation: confidenceEnter 0.4s ease-out forwards;
+}
+
+@keyframes confidenceEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.speed-hover {
+  transition: all 0.15s ease;
+}
+
+.speed-hover:hover {
+  transform: translateY(-2px);
+}
+
+/* Accessibility - Focus States */
+*:focus {
+  outline: 2px solid var(--clr-primary);
+  outline-offset: 2px;
+}
+
+.btn-primary:focus,
+.btn-secondary:focus,
+.btn-ghost:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--clr-primary);
+}
+
+/* Skip to main content for screen readers */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--clr-primary);
+  color: var(--clr-bg);
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --clr-border: #000000;
+    --clr-text: #ffffff;
+    --clr-text-2: #e0e0e0;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Mobile-First Responsive */
+@media (max-width: 768px) {
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    height: var(--btn-height);
+    min-height: 44px; /* Touch target minimum */
+  }
+  
+  .card-default {
+    padding: 16px;
+  }
+  
+  .phone-frame {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  
+  /* Touch targets */
+  button, .chip-brand {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}

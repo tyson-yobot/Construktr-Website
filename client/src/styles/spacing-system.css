@@ -1,0 +1,336 @@
+/* CONSTRUKTR Brand Spacing System */
+/* Provides uniform padding/margins across sections with 60px top/bottom standard */
+
+/* Section Spacing - 60px vertical standard */
+.section-spacing,
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.section-spacing-lg,
+.section-lg {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.section-spacing-xl,
+.section-xl {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.section-spacing-sm,
+.section-sm {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* Container Widths */
+.container-narrow {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.container-standard {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.container-wide {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.container-full {
+  max-width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* Heading Margins - Consistent hierarchy */
+h1, .h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+h2, .h2 {
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
+h3, .h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+h4, .h4 {
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+h5, .h5,
+h6, .h6 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+/* Paragraph Spacing */
+p {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* List Spacing */
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 16px;
+  padding-left: 24px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+/* Card Spacing */
+.card,
+.card-container {
+  padding: 24px;
+}
+
+.card-lg {
+  padding: 32px;
+}
+
+.card-sm {
+  padding: 16px;
+}
+
+.card-header {
+  margin-bottom: 16px;
+}
+
+.card-body {
+  margin-bottom: 16px;
+}
+
+.card-footer {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border-light);
+}
+
+/* Grid System - Aligned columns */
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-auto {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Stack Layout - Vertical spacing */
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.stack-xs {
+  gap: 8px;
+}
+
+.stack-sm {
+  gap: 12px;
+}
+
+.stack-md {
+  gap: 16px;
+}
+
+.stack-lg {
+  gap: 24px;
+}
+
+.stack-xl {
+  gap: 32px;
+}
+
+/* Flex Spacing */
+.flex-gap-xs {
+  gap: 8px;
+}
+
+.flex-gap-sm {
+  gap: 12px;
+}
+
+.flex-gap-md {
+  gap: 16px;
+}
+
+.flex-gap-lg {
+  gap: 24px;
+}
+
+.flex-gap-xl {
+  gap: 32px;
+}
+
+/* Margin Utilities (use sparingly) */
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: 8px; }
+.mt-2 { margin-top: 16px; }
+.mt-3 { margin-top: 24px; }
+.mt-4 { margin-top: 32px; }
+.mt-5 { margin-top: 40px; }
+.mt-6 { margin-top: 48px; }
+
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: 8px; }
+.mb-2 { margin-bottom: 16px; }
+.mb-3 { margin-bottom: 24px; }
+.mb-4 { margin-bottom: 32px; }
+.mb-5 { margin-bottom: 40px; }
+.mb-6 { margin-bottom: 48px; }
+
+.ml-0 { margin-left: 0; }
+.ml-1 { margin-left: 8px; }
+.ml-2 { margin-left: 16px; }
+.ml-3 { margin-left: 24px; }
+
+.mr-0 { margin-right: 0; }
+.mr-1 { margin-right: 8px; }
+.mr-2 { margin-right: 16px; }
+.mr-3 { margin-right: 24px; }
+
+/* Padding Utilities */
+.p-0 { padding: 0; }
+.p-1 { padding: 8px; }
+.p-2 { padding: 16px; }
+.p-3 { padding: 24px; }
+.p-4 { padding: 32px; }
+.p-5 { padding: 40px; }
+.p-6 { padding: 48px; }
+
+.px-0 { padding-left: 0; padding-right: 0; }
+.px-1 { padding-left: 8px; padding-right: 8px; }
+.px-2 { padding-left: 16px; padding-right: 16px; }
+.px-3 { padding-left: 24px; padding-right: 24px; }
+.px-4 { padding-left: 32px; padding-right: 32px; }
+
+.py-0 { padding-top: 0; padding-bottom: 0; }
+.py-1 { padding-top: 8px; padding-bottom: 8px; }
+.py-2 { padding-top: 16px; padding-bottom: 16px; }
+.py-3 { padding-top: 24px; padding-bottom: 24px; }
+.py-4 { padding-top: 32px; padding-bottom: 32px; }
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .section-spacing,
+  .section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  
+  .section-spacing-lg,
+  .section-lg {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+  
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-spacing,
+  .section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  
+  .section-spacing-lg,
+  .section-lg {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+  
+  .container-narrow,
+  .container-standard,
+  .container-wide {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+  
+  .card,
+  .card-container {
+    padding: 20px;
+  }
+  
+  .card-lg {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  h1, .h1 {
+    margin-bottom: 16px;
+  }
+  
+  h2, .h2 {
+    margin-bottom: 14px;
+  }
+  
+  h3, .h3 {
+    margin-bottom: 12px;
+  }
+}

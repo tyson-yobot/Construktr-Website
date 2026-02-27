@@ -1,0 +1,70 @@
+CEO directives (what the site must look like & do)
+
+Look: dark, modern, zero clutter. one blue family, one yellow CTA, mono trust icons. nothing else.
+
+Feel: confidence + speed. every block answers: how fast will this help me quote, schedule, get paid?
+
+Outcome: clicks on Start Free Trial, plays of the 45-sec video, demo submissions.
+
+Offer: always-on 14-day free trial; time-boxed “1 month free for the next 250 downloads” promo with a small, classy top bar (not a takeover).
+
+Education: the 3-step flow Quote → Schedule → Get Paid with tiny real app loops in phone frames. short bullets. proof. pricing. done.
+
+Parity: website and app share the exact tokens (colors, type, radii), same button sizes, same card look. screenshots show only blue UI and have a tiny “Real App” bubble.
+
+Non-negotiables (brand system)
+
+Single source of truth
+Use the exact tokens you supplied (colors, radii, shadows, button sizes). No unapproved colors, no deviations.
+
+CSS variables live in design-system.css and are consumed by both the Next.js site and the app (Tailwind + RN theme).
+
+Tailwind mapping: mirror the tokens and read from CSS vars so site & app stay visually locked.
+
+// tailwind.config.js (site)
+export default {
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          900: 'var(--clr-brand-900)', 800: 'var(--clr-brand-800)', 700: 'var(--clr-brand-700)',
+          600: 'var(--clr-brand-600)', 500: 'var(--clr-brand-500)', 400: 'var(--clr-brand-400)', 300: 'var(--clr-brand-300)',
+        },
+        bg: 'var(--clr-bg)', surface: 'var(--clr-surface)', elev: 'var(--clr-elev)', border: 'var(--clr-border)',
+        text: 'var(--clr-text)', text2: 'var(--clr-text-2)',
+        primary: 'var(--clr-primary)', primary600: 'var(--clr-primary-600)',
+        success: 'var(--clr-success)', info: 'var(--clr-info)', warning: 'var(--clr-warning)', danger: 'var(--clr-danger)',
+      },
+      borderRadius: { lg: 'var(--radius-lg)', md: 'var(--radius-md)', sm: 'var(--radius-sm)' },
+      boxShadow: { soft: 'var(--shadow-soft)', glowBlue: 'var(--glow-blue)' },
+    }
+  }
+}
+
+// react-native theme (app)
+export const theme = {
+  colors: {
+    bg: '#0E1732', surface: '#121B3B', border: '#293253',
+    text: '#EAF1FF', text2: '#B9C6E3',
+    brand500: '#2A5BD7', primary: '#FFCE2E', primary600: '#E8B800',
+  },
+  radius: { lg: 20, md: 14, sm: 10 },
+  shadows: { soft: { elevation: 6, shadowColor: '#000', shadowOpacity: 0.35, shadowRadius: 8 } }
+}
+
+
+Buttons (same everywhere)
+
+Primary: yellow --clr-primary, 48–52px tall, bold 14–16px, radius 10px. Label = Start Free Trial.
+
+Secondary: dark surface + border. Label = Book a Demo.
+
+Ghost: transparent + border. Label = Download (utility).
+
+No other variants allowed.
+
+Cards & Chips
+
+Cards: --clr-surface, 1px --clr-border, radius 20px, var(--shadow-soft).
+
+Chips: pill 28–32px, brand-blue family only, never multicolor.

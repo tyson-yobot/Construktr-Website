@@ -1,0 +1,92 @@
+2) Create central config
+
+src/data/pricing.ts
+
+export const FOUNDERS_PROMO_ENABLED = false; // toggle UI-only display pricing
+
+const realPrices = {
+  starter: 49,
+  pro: 99,
+  enterprise: 199,
+};
+
+const promoPrices = {
+  starter: 29,
+  pro: 49,
+  enterprise: 99,
+};
+
+const active = FOUNDERS_PROMO_ENABLED ? promoPrices : realPrices;
+
+export type TierKey = "starter" | "pro" | "enterprise";
+
+export interface Tier {
+  key: TierKey;
+  name: string;
+  priceMonthly: number;
+  isMostPopular?: boolean;
+  cta: string;
+  features: string[];
+  limits?: string[];
+  stripePriceId?: string; // fill after Stripe setup
+}
+
+export const tiers: Tier[] = [
+  {
+    key: "starter",
+    name: "Starter",
+    priceMonthly: active.starter,
+    cta: "Start Free Trial",
+    features: [
+      "Up to 50 quotes/month",
+      "Basic scheduling",
+      "Card & wallet payments (Stripe; Apple/Google Pay)",
+      "Digital invoices (email)",
+      "Photo attachments on jobs/quotes",
+      "Two‑Way SMS (basic): reminders, OMW",
+      "Client portal (basic): approvals & invoice payment",
+      "Email support",
+      "Offline capture (notes/photos; sync later)"
+    ],
+  },
+  {
+    key: "pro",
+    name: "Pro",
+    priceMonthly: active.pro,
+    isMostPopular: true,
+    cta: "Start Free Trial",
+    features: [
+      "Everything in Starter",
+      "Unlimited quotes & jobs",
+      "AI Quoting (full): SLTs, local wage data, materials DB",
+      "Smart Scheduling + Weather AI",
+      "Route optimization + crew GPS ETA",
+      "Same‑day payments (subject to Stripe)",
+      "Customer management (CRM‑lite)",
+      "Two‑Way SMS (full): replies, review requests",
+      "Client portal (full): magic links, live updates (SSE), chat",
+      "Inventory tracking (barcode/QR) + Auto‑reorder",
+      "AI/AR Part Finder™ with cross‑vendor pricing & reserve",
+      "Universal Search (clients, jobs, parts, messages)",
+      "Offline‑first sync with deterministic conflict resolution",
+      "AI Owner’s Briefing (weekly) via email/Slack + PDF archive"
+    ],
+  },
+  {
+    key: "enterprise",
+    name: "Enterprise",
+    priceMonthly: active.enterprise,
+    cta: "Start Free Trial",
+    features: [
+      "Everything in Pro",
+      "Team management & RBAC (Owner / Dispatcher / Tech)",
+      "Field‑level masking for sensitive data",
+      "Advanced analytics dashboard",
+      "Append‑only audit log with hash chain + Merkle checkpoints",
+      "AR Training & Troubleshooting overlays",
+      "Custom integrations (QBO, vendors, Twilio, maps)",
+      "Priority support (accelerated SLA)",
+      "Dedicated onboarding & API access"
+    ],
+  },
+];

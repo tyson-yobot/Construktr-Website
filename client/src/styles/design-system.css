@@ -1,0 +1,373 @@
+/* CONSTRUKTR Design System - CEO Specifications */
+
+/* Hero Background - Clean CSS Starfield */
+.hero {
+  background:
+    radial-gradient(1200px 600px at 70% 20%, rgba(91,132,255,.25), transparent 60%),
+    radial-gradient(900px 500px at 25% 70%, rgba(42,91,215,.18), transparent 60%),
+    linear-gradient(180deg, var(--clr-brand-700) 0%, var(--clr-brand-600) 35%, var(--clr-brand-800) 100%);
+  color: var(--clr-text);
+  position: relative;
+}
+
+.hero .stars {
+  position: absolute; 
+  inset: 0; 
+  pointer-events: none;
+  background-image: radial-gradient(rgba(255,255,255,.15) 1px, transparent 1px);
+  background-size: 2px 2px; 
+  opacity: .14; 
+  mix-blend-mode: screen;
+}
+
+/* Standardized Chip Styles - CEO Specifications */
+.chip-brand {
+  background: var(--color-brand-900);
+  color: var(--color-brand-300);
+  border: 1px solid var(--color-border);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  height: 32px;
+  padding: 0 var(--space-md);
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.chip-brand-sm {
+  height: 28px;
+  font-size: var(--font-size-xs);
+  padding: 0 var(--space-sm);
+  font-weight: 600;
+}
+
+.chip-brand:hover {
+  background: var(--color-brand-800);
+  border-color: var(--color-brand-500);
+  color: var(--color-brand-200);
+}
+
+/* Standardized Button Classes - Exact CEO Specifications */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  border-radius: var(--radius-xl);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  font-family: 'Inter', system-ui, sans-serif;
+  min-height: var(--button-height);
+  white-space: nowrap;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  font-weight: 700;
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-dark {
+  background: var(--color-elevated);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+}
+
+.btn-dark:hover {
+  background: var(--color-border);
+  border-color: var(--color-brand-500);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-text-secondary);
+  border: 1px solid transparent;
+}
+
+.btn-ghost:hover {
+  background: var(--color-elevated);
+  color: var(--color-text-primary);
+  border-color: var(--color-border);
+}
+
+/* Button size variants */
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 14px;
+  min-height: var(--button-height-sm);
+}
+
+.btn-lg {
+  padding: 16px 32px;
+  font-size: 18px;
+  min-height: var(--button-height-lg);
+}
+
+/* Hover Effect Class */
+.speed-hover {
+  transition: all 0.15s ease;
+}
+
+.speed-hover:hover {
+  transform: translateY(-1px);
+}
+
+/* Standardized Card Styles */
+.card-default {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  transition: all 0.2s ease;
+}
+
+.card-default:hover {
+  border-color: var(--color-brand-500);
+  background: var(--color-elevated);
+}
+
+/* Phone Mockup - Real App Styling */
+.phone-frame {
+  background: var(--color-brand-800);
+  border-radius: 38px;
+  box-shadow: var(--glow-blue);
+  padding: 8px;
+  min-height: 420px;
+}
+
+.phone-screen {
+  background: var(--color-brand-900);
+  border-radius: 30px;
+  overflow: hidden;
+  height: 100%;
+}
+
+/* Real App Badge */
+.real-app-badge {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 12px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 10;
+}
+
+/* Trust Icons */
+.trust-icon {
+  color: var(--color-text-secondary);
+  opacity: 0.6;
+}
+
+.trust-icon:hover {
+  opacity: 1;
+  color: var(--color-text-primary);
+}
+
+/* Education Flow Styling */
+.education-step {
+  background: var(--color-surface);
+  border: var(--card-border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  transition: all 0.2s ease;
+}
+
+.education-step:hover {
+  background: var(--color-elevated);
+  border-color: var(--color-brand-500);
+}
+
+/* ===== MICRO ANIMATIONS - Task 9 ===== */
+
+/* Testimonial Card Animations */
+.testimonial-card {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-card .avatar {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover .avatar {
+  transform: scale(1.05);
+  box-shadow: 0 0 0 3px var(--color-primary), 0 0 12px rgba(2, 67, 213, 0.25);
+}
+
+/* Pricing Card Animations */
+.pricing-card {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: scale(1.02) translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-card.featured {
+  transform: scale(1.02);
+  box-shadow: 0 16px 32px -8px rgba(2, 67, 213, 0.2);
+}
+
+.pricing-card.featured:hover {
+  transform: scale(1.04) translateY(-6px);
+  box-shadow: 0 24px 48px -12px rgba(2, 67, 213, 0.25);
+}
+
+/* Trade Filter Pills - Active Glow */
+.trade-pill {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.trade-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.1);
+}
+
+.trade-pill.active,
+.trade-pill[data-active="true"] {
+  background: var(--color-primary);
+  color: white;
+  box-shadow: 0 0 0 2px rgba(2, 67, 213, 0.3), 0 4px 16px -4px rgba(2, 67, 213, 0.4);
+}
+
+.trade-pill.active::after,
+.trade-pill[data-active="true"]::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(2, 67, 213, 0.4), transparent);
+  opacity: 0;
+  animation: pill-glow 2s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes pill-glow {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+/* Feature Card Animations */
+.feature-card {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 24px -8px rgba(2, 67, 213, 0.15);
+}
+
+.feature-card .icon {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.feature-card:hover .icon {
+  transform: scale(1.1);
+  color: var(--color-primary);
+}
+
+/* Button Micro Animations */
+.btn,
+button {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:active,
+button:active {
+  transform: scale(0.98);
+}
+
+/* Fade-in Animation Utility */
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Stagger Children Animation */
+.stagger-children > * {
+  opacity: 0;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.stagger-children > *:nth-child(1) { animation-delay: 0.05s; }
+.stagger-children > *:nth-child(2) { animation-delay: 0.1s; }
+.stagger-children > *:nth-child(3) { animation-delay: 0.15s; }
+.stagger-children > *:nth-child(4) { animation-delay: 0.2s; }
+.stagger-children > *:nth-child(5) { animation-delay: 0.25s; }
+.stagger-children > *:nth-child(6) { animation-delay: 0.3s; }
+.stagger-children > *:nth-child(7) { animation-delay: 0.35s; }
+.stagger-children > *:nth-child(8) { animation-delay: 0.4s; }
+
+/* Pulse Animation for CTAs */
+.pulse-cta {
+  animation: ctaPulse 3s ease-in-out infinite;
+}
+
+@keyframes ctaPulse {
+  0%, 100% { box-shadow: 0 4px 12px -2px rgba(2, 67, 213, 0.3); }
+  50% { box-shadow: 0 6px 20px -2px rgba(2, 67, 213, 0.5); }
+}
+
+/* Smooth Scroll Reveal */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scrollbar Hide Utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

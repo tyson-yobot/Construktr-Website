@@ -1,0 +1,279 @@
+You are a senior front-end engineer working on the Construktr marketing site:
+
+https://konstrukt-site-tyson44.replit.app
+
+Goal
+- Perform a focused UI/UX improvement pass across the entire page.
+- Fix contrast issues (background vs boxes), refine spacing/hierarchy, clean up typography, and align components visually.
+- Do NOT change product copy in a major way. This is primarily layout, styling, and polish.
+
+------------------------------------------------
+0. Inspect the stack and structure
+------------------------------------------------
+
+1. Determine:
+   - Is this plain HTML/CSS, React, or another framework?
+   - Is styling done with Tailwind, a CSS framework, or custom CSS files?
+
+2. Identify key sections/components:
+   - Header/navigation
+   - Hero (headline + subheadline + device mock + CTAs)
+   - Demo / “See CONSTRUKTR in Action” section
+   - Stats band (8+ hours, 3× faster payments, 40% more profit, 2,500+ contractors)
+   - Feature grid (“30-second quotes”, “Smart scheduling”, etc.)
+   - “Built for Every Trade” section (trade tabs + phone mock)
+   - Any additional sections (FAQ, footer, etc.)
+
+All improvements below should be implemented using the existing stack conventions.
+
+------------------------------------------------
+1. Background & Section Contrast
+------------------------------------------------
+
+Problem: The background is too light and too close to white, so cards/boxes are hard to see.
+
+Actions:
+
+1. Global background:
+   - Adjust the page-shell background (html/body/root layout) to a slightly darker, cool silver/blue gradient so white cards stand out clearly.
+   - Use something in this range (adapt syntax to the existing styling approach):
+
+     Example:
+
+     background: linear-gradient(
+       to bottom,
+       #E4E7F1 0%,
+       #D7DBE6 40%,
+       #C9CEDA 100%
+     );
+
+   - It must be visibly darker than white, but still light and modern.
+
+2. Section banding:
+   - Use a clean rhythm for section backgrounds:
+     - Hero: can sit on the global gradient or a slightly tweaked variant.
+     - Stats band: flat white or very light gray (#F9FAFB).
+     - Feature grid: flat white or very light gray.
+     - Trade section: flat background (white / #F9FAFB), not another strong gradient.
+     - Footer: flat background with appropriate contrast.
+
+3. Avoid gradient overload:
+   - Do NOT put gradients inside cards.
+   - Gradients are for page shell and (optionally) hero only.
+
+------------------------------------------------
+2. Card / Box Styling & Separation
+------------------------------------------------
+
+Problem: The boxes are visually blending into the background.
+
+Actions:
+
+1. Card backgrounds:
+   - Set all primary cards/panels (feature cards, trade content boxes, stats cards, etc.) to:
+     - background: #FFFFFF;
+
+2. Borders:
+   - Add a subtle but clearly visible border:
+
+     border: 1px solid rgba(15, 23, 42, 0.08);
+
+3. Shadows:
+   - Add a soft shadow for depth, e.g.:
+
+     box-shadow:
+       0 10px 25px rgba(15, 23, 42, 0.08),
+       0 2px 8px rgba(15, 23, 42, 0.04);
+
+4. Radius & padding:
+   - Normalize card radius across the site (e.g., 12–16px).
+   - Normalize card padding (e.g., 20–24px) and ensure consistent spacing between cards in grids.
+
+5. Hover/focus:
+   - On desktop, add a subtle hover state for cards:
+     - Slight translateY(-2px) + stronger shadow or slightly darker border.
+   - Ensure focus-visible styles are present for keyboard users.
+
+------------------------------------------------
+3. Hero Section Improvements
+------------------------------------------------
+
+Goal: Strong hero hierarchy, clearly legible text, and a device mock that looks like real software.
+
+Actions:
+
+1. Layout & hierarchy:
+   - Ensure a clear 2-column layout on desktop:
+     - Left: headline, subheadline, CTAs, supporting bullets.
+     - Right: device mock.
+   - On mobile, stack: text content first, then device.
+
+2. Typography:
+   - Make the hero headline visually dominant (larger type size, strong weight).
+   - Keep the subheadline slightly smaller with a max-width for readability.
+   - Ensure sufficient line-height for both.
+
+3. Buttons:
+   - Use one primary CTA (e.g., “Start Free Trial”) and one secondary CTA (e.g., “Watch Demo”).
+   - Normalize button style across hero and other sections:
+     - Same border radius, padding, font size, and hover behavior.
+   - Make sure CTAs meet contrast requirements on the hero background.
+
+4. Device mock:
+   - If the current phone mock is mostly blank or low-contrast, replace/update the image to show real app UI (e.g., home or jobs screen).
+   - Make sure the device frame and screenshot are crisp and sized/responsive correctly.
+
+------------------------------------------------
+4. Demo / “See CONSTRUKTR in Action” Section
+------------------------------------------------
+
+Goal: Make this feel like a clean, interactive demo strip.
+
+Actions:
+
+1. Tabs or toggles:
+   - Ensure the active demo tab (Quoting / Scheduling / Payments) has strong active styling:
+     - Clear visual difference between active and inactive states (background color, border, underline, etc.).
+   - Hover states for inactive tabs.
+
+2. Layout:
+   - Align text and device mock on a clear horizontal grid on desktop.
+   - On mobile, stack them with appropriate spacing.
+   - Ensure consistent padding above and below the section.
+
+3. Background:
+   - Use a flat background (white or #F9FAFB) to keep focus on the demo phone and copy.
+
+------------------------------------------------
+5. Stats Band / Credibility Strip
+------------------------------------------------
+
+Goal: Turn the stats row into a crisp, scannable credibility band.
+
+Actions:
+
+1. Card structure:
+   - Ensure each stat card has:
+     - A large, bold stat value (“8+ hours”, “3×”, “40%”, “2,500+”).
+     - A small, clear label under it.
+   - Use the card styling rules from section 2 (border, shadow, padding).
+
+2. Background:
+   - Consider giving the entire stats band a subtle flat background (e.g., #F3F4F8 or #F9FAFB) so it reads as its own strip.
+
+3. Spacing:
+   - Add consistent vertical padding for this band.
+   - Ensure equal spacing between stat cards and proper alignment on mobile.
+
+------------------------------------------------
+6. Feature Grid (“Why Contractors Choose …”)
+------------------------------------------------
+
+Goal: Make features easy to scan and visually consistent.
+
+Actions:
+
+1. Card layout:
+   - For each feature card, ensure a consistent layout:
+     - Optional icon at top.
+     - Feature title (medium-bold).
+     - Short descriptive body text.
+
+2. Typography:
+   - Increase title weight/size slightly.
+   - Reduce body text size a bit for contrast and readability.
+   - Maintain consistent line-height.
+
+3. Hover:
+   - Add hover states similar to other cards (shadow/border accent).
+
+4. Background:
+   - Use a flat section background (white or #F9FAFB) with consistent padding.
+
+------------------------------------------------
+7. “Built for Every Trade” Section
+------------------------------------------------
+
+Goal: Make trade tabs feel real and the content clearly separated.
+
+Actions:
+
+1. Tabs:
+   - Style active tab with solid brand color background and white text.
+   - Inactive tabs use outline/ghost style with hover effect.
+   - Ensure tabs are scrollable or wrap nicely on mobile.
+
+2. Trade content panel:
+   - Ensure the text content (for each trade) sits in a clean card with:
+     - Background: #FFFFFF
+     - Border + shadow per section 2.
+   - Align bullets and CTAs with consistent spacing.
+
+3. Phone mock:
+   - Match the device styling and size used in the hero/demos for visual consistency.
+   - Ensure adequate spacing between panel text and phone mock on larger screens.
+
+------------------------------------------------
+8. Navigation, Footer, and Micro UX
+------------------------------------------------
+
+Actions:
+
+1. Header/nav:
+   - Normalize nav spacing and alignment.
+   - Use a single primary CTA in the header (e.g., “Start Free Trial”) with consistent button styling.
+   - Keep secondary actions like “Login” as clean text links.
+
+2. Sticky behavior:
+   - If not already sticky, consider making the header sticky on scroll so primary CTA is always accessible.
+
+3. Footer:
+   - Ensure the footer matches the site’s visual language (background, typography).
+   - Provide clear separation from the content area (slight background change and padding).
+
+4. Focus states:
+   - Ensure all interactive elements (links, buttons, tabs) have visible focus styles for keyboard navigation.
+
+------------------------------------------------
+9. Typography & Spacing System
+------------------------------------------------
+
+Goal: Create a consistent type scale and spacing rhythm.
+
+Actions:
+
+1. Headings:
+   - Define and apply a clear heading hierarchy (H1, H2, H3) with consistent sizes and margins.
+   - Avoid random one-off overrides unless necessary.
+
+2. Body text:
+   - Use a consistent base font size (e.g., 14–16px), color (e.g., #111827 or similar), and line-height.
+
+3. Spacing:
+   - Use consistent vertical spacing between sections.
+   - Use a spacing scale (e.g., multiples of 4 or 8px) for paddings and margins rather than arbitrary values.
+
+------------------------------------------------
+10. Responsive Checks & Cleanup
+------------------------------------------------
+
+1. Responsive:
+   - Verify layouts at common breakpoints:
+     - Hero, demo, stats, feature grid, and trade sections should all stack or reflow gracefully.
+   - Cards should always have enough padding and whitespace on mobile.
+
+2. Cleanup:
+   - Remove unused or redundant CSS rules.
+   - Consolidate duplicated styles (e.g., card styles) into shared classes/components.
+   - Ensure color and spacing tokens are reused where possible.
+
+------------------------------------------------
+Deliverables
+------------------------------------------------
+
+- A marketing site with:
+  - A darker, more usable background gradient where cards clearly stand out.
+  - Polished hero section with strong hierarchy and a clear device mock.
+  - Clean, consistent card styles across stats, features, and trade sections.
+  - Better section banding, spacing, and responsiveness.
+  - No major changes to content or routing—this is a UI/UX polish pass.

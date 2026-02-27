@@ -1,0 +1,85 @@
+CONSTRUKTR™ Design System & Site Polish (v1)
+1) Shared theme (site + app)
+
+Create a single source of truth for colors, type, spacing, and radii. Expose these as CSS variables so the site and app can match.
+
+:root{
+  /* Brand */
+  --clr-brand-900: #0B1531;   /* deep navy (headers/nav) */
+  --clr-brand-800: #0E1F47;
+  --clr-brand-700: #122B63;   /* hero outer ring */
+  --clr-brand-600: #1B3C88;   /* hero mid */
+  --clr-brand-500: #2A5BD7;   /* CONSTRUKTR blue */
+  --clr-brand-400: #5B84FF;   /* accent glow */
+  --clr-brand-300: #7EA2FF;
+
+  /* Neutrals */
+  --clr-bg:        #0E1732;   /* page background */
+  --clr-surface:   #121B3B;   /* cards/sections */
+  --clr-elev:      #1A2447;   /* elevated blocks */
+  --clr-border:    #293253;
+  --clr-text:      #EAF1FF;   /* primary text */
+  --clr-text-2:    #B9C6E3;   /* secondary text */
+
+  /* Functional */
+  --clr-primary:   #FFCE2E;   /* yellow CTA */
+  --clr-primary-600:#E8B800;
+  --clr-success:   #24C16B;
+  --clr-info:      #2A5BD7;
+  --clr-warning:   #FF8A1E;
+  --clr-danger:    #FF4D4D;
+
+  /* Radii & shadows */
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --radius-sm: 10px;
+  --shadow-soft: 0 8px 30px rgba(0,0,0,.35);
+  --glow-blue:  0 0 40px rgba(91,132,255,.35);
+}
+
+/* Typography */
+html{ font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif; }
+.h1{ font-weight: 800; letter-spacing:-.02em; line-height:1.05; }
+.h2{ font-weight: 800; letter-spacing:-.01em; line-height:1.1; }
+.subtle{ color:var(--clr-text-2); }
+
+/* Buttons */
+.btn{ border-radius: var(--radius-sm); padding:.9rem 1.25rem; font-weight:700; }
+.btn-primary{ background:var(--clr-primary); color:#142030; }
+.btn-primary:hover{ background:var(--clr-primary-600); box-shadow:var(--glow-blue); }
+.btn-dark{ background:#182142; color:var(--clr-text); border:1px solid var(--clr-border); }
+.btn-ghost{ background:transparent; color:var(--clr-text); border:1px solid var(--clr-border); }
+
+/* Badges/Chips (for trades, proof points) */
+.chip{ background:rgba(42,91,215,.12); color:#AFC6FF; border:1px solid rgba(91,132,255,.35); border-radius:999px; padding:.35rem .7rem; font-weight:600; }
+
+/* Cards */
+.card{ background:var(--clr-surface); border:1px solid var(--clr-border); border-radius:var(--radius-lg); box-shadow:var(--shadow-soft); }
+
+
+If you’re using Tailwind, mirror these tokens in tailwind.config.js and use CSS variables in the theme to share between site & app.
+
+2) Hero background (make it lighter like the reference)
+
+Replace the current dark wash with a layered gradient + subtle starfield. This keeps the “night sky” vibe but increases contrast and readability.
+
+.hero{
+  background:
+    radial-gradient(1200px 600px at 70% 20%, rgba(91,132,255,.25), transparent 60%),
+    radial-gradient(900px 500px at 25% 70%, rgba(42,91,215,.18), transparent 60%),
+    linear-gradient(180deg, var(--clr-brand-700) 0%, var(--clr-brand-600) 35%, var(--clr-brand-800) 100%);
+  color: var(--clr-text);
+}
+.hero .phone-frame{ box-shadow: var(--glow-blue); border-radius: 38px; }
+.hero .stars{
+  position:absolute; inset:0; pointer-events:none;
+  background-image: radial-gradient(rgba(255,255,255,.15) 1px, transparent 1px);
+  background-size: 2px 2px; opacity:.14; mix-blend-mode: screen;
+}
+
+
+Dev notes
+
+Keep the device mockup on the right, headline/CTAs left (you already have this).
+
+Ensure text contrast ≥ 4.5:1 on all chips and captions.
