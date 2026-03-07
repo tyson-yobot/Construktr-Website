@@ -1,23 +1,38 @@
-Deployment trigger: March 7, 2026, 7:00 AM MST
+Deployment trigger: March 7, 2026, 7:15 AM MST
 This file exists only to trigger a Vercel rebuild.
-Dev branch deployment with COMPREHENSIVE FEATURE AUDIT:
+Dev branch deployment with COMPREHENSIVE WEBSITE OVERHAUL:
 
-✅ COMPLETED FIXES:
-- Business location updated from Phoenix to Scottsdale, AZ
-- Feature count corrections (63+ features)  
-- Login/navigation routing fixes
-- Real app screenshots replacing empty phone mockups (11 screenshots, 13 components)
+✅ BRANDING FIXES:
+- Removed all ™ and ® symbols from CONSTRUKTR everywhere
+- Ensured CONSTRUKTR is consistently in ALL CAPS across entire site
+- Updated 92 files with brand consistency fixes
 
-✅ MAJOR FEATURE LISTING OVERHAUL:
+✅ SCREENSHOT IMAGE FIXES:
+- Fixed mobile app screenshots not showing up on phone mockups
+- Converted invalid Vite imports to proper public folder references
+- All 11 real app screenshots now display correctly
+- Updated 13 major components with working image paths
+
+✅ AI CAPABILITIES EXPANSION:
+- Expanded AI features from 3 to 6 comprehensive AI capabilities
+- Added: AI Quote Generator, AI Route Optimization, AI Business Analytics
+- Enhanced descriptions with detailed capabilities for each AI feature
+- Updated grid layout to accommodate expanded feature set
+
+✅ FEATURE LISTINGS COMPREHENSIVE AUDIT:
 - Core Features: Expanded from 6 to 10 essential features
 - Feature List Layout: Expanded from 4 to 8 comprehensive features  
 - Pricing Tiers: Now include 12-18 features each (vs 8-11 previously)
 - All feature listings now comprehensive and accurate to 63+ available features
 - Consistent data across all pricing and feature pages
-- No missing features in any major component
 
-✅ COMPONENTS UPDATED:
-- comprehensive-features.tsx (Core Features expanded)
-- feature-list-layout.tsx (doubled feature count)
-- pricing.ts (all tiers now comprehensive)
-- All pricing displays now show full feature lists
+✅ PRICING CONSISTENCY:
+- Verified pricing accuracy across all components
+- Fixed chatbot pricing to reflect current tiers
+- Ensured all pricing displays match main pricing.ts source
+
+✅ COMPONENTS FULLY UPDATED:
+- 92 files modified with brand and functionality improvements
+- All screenshot imports converted to direct public folder paths
+- Comprehensive feature coverage across all sections
+- Professional presentation with working real app screenshots
