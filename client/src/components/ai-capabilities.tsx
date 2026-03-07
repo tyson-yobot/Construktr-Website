@@ -144,7 +144,7 @@ export default function AICapabilities() {
           <div className="inline-flex flex-col items-center p-8 bg-white rounded-2xl border border-[rgba(15,23,42,0.08)] shadow-[0_10px_25px_rgba(15,23,42,0.08),0_2px_8px_rgba(15,23,42,0.04)]">
             <Brain className="w-12 h-12 text-[var(--color-primary)] mb-4" />
             <h3 className="text-2xl font-bold text-[var(--color-text-primary)] mb-2">
-              All 28 Features, 3 AI-Enhanced
+              All 63 Features, 3 AI-Enhanced
             </h3>
             <p className="text-[var(--color-text-secondary)] mb-6 max-w-xl">
               Complete feature set with AI enhancements. Photo estimating, scheduling, 

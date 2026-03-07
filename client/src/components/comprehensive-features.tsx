@@ -15,7 +15,7 @@ import {
  * Comprehensive Features Section
  * Source of truth: construktr-mobile README.md
  * 
- * 33+ features across core operations, AI capabilities, and team tools.
+ * 63+ features across core operations, AI capabilities, and team tools.
  */
 
 const featureCategories = [

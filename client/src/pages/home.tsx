@@ -95,7 +95,7 @@ export default function Home() {
         {/* Gradient Divider */}
         <SectionDivider variant="light-blue" />
         
-        {/* SECTION 6: Comprehensive Features - 33+ features */}
+        {/* SECTION 6: Comprehensive Features - 63+ features */}
         <ComprehensiveFeatures />
         
         {/* SECTION 7: Role-Based Sections - For Owners, Dispatch, Techs, Finance */}

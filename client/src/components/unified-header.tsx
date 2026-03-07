@@ -54,7 +54,7 @@ export default function UnifiedHeader() {
         transition-all duration-300
       `}
     >
-      {/* Pre-launch Banner - Only visible when not scrolled */}
+      {/* Live Apps Banner - Only visible when not scrolled */}
       <AnimatePresence>
         {!isScrolled && (
           <motion.div
@@ -65,9 +65,9 @@ export default function UnifiedHeader() {
           >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex items-center justify-center space-x-6 text-sm font-medium" style={{ color: '#ffffff' }}>
-                <span className="text-white">📱 Coming Soon to App Store & Google Play</span>
+                <span className="text-white">📱 Available on App Store & Google Play</span>
                 <span className="text-white hidden sm:inline">·</span>
-                <span className="text-white hidden sm:inline">33+ Features · AI-Powered · Offline-First</span>
+                <span className="text-white hidden sm:inline">63+ Features · AI-Powered · Offline-First</span>
               </div>
             </div>
           </motion.div>

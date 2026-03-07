@@ -14,7 +14,7 @@ const rotatingMessages = [
   "Same-day Stripe deposits",
   "Works offline in basements & barns",
   "QuickBooks sync in one click",
-  "33+ features built for the field"
+  "63+ features built for the field"
 ];
 
 const aiFeatureBullets = [
@@ -60,7 +60,7 @@ export default function CEOHero() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-[var(--color-primary)]/10 text-[var(--color-primary)] border border-[var(--color-primary)]/20">
-                33+ features · AI at every paid tier
+                63+ features · AI at every paid tier
               </span>
             </motion.div>
 

@@ -92,7 +92,7 @@ export default function ComparisonTable() {
             How CONSTRUKTR Compares
           </h2>
           <p className="text-xl text-[var(--color-text-secondary)] max-w-3xl mx-auto">
-            See why contractors switch from generic scheduling apps and paper systems to an AI-powered operating system.
+            See why contractors switch from Jobber, ServiceTitan, and other platforms to an AI-powered operating system.
           </p>
         </motion.div>
 
@@ -121,17 +121,17 @@ export default function ComparisonTable() {
                 <th className="py-4 px-4 text-center">
                   <div className="inline-flex flex-col items-center">
                     <div className="px-4 py-2 bg-gray-200 rounded-lg text-gray-700 font-bold">
-                      Generic Scheduling App
+                      Jobber
                     </div>
-                    <span className="text-xs text-[var(--color-text-secondary)] mt-1">Basic Features</span>
+                    <span className="text-xs text-[var(--color-text-secondary)] mt-1">Field Service</span>
                   </div>
                 </th>
                 <th className="py-4 px-4 text-center">
                   <div className="inline-flex flex-col items-center">
                     <div className="px-4 py-2 bg-gray-100 rounded-lg text-gray-500 font-bold">
-                      Paper / Spreadsheets
+                      ServiceTitan
                     </div>
-                    <span className="text-xs text-[var(--color-text-secondary)] mt-1">Manual</span>
+                    <span className="text-xs text-[var(--color-text-secondary)] mt-1">Enterprise</span>
                   </div>
                 </th>
               </tr>
