@@ -69,6 +69,62 @@ const features: Feature[] = [
       "Client history",
       "Communication logs"
     ]
+  },
+  {
+    id: "gps-tracking", 
+    assetId: "gps-tracking",
+    icon: Clock,
+    title: "GPS Time Tracking",
+    subtitle: "Automatic clock in/out",
+    description: "GPS-based time tracking with geofencing. Never lose billable hours or have timesheet disputes again.",
+    benefits: [
+      "Automatic clock in/out",
+      "GPS verification",
+      "Accurate payroll",
+      "Zero timesheet disputes"
+    ]
+  },
+  {
+    id: "inventory-tracking",
+    assetId: "inventory-tracking", 
+    icon: CheckCircle,
+    title: "Inventory Management",
+    subtitle: "Track every part",
+    description: "Barcode scanning, auto-reordering, and usage tracking. Never run out of materials on a job again.",
+    benefits: [
+      "Barcode scanning",
+      "Auto-reordering alerts",
+      "Usage tracking", 
+      "Cost management"
+    ]
+  },
+  {
+    id: "offline-mode",
+    assetId: "offline-mode",
+    icon: CheckCircle, 
+    title: "Offline Mode",
+    subtitle: "Works everywhere",
+    description: "Full functionality without internet. Perfect for basements, rural areas, or anywhere with poor signal.",
+    benefits: [
+      "100% offline capability",
+      "Auto-sync when connected",
+      "No lost data",
+      "Rural job support"
+    ]
+  },
+  {
+    id: "customer-portal",
+    assetId: "customer-portal",
+    icon: Users,
+    title: "Customer Portal", 
+    subtitle: "Self-service platform",
+    description: "Magic link portal for customers to view quotes, approve work, pay invoices, and track job progress.",
+    benefits: [
+      "Self-service portal",
+      "Quote approvals",
+      "Payment processing",
+      "Job tracking"
+    ]
   }
 ];
 

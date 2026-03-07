@@ -49,6 +49,41 @@ const featureCategories = [
         isAI: false
       },
       {
+        icon: Users,
+        title: "Job Management",
+        description: "Complete job lifecycle tracking from lead to completion with customer integration and status updates.",
+        metric: "Complete control",
+        isAI: false
+      },
+      {
+        icon: FileText,
+        title: "Professional Invoicing",
+        description: "Generate professional invoices with your branding, terms, and payment options. Auto-send reminders.",
+        metric: "Faster payments",
+        isAI: false
+      },
+      {
+        icon: MapPin,
+        title: "GPS Time Tracking",
+        description: "Automatic clock in/out with geofencing. Track time and location for accurate payroll and billing.",
+        metric: "Precise tracking",
+        isAI: false
+      },
+      {
+        icon: Smartphone,
+        title: "Mobile Dashboard",
+        description: "Real-time business overview from your phone. Revenue, active jobs, and team status at a glance.",
+        metric: "Always informed",
+        isAI: false
+      },
+      {
+        icon: WifiOff,
+        title: "Offline Mode",
+        description: "Full functionality without internet. All job data cached locally and syncs when connected.",
+        metric: "100% uptime",
+        isAI: false
+      },
+      {
         icon: CreditCard,
         title: "Invoicing + Payments",
         description: "Generate invoices and accept payments on-site via Stripe. Cards, ACH, Apple Pay, Google Pay.",
