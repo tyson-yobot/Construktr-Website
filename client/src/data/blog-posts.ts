@@ -21,7 +21,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "2025-01-20",
     category: "Business Tips",
     tags: ["quoting", "pricing", "business growth", "revenue"],
-    seoTitle: "Top 5 Contractor Quoting Mistakes Costing You Money | CONSTRUKTR™",
+    seoTitle: "Top 5 Contractor Quoting Mistakes Costing You Money | CONSTRUKTR",
     seoDescription: "Avoid these 5 costly quoting mistakes contractors make. Learn how to price jobs correctly and increase your revenue by 20-30% with better quoting strategies.",
     keywords: "contractor quoting mistakes, contractor pricing errors, how to quote contractor jobs, contractor business tips",
     content: `
@@ -130,7 +130,7 @@ You'll likely find you're undercharging by 20-30%. That's money you deserve for 
     publishedAt: "2025-01-15",
     category: "HVAC",
     tags: ["hvac", "scheduling", "seasonal", "maintenance", "revenue"],
-    seoTitle: "HVAC Seasonal Scheduling Guide - Double Your Revenue | CONSTRUKTR™",
+    seoTitle: "HVAC Seasonal Scheduling Guide - Double Your Revenue | CONSTRUKTR",
     seoDescription: "Master HVAC seasonal scheduling to build recurring revenue. Learn maintenance scheduling strategies that successful HVAC contractors use to double their income.",
     keywords: "hvac seasonal scheduling, hvac maintenance contracts, hvac business revenue, hvac contractor scheduling",
     content: `
@@ -302,7 +302,7 @@ Contractors implementing strategic seasonal scheduling see:
     publishedAt: "2025-01-10",
     category: "Electrical",
     tags: ["electrical", "code compliance", "nec", "safety", "inspections"],
-    seoTitle: "Common Electrical Code Violations & How to Avoid Them | CONSTRUKTR™",
+    seoTitle: "Common Electrical Code Violations & How to Avoid Them | CONSTRUKTR",
     seoDescription: "Avoid costly electrical code violations. Learn the top 5 NEC compliance mistakes electrical contractors make and how to ensure code compliance on every job.",
     keywords: "electrical code violations, nec compliance, electrical inspector fails, electrical contractor mistakes",
     content: `

@@ -1,7 +1,7 @@
 export const content = {
   hero: {
     title: "CONSTRUKTR",
-    trademark: "™",
+    trademark: "",
     tagline: "Run your contracting business from one app — quotes, jobs, payments, and more.",
     primaryCta: "Get Started Free",
     secondaryCta: "Book a Demo",
@@ -92,10 +92,10 @@ export const content = {
   },
   testimonials: {
     title: "What Contractors Are Saying",
-    subtitle: "See how CONSTRUKTR™ has transformed contracting businesses like yours",
+    subtitle: "See how CONSTRUKTR has transformed contracting businesses like yours",
     items: [
       {
-        quote: "CONSTRUKTR™ completely changed how we run our plumbing business. The AI quotes are incredibly accurate, and we've increased our job acceptance rate by 40%. No more underbidding or losing jobs to competitors.",
+        quote: "CONSTRUKTR completely changed how we run our plumbing business. The AI quotes are incredibly accurate, and we've increased our job acceptance rate by 40%. No more underbidding or losing jobs to competitors.",
         author: "Michael Rodriguez",
         company: "Rodriguez Plumbing Services",
         location: "Denver, CO",
@@ -122,7 +122,7 @@ export const content = {
         avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"
       },
       {
-        quote: "As a general contractor, I needed something that could handle multiple trades and complex projects. CONSTRUKTR™ does it all - from initial estimates to final payment. Game changer.",
+        quote: "As a general contractor, I needed something that could handle multiple trades and complex projects. CONSTRUKTR does it all - from initial estimates to final payment. Game changer.",
         author: "Maria Santos",
         company: "Santos Construction Group",
         location: "Miami, FL",
@@ -150,7 +150,7 @@ export const content = {
   },
   footer: {
     company: {
-      name: "CONSTRUKTR™",
+      name: "CONSTRUKTR",
       description: "The most powerful AI platform for service businesses. Win more jobs, save hours daily, and grow 40% faster with intelligent automation."
     },
     navigation: {
