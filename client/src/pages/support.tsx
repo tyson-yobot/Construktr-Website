@@ -76,7 +76,7 @@ export default function Support() {
               <h3 className="font-bold text-[var(--color-text-primary)] mb-2">Company</h3>
               <p className="text-[var(--color-text-secondary)] text-sm">
                 Automate AI LLC<br />
-                Phoenix, AZ
+                Scottsdale, AZ
               </p>
             </div>
 

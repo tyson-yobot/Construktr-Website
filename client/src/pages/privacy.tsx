@@ -23,7 +23,7 @@ export default function Privacy() {
 
             <section>
               <p>This Privacy Policy describes how Automate AI LLC ("Construktr," "we," "our," or "us") collects, uses, and shares information about you when you use the Construktr mobile application ("App") and website at construktr.ai ("Site"). By using our services, you agree to this policy.</p>
-              <p className="mt-3">Company: Automate AI LLC, Phoenix, AZ<br />Contact: <a href="mailto:privacy@construktr.ai" className="text-[var(--color-primary)]">privacy@construktr.ai</a></p>
+              <p className="mt-3">Company: Automate AI LLC, Scottsdale, AZ<br />Contact: <a href="mailto:privacy@construktr.ai" className="text-[var(--color-primary)]">privacy@construktr.ai</a></p>
             </section>
 
             <section>
@@ -152,7 +152,7 @@ export default function Privacy() {
               <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-4">11. Contact Us</h2>
               <p>
                 Automate AI LLC<br />
-                Phoenix, AZ<br />
+                Scottsdale, AZ<br />
                 Privacy inquiries: <a href="mailto:privacy@construktr.ai" className="text-[var(--color-primary)]">privacy@construktr.ai</a><br />
                 General support: <a href="mailto:support@construktr.ai" className="text-[var(--color-primary)]">support@construktr.ai</a>
               </p>

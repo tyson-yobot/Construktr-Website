@@ -166,7 +166,7 @@ export default function UnifiedFooter() {
               © 2026 Automate AI LLC. All rights reserved.
             </p>
             <p className="text-[var(--color-text-tertiary)] text-xs mt-1">
-              Construktr™ is a product of Automate AI LLC, Phoenix, AZ
+              Construktr™ is a product of Automate AI LLC, Scottsdale, AZ
             </p>
           </div>
           

@@ -38,7 +38,7 @@ export default function SEOHead({
     "foundingDate": "2023",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Phoenix",
+      "addressLocality": "Scottsdale",
       "addressRegion": "AZ",
       "addressCountry": "US"
     }

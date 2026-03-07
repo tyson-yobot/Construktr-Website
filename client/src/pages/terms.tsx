@@ -23,7 +23,7 @@ export default function Terms() {
 
             <section>
               <p>These Terms of Service ("Terms") govern your use of the Construktr mobile application and website (collectively, "Services") provided by Automate AI LLC ("Construktr," "we," "our," or "us"). By accessing or using our Services, you agree to be bound by these Terms.</p>
-              <p className="mt-3">Company: Automate AI LLC, Phoenix, AZ<br />Legal contact: <a href="mailto:legal@construktr.ai" className="text-[var(--color-primary)]">legal@construktr.ai</a></p>
+              <p className="mt-3">Company: Automate AI LLC, Scottsdale, AZ<br />Legal contact: <a href="mailto:legal@construktr.ai" className="text-[var(--color-primary)]">legal@construktr.ai</a></p>
             </section>
 
             <section>
@@ -130,7 +130,7 @@ export default function Terms() {
               <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-4">14. Contact</h2>
               <p>
                 Automate AI LLC<br />
-                Phoenix, AZ<br />
+                Scottsdale, AZ<br />
                 Legal: <a href="mailto:legal@construktr.ai" className="text-[var(--color-primary)]">legal@construktr.ai</a><br />
                 Support: <a href="mailto:support@construktr.ai" className="text-[var(--color-primary)]">support@construktr.ai</a>
               </p>
