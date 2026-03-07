@@ -125,7 +125,7 @@ export default function EnhancedFooter() {
               />
               <div>
                 <div className="text-white font-bold text-xl">
-                  CONSTRUKTR<span className="text-blue-400">™</span>
+                  CONSTRUKTR
                 </div>
                 <Badge variant="outline" className="text-xs border-blue-500 text-blue-300">
                   Pro Platform
