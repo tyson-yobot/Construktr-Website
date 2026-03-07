@@ -1,6 +1,10 @@
-Deployment trigger: March 7, 2026, 6:30 AM MST
+Deployment trigger: March 7, 2026, 6:40 AM MST
 This file exists only to trigger a Vercel rebuild.
 Dev branch deployment with:
 - Business location updated from Phoenix to Scottsdale, AZ
-- Feature count corrections (63+ features)
+- Feature count corrections (63+ features)  
 - Login/navigation routing fixes
+- MAJOR UPDATE: Real app screenshots replacing empty phone mockups
+  - 11 actual mobile app screenshots added
+  - 13 components updated with context-appropriate images
+  - Hero shows dashboard, quotes show quote-builder, etc.
