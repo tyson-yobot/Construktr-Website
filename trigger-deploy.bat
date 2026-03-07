@@ -1,8 +1,8 @@
 @echo off
 cd /d C:\dev\Construktr-Website
 git add DEPLOY_TRIGGER.txt deploy.bat trigger-deploy.bat deploy-website.ps1 .gitignore
-git commit -m "trigger: force Vercel rebuild for legal pages deployment"
-git push origin main
+git commit -m "trigger: force Vercel rebuild for dev branch deployment"
+git push origin dev
 echo.
 echo ================================================================================
 echo Vercel rebuild triggered!
