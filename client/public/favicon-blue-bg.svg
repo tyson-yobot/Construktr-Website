@@ -1,35 +1,39 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
   <!-- CONSTRUKTR blue background -->
-  <rect width="32" height="32" rx="6" fill="#0243D5"/>
+  <rect width="32" height="32" fill="#0243D5"/>
   
-  <!-- White shield outline -->
-  <path d="M16 4 L25 7.5 L25 18 Q25 22.5 16 27 Q7 22.5 7 18 L7 7.5 Z" 
-        fill="#ffffff" stroke="#e5e5e5" stroke-width="0.3"/>
+  <!-- Shield outline -->
+  <path d="M16 3.13 L24 6.25 L24 18.75 Q24 23.44 16 28.13 Q8 23.44 8 18.75 L8 6.25 Z" 
+        fill="#ffffff" stroke="#e5e5e5" stroke-width="0.25"/>
   
-  <!-- Blue inner area for circuit pattern -->
-  <path d="M16 6 L23 8.5 L23 17 Q23 20.5 16 24 Q9 20.5 9 17 L9 8.5 Z" 
-        fill="#0243D5" stroke="#ffffff" stroke-width="0.2"/>
+  <!-- Inner blue area -->
+  <path d="M16 4.69 L22.38 7.19 L22.38 17.81 Q22.38 21.56 16 25.63 Q9.63 21.56 9.63 17.81 L9.63 7.19 Z" 
+        fill="#0243D5" stroke="#ffffff" stroke-width="0.19"/>
   
-  <!-- White circuit pattern -->
-  <g stroke="#ffffff" stroke-width="0.4" fill="none">
-    <!-- Main circuit lines -->
-    <line x1="12" y1="12" x2="20" y2="12"/>
-    <line x1="13" y1="15" x2="19" y2="15"/>
-    <line x1="14" y1="18" x2="18" y2="18"/>
+  <!-- Circuit pattern -->
+  <g stroke="#ffffff" stroke-width="0.25" fill="none">
+    <!-- Horizontal lines -->
+    <line x1="11.88" y1="13.13" x2="20.13" y2="13.13"/>
+    <line x1="12.5" y1="15" x2="19.5" y2="15"/>
+    <line x1="13.13" y1="16.88" x2="18.88" y2="16.88"/>
     
-    <!-- Central vertical -->
-    <line x1="16" y1="10" x2="16" y2="20"/>
+    <!-- Vertical connections -->
+    <line x1="16" y1="11.25" x2="16" y2="18.75"/>
+    <line x1="13.13" y1="13.75" x2="13.13" y2="16.25"/>
+    <line x1="18.88" y1="13.75" x2="18.88" y2="16.25"/>
   </g>
   
-  <!-- White circuit nodes -->
+  <!-- Circuit nodes -->
   <g fill="#ffffff">
-    <circle cx="12" cy="12" r="0.5"/>
-    <circle cx="20" cy="12" r="0.5"/>
-    <circle cx="16" cy="15" r="0.8"/>
+    <circle cx="11.88" cy="13.13" r="0.38"/>
+    <circle cx="20.13" cy="13.13" r="0.38"/>
+    <circle cx="16" cy="15" r="0.5"/>
+    <circle cx="13.13" cy="16.88" r="0.38"/>
+    <circle cx="18.88" cy="16.88" r="0.38"/>
   </g>
   
-  <!-- White Central C -->
-  <text x="16" y="17" font-family="Arial, sans-serif" font-size="6" font-weight="bold" 
+  <!-- Central C -->
+  <text x="16" y="16.5" font-family="Arial, sans-serif" font-size="5" font-weight="bold" 
         fill="#ffffff" text-anchor="middle">C</text>
 </svg>

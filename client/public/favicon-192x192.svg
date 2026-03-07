@@ -3,37 +3,37 @@
   <!-- CONSTRUKTR blue background -->
   <rect width="192" height="192" rx="32" fill="#0243D5"/>
   
-  <!-- White shield outline -->
-  <path d="M96 24 L156 48 L156 120 Q156 150 96 168 Q36 150 36 120 L36 48 Z" 
-        fill="#ffffff" stroke="#e5e5e5" stroke-width="2"/>
+  <!-- Shield outline -->
+  <path d="M96 18.75 L144 37.5 L144 112.5 Q144 140.63 96 168.75 Q48 140.63 48 112.5 L48 37.5 Z" 
+        fill="#ffffff" stroke="#e5e5e5" stroke-width="1.5"/>
   
-  <!-- Blue inner area -->
-  <path d="M96 36 L144 54 L144 114 Q144 138 96 156 Q48 138 48 114 L48 54 Z" 
-        fill="#0243D5" stroke="#ffffff" stroke-width="1"/>
+  <!-- Inner blue area -->
+  <path d="M96 28.13 L134.63 43.13 L134.63 106.88 Q134.63 129.38 96 153.75 Q57.38 129.38 57.38 106.88 L57.38 43.13 Z" 
+        fill="#0243D5" stroke="#ffffff" stroke-width="1.13"/>
   
   <!-- Circuit pattern -->
-  <g stroke="#ffffff" stroke-width="2" fill="none">
+  <g stroke="#ffffff" stroke-width="1.5" fill="none">
     <!-- Horizontal lines -->
-    <line x1="72" y1="84" x2="120" y2="84"/>
-    <line x1="78" y1="96" x2="114" y2="96"/>
-    <line x1="84" y1="108" x2="108" y2="108"/>
+    <line x1="71.25" y1="78.75" x2="120.75" y2="78.75"/>
+    <line x1="75" y1="90" x2="117" y2="90"/>
+    <line x1="78.75" y1="101.25" x2="113.25" y2="101.25"/>
     
     <!-- Vertical connections -->
-    <line x1="96" y1="72" x2="96" y2="120"/>
-    <line x1="84" y1="90" x2="84" y2="102"/>
-    <line x1="108" y1="90" x2="108" y2="102"/>
+    <line x1="96" y1="67.5" x2="96" y2="112.5"/>
+    <line x1="78.75" y1="82.5" x2="78.75" y2="97.5"/>
+    <line x1="113.25" y1="82.5" x2="113.25" y2="97.5"/>
   </g>
   
-  <!-- White circuit nodes -->
+  <!-- Circuit nodes -->
   <g fill="#ffffff">
-    <circle cx="72" cy="84" r="3"/>
-    <circle cx="120" cy="84" r="3"/>
-    <circle cx="96" cy="96" r="4"/>
-    <circle cx="84" cy="108" r="3"/>
-    <circle cx="108" cy="108" r="3"/>
+    <circle cx="71.25" cy="78.75" r="2.25"/>
+    <circle cx="120.75" cy="78.75" r="2.25"/>
+    <circle cx="96" cy="90" r="3"/>
+    <circle cx="78.75" cy="101.25" r="2.25"/>
+    <circle cx="113.25" cy="101.25" r="2.25"/>
   </g>
   
-  <!-- White Central C -->
-  <text x="96" y="104" font-family="Arial, sans-serif" font-size="36" font-weight="bold" 
+  <!-- Central C -->
+  <text x="96" y="95.63" font-family="Arial, sans-serif" font-size="30" font-weight="bold" 
         fill="#ffffff" text-anchor="middle">C</text>
 </svg>

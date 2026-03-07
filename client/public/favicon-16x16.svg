@@ -1,20 +1,27 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-  <!-- Shield with correct CONSTRUKTR blue -->
-  <path d="M8 1.5 L13 3.5 L13 10 Q13 12.5 8 14.5 Q3 12.5 3 10 L3 3.5 Z" 
-        fill="#0243D5" stroke="#1a5490" stroke-width="0.2"/>
+  <!-- Shield outline with correct CONSTRUKTR blue -->
+  <path d="M8 1.5 L12 3 L12 9.38 Q12 11.72 8 14.06 Q4 11.72 4 9.38 L4 3 Z" 
+        fill="#0243D5" stroke="#1a5490" stroke-width="0.13"/>
   
   <!-- Inner white area -->
-  <path d="M8 2.5 L12 4 L12 9.5 Q12 11.5 8 13 Q4 11.5 4 9.5 L4 4 Z" 
-        fill="#ffffff" stroke="#0243D5" stroke-width="0.1"/>
+  <path d="M8 2.34 L11.19 3.59 L11.19 8.91 Q11.19 10.78 8 12.81 Q4.81 10.78 4.81 8.91 L4.81 3.59 Z" 
+        fill="#ffffff" stroke="#0243D5" stroke-width="0.09"/>
   
-  <!-- Simplified circuit for small size -->
-  <g stroke="#0243D5" stroke-width="0.2" fill="none">
-    <line x1="6" y1="6" x2="10" y2="6"/>
-    <line x1="8" y1="5" x2="8" y2="10"/>
+  <!-- Simplified circuit for 16px -->
+  <g stroke="#0243D5" stroke-width="0.13" fill="none">
+    <line x1="6" y1="6.5" x2="10" y2="6.5"/>
+    <line x1="8" y1="5.5" x2="8" y2="9.5"/>
+  </g>
+  
+  <!-- Circuit nodes -->
+  <g fill="#0243D5">
+    <circle cx="6" cy="6.5" r="0.19"/>
+    <circle cx="10" cy="6.5" r="0.19"/>
+    <circle cx="8" cy="7.5" r="0.25"/>
   </g>
   
   <!-- Central C -->
-  <text x="8" y="8.5" font-family="Arial, sans-serif" font-size="3" font-weight="bold" 
+  <text x="8" y="8.25" font-family="Arial, sans-serif" font-size="2.5" font-weight="bold" 
         fill="#0243D5" text-anchor="middle">C</text>
 </svg>
