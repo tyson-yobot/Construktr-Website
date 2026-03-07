@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Shield outline -->
+  <path d="M100 20 L160 45 L160 120 Q160 160 100 180 Q40 160 40 120 L40 45 Z" 
+        fill="#0243D5" stroke="#1a5490" stroke-width="2"/>
+  
+  <!-- Inner white area -->
+  <path d="M100 35 L145 55 L145 115 Q145 145 100 165 Q55 145 55 115 L55 55 Z" 
+        fill="#ffffff" stroke="#0243D5" stroke-width="1"/>
+  
+  <!-- Circuit board pattern -->
+  <g stroke="#0243D5" stroke-width="1.5" fill="none">
+    <!-- Horizontal lines -->
+    <line x1="75" y1="70" x2="125" y2="70"/>
+    <line x1="80" y1="85" x2="120" y2="85"/>
+    <line x1="85" y1="100" x2="115" y2="100"/>
+    <line x1="90" y1="115" x2="110" y2="115"/>
+    
+    <!-- Vertical connections -->
+    <line x1="100" y1="60" x2="100" y2="125"/>
+    <line x1="85" y1="75" x2="85" y2="105"/>
+    <line x1="115" y1="75" x2="115" y2="105"/>
+    
+    <!-- Corner connections -->
+    <line x1="75" y1="70" x2="80" y2="85"/>
+    <line x1="125" y1="70" x2="120" y2="85"/>
+    <line x1="85" y1="100" x2="90" y2="115"/>
+    <line x1="115" y1="100" x2="110" y2="115"/>
+  </g>
+  
+  <!-- Circuit nodes -->
+  <g fill="#0243D5">
+    <circle cx="75" cy="70" r="2"/>
+    <circle cx="125" cy="70" r="2"/>
+    <circle cx="100" cy="85" r="3"/>
+    <circle cx="85" cy="100" r="2"/>
+    <circle cx="115" cy="100" r="2"/>
+    <circle cx="100" cy="115" r="2"/>
+  </g>
+  
+  <!-- Central C -->
+  <text x="100" y="95" font-family="Arial, sans-serif" font-size="24" font-weight="bold" 
+        fill="#0243D5" text-anchor="middle">C</text>
+</svg>

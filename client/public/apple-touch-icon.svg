@@ -1,17 +1,39 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <svg width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
-  <!-- CONSTRUKTR blue background -->
+  <!-- CONSTRUKTR blue background with rounded corners -->
   <rect width="180" height="180" rx="28" fill="#0243D5"/>
   
-  <!-- Shield outline -->
-  <path d="M90 22 L142 41 L142 90 Q142 124 90 158 Q38 124 38 90 L38 41 Z" 
-        fill="#ffffff" stroke="#0243D5" stroke-width="3"/>
+  <!-- White shield outline -->
+  <path d="M90 22 L144 42 L144 112 Q144 140 90 158 Q36 140 36 112 L36 42 Z" 
+        fill="#ffffff" stroke="#e5e5e5" stroke-width="2"/>
   
-  <!-- Inner shield -->
-  <path d="M90 33 L131 49 L131 86 Q131 113 90 140 Q49 113 49 86 L49 49 Z" 
-        fill="#0243D5" stroke="#ffffff" stroke-width="2"/>
+  <!-- Blue inner area -->
+  <path d="M90 34 L132 50 L132 106 Q132 128 90 146 Q48 128 48 106 L48 50 Z" 
+        fill="#0243D5" stroke="#ffffff" stroke-width="1"/>
   
-  <!-- Letter C -->
-  <text x="90" y="97" font-family="Arial, sans-serif" font-size="34" font-weight="bold" 
+  <!-- Circuit pattern -->
+  <g stroke="#ffffff" stroke-width="1.5" fill="none">
+    <!-- Horizontal lines -->
+    <line x1="68" y1="78" x2="112" y2="78"/>
+    <line x1="72" y1="88" x2="108" y2="88"/>
+    <line x1="76" y1="98" x2="104" y2="98"/>
+    
+    <!-- Vertical connections -->
+    <line x1="90" y1="68" x2="90" y2="108"/>
+    <line x1="80" y1="84" x2="80" y2="92"/>
+    <line x1="100" y1="84" x2="100" y2="92"/>
+  </g>
+  
+  <!-- White circuit nodes -->
+  <g fill="#ffffff">
+    <circle cx="68" cy="78" r="2"/>
+    <circle cx="112" cy="78" r="2"/>
+    <circle cx="90" cy="88" r="3"/>
+    <circle cx="80" cy="98" r="2"/>
+    <circle cx="100" cy="98" r="2"/>
+  </g>
+  
+  <!-- White Central C -->
+  <text x="90" y="96" font-family="Arial, sans-serif" font-size="32" font-weight="bold" 
         fill="#ffffff" text-anchor="middle">C</text>
 </svg>

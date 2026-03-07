@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-const construktrLogo = "/construktr-shield-logo-dark.svg";
+const construktrLogo = "/construktr-official-logo.svg";
 
 export default function UnifiedHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -86,17 +86,20 @@ export default function UnifiedHeader() {
             <motion.div
               animate={{ scale: isScrolled ? 0.85 : 1 }}
               transition={{ duration: 0.3 }}
-              className="flex items-center gap-2 cursor-pointer"
+              className="flex items-center gap-3 cursor-pointer"
             >
               <img 
                 src={construktrLogo} 
-                alt="CONSTRUKTR" 
+                alt="CONSTRUKTR Logo" 
                 className={`w-auto transition-all duration-300 ${
-                  isScrolled ? "h-10" : "h-12"
+                  isScrolled ? "h-8" : "h-10"
                 }`}
                 loading="eager"
                 decoding="async"
               />
+              <span className="text-2xl font-bold text-[var(--color-primary)] tracking-wide">
+                CONSTRUKTR
+              </span>
             </motion.div>
           </Link>
 

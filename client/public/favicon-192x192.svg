@@ -4,14 +4,36 @@
   <rect width="192" height="192" rx="32" fill="#0243D5"/>
   
   <!-- White shield outline -->
-  <path d="M96 20 L160 40 L160 90 Q160 130 96 170 Q32 130 32 90 L32 40 Z" 
-        fill="#ffffff" stroke="#0243D5" stroke-width="3"/>
+  <path d="M96 24 L156 48 L156 120 Q156 150 96 168 Q36 150 36 120 L36 48 Z" 
+        fill="#ffffff" stroke="#e5e5e5" stroke-width="2"/>
   
   <!-- Blue inner area -->
-  <path d="M96 35 L145 50 L145 85 Q145 115 96 145 Q47 115 47 85 L47 50 Z" 
-        fill="#0243D5" stroke="#ffffff" stroke-width="2"/>
+  <path d="M96 36 L144 54 L144 114 Q144 138 96 156 Q48 138 48 114 L48 54 Z" 
+        fill="#0243D5" stroke="#ffffff" stroke-width="1"/>
   
-  <!-- White Letter C -->
-  <text x="96" y="105" font-family="Arial, sans-serif" font-size="40" font-weight="bold" 
+  <!-- Circuit pattern -->
+  <g stroke="#ffffff" stroke-width="2" fill="none">
+    <!-- Horizontal lines -->
+    <line x1="72" y1="84" x2="120" y2="84"/>
+    <line x1="78" y1="96" x2="114" y2="96"/>
+    <line x1="84" y1="108" x2="108" y2="108"/>
+    
+    <!-- Vertical connections -->
+    <line x1="96" y1="72" x2="96" y2="120"/>
+    <line x1="84" y1="90" x2="84" y2="102"/>
+    <line x1="108" y1="90" x2="108" y2="102"/>
+  </g>
+  
+  <!-- White circuit nodes -->
+  <g fill="#ffffff">
+    <circle cx="72" cy="84" r="3"/>
+    <circle cx="120" cy="84" r="3"/>
+    <circle cx="96" cy="96" r="4"/>
+    <circle cx="84" cy="108" r="3"/>
+    <circle cx="108" cy="108" r="3"/>
+  </g>
+  
+  <!-- White Central C -->
+  <text x="96" y="104" font-family="Arial, sans-serif" font-size="36" font-weight="bold" 
         fill="#ffffff" text-anchor="middle">C</text>
 </svg>

@@ -1,14 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-  <!-- Shield outline optimized for 16px -->
-  <path d="M8 1 L14 3 L14 8 Q14 12 8 15 Q2 12 2 8 L2 3 Z" 
-        fill="#0243D5" stroke="#2c5aa0" stroke-width="0.3"/>
+  <!-- Shield with correct CONSTRUKTR blue -->
+  <path d="M8 1.5 L13 3.5 L13 10 Q13 12.5 8 14.5 Q3 12.5 3 10 L3 3.5 Z" 
+        fill="#0243D5" stroke="#1a5490" stroke-width="0.2"/>
   
-  <!-- Inner shield -->
-  <path d="M8 2 L13 3.5 L13 7.5 Q13 11 8 13.5 Q3 11 3 7.5 L3 3.5 Z" 
-        fill="#ffffff" stroke="#0243D5" stroke-width="0.2"/>
+  <!-- Inner white area -->
+  <path d="M8 2.5 L12 4 L12 9.5 Q12 11.5 8 13 Q4 11.5 4 9.5 L4 4 Z" 
+        fill="#ffffff" stroke="#0243D5" stroke-width="0.1"/>
   
-  <!-- Letter C -->
-  <text x="8" y="9" font-family="Arial, sans-serif" font-size="4" font-weight="bold" 
+  <!-- Simplified circuit for small size -->
+  <g stroke="#0243D5" stroke-width="0.2" fill="none">
+    <line x1="6" y1="6" x2="10" y2="6"/>
+    <line x1="8" y1="5" x2="8" y2="10"/>
+  </g>
+  
+  <!-- Central C -->
+  <text x="8" y="8.5" font-family="Arial, sans-serif" font-size="3" font-weight="bold" 
         fill="#0243D5" text-anchor="middle">C</text>
 </svg>
