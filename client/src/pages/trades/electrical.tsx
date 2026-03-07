@@ -94,7 +94,7 @@ export default function ElectricalLanding() {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">Built for Electrical Professionals</h2>
             <p className="text-xl text-[var(--clr-text-2)] max-w-3xl mx-auto">
-              From residential rewires to commercial installations - every feature designed around electrical work
+              From residential rewires to commercial installations, every feature designed around electrical work
             </p>
           </div>
 

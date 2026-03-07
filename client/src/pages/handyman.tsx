@@ -237,7 +237,7 @@ export default function HandymanLanding() {
                 name: "Steve Miller",
                 business: "Miller Home Solutions",
                 location: "Tampa, FL",
-                quote: "The multi-trade calculator is perfect for someone like me who does everything. Plumbing, electrical, carpentry - it handles it all.",
+                quote: "The multi-trade calculator is perfect for someone like me who does everything. Plumbing, electrical, carpentry, it handles it all.",
                 rating: 5,
                 result: "Quotes all trades"
               }

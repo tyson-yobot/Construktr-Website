@@ -68,7 +68,7 @@ const educationSteps = [
     id: "pricing",
     icon: DollarSign,
     title: "Simple Pricing",
-    subtitle: "$49/month - Cancel anytime",
+    subtitle: "$49/month, cancel anytime",
     description: "No setup fees, no contracts. Start free and see results immediately.",
     benefits: ["Free forever plan", "No setup fees", "Cancel anytime"],
     image: appSchedulingImage,

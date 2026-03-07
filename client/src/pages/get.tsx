@@ -118,7 +118,7 @@ export default function GetApp() {
                 <span className="text-electric-blue"> From Your Phone</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Join 50,000+ service professionals who've transformed their business with the CONSTRUKTR mobile app. Everything you need to quote, schedule, and get paid - all in your pocket.
+                Join 50,000+ service professionals who've transformed their business with the CONSTRUKTR mobile app. Everything you need to quote, schedule, and get paid, all in your pocket.
               </p>
               
               {/* Download Buttons */}

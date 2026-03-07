@@ -127,7 +127,7 @@ export default function PromoBarSlim() {
             <button
               onClick={handleStartTrial}
               className="inline-flex items-center px-3 py-1 text-xs font-medium bg-[var(--color-primary)] text-white rounded-full hover:bg-[var(--color-primary)]/90 focus:outline-none focus:ring-1 focus:ring-[var(--color-primary)] transition-colors"
-              aria-label="Start your free trial - no setup fees, cancel anytime"
+              aria-label="Start your free trial, no setup fees, cancel anytime"
               role="button"
               tabIndex={0}
             >

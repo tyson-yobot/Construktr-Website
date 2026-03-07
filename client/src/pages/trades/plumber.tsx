@@ -93,7 +93,7 @@ export default function PlumberLanding() {
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">Built Specifically for Plumbing Businesses</h2>
             <p className="text-xl text-[var(--clr-text-2)] max-w-3xl mx-auto">
-              Every feature designed around real plumber workflows - from drain cleans to whole-house repipes
+              Every feature designed around real plumber workflows, from drain cleans to whole-house repipes
             </p>
           </div>
 
@@ -237,7 +237,7 @@ export default function PlumberLanding() {
           >
             <div className="text-6xl mb-6">💬</div>
             <blockquote className="text-2xl font-medium mb-6">
-              "CONSTRUKTR doubled my revenue in 6 months. The AI quoting is scary accurate - it knows plumbing better than some techs I've hired."
+              "CONSTRUKTR doubled my revenue in 6 months. The AI quoting is scary accurate, it knows plumbing better than some techs I've hired."
             </blockquote>
             <div className="text-[var(--clr-text-2)]">
               <div className="font-semibold text-white">Mike Rodriguez</div>

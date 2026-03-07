@@ -12,7 +12,7 @@ export const content = {
   },
   howItWorks: {
     title: "How AI Transforms Your Business in 3 Steps",
-    subtitle: "From quote to payment - AI handles the heavy lifting so you can focus on growing",
+    subtitle: "From quote to payment, AI handles the heavy lifting so you can focus on growing",
     steps: [
       {
         icon: "calculator",
@@ -33,7 +33,7 @@ export const content = {
   },
   features: {
     title: "AI-Powered Business Growth Platform",
-    subtitle: "Every tool you need to win more jobs, save time, and get paid faster - all powered by intelligent AI",
+    subtitle: "Every tool you need to win more jobs, save time, and get paid faster, all powered by intelligent AI",
     items: [
       {
         icon: "zap",
@@ -122,7 +122,7 @@ export const content = {
         avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100"
       },
       {
-        quote: "As a general contractor, I needed something that could handle multiple trades and complex projects. CONSTRUKTR does it all - from initial estimates to final payment. Game changer.",
+        quote: "As a general contractor, I needed something that could handle multiple trades and complex projects. CONSTRUKTR does it all, from initial estimates to final payment. Game changer.",
         author: "Maria Santos",
         company: "Santos Construction Group",
         location: "Miami, FL",

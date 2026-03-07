@@ -113,7 +113,7 @@ The most successful contractors we work with have moved beyond spreadsheets and 
 
 ## Take Action Today
 
-Start by tracking your actual time on the next 10 jobs. Note everything - travel, materials, unexpected issues, cleanup time. Compare this to what you quoted.
+Start by tracking your actual time on the next 10 jobs. Note everything: travel, materials, unexpected issues, cleanup time. Compare this to what you quoted.
 
 You'll likely find you're undercharging by 20-30%. That's money you deserve for your expertise and hard work.
 
@@ -217,7 +217,7 @@ Modern HVAC contractors use scheduling software to automate their seasonal strat
 
 **Automated Reminders:** 
 - Spring: "Time for your AC tune-up!"
-- Fall: "Don't get caught in the cold - schedule your heating checkup"
+- Fall: "Don't get caught in the cold, schedule your heating checkup"
 - Filter changes: Monthly reminders for premium customers
 
 **Weather Triggers:**

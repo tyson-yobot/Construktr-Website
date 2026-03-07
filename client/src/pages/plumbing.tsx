@@ -283,7 +283,7 @@ export default function PlumbingLanding() {
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Download the app trusted by plumbing contractors nationwide. 
-              Start your 15-day free trial - no credit card required.
+              Start your 15-day free trial, no credit card required.
             </p>
             
             <div className="mb-8">

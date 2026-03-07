@@ -61,7 +61,7 @@ const testimonials = [
     title: "Thompson Landscaping",
     location: "Denver, CO",
     rating: 5,
-    content: "The mobile app keeps my entire crew connected. Weather alerts, job updates, photo documentation - everything we need in the field. Revenue up 60%.",
+    content: "The mobile app keeps my entire crew connected. Weather alerts, job updates, photo documentation, everything we need in the field. Revenue up 60%.",
     avatar: "DT",
     category: "Teams",
     metrics: {

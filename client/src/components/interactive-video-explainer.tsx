@@ -245,12 +245,12 @@ export default function InteractiveVideoExplainer() {
     {
       title: "Click any timeline step",
       description: "Jump directly to see Quote, Schedule, Invoice, or Payment in action",
-      highlight: "No need to watch the whole video - skip to what interests you most"
+      highlight: "No need to watch the whole video, skip to what interests you most"
     },
     {
       title: "Watch the workflow flow",
       description: "See how each step connects seamlessly to create the complete contractor experience",
-      highlight: "Notice how everything happens automatically - no manual data entry"
+      highlight: "Notice how everything happens automatically, no manual data entry"
     },
     {
       title: "Real contractor results",

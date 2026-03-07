@@ -52,7 +52,7 @@ export default function SEOHead({
     "applicationCategory": "BusinessApplication",
     "applicationSubCategory": "Project Management",
     "operatingSystem": "iOS, Android, Web",
-    "description": "AI contractor app for professional job management - generate quotes in 30 seconds, optimize scheduling routes, and process same-day payments. The best contractor management software for HVAC, plumbing, electrical, and service businesses.",
+    "description": "AI contractor app for professional job management: generate quotes in 30 seconds, optimize scheduling routes, and process same-day payments. The best contractor management software for HVAC, plumbing, electrical, and service businesses.",
     "features": [
       "AI-powered estimating software for instant quotes",
       "Smart scheduling for service businesses with route optimization",
