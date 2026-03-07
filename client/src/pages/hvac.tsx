@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Thermometer, Wrench, Clock, DollarSign, Star, CheckCircle, ArrowRight, Wind } from "lucide-react";
-import EnhancedNavbar from "@/components/enhanced-navbar";
+
 import AppStoreBadges from "@/components/app-store-badges";
 import UrgencyBanner from "@/components/urgency-banner";
 import LeadMagnetCapture from "@/components/lead-magnet-capture";
@@ -20,7 +20,6 @@ export default function HVACLanding() {
       <title>HVAC Job Scheduler & Business App | CONSTRUKTR - AI Quote Software</title>
       
       <UrgencyBanner variant="downloads" position="top" />
-      <EnhancedNavbar />
 
       {/* Hero Section - HVAC Specific */}
       <section className="bg-gradient-to-br from-orange-50 to-white py-20">

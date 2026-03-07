@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Home, Wrench, Clock, DollarSign, Star, CheckCircle, ArrowRight, Cloud } from "lucide-react";
-import EnhancedNavbar from "@/components/enhanced-navbar";
+
 import AppStoreBadges from "@/components/app-store-badges";
 import UrgencyBanner from "@/components/urgency-banner";
 import LeadMagnetCapture from "@/components/lead-magnet-capture";
@@ -20,7 +20,6 @@ export default function RoofingLanding() {
       <title>Roofing Business App | CONSTRUKTR - Roof Quote & Job Management Software</title>
       
       <UrgencyBanner variant="downloads" position="top" />
-      <EnhancedNavbar />
 
       {/* Hero Section - Roofing Specific */}
       <section className="bg-gradient-to-br from-red-50 to-white py-20">

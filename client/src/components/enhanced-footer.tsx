@@ -182,14 +182,14 @@ export default function EnhancedFooter() {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-slate-400 hover:text-white transition-colors duration-200">
+                <a href="mailto:support@construktr.ai?subject=API Documentation Request" className="text-slate-400 hover:text-white transition-colors duration-200">
                   API Documentation
                 </a>
               </li>
               <li>
-                <a href="#" className="text-slate-400 hover:text-white transition-colors duration-200">
+                <Link href="/features" className="text-slate-400 hover:text-white transition-colors duration-200">
                   Integrations
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -209,22 +209,22 @@ export default function EnhancedFooter() {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-slate-400 hover:text-white transition-colors duration-200">
+                <a href="mailto:careers@construktr.ai?subject=Career Inquiry" className="text-slate-400 hover:text-white transition-colors duration-200">
                   Careers
                 </a>
               </li>
               <li>
-                <a href="#" className="text-slate-400 hover:text-white transition-colors duration-200">
+                <a href="mailto:press@construktr.ai?subject=Press Kit Request" className="text-slate-400 hover:text-white transition-colors duration-200">
                   Press Kit
                 </a>
               </li>
               <li>
-                <a href="#" className="text-slate-400 hover:text-white transition-colors duration-200">
+                <Link href="/blog" className="text-slate-400 hover:text-white transition-colors duration-200">
                   Blog
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-slate-400 hover:text-white transition-colors duration-200">
+                <a href="mailto:partnerships@construktr.ai?subject=Partnership Inquiry" className="text-slate-400 hover:text-white transition-colors duration-200">
                   Partners
                 </a>
               </li>
@@ -241,17 +241,17 @@ export default function EnhancedFooter() {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-slate-400 hover:text-white transition-colors duration-200">
+                <a href="mailto:support@construktr.ai?subject=Support Request" className="text-slate-400 hover:text-white transition-colors duration-200">
                   Live Chat
                 </a>
               </li>
               <li>
-                <a href="#" className="text-slate-400 hover:text-white transition-colors duration-200">
+                <a href="mailto:training@construktr.ai?subject=Training Request" className="text-slate-400 hover:text-white transition-colors duration-200">
                   Training
                 </a>
               </li>
               <li>
-                <a href="#" className="text-slate-400 hover:text-white transition-colors duration-200">
+                <a href="https://status.construktr.ai" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors duration-200">
                   System Status
                 </a>
               </li>
@@ -317,35 +317,35 @@ export default function EnhancedFooter() {
           
           {/* Legal Links */}
           <div className="flex flex-wrap justify-center lg:justify-start gap-6 text-sm">
-            <a href="#" className="text-slate-400 hover:text-white transition-colors duration-200">
+            <Link href="/privacy" className="text-slate-400 hover:text-white transition-colors duration-200">
               Privacy Policy
-            </a>
-            <a href="#" className="text-slate-400 hover:text-white transition-colors duration-200">
+            </Link>
+            <Link href="/terms" className="text-slate-400 hover:text-white transition-colors duration-200">
               Terms of Service
-            </a>
-            <a href="#" className="text-slate-400 hover:text-white transition-colors duration-200">
+            </Link>
+            <a href="mailto:security@construktr.ai?subject=Security Inquiry" className="text-slate-400 hover:text-white transition-colors duration-200">
               Security
             </a>
-            <a href="#" className="text-slate-400 hover:text-white transition-colors duration-200">
+            <Link href="/privacy" className="text-slate-400 hover:text-white transition-colors duration-200">
               GDPR
-            </a>
+            </Link>
           </div>
 
           {/* Social Media */}
           <div className="flex items-center space-x-4">
-            <a href="#" className="text-slate-400 hover:text-white transition-colors duration-200">
+            <a href="https://twitter.com/construktr_ai" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors duration-200">
               <Twitter className="w-5 h-5" />
             </a>
-            <a href="#" className="text-slate-400 hover:text-white transition-colors duration-200">
+            <a href="https://linkedin.com/company/construktr" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors duration-200">
               <Linkedin className="w-5 h-5" />
             </a>
-            <a href="#" className="text-slate-400 hover:text-white transition-colors duration-200">
+            <a href="https://facebook.com/construktr.ai" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors duration-200">
               <Facebook className="w-5 h-5" />
             </a>
-            <a href="#" className="text-slate-400 hover:text-white transition-colors duration-200">
+            <a href="https://instagram.com/construktr.ai" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors duration-200">
               <Instagram className="w-5 h-5" />
             </a>
-            <a href="#" className="text-slate-400 hover:text-white transition-colors duration-200">
+            <a href="https://youtube.com/@construktr" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors duration-200">
               <Youtube className="w-5 h-5" />
             </a>
           </div>

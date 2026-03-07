@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Droplets, Wrench, Clock, DollarSign, Star, CheckCircle, ArrowRight } from "lucide-react";
-import EnhancedNavbar from "@/components/enhanced-navbar";
+
 import AppStoreBadges from "@/components/app-store-badges";
 import UrgencyBanner from "@/components/urgency-banner";
 import LeadMagnetCapture from "@/components/lead-magnet-capture";
@@ -21,7 +21,6 @@ export default function PlumbingLanding() {
       <title>AI Plumbing Business App | CONSTRUKTR - Job Scheduler & Quote Software</title>
       
       <UrgencyBanner variant="downloads" position="top" />
-      <EnhancedNavbar />
 
       {/* Hero Section - Plumbing Specific */}
       <section className="bg-gradient-to-br from-blue-50 to-white py-20">

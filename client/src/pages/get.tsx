@@ -2,7 +2,6 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Smartphone, Download, Star, Shield, Zap, Clock, Users, CheckCircle, QrCode } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
 const appFeatures = [
@@ -103,7 +102,6 @@ export default function GetApp() {
 
   return (
     <div className="min-h-screen bg-[var(--clr-surface)]">
-      <Navbar />
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 gradient-hero text-white overflow-hidden">
@@ -125,21 +123,25 @@ export default function GetApp() {
               
               {/* Download Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mb-6">
-                <Button className="bg-black text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-800 transition-colors duration-200 flex items-center justify-center space-x-3">
-                  <img src="https://developer.apple.com/assets/elements/icons/app-store/app-store-128x128_2x.png" alt="App Store" className="w-6 h-6" width="24" height="24" loading="lazy" decoding="async" />
-                  <div className="text-left">
-                    <div className="text-xs">Download on the</div>
-                    <div className="text-lg font-bold">App Store</div>
-                  </div>
-                </Button>
+                <a href="https://apps.apple.com/app/construktr" target="_blank" rel="noopener noreferrer">
+                  <Button className="bg-black text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-800 transition-colors duration-200 flex items-center justify-center space-x-3">
+                    <img src="https://developer.apple.com/assets/elements/icons/app-store/app-store-128x128_2x.png" alt="App Store" className="w-6 h-6" width="24" height="24" loading="lazy" decoding="async" />
+                    <div className="text-left">
+                      <div className="text-xs">Download on the</div>
+                      <div className="text-lg font-bold">App Store</div>
+                    </div>
+                  </Button>
+                </a>
                 
-                <Button className="bg-black text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-800 transition-colors duration-200 flex items-center justify-center space-x-3">
-                  <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Google Play" className="w-6 h-6" width="24" height="24" loading="lazy" decoding="async" />
-                  <div className="text-left">
-                    <div className="text-xs">Get it on</div>
-                    <div className="text-lg font-bold">Google Play</div>
-                  </div>
-                </Button>
+                <a href="https://play.google.com/store/apps/details?id=com.construktr.app" target="_blank" rel="noopener noreferrer">
+                  <Button className="bg-black text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-800 transition-colors duration-200 flex items-center justify-center space-x-3">
+                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Google Play" className="w-6 h-6" width="24" height="24" loading="lazy" decoding="async" />
+                    <div className="text-left">
+                      <div className="text-xs">Get it on</div>
+                      <div className="text-lg font-bold">Google Play</div>
+                    </div>
+                  </Button>
+                </a>
               </div>
               
               {/* Trust Line */}

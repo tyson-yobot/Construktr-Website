@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Award, Calendar, Users, Target, Download, ExternalLink, MapPin, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
 const teamMembers = [
@@ -156,7 +155,6 @@ const mediaFeatures = [
 export default function About() {
   return (
     <div className="min-h-screen bg-[var(--clr-surface)]">
-      <Navbar />
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 gradient-hero text-white">

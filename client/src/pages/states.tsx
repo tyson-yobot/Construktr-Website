@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Users, TrendingUp, Star, Phone, Mail, Clock, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
-import EnhancedStickyNavbar from "@/components/enhanced-sticky-navbar";
+
 import StickyMobileCTA from "@/components/sticky-mobile-cta";
 
 // This would normally come from a CMS or API
@@ -124,7 +124,6 @@ export default function StatePage() {
 
   return (
     <div className="min-h-screen">
-      <EnhancedStickyNavbar />
       
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-blue-900 via-slate-800 to-slate-900 text-white">

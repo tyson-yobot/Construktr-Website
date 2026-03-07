@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Zap, Wrench, Clock, DollarSign, Star, CheckCircle, ArrowRight, Shield } from "lucide-react";
-import EnhancedNavbar from "@/components/enhanced-navbar";
 import AppStoreBadges from "@/components/app-store-badges";
 import UrgencyBanner from "@/components/urgency-banner";
 import LeadMagnetCapture from "@/components/lead-magnet-capture";
@@ -20,7 +19,6 @@ export default function ElectricalLanding() {
       <title>Electrical Business App | CONSTRUKTR - Electrician Quote & Job Software</title>
       
       <UrgencyBanner variant="downloads" position="top" />
-      <EnhancedNavbar />
 
       {/* Hero Section - Electrical Specific */}
       <section className="bg-gradient-to-br from-yellow-50 to-white py-20">

@@ -5,7 +5,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Users, Phone, Star, Clock, DollarSign, ArrowRight, CheckCircle } from "lucide-react";
 import { Link } from "wouter";
-import EnhancedStickyNavbar from "@/components/enhanced-sticky-navbar";
 import StickyMobileCTA from "@/components/sticky-mobile-cta";
 
 // City-specific data - would normally come from CMS/API
@@ -146,7 +145,6 @@ export default function CityPage() {
 
   return (
     <div className="min-h-screen">
-      <EnhancedStickyNavbar />
       
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-blue-900 via-slate-800 to-slate-900 text-white">

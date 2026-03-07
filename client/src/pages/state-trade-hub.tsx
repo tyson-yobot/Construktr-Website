@@ -3,14 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Wrench, TrendingUp, Star, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
-import EnhancedStickyNavbar from "@/components/enhanced-sticky-navbar";
+
 import StateTradeGrids from "@/components/state-trade-landing-grids";
 import StickyMobileCTA from "@/components/sticky-mobile-cta";
 
 export default function StateTradeHub() {
   return (
     <div className="min-h-screen">
-      <EnhancedStickyNavbar />
       
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-blue-900 via-slate-800 to-slate-900 text-white">

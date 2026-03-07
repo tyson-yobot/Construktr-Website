@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Hammer, Wrench, Clock, DollarSign, Star, CheckCircle, ArrowRight, Settings } from "lucide-react";
-import EnhancedNavbar from "@/components/enhanced-navbar";
+
 import AppStoreBadges from "@/components/app-store-badges";
 import UrgencyBanner from "@/components/urgency-banner";
 import LeadMagnetCapture from "@/components/lead-magnet-capture";
@@ -20,7 +20,6 @@ export default function HandymanLanding() {
       <title>Handyman Quoting Software | CONSTRUKTR - Business App for Handymen</title>
       
       <UrgencyBanner variant="downloads" position="top" />
-      <EnhancedNavbar />
 
       {/* Hero Section - Handyman Specific */}
       <section className="bg-gradient-to-br from-green-50 to-white py-20">

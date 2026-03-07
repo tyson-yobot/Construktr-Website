@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { Play, Download, ChevronRight, Wrench, Droplets, Wind, Zap, Building, Home, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
 const industries = [
@@ -211,7 +210,6 @@ export default function Demos() {
 
   return (
     <div className="min-h-screen bg-[var(--clr-surface)]">
-      <Navbar />
       
       {/* Hero Section */}
       <section className="pt-24 pb-16 gradient-hero text-white">
