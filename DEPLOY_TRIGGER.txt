@@ -1,6 +1,6 @@
-Deployment trigger: March 7, 2026, 7:15 AM MST
+Deployment trigger: March 7, 2026, 7:30 AM MST
 This file exists only to trigger a Vercel rebuild.
-Dev branch deployment with COMPREHENSIVE WEBSITE OVERHAUL:
+Dev branch deployment with LOGO & FAVICON FIXES:
 
 ✅ BRANDING FIXES:
 - Removed all ™ and ® symbols from CONSTRUKTR everywhere
@@ -31,8 +31,17 @@ Dev branch deployment with COMPREHENSIVE WEBSITE OVERHAUL:
 - Fixed chatbot pricing to reflect current tiers
 - Ensured all pricing displays match main pricing.ts source
 
+✅ LOGO & FAVICON TRANSPARENT BACKGROUND FIXES:
+- Created proper SVG logo with transparent background in CONSTRUKTR brand blue (#0243D5)
+- Added white version for dark backgrounds  
+- Created proper favicon with transparent background (blue square with white "C")
+- Updated 15 components to use new transparent logos
+- Fixed index.html to remove ™ symbols and use proper favicon
+- Updated all schema references to point to new logo files
+
 ✅ COMPONENTS FULLY UPDATED:
 - 92 files modified with brand and functionality improvements
 - All screenshot imports converted to direct public folder paths
 - Comprehensive feature coverage across all sections
 - Professional presentation with working real app screenshots
+- All logo displays now use transparent background logos
