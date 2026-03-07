@@ -14,9 +14,9 @@ import {
 } from "lucide-react";
 import { trackVideoPlayed45sDemo, trackCTAStartTrialClicked } from "@/lib/analytics-events";
 import StandardizedPhoneMockup from "./standardized-phone-mockup";
-import appQuotesImage from "@assets/image_1754832756730.png";
-import appSchedulingImage from "@assets/image_1754832756730.png";
-import appPaymentsImage from "@assets/image_1754832756730.png";
+import appQuotesImage from "/screens/quote-builder.png";
+import appSchedulingImage from "/screens/schedule-view.png";
+import appPaymentsImage from "/screens/payment-processing.png";
 
 // Education Flow Steps - Quote → Schedule → Get Paid → Proof → Pricing
 const educationSteps = [

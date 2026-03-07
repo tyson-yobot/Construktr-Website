@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
 import { Smartphone, CheckCircle, Zap, Clock, DollarSign } from "lucide-react";
-import phoneDemo from "@assets/image_1754832756730.png";
+import phoneDemo from "/screens/home-screen.png";
 import StandardizedPhoneMockup from "./standardized-phone-mockup";
 
 const keyFeatures = [

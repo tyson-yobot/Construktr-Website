@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Play, Pause, Volume2, VolumeX, CheckCircle, Calendar } from 'lucide-react';
 import StandardizedPhoneMockup from './standardized-phone-mockup';
 import { Button } from '@/components/ui/button';
-import appScreenshotImage from '@assets/image_1754832756730.png';
+import appScreenshotImage from '/screens/dashboard.png';
 
 const videoTimelineSteps = [
   {

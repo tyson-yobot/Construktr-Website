@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { Smartphone, Brain, Zap, Sparkles } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import screenshot1 from "@assets/image_1754832756730.png";
-import screenshot2 from "@assets/image_1754832756730.png";  
-import screenshot3 from "@assets/image_1754832756730.png";
+import screenshot1 from "/screens/dashboard.png";
+import screenshot2 from "/screens/schedule-view.png";  
+import screenshot3 from "/screens/quote-builder.png";
 import StandardizedPhoneMockup from "./standardized-phone-mockup";
 
 export default function MobileAppShowcase() {

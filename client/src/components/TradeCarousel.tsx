@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Phone, Wrench, Zap, Home, Paintbrush, TreePine, Hammer, Building } from "lucide-react";
 import StandardizedPhoneMockup from "./standardized-phone-mockup";
-import appQuotesImage from "@assets/image_1754832756730.png";
+import appQuotesImage from "/screens/quote-builder.png";
 import tradesData from "../../../content/trades.json";
 
 const tradeIcons = {

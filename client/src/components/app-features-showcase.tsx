@@ -5,11 +5,11 @@ import { ChevronLeft, ChevronRight, MessageSquare, Calendar, FileText, MapPin, B
 import { motion, AnimatePresence } from "framer-motion";
 
 // Import the actual app screenshots
-import quoteScreenshot from "@assets/image_1754788551645.png";
-import calendarScreenshot from "@assets/image_1754788551645.png";
-import invoiceScreenshot from "@assets/image_1754788551645.png";
-import routeScreenshot from "@assets/image_1754788551645.png";
-import insightsScreenshot from "@assets/image_1754788551645.png";
+import quoteScreenshot from "/screens/quote-builder.png";
+import calendarScreenshot from "/screens/schedule-view.png";
+import invoiceScreenshot from "/screens/invoice-view.png";
+import routeScreenshot from "/screens/dashboard.png";
+import insightsScreenshot from "/screens/ai-assistant.png";
 
 const features = [
   {

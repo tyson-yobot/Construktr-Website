@@ -3,9 +3,9 @@ import { Button } from '@/components/ui/button';
 import { Download, Star } from 'lucide-react';
 import StandardizedPhoneMockup from './standardized-phone-mockup';
 import { Badge } from '@/components/ui/badge';
-import smartSchedulingScreen from '@assets/image_1754832756730.png';
-import instantQuotesScreen from '@assets/image_1754832756730.png';
-import smartDashboardScreen from '@assets/image_1754832756730.png';
+import smartSchedulingScreen from '/screens/schedule-view.png';
+import instantQuotesScreen from '/screens/quote-builder.png';
+import smartDashboardScreen from '/screens/dashboard.png';
 
 const appFeatures = [
   {

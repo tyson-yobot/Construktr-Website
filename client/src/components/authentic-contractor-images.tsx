@@ -16,8 +16,8 @@ import workTruckImage from "@assets/IMG_4338_1754274611770.jpeg";
 import appScreenImage from "@assets/IMG_4330_1754274611770.jpeg";
 import jobCompleteImage from "@assets/IMG_4331_1754274611770.jpeg";
 import customerMeetingImage from "@assets/IMG_4332_1754274611770.jpeg";
-import dashboardImage from "@assets/image_1754832756730.png";
-import mobileAppImage from "@assets/image_1754832756730.png";
+import dashboardImage from "/screens/dashboard.png";
+import mobileAppImage from "/screens/home-screen.png";
 
 interface AuthenticImageProps {
   scenario: "truck" | "jobsite" | "phone-usage" | "tools" | "meeting" | "dashboard" | "app-screen";

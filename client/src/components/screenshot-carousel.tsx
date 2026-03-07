@@ -5,12 +5,12 @@ import { Badge } from "@/components/ui/badge";
 import StandardizedPhoneMockup from "./standardized-phone-mockup";
 
 // Import the actual app screenshots
-import screenshot1 from "@assets/image_1754832756730.png";
-import screenshot2 from "@assets/image_1754832756730.png"; 
-import screenshot3 from "@assets/image_1754832756730.png";
-import screenshot4 from "@assets/image_1754832756730.png";
-import screenshot5 from "@assets/image_1754832756730.png";
-import screenshot6 from "@assets/image_1754832756730.png";
+import screenshot1 from "/screens/dashboard.png";
+import screenshot2 from "/screens/schedule-view.png"; 
+import screenshot3 from "/screens/quote-builder.png";
+import screenshot4 from "/screens/job-details.png";
+import screenshot5 from "/screens/payment-processing.png";
+import screenshot6 from "/screens/ai-assistant.png";
 
 const screenshots = [
   { 

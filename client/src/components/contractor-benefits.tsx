@@ -3,10 +3,10 @@ import { Badge } from "@/components/ui/badge";
 import { TrendingUp, Clock, CreditCard, Heart, CheckCircle } from "lucide-react";
 import MicroCTA from "@/components/micro-cta";
 import StandardizedPhoneMockup from "./standardized-phone-mockup";
-import quoteScreenshot from "@assets/image_1754832756730.png";
-import scheduleScreenshot from "@assets/image_1754832756730.png";
-import paymentScreenshot from "@assets/image_1754832756730.png";
-import clientScreenshot from "@assets/image_1754832756730.png";
+import quoteScreenshot from "/screens/quote-builder.png";
+import scheduleScreenshot from "/screens/schedule-view.png";
+import paymentScreenshot from "/screens/payment-processing.png";
+import clientScreenshot from "/screens/ai-assistant.png";
 
 const benefits = [
   {
