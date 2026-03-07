@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <!-- Shield outline optimized for 16px -->
+  <path d="M8 1 L14 3 L14 8 Q14 12 8 15 Q2 12 2 8 L2 3 Z" 
+        fill="#0243D5" stroke="#2c5aa0" stroke-width="0.3"/>
+  
+  <!-- Inner shield -->
+  <path d="M8 2 L13 3.5 L13 7.5 Q13 11 8 13.5 Q3 11 3 7.5 L3 3.5 Z" 
+        fill="#ffffff" stroke="#0243D5" stroke-width="0.2"/>
+  
+  <!-- Letter C -->
+  <text x="8" y="9" font-family="Arial, sans-serif" font-size="4" font-weight="bold" 
+        fill="#0243D5" text-anchor="middle">C</text>
+</svg>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+  <!-- CONSTRUKTR blue background -->
+  <rect width="96" height="96" rx="16" fill="#0243D5"/>
+  
+  <!-- Shield outline -->
+  <path d="M48 12 L76 22 L76 48 Q76 66 48 84 Q20 66 20 48 L20 22 Z" 
+        fill="#ffffff" stroke="#0243D5" stroke-width="2"/>
+  
+  <!-- Inner shield -->
+  <path d="M48 18 L70 26 L70 46 Q70 60 48 74 Q26 60 26 46 L26 26 Z" 
+        fill="#0243D5" stroke="#ffffff" stroke-width="1.5"/>
+  
+  <!-- Letter C -->
+  <text x="48" y="52" font-family="Arial, sans-serif" font-size="18" font-weight="bold" 
+        fill="#ffffff" text-anchor="middle">C</text>
+</svg>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+  <!-- Shield outline -->
+  <path d="M24 3 L42 9 L42 24 Q42 36 24 45 Q6 36 6 24 L6 9 Z" 
+        fill="#0243D5" stroke="#2c5aa0" stroke-width="0.8"/>
+  
+  <!-- Inner shield -->
+  <path d="M24 6 L39 10.5 L39 22.5 Q39 33 24 40.5 Q9 33 9 22.5 L9 10.5 Z" 
+        fill="#ffffff" stroke="#0243D5" stroke-width="0.5"/>
+  
+  <!-- Letter C -->
+  <text x="24" y="27" font-family="Arial, sans-serif" font-size="12" font-weight="bold" 
+        fill="#0243D5" text-anchor="middle">C</text>
+</svg>
