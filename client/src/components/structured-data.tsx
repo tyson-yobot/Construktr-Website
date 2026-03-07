@@ -6,7 +6,7 @@ const structuredData = {
     "@type": "Organization",
     "name": "CONSTRUKTR",
     "url": "https://CONSTRUKTR.ai",
-    "logo": "https://CONSTRUKTR.ai/logo.png",
+    "logo": "https://construktr.ai/construktr-logo.svg",
     "description": "Best contractor job management and scheduling app. AI-powered quotes, smart scheduling, and same-day payments for contractors in all 50 states.",
     "foundingDate": "2023",
     "industry": "Construction Management Software",

@@ -18,7 +18,7 @@ import {
   Instagram,
   Youtube
 } from "lucide-react";
-import construktrLogo from "@assets/Construktr_Logo_Transparent_1024_x_1024_1772187695111.jpg";
+const construktrLogo = "/construktr-logo.svg";
 
 export default function EnhancedFooter() {
   return (

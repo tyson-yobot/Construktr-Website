@@ -24,7 +24,7 @@ export default function SEOHead({
     "alternateName": "Construktr",
     "legalName": "Automate AI LLC",
     "url": "https://CONSTRUKTR.ai",
-    "logo": "https://CONSTRUKTR.ai/logo-construktr.png",
+    "logo": "https://construktr.ai/construktr-logo.svg",
     "sameAs": [
       "https://apps.apple.com/app/construktr",
       "https://play.google.com/store/apps/details?id=com.construktr"

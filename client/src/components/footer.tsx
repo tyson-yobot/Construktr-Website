@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import logoPath from "@assets/Construktr_Logo_Transparent_1024_x_1024_1772187695111.jpg";
+const logoPath = "/construktr-logo.svg";
 import EcosystemFooter from "@/components/seo/EcosystemFooter";
 
 const ecosystemData = {

@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Shield, Award, CheckCircle, Clock } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
-import construktrLogo from "@assets/Construktr_Logo_Transparent_1024_x_1024_1772187695111.jpg";
+const construktrLogo = "/construktr-logo.svg";
 import AppStoreBadges from "./app-store-badges";
 
 export default function SEOFooter() {

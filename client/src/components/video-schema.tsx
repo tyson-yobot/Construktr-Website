@@ -33,7 +33,7 @@ export default function VideoSchema({
         "name": "CONSTRUKTR",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://CONSTRUKTR.ai/logo.png"
+          "url": "https://construktr.ai/construktr-logo.svg"
         }
       },
       "creator": {

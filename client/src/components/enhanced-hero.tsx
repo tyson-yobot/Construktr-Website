@@ -11,7 +11,7 @@ import AppStoreBadges from "./app-store-badges";
 import OptimizedImage from "./optimized-image";
 import SMSAppLink from "./sms-app-link";
 import { trackCTAStartTrialClicked, trackCTABookDemoClicked, trackTradeChipClicked } from "@/lib/analytics-events";
-import construktrLogo from "@assets/Construktr_Logo_Transparent_1024_x_1024_1772187695111.jpg";
+const construktrLogo = "/construktr-logo-white.svg";
 const appScreenshotImage = "/screens/dashboard.png";
 import StandardizedPhoneMockup from "./standardized-phone-mockup";
 

@@ -5,7 +5,7 @@ import { Link } from "wouter";
 import { content } from "@/lib/content";
 import VideoTrigger from "@/components/video-demo-modal";
 import TrustBar from "@/components/TrustBar";
-import logoPath from "@assets/Construktr_Logo_Transparent_1024_x_1024_1772187695111.jpg";
+const logoPath = "/construktr-logo-white.svg";
 
 export default function Hero() {
   const scrollToSection = (sectionId: string) => {
