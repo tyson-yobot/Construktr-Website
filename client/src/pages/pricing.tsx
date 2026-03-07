@@ -31,7 +31,7 @@ export default function Pricing() {
       "price": tier.priceMonthly,
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
-      "url": "https://construktr.ai/pricing",
+      "url": "https://CONSTRUKTR.ai/pricing",
       "priceSpecification": {
         "@type": "UnitPriceSpecification",
         "price": tier.priceMonthly,
@@ -55,9 +55,9 @@ export default function Pricing() {
   return (
     <div className="min-h-screen bg-[var(--color-bg)] text-white">
       <SEOHead 
-        title="CONSTRUKTR™ Pricing — Free Plan + Starter, Pro & Business Tiers"
+        title="CONSTRUKTR Pricing — Free Plan + Starter, Pro & Business Tiers"
         description="Transparent contractor software pricing. Free forever plan available. Starter ($49/mo), Pro ($89/mo), Business ($199/mo). Annual billing saves ~20%. No credit card required."
-        canonical="https://construktr.ai/pricing"
+        canonical="https://CONSTRUKTR.ai/pricing"
         structuredData={productSchemas}
       />
       
@@ -182,7 +182,7 @@ export default function Pricing() {
                     {/* App Content */}
                     <div className="p-6 bg-gradient-to-b from-blue-50 to-white h-full">
                       <div className="mb-6">
-                        <h3 className="text-xl font-bold text-gray-900 mb-2">CONSTRUKTR™</h3>
+                        <h3 className="text-xl font-bold text-gray-900 mb-2">CONSTRUKTR</h3>
                         <p className="text-gray-600 text-sm">AI Business Manager</p>
                       </div>
                       

@@ -32,7 +32,7 @@ import ProductGrid from "@/components/seo/ProductGrid";
 const ecosystemProducts = [
   {
     name: "Construktr",
-    url: "https://construktr.ai",
+    url: "https://CONSTRUKTR.ai",
     tagline: "AI field operations platform for contractors",
     anchors: ["AI contractor app", "contractor scheduling software"]
   },

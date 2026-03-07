@@ -97,7 +97,7 @@ export default function TestimonialsSlider() {
             Trusted by Contractors Nationwide
           </h2>
           <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-            Join thousands of contractors who've transformed their business with CONSTRUKTR™
+            Join thousands of contractors who've transformed their business with CONSTRUKTR
           </p>
         </motion.div>
 

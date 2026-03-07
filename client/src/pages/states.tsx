@@ -50,15 +50,15 @@ const statePageData: Record<string, any> = {
       topSeason: "Spring/Summer"
     },
     seoContent: {
-      title: "Texas Contractor Software | CONSTRUKTR™",
-      metaDescription: "Join 15,200+ Texas contractors using CONSTRUKTR™ to grow their business. AI-powered quotes, scheduling, and payments. Available in Houston, Dallas, Austin & more.",
+      title: "Texas Contractor Software | CONSTRUKTR",
+      metaDescription: "Join 15,200+ Texas contractors using CONSTRUKTR to grow their business. AI-powered quotes, scheduling, and payments. Available in Houston, Dallas, Austin & more.",
       h1: "The Leading Contractor Software in Texas",
       localKeywords: ["Texas contractor software", "Houston HVAC software", "Dallas plumbing app", "Austin electrician tools"]
     }
   },
   california: {
     name: "California",
-    description: "Golden State contractors trust CONSTRUKTR™ for growth and efficiency",
+    description: "Golden State contractors trust CONSTRUKTR for growth and efficiency",
     contractors: "22,400+",
     growth: "+22%",
     avgRevenue: "$156,000",
@@ -96,8 +96,8 @@ const statePageData: Record<string, any> = {
       topSeason: "Year-round"
     },
     seoContent: {
-      title: "California Contractor Software | CONSTRUKTR™",
-      metaDescription: "Join 22,400+ California contractors using CONSTRUKTR™. Perfect for LA, San Diego, San Francisco contractors. AI quotes, smart scheduling, instant payments.",
+      title: "California Contractor Software | CONSTRUKTR",
+      metaDescription: "Join 22,400+ California contractors using CONSTRUKTR. Perfect for LA, San Diego, San Francisco contractors. AI quotes, smart scheduling, instant payments.",
       h1: "California's Most Trusted Contractor Software",
       localKeywords: ["California contractor app", "Los Angeles plumbing software", "San Diego solar tools", "Bay Area electrical app"]
     }
@@ -226,7 +226,7 @@ export default function StatePage() {
               Cities We Serve in {stateData.name}
             </h2>
             <p className="text-xl text-[var(--clr-text-2)] max-w-3xl mx-auto">
-              CONSTRUKTR™ is trusted by contractors in every major city across {stateData.name}
+              CONSTRUKTR is trusted by contractors in every major city across {stateData.name}
             </p>
           </motion.div>
 

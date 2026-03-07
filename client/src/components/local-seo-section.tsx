@@ -45,7 +45,7 @@ export default function LocalSEOSection() {
             Serving Contractors Across the U.S.
           </h2>
           <p className="text-xl text-[var(--clr-text-2)] max-w-3xl mx-auto mb-8">
-            From California to New York, CONSTRUKTR™ helps contractors in every state 
+            From California to New York, CONSTRUKTR helps contractors in every state 
             streamline their business operations with AI-powered tools.
           </p>
           
@@ -133,7 +133,7 @@ export default function LocalSEOSection() {
             </h3>
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Whether you're a plumber in Miami, an electrician in Seattle, or an HVAC tech in Denver, 
-              CONSTRUKTR™ adapts to your local market needs while providing enterprise-grade tools.
+              CONSTRUKTR adapts to your local market needs while providing enterprise-grade tools.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <span className="bg-[var(--clr-surface)]/20 rounded-full px-4 py-2">Local Permits & Codes</span>

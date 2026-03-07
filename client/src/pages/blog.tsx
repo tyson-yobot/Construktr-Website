@@ -10,7 +10,7 @@ export default function Blog() {
   return (
     <div className="min-h-screen bg-gradient-primary text-white">
       <Helmet>
-        <title>Contractor Business Blog - Expert Tips & Industry Insights | CONSTRUKTR™</title>
+        <title>Contractor Business Blog - Expert Tips & Industry Insights | CONSTRUKTR</title>
         <meta name="description" content="Get expert contractor business tips, industry insights, and proven strategies to grow your contracting business. Free resources from CONSTRUKTR." />
         <meta name="keywords" content="contractor business tips, contractor blog, contracting industry news, business growth for contractors" />
       </Helmet>

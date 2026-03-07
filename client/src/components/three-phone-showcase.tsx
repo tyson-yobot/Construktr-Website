@@ -3,9 +3,9 @@ import { Button } from '@/components/ui/button';
 import { Download, Star } from 'lucide-react';
 import StandardizedPhoneMockup from './standardized-phone-mockup';
 import { Badge } from '@/components/ui/badge';
-import smartSchedulingScreen from '/screens/schedule-view.png';
-import instantQuotesScreen from '/screens/quote-builder.png';
-import smartDashboardScreen from '/screens/dashboard.png';
+const smartSchedulingScreen = '/screens/schedule-view.png';
+const instantQuotesScreen = '/screens/quote-builder.png';
+const smartDashboardScreen = '/screens/dashboard.png';
 
 const appFeatures = [
   {
@@ -77,7 +77,7 @@ export default function ThreePhoneShowcase() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            See CONSTRUKTR™ in Action
+            See CONSTRUKTR in Action
           </h2>
           <p className="text-xl max-w-3xl mx-auto">
             Experience the three core features that are transforming how contractors 
@@ -155,7 +155,7 @@ export default function ThreePhoneShowcase() {
         >
           <div className="mb-8">
             <h3 className="text-2xl font-bold text-white mb-4">
-              Download CONSTRUKTR™ Today
+              Download CONSTRUKTR Today
             </h3>
             <p className="text-[var(--clr-text-2)] max-w-2xl mx-auto">
               Join thousands of contractors who've transformed their businesses. 

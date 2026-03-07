@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { Smartphone, Brain, Zap, Sparkles } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import screenshot1 from "/screens/dashboard.png";
-import screenshot2 from "/screens/schedule-view.png";  
-import screenshot3 from "/screens/quote-builder.png";
+const screenshot1 = "/screens/dashboard.png";
+const screenshot2 = "/screens/schedule-view.png";  
+const screenshot3 = "/screens/quote-builder.png";
 import StandardizedPhoneMockup from "./standardized-phone-mockup";
 
 export default function MobileAppShowcase() {
@@ -17,7 +17,7 @@ export default function MobileAppShowcase() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-bold text-white mb-6"
           >
-            See CONSTRUKTR™ in Action
+            See CONSTRUKTR in Action
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 30 }}

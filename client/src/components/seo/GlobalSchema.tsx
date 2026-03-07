@@ -3,7 +3,7 @@ import JsonLd from "./JsonLd";
 const ecosystemData = {
   organization: {
     name: "Construktr",
-    url: "https://construktr.ai",
+    url: "https://CONSTRUKTR.ai",
     sameAs: [
       "https://automateai.bot",
       "https://inspectone.ai"

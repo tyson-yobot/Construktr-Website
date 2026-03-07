@@ -43,7 +43,7 @@ export default function Hero() {
           >
             <img 
               src={logoPath} 
-              alt="CONSTRUKTR™" 
+              alt="CONSTRUKTR" 
               className="h-48 md:h-64 lg:h-80 xl:h-96 w-auto max-w-6xl mb-4"
               width="384"
               height="384"

@@ -9,10 +9,10 @@ interface SEOHeadProps {
 }
 
 export default function SEOHead({
-  title = "CONSTRUKTR™ — Contractor App for Quotes, Scheduling & Payments",
+  title = "CONSTRUKTR — Contractor App for Quotes, Scheduling & Payments",
   description = "Transform your contracting business with Construktr. Generate professional quotes in 30 seconds, optimize routes automatically, and get paid same-day. Free to start — no credit card required.",
-  canonical = "https://construktr.ai",
-  ogImage = "https://construktr.ai/og-image-construktr.jpg",
+  canonical = "https://CONSTRUKTR.ai",
+  ogImage = "https://CONSTRUKTR.ai/og-image-construktr.jpg",
   structuredData
 }: SEOHeadProps) {
   
@@ -23,15 +23,15 @@ export default function SEOHead({
     "name": "CONSTRUKTR",
     "alternateName": "Construktr",
     "legalName": "Automate AI LLC",
-    "url": "https://construktr.ai",
-    "logo": "https://construktr.ai/logo-construktr.png",
+    "url": "https://CONSTRUKTR.ai",
+    "logo": "https://CONSTRUKTR.ai/logo-construktr.png",
     "sameAs": [
       "https://apps.apple.com/app/construktr",
       "https://play.google.com/store/apps/details?id=com.construktr"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "email": "support@construktr.ai",
+      "email": "support@CONSTRUKTR.ai",
       "contactType": "customer service",
       "availableLanguage": "English"
     },

@@ -6,7 +6,7 @@ import UnifiedFooter from "@/components/unified-footer";
 const faqs = [
   {
     q: "How do I reset my password?",
-    a: "Open the Construktr app and tap 'Forgot Password' on the login screen. Enter your email address and we'll send you a reset link. If you don't receive the email within a few minutes, check your spam folder or contact support@construktr.ai.",
+    a: "Open the Construktr app and tap 'Forgot Password' on the login screen. Enter your email address and we'll send you a reset link. If you don't receive the email within a few minutes, check your spam folder or contact support@CONSTRUKTR.ai.",
   },
   {
     q: "How do I cancel my subscription?",
@@ -48,7 +48,7 @@ export default function Support() {
       <Helmet>
         <title>Support — Construktr</title>
         <meta name="description" content="Get help with Construktr. Contact support, browse FAQs, and find answers." />
-        <link rel="canonical" href="https://construktr.ai/support" />
+        <link rel="canonical" href="https://CONSTRUKTR.ai/support" />
       </Helmet>
 
       <main className="pt-32 pb-16">
@@ -66,8 +66,8 @@ export default function Support() {
               <Mail className="w-8 h-8 text-[var(--color-primary)] mx-auto mb-3" />
               <h3 className="font-bold text-[var(--color-text-primary)] mb-2">Email Support</h3>
               <p className="text-[var(--color-text-secondary)] text-sm mb-3">We respond within 24 hours on business days.</p>
-              <a href="mailto:support@construktr.ai" className="text-[var(--color-primary)] font-semibold text-sm hover:underline">
-                support@construktr.ai
+              <a href="mailto:support@CONSTRUKTR.ai" className="text-[var(--color-primary)] font-semibold text-sm hover:underline">
+                support@CONSTRUKTR.ai
               </a>
             </div>
 
@@ -84,8 +84,8 @@ export default function Support() {
               <Bug className="w-8 h-8 text-[var(--color-primary)] mx-auto mb-3" />
               <h3 className="font-bold text-[var(--color-text-primary)] mb-2">Report a Bug</h3>
               <p className="text-[var(--color-text-secondary)] text-sm mb-3">Found something broken? Send us a screenshot and description.</p>
-              <a href="mailto:support@construktr.ai?subject=Bug%20Report" className="text-[var(--color-primary)] font-semibold text-sm hover:underline">
-                support@construktr.ai
+              <a href="mailto:support@CONSTRUKTR.ai?subject=Bug%20Report" className="text-[var(--color-primary)] font-semibold text-sm hover:underline">
+                support@CONSTRUKTR.ai
               </a>
             </div>
           </div>
@@ -113,10 +113,10 @@ export default function Support() {
           <div className="bg-[var(--color-primary)]/5 border border-[var(--color-primary)]/20 rounded-2xl p-6 text-center">
             <p className="text-[var(--color-text-secondary)] text-sm">
               For legal questions:{" "}
-              <a href="mailto:legal@construktr.ai" className="text-[var(--color-primary)] font-medium hover:underline">legal@construktr.ai</a>
+              <a href="mailto:legal@CONSTRUKTR.ai" className="text-[var(--color-primary)] font-medium hover:underline">legal@CONSTRUKTR.ai</a>
               {" · "}
               For privacy requests:{" "}
-              <a href="mailto:privacy@construktr.ai" className="text-[var(--color-primary)] font-medium hover:underline">privacy@construktr.ai</a>
+              <a href="mailto:privacy@CONSTRUKTR.ai" className="text-[var(--color-primary)] font-medium hover:underline">privacy@CONSTRUKTR.ai</a>
             </p>
             <p className="text-[var(--color-text-secondary)] text-sm mt-3">
               <Link href="/privacy" className="text-[var(--color-primary)] hover:underline">Privacy Policy</Link>

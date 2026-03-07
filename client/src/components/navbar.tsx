@@ -42,7 +42,7 @@ export default function Navbar() {
             <Link href="/">
               <img 
                 src={logoPath} 
-                alt="CONSTRUKTR™" 
+                alt="CONSTRUKTR" 
                 className="h-10 w-auto cursor-pointer"
               />
             </Link>

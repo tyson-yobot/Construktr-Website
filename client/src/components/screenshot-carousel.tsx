@@ -5,12 +5,12 @@ import { Badge } from "@/components/ui/badge";
 import StandardizedPhoneMockup from "./standardized-phone-mockup";
 
 // Import the actual app screenshots
-import screenshot1 from "/screens/dashboard.png";
-import screenshot2 from "/screens/schedule-view.png"; 
-import screenshot3 from "/screens/quote-builder.png";
-import screenshot4 from "/screens/job-details.png";
-import screenshot5 from "/screens/payment-processing.png";
-import screenshot6 from "/screens/ai-assistant.png";
+const screenshot1 = "/screens/dashboard.png";
+const screenshot2 = "/screens/schedule-view.png"; 
+const screenshot3 = "/screens/quote-builder.png";
+const screenshot4 = "/screens/job-details.png";
+const screenshot5 = "/screens/payment-processing.png";
+const screenshot6 = "/screens/ai-assistant.png";
 
 const screenshots = [
   { 
@@ -108,7 +108,7 @@ export default function ScreenshotCarousel() {
             📱 Your Toolkit in Your Pocket
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-4">
-            Explore how CONSTRUKTR™ helps you win more jobs with these real app screens.
+            Explore how CONSTRUKTR helps you win more jobs with these real app screens.
           </p>
           <div className="flex items-center justify-center gap-2 text-sm text-gray-500">
             <span>← Swipe or click arrows to explore →</span>

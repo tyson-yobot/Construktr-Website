@@ -24,7 +24,9 @@ const aiFeatures = [
       "AI identifies materials in photos",
       "Automatic dimension measurement",
       "Converts annotations to line-item estimates",
-      "Works with job site photos and blueprints"
+      "Works with job site photos and blueprints",
+      "Material cost lookup from photos",
+      "Labor time estimation based on scope"
     ],
     color: "from-violet-500 to-purple-600"
   },
@@ -37,7 +39,9 @@ const aiFeatures = [
       "Scan receipts into searchable PDFs",
       "AI extracts text from images",
       "Automatic expense categorization",
-      "Matches receipts to quoted materials"
+      "Matches receipts to quoted materials",
+      "Business card scanning and contact creation",
+      "Document search and organization"
     ],
     color: "from-blue-500 to-cyan-600"
   },
@@ -50,9 +54,56 @@ const aiFeatures = [
       "GPS geofencing for job sites",
       "Automatic clock in/out",
       "Accurate timesheets without manual entry",
-      "Overtime calculations included"
+      "Overtime calculations included",
+      "Travel time optimization",
+      "Crew efficiency analytics"
     ],
     color: "from-green-500 to-emerald-600"
+  },
+  {
+    icon: Brain,
+    title: "AI Quote Generator",
+    subtitle: "Smart Pricing Engine",
+    description: "AI-powered quote generation that analyzes your local market, material costs, and historical job data to create winning estimates in 30 seconds.",
+    capabilities: [
+      "Market-based pricing recommendations",
+      "Material cost optimization",
+      "Labor rate calculations", 
+      "Competitive analysis integration",
+      "Profit margin optimization",
+      "Historical performance learning"
+    ],
+    color: "from-orange-500 to-red-600"
+  },
+  {
+    icon: ArrowRight,
+    title: "AI Route Optimization",
+    subtitle: "Smart Dispatch & Planning",
+    description: "AI optimizes your daily routes, considers traffic patterns, job priorities, and crew capabilities to maximize efficiency and reduce fuel costs.",
+    capabilities: [
+      "Multi-stop route optimization",
+      "Real-time traffic integration",
+      "Crew skill matching",
+      "Priority-based scheduling",
+      "Fuel cost reduction",
+      "Customer preference consideration"
+    ],
+    color: "from-teal-500 to-green-600"
+  },
+  {
+    icon: CheckCircle2,
+    title: "AI Business Analytics",
+    subtitle: "Predictive Insights",
+    description: "AI analyzes your business patterns to predict cash flow, identify profitable job types, and recommend operational improvements for maximum growth.",
+    capabilities: [
+      "Revenue forecasting",
+      "Profitability analysis by job type",
+      "Customer lifetime value prediction",
+      "Operational efficiency recommendations",
+      "Seasonal trend analysis",
+      "Growth opportunity identification"
+    ],
+    color: "from-indigo-500 to-purple-600"
   }
 ];
 
@@ -70,18 +121,18 @@ export default function AICapabilities() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-primary)]/10 text-[var(--color-primary)] text-sm font-medium mb-4">
             <Sparkles className="w-4 h-4" />
-            3 Core AI-Enhanced Features
+            6 Core AI-Enhanced Features
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-[var(--color-text-primary)] mb-4">
             Real AI, Not Buzzwords
           </h2>
           <p className="text-xl text-[var(--color-text-secondary)] max-w-3xl mx-auto">
-            These aren't marketing terms—these are the specific features that use AI 
-            to save you hours every week.
+            These aren't marketing terms—these are the specific AI-powered features that automate your business, 
+            increase profits, and save you hours every week.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {aiFeatures.map((feature, index) => {
             const FeatureIcon = feature.icon;
             

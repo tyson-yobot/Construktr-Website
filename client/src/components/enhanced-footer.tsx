@@ -55,7 +55,7 @@ export default function EnhancedFooter() {
                   defaultChecked
                 />
                 <label htmlFor="try-app" className="text-slate-300">
-                  ✅ Yes, I want to try CONSTRUKTR™ and get SMS link to download
+                  ✅ Yes, I want to try CONSTRUKTR and get SMS link to download
                 </label>
               </div>
               
@@ -81,7 +81,7 @@ export default function EnhancedFooter() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center">
             <h3 className="text-3xl font-bold text-white mb-4">
-              🚀 Ready to book more jobs? Download CONSTRUKTR™ now.
+              🚀 Ready to book more jobs? Download CONSTRUKTR now.
             </h3>
             <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
               Join thousands of contractors who are already growing their business with smart scheduling, AI quotes, and instant payments.
@@ -352,7 +352,7 @@ export default function EnhancedFooter() {
 
           {/* Copyright */}
           <div className="text-sm text-slate-500 text-center lg:text-right">
-            <p>© 2024 CONSTRUKTR™. All rights reserved.</p>
+            <p>© 2024 CONSTRUKTR. All rights reserved.</p>
             <p className="mt-1">Built with ❤️ for service professionals.</p>
           </div>
         </div>

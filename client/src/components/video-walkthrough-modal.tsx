@@ -55,10 +55,10 @@ export default function VideoWalkthroughModal({ isOpen, onClose }: VideoWalkthro
           <div className="p-6 pb-4">
             <DialogHeader>
               <DialogTitle className="text-2xl font-bold text-white mb-2">
-                🚀 CONSTRUKTR™ Walkthrough (60 seconds)
+                🚀 CONSTRUKTR Walkthrough (60 seconds)
               </DialogTitle>
               <DialogDescription className="text-slate-300">
-                See exactly how contractors use CONSTRUKTR™ to quote faster, schedule smarter, and get paid instantly.
+                See exactly how contractors use CONSTRUKTR to quote faster, schedule smarter, and get paid instantly.
               </DialogDescription>
             </DialogHeader>
           </div>

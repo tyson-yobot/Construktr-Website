@@ -81,8 +81,8 @@ BEGIN:VEVENT
 UID:demo-${Date.now()}@construktr.com
 DTSTART:${formatDate(startTime)}
 DTEND:${formatDate(endTime)}
-SUMMARY:CONSTRUKTR™ Demo - ${demoType}
-DESCRIPTION:Personal demo of CONSTRUKTR™ contractor management software.\\n\\nDemo Type: ${demoType}\\n\\nJoin URL: https://meet.construktr.com/demo/${Date.now()}\\n\\nQuestions? Call (555) 123-4567
+SUMMARY:CONSTRUKTR Demo - ${demoType}
+DESCRIPTION:Personal demo of CONSTRUKTR contractor management software.\\n\\nDemo Type: ${demoType}\\n\\nJoin URL: https://meet.construktr.com/demo/${Date.now()}\\n\\nQuestions? Call (555) 123-4567
 LOCATION:Online Video Call
 ORGANIZER;CN=CONSTRUKTR Team:mailto:demos@construktr.com
 ATTENDEE;CN=${name}:mailto:${email}
@@ -254,7 +254,7 @@ export default function FreeDemoBooking() {
                 </h3>
                 <p className="text-[var(--clr-text-2)] mb-6">
                   We've sent a calendar invite to {formData.email}. Our team will show you exactly how 
-                  CONSTRUKTR™ can transform your {formData.tradeType.toLowerCase()} business.
+                  CONSTRUKTR can transform your {formData.tradeType.toLowerCase()} business.
                 </p>
                 
                 <div className="bg-blue-50 rounded-xl p-6 mb-8">
@@ -326,7 +326,7 @@ export default function FreeDemoBooking() {
             Book Your Free Demo
           </h2>
           <p className="text-xl text-[var(--clr-text-2)] max-w-3xl mx-auto leading-relaxed">
-            See exactly how CONSTRUKTR™ works for your specific trade. Our experts will show you 
+            See exactly how CONSTRUKTR works for your specific trade. Our experts will show you 
             features tailored to your business needs.
           </p>
         </motion.div>

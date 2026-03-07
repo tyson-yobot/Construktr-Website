@@ -170,7 +170,7 @@ const beforeAfterComparisons = [
 const downloadableResources = [
   {
     title: "Complete Platform Overview",
-    description: "Comprehensive slide deck covering all CONSTRUKTR™ features and benefits",
+    description: "Comprehensive slide deck covering all CONSTRUKTR features and benefits",
     pages: 24,
     type: "PDF Presentation",
     size: "4.2 MB",
@@ -194,7 +194,7 @@ const downloadableResources = [
   },
   {
     title: "Industry Best Practices",
-    description: "Proven strategies from successful service businesses using CONSTRUKTR™",
+    description: "Proven strategies from successful service businesses using CONSTRUKTR",
     pages: 16,
     type: "PDF Report",
     size: "2.9 MB",
@@ -223,7 +223,7 @@ export default function Demos() {
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-6xl font-bold mb-6"
           >
-            See CONSTRUKTR™
+            See CONSTRUKTR
             <span className="text-electric-blue"> In Action</span>
           </motion.h1>
           <motion.p
@@ -251,7 +251,7 @@ export default function Demos() {
               Demos by Industry
             </h2>
             <p className="text-xl text-[var(--clr-text-2)]">
-              See how CONSTRUKTR™ works for your specific trade
+              See how CONSTRUKTR works for your specific trade
             </p>
           </motion.div>
 
@@ -349,7 +349,7 @@ export default function Demos() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl font-bold text-white mb-4">
-              Before vs. After CONSTRUKTR™
+              Before vs. After CONSTRUKTR
             </h2>
             <p className="text-xl text-[var(--clr-text-2)]">
               See the dramatic improvements our customers experience

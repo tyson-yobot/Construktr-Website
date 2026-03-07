@@ -11,7 +11,7 @@ import ThreePhoneShowcase from '@/components/three-phone-showcase';
 const stateData: { [key: string]: any } = {
   'california': {
     name: 'California',
-    description: 'Leading the nation in construction innovation, California contractors using CONSTRUKTR™ report 40% higher profits and streamlined operations across diverse projects.',
+    description: 'Leading the nation in construction innovation, California contractors using CONSTRUKTR report 40% higher profits and streamlined operations across diverse projects.',
     cities: [
       { name: 'Los Angeles', contractors: '1,200+', avgSavings: '$18,500' },
       { name: 'San Francisco', contractors: '850+', avgSavings: '$22,000' },
@@ -35,7 +35,7 @@ const stateData: { [key: string]: any } = {
   },
   'texas': {
     name: 'Texas',
-    description: 'Texas contractors trust CONSTRUKTR™ for managing large-scale projects efficiently. From Houston to Dallas, our platform drives business growth statewide.',
+    description: 'Texas contractors trust CONSTRUKTR for managing large-scale projects efficiently. From Houston to Dallas, our platform drives business growth statewide.',
     cities: [
       { name: 'Houston', contractors: '980+', avgSavings: '$19,200' },
       { name: 'Dallas', contractors: '890+', avgSavings: '$17,500' },
@@ -141,10 +141,10 @@ export default function StateTemplate() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl font-bold text-white mb-6">
-              CONSTRUKTR™ Contractors by City
+              CONSTRUKTR Contractors by City
             </h2>
             <p className="text-xl text-[var(--clr-text-2)] max-w-3xl mx-auto">
-              See how contractors in major {state.name} cities are using CONSTRUKTR™ 
+              See how contractors in major {state.name} cities are using CONSTRUKTR 
               to transform their businesses and increase profitability.
             </p>
           </motion.div>

@@ -10,7 +10,7 @@ export default function Privacy() {
       <Helmet>
         <title>Privacy Policy — Construktr</title>
         <meta name="description" content="How Construktr collects, uses, and protects your data. CCPA compliant." />
-        <link rel="canonical" href="https://construktr.ai/privacy" />
+        <link rel="canonical" href="https://CONSTRUKTR.ai/privacy" />
       </Helmet>
 
       <main className="pt-32 pb-16">
@@ -22,8 +22,8 @@ export default function Privacy() {
           <div className="prose prose-gray max-w-none space-y-10 text-[var(--color-text-secondary)] leading-relaxed">
 
             <section>
-              <p>This Privacy Policy describes how Automate AI LLC ("Construktr," "we," "our," or "us") collects, uses, and shares information about you when you use the Construktr mobile application ("App") and website at construktr.ai ("Site"). By using our services, you agree to this policy.</p>
-              <p className="mt-3">Company: Automate AI LLC, Scottsdale, AZ<br />Contact: <a href="mailto:privacy@construktr.ai" className="text-[var(--color-primary)]">privacy@construktr.ai</a></p>
+              <p>This Privacy Policy describes how Automate AI LLC ("Construktr," "we," "our," or "us") collects, uses, and shares information about you when you use the Construktr mobile application ("App") and website at CONSTRUKTR.ai ("Site"). By using our services, you agree to this policy.</p>
+              <p className="mt-3">Company: Automate AI LLC, Scottsdale, AZ<br />Contact: <a href="mailto:privacy@CONSTRUKTR.ai" className="text-[var(--color-primary)]">privacy@CONSTRUKTR.ai</a></p>
             </section>
 
             <section>
@@ -110,7 +110,7 @@ export default function Privacy() {
                 <li>Role-based access control (RBAC)</li>
                 <li>Regular security reviews</li>
               </ul>
-              <p className="mt-3">No system is 100% secure. If you believe your account has been compromised, contact <a href="mailto:support@construktr.ai" className="text-[var(--color-primary)]">support@construktr.ai</a> immediately.</p>
+              <p className="mt-3">No system is 100% secure. If you believe your account has been compromised, contact <a href="mailto:support@CONSTRUKTR.ai" className="text-[var(--color-primary)]">support@CONSTRUKTR.ai</a> immediately.</p>
             </section>
 
             <section>
@@ -123,7 +123,7 @@ export default function Privacy() {
                 <li><strong>Portability:</strong> Export your job data in a standard format</li>
                 <li><strong>Opt-out of marketing:</strong> Unsubscribe from marketing emails at any time</li>
               </ul>
-              <p className="mt-3">To exercise these rights, email <a href="mailto:privacy@construktr.ai" className="text-[var(--color-primary)]">privacy@construktr.ai</a>. We will respond within 30 days.</p>
+              <p className="mt-3">To exercise these rights, email <a href="mailto:privacy@CONSTRUKTR.ai" className="text-[var(--color-primary)]">privacy@CONSTRUKTR.ai</a>. We will respond within 30 days.</p>
             </section>
 
             <section>
@@ -135,7 +135,7 @@ export default function Privacy() {
                 <li><strong>Right to Opt-Out:</strong> We do not sell personal information, so there is nothing to opt out of.</li>
                 <li><strong>Non-Discrimination:</strong> We will not discriminate against you for exercising your CCPA rights.</li>
               </ul>
-              <p className="mt-3">To submit a CCPA request, contact <a href="mailto:privacy@construktr.ai" className="text-[var(--color-primary)]">privacy@construktr.ai</a>.</p>
+              <p className="mt-3">To submit a CCPA request, contact <a href="mailto:privacy@CONSTRUKTR.ai" className="text-[var(--color-primary)]">privacy@CONSTRUKTR.ai</a>.</p>
             </section>
 
             <section>
@@ -153,8 +153,8 @@ export default function Privacy() {
               <p>
                 Automate AI LLC<br />
                 Scottsdale, AZ<br />
-                Privacy inquiries: <a href="mailto:privacy@construktr.ai" className="text-[var(--color-primary)]">privacy@construktr.ai</a><br />
-                General support: <a href="mailto:support@construktr.ai" className="text-[var(--color-primary)]">support@construktr.ai</a>
+                Privacy inquiries: <a href="mailto:privacy@CONSTRUKTR.ai" className="text-[var(--color-primary)]">privacy@CONSTRUKTR.ai</a><br />
+                General support: <a href="mailto:support@CONSTRUKTR.ai" className="text-[var(--color-primary)]">support@CONSTRUKTR.ai</a>
               </p>
               <p className="mt-4">
                 <Link href="/terms" className="text-[var(--color-primary)] underline">Terms of Service</Link>

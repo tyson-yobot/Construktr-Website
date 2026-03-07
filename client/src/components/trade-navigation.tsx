@@ -112,8 +112,8 @@ export function TradeSEOTags({ trade }: { trade: string }) {
   return (
     <>
       <meta name="keywords" content={tradeData.keywords} />
-      <meta name="description" content={`${tradeData.name} business app for contractors. Generate professional quotes, manage jobs, and grow your ${trade.toLowerCase()} business with CONSTRUKTR™ AI-powered platform.`} />
-      <meta property="og:title" content={`${tradeData.name} Business App | CONSTRUKTR™`} />
+      <meta name="description" content={`${tradeData.name} business app for contractors. Generate professional quotes, manage jobs, and grow your ${trade.toLowerCase()} business with CONSTRUKTR AI-powered platform.`} />
+      <meta property="og:title" content={`${tradeData.name} Business App | CONSTRUKTR`} />
       <meta property="og:description" content={`Professional ${trade.toLowerCase()} business management app with AI quotes, smart scheduling, and payment processing.`} />
     </>
   );

@@ -120,7 +120,7 @@ export default function WhatItDoes() {
             Ready to 3x Your Revenue?
           </h3>
           <p className="text-slate-400 text-lg mb-8">
-            Join 2,500+ contractors already using CONSTRUKTR™ to book more jobs and get paid faster
+            Join 2,500+ contractors already using CONSTRUKTR to book more jobs and get paid faster
           </p>
           
           {/* Strong CTA Buttons */}

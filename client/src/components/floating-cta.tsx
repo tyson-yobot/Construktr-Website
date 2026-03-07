@@ -40,7 +40,7 @@ export default function FloatingCTA() {
                   Ready to grow your business?
                 </p>
                 <p className="text-blue-100 text-xs">
-                  Join 2,500+ contractors using CONSTRUKTR™
+                  Join 2,500+ contractors using CONSTRUKTR
                 </p>
               </div>
               <Button

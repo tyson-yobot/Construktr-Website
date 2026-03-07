@@ -5,13 +5,13 @@ import EcosystemFooter from "@/components/seo/EcosystemFooter";
 const ecosystemData = {
   crossLinks: [
     {
-      from: "https://construktr.ai",
+      from: "https://CONSTRUKTR.ai",
       to: "https://automateai.bot",
       anchor: "part of the Automate AI ecosystem",
       placements: ["about.org", "footer.brand"]
     },
     {
-      from: "https://construktr.ai",
+      from: "https://CONSTRUKTR.ai",
       to: "https://inspectone.ai",
       anchor: "AI inspection and compliance suite",
       placements: ["features.reporting", "footer.products"]
@@ -28,7 +28,7 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <img 
               src={logoPath} 
-              alt="CONSTRUKTR™" 
+              alt="CONSTRUKTR" 
               className="h-12 w-auto mb-4"
             />
             <p className="text-[var(--clr-text-2)] text-lg leading-relaxed max-w-md">
@@ -134,13 +134,13 @@ export default function Footer() {
         {/* Ecosystem Links */}
         <EcosystemFooter 
           crossLinks={ecosystemData.crossLinks} 
-          currentSite="https://construktr.ai" 
+          currentSite="https://CONSTRUKTR.ai" 
         />
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-[var(--clr-text-2)] text-sm">
-            © 2025 CONSTRUKTR™. All rights reserved.
+            © 2025 CONSTRUKTR. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="/privacy" className="text-[var(--clr-text-2)] hover:text-electric-blue transition-colors duration-200 text-sm">

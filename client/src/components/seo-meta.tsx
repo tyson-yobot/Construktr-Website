@@ -12,8 +12,8 @@ const defaultSEO = {
   title: "Best Contractor Job Management & Scheduling App | CONSTRUKTR",
   description: "CONSTRUKTR is the #1 contractor management app. Generate quotes in 30 seconds, smart scheduling, same-day payments. Built for HVAC, plumbing, electrical, roofing contractors in all 50 states.",
   keywords: "contractor app, job management software, construction scheduling, plumber software, HVAC management, electrical contractor app, roofing software, contractor quotes, payment processing",
-  ogImage: "https://construktr.ai/og-image.png",
-  canonicalUrl: "https://construktr.ai"
+  ogImage: "https://CONSTRUKTR.ai/og-image.png",
+  canonicalUrl: "https://CONSTRUKTR.ai"
 };
 
 export default function SEOMeta({

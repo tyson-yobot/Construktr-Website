@@ -337,7 +337,7 @@ export default function Features() {
             >
               <div className="h-full flex flex-col">
                 <div className="bg-electric-blue text-white p-6 flex justify-between items-center">
-                  <h3 className="text-2xl font-bold">CONSTRUKTR™ Live Demo</h3>
+                  <h3 className="text-2xl font-bold">CONSTRUKTR Live Demo</h3>
                   <button
                     onClick={() => setIsSimulatorOpen(false)}
                     className="w-8 h-8 bg-[var(--clr-surface)]/20 rounded-full flex items-center justify-center hover:bg-[var(--clr-surface)]/30 transition-colors"

@@ -237,10 +237,10 @@ export default function StateTradeGrids({
               className="text-center mb-12"
             >
               <h2 className="text-4xl lg:text-5xl font-black text-white mb-6 tracking-tight">
-                CONSTRUKTR™ by State
+                CONSTRUKTR by State
               </h2>
               <p className="text-xl text-[var(--clr-text-2)] max-w-3xl mx-auto leading-relaxed">
-                Join thousands of contractors across America who trust CONSTRUKTR™ to grow their business
+                Join thousands of contractors across America who trust CONSTRUKTR to grow their business
               </p>
             </motion.div>
 
@@ -328,7 +328,7 @@ export default function StateTradeGrids({
               className="text-center mb-12"
             >
               <h2 className="text-4xl lg:text-5xl font-black text-white mb-6 tracking-tight">
-                CONSTRUKTR™ by Trade
+                CONSTRUKTR by Trade
               </h2>
               <p className="text-xl text-[var(--clr-text-2)] max-w-3xl mx-auto leading-relaxed">
                 Purpose-built features for every type of contractor and service professional
@@ -428,7 +428,7 @@ export default function StateTradeGrids({
             Ready to Grow Your {showTrades ? 'Trade' : 'Local'} Business?
           </h3>
           <p className="text-xl mb-6 text-blue-100">
-            Join contractors across America who've increased revenue by 40% with CONSTRUKTR™
+            Join contractors across America who've increased revenue by 40% with CONSTRUKTR
           </p>
           <Button 
             size="lg"

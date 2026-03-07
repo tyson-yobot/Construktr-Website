@@ -17,7 +17,7 @@ export default function ElectricalLanding() {
 
   return (
     <div className="min-h-screen bg-[var(--clr-surface)]">
-      <title>Electrical Business App | CONSTRUKTR™ - Electrician Quote & Job Software</title>
+      <title>Electrical Business App | CONSTRUKTR - Electrician Quote & Job Software</title>
       
       <UrgencyBanner variant="downloads" position="top" />
       <EnhancedNavbar />
@@ -158,7 +158,7 @@ export default function ElectricalLanding() {
               Stop These Electrical Business Problems
             </h2>
             <p className="text-xl text-[var(--clr-text-2)] max-w-3xl mx-auto">
-              Every electrician faces these daily challenges. CONSTRUKTR™ solves them all.
+              Every electrician faces these daily challenges. CONSTRUKTR solves them all.
             </p>
           </motion.div>
 
@@ -279,7 +279,7 @@ export default function ElectricalLanding() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl lg:text-4xl font-black text-white mb-6">
-              Join 900+ Electricians Using CONSTRUKTR™
+              Join 900+ Electricians Using CONSTRUKTR
             </h2>
             <p className="text-xl text-yellow-100 mb-8 max-w-3xl mx-auto">
               Download the app trusted by licensed electricians nationwide. 

@@ -222,7 +222,7 @@ export default function AnimatedDemoVideo({ isPlaying, onPlayPause, duration = 1
       {/* CONSTRUKTR Watermark */}
       <div className="absolute top-4 right-4">
         <div className="bg-black/50 backdrop-blur-sm rounded-lg px-3 py-1">
-          <span className="text-white font-bold text-sm">CONSTRUKTR™</span>
+          <span className="text-white font-bold text-sm">CONSTRUKTR</span>
         </div>
       </div>
     </div>

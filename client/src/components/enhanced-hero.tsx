@@ -12,7 +12,7 @@ import OptimizedImage from "./optimized-image";
 import SMSAppLink from "./sms-app-link";
 import { trackCTAStartTrialClicked, trackCTABookDemoClicked, trackTradeChipClicked } from "@/lib/analytics-events";
 import construktrLogo from "@assets/Construktr_Logo_Transparent_1024_x_1024_1772187695111.jpg";
-import appScreenshotImage from "/screens/dashboard.png";
+const appScreenshotImage = "/screens/dashboard.png";
 import StandardizedPhoneMockup from "./standardized-phone-mockup";
 
 export default function EnhancedHero() {

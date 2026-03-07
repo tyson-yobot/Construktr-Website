@@ -28,10 +28,10 @@ export default function ComparisonChart() {
             Comparison
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Why CONSTRUKTR™ vs Others?
+            Why CONSTRUKTR vs Others?
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            See how CONSTRUKTR™ stacks up against other service business platforms.
+            See how CONSTRUKTR stacks up against other service business platforms.
           </p>
         </div>
 
@@ -47,7 +47,7 @@ export default function ComparisonChart() {
                     <div className="relative z-10 flex flex-col items-center space-y-2">
                       <div className="flex items-center space-x-2">
                         <Shield className="w-6 h-6 text-blue-400" />
-                        <span className="text-white font-bold text-xl">CONSTRUKTR™</span>
+                        <span className="text-white font-bold text-xl">CONSTRUKTR</span>
                       </div>
                       <Badge className="bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm shadow-lg">
                         <Star className="w-4 h-4 mr-1" />
@@ -120,7 +120,7 @@ export default function ComparisonChart() {
               <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-lg">
                 Best Value
               </Badge>
-              <h4 className="text-white font-bold mb-2 text-lg">CONSTRUKTR™</h4>
+              <h4 className="text-white font-bold mb-2 text-lg">CONSTRUKTR</h4>
               <div className="text-4xl font-bold text-white mb-2">$49<span className="text-sm font-normal">/month</span></div>
               <p className="text-blue-200 text-sm">All features included</p>
               <Button className="w-full mt-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-blue-500/30 transition-all duration-300">

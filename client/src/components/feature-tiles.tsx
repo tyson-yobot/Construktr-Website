@@ -75,7 +75,7 @@ export default function FeatureTiles() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-[var(--color-text-primary)] mb-4">
-            Why Contractors Choose CONSTRUKTR™
+            Why Contractors Choose CONSTRUKTR
           </h2>
           <p className="text-xl text-[var(--color-text-secondary)] max-w-3xl mx-auto">
             The only mobile-first platform built specifically for home service contractors.

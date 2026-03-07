@@ -14,7 +14,7 @@ export default function FooterEnhanced() {
           
           {/* Company Info */}
           <div className="md:col-span-1">
-            <h3 className="text-lg font-bold text-[var(--clr-text)] mb-4">CONSTRUKTR™</h3>
+            <h3 className="text-lg font-bold text-[var(--clr-text)] mb-4">CONSTRUKTR</h3>
             <p className="text-[var(--clr-text-2)] text-sm mb-6">
               The complete job management platform built by contractors, for contractors.
             </p>

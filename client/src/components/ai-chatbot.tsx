@@ -33,7 +33,7 @@ const quickResponses = {
     suggestions: ["Yes, show me a demo", "What about scheduling features?", "How accurate are the quotes?"]
   },
   "Show me pricing plans": {
-    content: "CONSTRUKTR™ is $49/month with all features included - unlimited jobs, AI quotes, mobile apps, and 24/7 support. We're offering 50% off your first 3 months. Ready to start free trial?",
+    content: "CONSTRUKTR starts at $49/month for the Starter plan with unlimited jobs, AI quotes, mobile apps, and support. Pro plan is $89/month with advanced AI features. Ready to start your free trial?",
     suggestions: ["Start free trial", "What's included?", "Compare to other tools"]
   },
   "Schedule a demo": {
@@ -160,7 +160,7 @@ export default function AIChatbot() {
                   </div>
                   <div className="flex-1">
                     <p className="text-sm text-gray-800 font-medium mb-1">
-                      Hi 👋 I'm your CONSTRUKTR™ AI Assistant.
+                      Hi 👋 I'm your CONSTRUKTR AI Assistant.
                     </p>
                     <p className="text-xs text-[var(--clr-text-2)]">
                       How can I help you today?
@@ -199,7 +199,7 @@ export default function AIChatbot() {
                     <Bot className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="font-semibold">CONSTRUKTR™ AI</h3>
+                    <h3 className="font-semibold">CONSTRUKTR AI</h3>
                     <p className="text-xs opacity-90">Contractor Assistant</p>
                   </div>
                 </div>
@@ -315,7 +315,7 @@ export default function AIChatbot() {
                 </Button>
               </div>
               <p className="text-xs text-gray-500 mt-2 text-center">
-                Powered by CONSTRUKTR™ AI • Always learning
+                Powered by CONSTRUKTR AI • Always learning
               </p>
             </div>
           </motion.div>

@@ -40,7 +40,7 @@ export default function SEOLocalTargeting() {
             Best Contractor Business App in Your State
           </h2>
           <p className="text-xl text-[var(--clr-text-2)] max-w-4xl mx-auto">
-            CONSTRUKTR™ contractor job management software helps HVAC, plumbing, electrical, and roofing contractors across all 50 states. 
+            CONSTRUKTR contractor job management software helps HVAC, plumbing, electrical, and roofing contractors across all 50 states. 
             From construction scheduling apps to plumber quoting software, we've got your trade covered.
           </p>
         </motion.div>
@@ -134,7 +134,7 @@ export default function SEOLocalTargeting() {
           className="text-center mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white"
         >
           <h3 className="text-2xl font-bold mb-4">
-            Why Contractors Choose CONSTRUKTR™
+            Why Contractors Choose CONSTRUKTR
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
             <div>

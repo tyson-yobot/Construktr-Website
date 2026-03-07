@@ -187,7 +187,7 @@ export default function EnhancedStickyNavbar() {
 
               <div className="pt-4 border-t border-gray-700 text-center">
                 <p className="text-sm text-gray-400">
-                  <span className="text-green-400 font-semibold">2,500+</span> active contractors trust CONSTRUKTR™
+                  <span className="text-green-400 font-semibold">2,500+</span> active contractors trust CONSTRUKTR
                 </p>
               </div>
             </div>

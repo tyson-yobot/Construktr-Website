@@ -16,13 +16,13 @@ export default function SEOFooter() {
             <div className="flex items-center justify-center md:justify-start mb-3">
               <img 
                 src={construktrLogo} 
-                alt="CONSTRUKTR™ Logo" 
+                alt="CONSTRUKTR Logo" 
                 className="h-8 w-auto mr-3"
               />
-              <span className="text-[var(--color-text-primary)] font-bold text-lg">CONSTRUKTR™</span>
+              <span className="text-[var(--color-text-primary)] font-bold text-lg">CONSTRUKTR</span>
             </div>
             <p className="text-[var(--color-text-secondary)] text-sm leading-relaxed max-w-xs mx-auto md:mx-0">
-              CONSTRUKTR™ is the all-in-one AI app for contractors, handymen, HVAC, roofing, plumbing, landscaping, and more.
+              CONSTRUKTR is the all-in-one AI app for contractors, handymen, HVAC, roofing, plumbing, landscaping, and more.
             </p>
           </div>
 
@@ -89,7 +89,7 @@ export default function SEOFooter() {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-center md:text-left">
             <p className="text-[var(--color-text-secondary)] text-sm">
-              © 2024 CONSTRUKTR™. All rights reserved.
+              © 2024 CONSTRUKTR. All rights reserved.
             </p>
             <p className="text-[var(--color-text-tertiary)] text-xs mt-1">
               Professional contractor management software trusted by thousands

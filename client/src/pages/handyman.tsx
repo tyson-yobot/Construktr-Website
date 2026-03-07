@@ -17,7 +17,7 @@ export default function HandymanLanding() {
 
   return (
     <div className="min-h-screen bg-[var(--clr-surface)]">
-      <title>Handyman Quoting Software | CONSTRUKTR™ - Business App for Handymen</title>
+      <title>Handyman Quoting Software | CONSTRUKTR - Business App for Handymen</title>
       
       <UrgencyBanner variant="downloads" position="top" />
       <EnhancedNavbar />
@@ -158,7 +158,7 @@ export default function HandymanLanding() {
               Stop These Handyman Business Problems
             </h2>
             <p className="text-xl text-[var(--clr-text-2)] max-w-3xl mx-auto">
-              Every handyman deals with these daily frustrations. CONSTRUKTR™ fixes them all.
+              Every handyman deals with these daily frustrations. CONSTRUKTR fixes them all.
             </p>
           </motion.div>
 
@@ -279,7 +279,7 @@ export default function HandymanLanding() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl lg:text-4xl font-black text-white mb-6">
-              Join 600+ Handymen Using CONSTRUKTR™
+              Join 600+ Handymen Using CONSTRUKTR
             </h2>
             <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
               Download the app trusted by independent handymen nationwide. 

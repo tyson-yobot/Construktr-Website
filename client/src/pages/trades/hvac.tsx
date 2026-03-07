@@ -8,7 +8,7 @@ export default function HVACLanding() {
   return (
     <div className="min-h-screen bg-[var(--color-bg)] text-white">
       <Helmet>
-        <title>Best HVAC Business Software | CONSTRUKTR™ - Scheduling & Service Management</title>
+        <title>Best HVAC Business Software | CONSTRUKTR - Scheduling & Service Management</title>
         <meta name="description" content="HVAC business management software for contractors. Automated scheduling, seasonal maintenance tracking, and instant HVAC quotes. Trusted by 800+ HVAC pros." />
         <meta name="keywords" content="HVAC scheduling software, HVAC business management, HVAC service app, air conditioning contractor software, heating contractor CRM" />
       </Helmet>

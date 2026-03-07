@@ -8,7 +8,7 @@ export default function ElectricalLanding() {
   return (
     <div className="min-h-screen bg-[var(--color-bg)] text-white">
       <Helmet>
-        <title>Best Electrical Contractor Software | CONSTRUKTR™ - Code Compliant Quoting</title>
+        <title>Best Electrical Contractor Software | CONSTRUKTR - Code Compliant Quoting</title>
         <meta name="description" content="Electrical contractor business management software with code compliance checking and safety-focused quoting. Trusted by 600+ electrical contractors nationwide." />
         <meta name="keywords" content="electrical contractor software, electrician business app, electrical quoting software, electrical code compliance, electrician scheduling" />
       </Helmet>

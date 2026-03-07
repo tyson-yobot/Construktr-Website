@@ -4,12 +4,12 @@ import { Badge } from "@/components/ui/badge";
 import { ChevronLeft, ChevronRight, MessageSquare, Calendar, FileText, MapPin, BarChart3, Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-// Import the actual app screenshots
-import quoteScreenshot from "/screens/quote-builder.png";
-import calendarScreenshot from "/screens/schedule-view.png";
-import invoiceScreenshot from "/screens/invoice-view.png";
-import routeScreenshot from "/screens/dashboard.png";
-import insightsScreenshot from "/screens/ai-assistant.png";
+// Use direct paths to screenshots in public folder
+const quoteScreenshot = "/screens/quote-builder.png";
+const calendarScreenshot = "/screens/schedule-view.png";
+const invoiceScreenshot = "/screens/invoice-view.png";
+const routeScreenshot = "/screens/dashboard.png";
+const insightsScreenshot = "/screens/ai-assistant.png";
 
 const features = [
   {
@@ -114,7 +114,7 @@ export default function AppFeaturesShowcase() {
             See What You're Getting
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Take a detailed look at the actual CONSTRUKTR™ app features that are transforming how contractors run their business.
+            Take a detailed look at the actual CONSTRUKTR app features that are transforming how contractors run their business.
           </p>
         </div>
 

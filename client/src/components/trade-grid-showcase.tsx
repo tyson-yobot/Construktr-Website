@@ -122,7 +122,7 @@ export default function TradeGridShowcase() {
             Contractor Job Management by Trade
           </h2>
           <p className="text-xl text-[var(--clr-text-2)] max-w-3xl mx-auto">
-            CONSTRUKTR™ is built with trade-specific features that understand the unique 
+            CONSTRUKTR is built with trade-specific features that understand the unique 
             challenges and workflows of your specific contracting business.
           </p>
         </motion.div>
@@ -199,7 +199,7 @@ export default function TradeGridShowcase() {
               Don't See Your Trade?
             </h3>
             <p className="mb-6 max-w-2xl mx-auto text-blue-100">
-              CONSTRUKTR™ works for all construction and service trades. Our flexible platform 
+              CONSTRUKTR works for all construction and service trades. Our flexible platform 
               adapts to your specific business needs and workflows.
             </p>
             <Link href="#demo-form">

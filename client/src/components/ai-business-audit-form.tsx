@@ -143,7 +143,7 @@ export default function AIBusinessAuditForm() {
             Get Your Free AI Business Audit
           </h2>
           <p className="text-xl text-[var(--clr-text-2)] max-w-3xl mx-auto leading-relaxed">
-            Discover exactly how much time and money CONSTRUKTR™ can save your business. 
+            Discover exactly how much time and money CONSTRUKTR can save your business. 
             Get a personalized PDF report in under 3 minutes.
           </p>
         </motion.div>
@@ -279,7 +279,7 @@ export default function AIBusinessAuditForm() {
                 </Button>
 
                 <p className="text-xs text-gray-500 text-center">
-                  No spam. We'll only send you the audit report and occasional updates about CONSTRUKTR™.
+                  No spam. We'll only send you the audit report and occasional updates about CONSTRUKTR.
                 </p>
               </form>
             </CardContent>

@@ -53,7 +53,7 @@ export default function SocialProofStats() {
             Trusted by Contractors Nationwide
           </h2>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-            Join thousands of field service professionals who are growing their businesses with CONSTRUKTR™
+            Join thousands of field service professionals who are growing their businesses with CONSTRUKTR
           </p>
         </motion.div>
 

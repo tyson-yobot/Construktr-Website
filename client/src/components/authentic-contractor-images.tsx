@@ -16,8 +16,8 @@ import workTruckImage from "@assets/IMG_4338_1754274611770.jpeg";
 import appScreenImage from "@assets/IMG_4330_1754274611770.jpeg";
 import jobCompleteImage from "@assets/IMG_4331_1754274611770.jpeg";
 import customerMeetingImage from "@assets/IMG_4332_1754274611770.jpeg";
-import dashboardImage from "/screens/dashboard.png";
-import mobileAppImage from "/screens/home-screen.png";
+const dashboardImage = "/screens/dashboard.png";
+const mobileAppImage = "/screens/home-screen.png";
 
 interface AuthenticImageProps {
   scenario: "truck" | "jobsite" | "phone-usage" | "tools" | "meeting" | "dashboard" | "app-screen";
@@ -115,7 +115,7 @@ export function BeforeAfterContractor() {
         className="text-center"
       >
         <div className="bg-red-50 border-2 border-red-200 rounded-xl p-6 mb-4">
-          <h3 className="text-xl font-bold text-red-600 mb-4">❌ Before CONSTRUKTR™</h3>
+          <h3 className="text-xl font-bold text-red-600 mb-4">❌ Before CONSTRUKTR</h3>
           <AuthenticContractorImage scenario="tools" className="w-full h-48 object-cover mb-4" />
           <ul className="text-left space-y-2 text-gray-700">
             <li>• Handwritten quotes on napkins</li>
@@ -135,7 +135,7 @@ export function BeforeAfterContractor() {
         className="text-center"
       >
         <div className="bg-green-50 border-2 border-green-200 rounded-xl p-6 mb-4">
-          <h3 className="text-xl font-bold text-green-600 mb-4">✅ After CONSTRUKTR™</h3>
+          <h3 className="text-xl font-bold text-green-600 mb-4">✅ After CONSTRUKTR</h3>
           <AuthenticContractorImage scenario="phone-usage" className="w-full h-48 object-cover mb-4" />
           <ul className="text-left space-y-2 text-gray-700">
             <li>• Professional quotes in 30 seconds</li>

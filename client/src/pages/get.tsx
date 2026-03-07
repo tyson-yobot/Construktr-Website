@@ -120,7 +120,7 @@ export default function GetApp() {
                 <span className="text-electric-blue"> From Your Phone</span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Join 50,000+ service professionals who've transformed their business with the CONSTRUKTR™ mobile app. Everything you need to quote, schedule, and get paid - all in your pocket.
+                Join 50,000+ service professionals who've transformed their business with the CONSTRUKTR mobile app. Everything you need to quote, schedule, and get paid - all in your pocket.
               </p>
               
               {/* Download Buttons */}
@@ -182,7 +182,7 @@ export default function GetApp() {
                       <div className="w-16 h-16 bg-[var(--clr-surface)]/20 rounded-2xl mx-auto mb-3 flex items-center justify-center">
                         <Smartphone className="w-8 h-8" />
                       </div>
-                      <h3 className="font-bold text-lg">CONSTRUKTR™</h3>
+                      <h3 className="font-bold text-lg">CONSTRUKTR</h3>
                       <p className="text-sm opacity-80">Pro Dashboard</p>
                     </div>
                     <div className="space-y-3">
@@ -298,7 +298,7 @@ export default function GetApp() {
               Loved by Service Professionals
             </h2>
             <p className="text-xl text-[var(--clr-text-2)]">
-              See what real users say about the CONSTRUKTR™ mobile app
+              See what real users say about the CONSTRUKTR mobile app
             </p>
           </motion.div>
 

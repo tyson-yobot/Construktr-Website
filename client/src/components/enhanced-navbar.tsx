@@ -193,7 +193,7 @@ export default function EnhancedNavbar() {
                   <span>support@construktr.com</span>
                 </div>
                 <div className="text-[var(--clr-text-2)] text-sm">
-                  <span className="text-green-600 font-semibold">2,500+</span> active contractors trust CONSTRUKTR™
+                  <span className="text-green-600 font-semibold">2,500+</span> active contractors trust CONSTRUKTR
                 </div>
               </div>
             </div>

@@ -16,7 +16,7 @@ export default function SimplifiedBenefits() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl lg:text-4xl font-black text-white mb-6">
-            How CONSTRUKTR™ Grows Your Business
+            How CONSTRUKTR Grows Your Business
           </h2>
           <p className="text-xl text-[var(--clr-text-2)] max-w-3xl mx-auto">
             Simple tools that solve real contractor problems. No complexity, just results.
@@ -106,7 +106,7 @@ export default function SimplifiedBenefits() {
             className="text-center mb-12"
           >
             <h3 className="text-2xl lg:text-3xl font-black text-white mb-4">
-              Before vs After CONSTRUKTR™
+              Before vs After CONSTRUKTR
             </h3>
             <p className="text-lg text-[var(--clr-text-2)]">
               See the difference professional tools make
@@ -120,7 +120,7 @@ export default function SimplifiedBenefits() {
         <div className="text-center">
           <QuickDownloadCTA />
           <p className="text-gray-500 text-sm mt-4">
-            Join 2,500+ contractors already using CONSTRUKTR™
+            Join 2,500+ contractors already using CONSTRUKTR
           </p>
         </div>
       </div>

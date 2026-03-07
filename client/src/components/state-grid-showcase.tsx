@@ -7,73 +7,73 @@ const stateData = [
   {
     state: 'California',
     slug: 'california',
-    description: 'Leading the nation in construction innovation, California contractors using CONSTRUKTR™ report 40% higher profits and streamlined operations across diverse projects.',
+    description: 'Leading the nation in construction innovation, California contractors using CONSTRUKTR report 40% higher profits and streamlined operations across diverse projects.',
     cities: ['Los Angeles', 'San Francisco', 'San Diego', 'Sacramento']
   },
   {
     state: 'Texas',
     slug: 'texas',
-    description: 'Texas contractors trust CONSTRUKTR™ for managing large-scale projects efficiently. From Houston to Dallas, our platform drives business growth statewide.',
+    description: 'Texas contractors trust CONSTRUKTR for managing large-scale projects efficiently. From Houston to Dallas, our platform drives business growth statewide.',
     cities: ['Houston', 'Dallas', 'Austin', 'San Antonio']
   },
   {
     state: 'Florida',
     slug: 'florida',
-    description: 'Florida\'s booming construction market relies on CONSTRUKTR™ for quick quotes and payment processing. Perfect for hurricane restoration and new development.',
+    description: 'Florida\'s booming construction market relies on CONSTRUKTR for quick quotes and payment processing. Perfect for hurricane restoration and new development.',
     cities: ['Miami', 'Orlando', 'Tampa', 'Jacksonville']
   },
   {
     state: 'New York',
     slug: 'new-york',
-    description: 'From NYC high-rises to upstate renovations, New York contractors use CONSTRUKTR™ to manage complex projects and accelerate payment cycles.',
+    description: 'From NYC high-rises to upstate renovations, New York contractors use CONSTRUKTR to manage complex projects and accelerate payment cycles.',
     cities: ['New York City', 'Buffalo', 'Rochester', 'Syracuse']
   },
   {
     state: 'Illinois',
     slug: 'illinois',
-    description: 'Illinois contractors leverage CONSTRUKTR™\'s smart scheduling to handle Chicago\'s demanding construction timeline and weather challenges efficiently.',
+    description: 'Illinois contractors leverage CONSTRUKTR\'s smart scheduling to handle Chicago\'s demanding construction timeline and weather challenges efficiently.',
     cities: ['Chicago', 'Aurora', 'Rockford', 'Joliet']
   },
   {
     state: 'Pennsylvania',
     slug: 'pennsylvania',
-    description: 'Pennsylvania\'s diverse construction needs from Philadelphia commercial to rural residential projects are streamlined with CONSTRUKTR™\'s comprehensive platform.',
+    description: 'Pennsylvania\'s diverse construction needs from Philadelphia commercial to rural residential projects are streamlined with CONSTRUKTR\'s comprehensive platform.',
     cities: ['Philadelphia', 'Pittsburgh', 'Allentown', 'Erie']
   },
   {
     state: 'Ohio',
     slug: 'ohio',
-    description: 'Ohio contractors choose CONSTRUKTR™ for reliable project management across industrial, commercial, and residential sectors throughout the state.',
+    description: 'Ohio contractors choose CONSTRUKTR for reliable project management across industrial, commercial, and residential sectors throughout the state.',
     cities: ['Columbus', 'Cleveland', 'Cincinnati', 'Toledo']
   },
   {
     state: 'Georgia',
     slug: 'georgia',
-    description: 'Georgia\'s growing construction market benefits from CONSTRUKTR™\'s AI-powered tools, helping contractors from Atlanta to Savannah increase efficiency.',
+    description: 'Georgia\'s growing construction market benefits from CONSTRUKTR\'s AI-powered tools, helping contractors from Atlanta to Savannah increase efficiency.',
     cities: ['Atlanta', 'Augusta', 'Columbus', 'Savannah']
   },
   {
     state: 'North Carolina',
     slug: 'north-carolina',
-    description: 'North Carolina contractors rely on CONSTRUKTR™ for managing everything from coastal restoration to mountain construction projects with precision.',
+    description: 'North Carolina contractors rely on CONSTRUKTR for managing everything from coastal restoration to mountain construction projects with precision.',
     cities: ['Charlotte', 'Raleigh', 'Greensboro', 'Durham']
   },
   {
     state: 'Michigan',
     slug: 'michigan',
-    description: 'Michigan\'s construction industry trusts CONSTRUKTR™ for efficient project management across automotive, industrial, and residential sectors statewide.',
+    description: 'Michigan\'s construction industry trusts CONSTRUKTR for efficient project management across automotive, industrial, and residential sectors statewide.',
     cities: ['Detroit', 'Grand Rapids', 'Warren', 'Sterling Heights']
   },
   {
     state: 'New Jersey',
     slug: 'new-jersey',
-    description: 'New Jersey contractors use CONSTRUKTR™ to navigate complex regulations and tight schedules, from Newark commercial projects to shore renovations.',
+    description: 'New Jersey contractors use CONSTRUKTR to navigate complex regulations and tight schedules, from Newark commercial projects to shore renovations.',
     cities: ['Newark', 'Jersey City', 'Paterson', 'Elizabeth']
   },
   {
     state: 'Virginia',
     slug: 'virginia',
-    description: 'Virginia contractors leverage CONSTRUKTR™ for government projects, commercial development, and residential construction from Richmond to Virginia Beach.',
+    description: 'Virginia contractors leverage CONSTRUKTR for government projects, commercial development, and residential construction from Richmond to Virginia Beach.',
     cities: ['Virginia Beach', 'Norfolk', 'Chesapeake', 'Richmond']
   }
 ];
@@ -94,7 +94,7 @@ export default function StateGridShowcase() {
             Best Contractor Business App in Your State
           </h2>
           <p className="text-xl text-[var(--clr-text-2)] max-w-3xl mx-auto">
-            Thousands of contractors across America trust CONSTRUKTR™ to manage their 
+            Thousands of contractors across America trust CONSTRUKTR to manage their 
             businesses more efficiently. Find contractors in your state and see why they choose us.
           </p>
         </motion.div>
@@ -176,7 +176,7 @@ export default function StateGridShowcase() {
               Don't See Your State?
             </h3>
             <p className="text-[var(--clr-text-2)] mb-6 max-w-2xl mx-auto">
-              CONSTRUKTR™ serves contractors nationwide. Contact us to learn how 
+              CONSTRUKTR serves contractors nationwide. Contact us to learn how 
               contractors in your area are using our platform to grow their businesses.
             </p>
             <Link href="#demo-form">

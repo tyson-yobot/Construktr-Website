@@ -10,7 +10,7 @@ export default function LandscapingContractor() {
   return (
     <div className="min-h-screen bg-gradient-primary text-white">
       <Helmet>
-        <title>Landscaping Contractor Software - Seasonal Scheduling & Route Optimization | CONSTRUKTR™</title>
+        <title>Landscaping Contractor Software - Seasonal Scheduling & Route Optimization | CONSTRUKTR</title>
         <meta name="description" content="Complete landscaping business software for seasonal scheduling, maintenance contracts, crew management, and customer communication. Built for landscape professionals." />
         <meta name="keywords" content="landscaping software, lawn care app, landscape contractor management, seasonal scheduling, maintenance contracts" />
       </Helmet>

@@ -69,7 +69,7 @@ export default function ContractorTestimonials() {
             Real Contractors, Real Results
           </h2>
           <p className="text-xl text-white/85 max-w-3xl mx-auto leading-relaxed">
-            See how contractors across all trades are growing their businesses with CONSTRUKTR™
+            See how contractors across all trades are growing their businesses with CONSTRUKTR
           </p>
         </motion.div>
 
@@ -82,7 +82,7 @@ export default function ContractorTestimonials() {
           className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-3xl p-8 mb-16"
         >
           <h3 className="text-3xl font-bold text-center text-white mb-12">
-            Before CONSTRUKTR™ vs After CONSTRUKTR™
+            Before CONSTRUKTR vs After CONSTRUKTR
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

@@ -10,7 +10,7 @@ export default function RoofingContractor() {
   return (
     <div className="min-h-screen bg-gradient-primary text-white">
       <Helmet>
-        <title>Roofing Contractor Software - Storm Response & Repair Management | CONSTRUKTR™</title>
+        <title>Roofing Contractor Software - Storm Response & Repair Management | CONSTRUKTR</title>
         <meta name="description" content="Professional roofing contractor software for storm response, insurance claims, repair estimates, and crew scheduling. Trusted by roofers nationwide." />
         <meta name="keywords" content="roofing contractor software, storm damage software, roofing estimates, insurance claim management, roof repair app" />
       </Helmet>

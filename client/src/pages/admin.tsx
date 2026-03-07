@@ -144,7 +144,7 @@ export default function Admin() {
         customerEmail: testLead.email || "test@example.com",
         customerCompany: testLead.company || "Test Company",
         items: [
-          { description: "CONSTRUKTR™ Pro Plan", quantity: 1, rate: 49, amount: 49 }
+          { description: "CONSTRUKTR Pro Plan", quantity: 1, rate: 49, amount: 49 }
         ],
         total: 49,
         quoteNumber: "Q-" + Date.now(),
@@ -188,7 +188,7 @@ export default function Admin() {
         {/* Header */}
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-4">
-            CONSTRUKTR™ Admin Dashboard
+            CONSTRUKTR Admin Dashboard
           </h1>
           <p className="text-slate-300">
             Backend automation system with Stripe, Slack, webhooks, and analytics

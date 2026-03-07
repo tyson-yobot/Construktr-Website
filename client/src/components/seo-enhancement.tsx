@@ -8,7 +8,7 @@ interface SEOEnhancementProps {
 }
 
 export default function SEOEnhancement({
-  title = "CONSTRUKTR™ - Best Contractor Job Management & Scheduling App",
+  title = "CONSTRUKTR - Best Contractor Job Management & Scheduling App",
   description = "Transform your contracting business with AI-powered quotes, smart scheduling, and instant payments. Join 2,500+ contractors who've increased revenue by 247% with CONSTRUKTR.",
   keywords = [
     "contractor app",

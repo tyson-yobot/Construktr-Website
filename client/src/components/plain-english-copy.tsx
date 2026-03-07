@@ -31,7 +31,7 @@ export function PlainEnglishFeatures() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-black mb-4">
-            What CONSTRUKTR™ Actually Does
+            What CONSTRUKTR Actually Does
           </h2>
           <p className="text-xl">
             No tech talk. Just the real benefits that matter to your business.
@@ -104,7 +104,7 @@ export function PlainEnglishTestimonials() {
             What Real Contractors Say
           </h2>
           <p className="text-xl text-[var(--clr-text-2)]">
-            Honest feedback from contractors already using CONSTRUKTR™
+            Honest feedback from contractors already using CONSTRUKTR
           </p>
         </div>
 

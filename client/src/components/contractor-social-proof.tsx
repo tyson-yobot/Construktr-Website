@@ -116,7 +116,7 @@ export default function ContractorSocialProof() {
             Real Contractors, Real Results
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Contractors like you are growing faster with CONSTRUKTR™
+            Contractors like you are growing faster with CONSTRUKTR
           </p>
         </motion.div>
 

@@ -277,7 +277,7 @@ export default function InteractiveVideoExplainer() {
             See How It Works in the Field
           </h2>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-            Watch a real contractor use CONSTRUKTR™ from quote to payment in under 45 seconds.
+            Watch a real contractor use CONSTRUKTR from quote to payment in under 45 seconds.
           </p>
           
           {/* Try This Feature Button */}

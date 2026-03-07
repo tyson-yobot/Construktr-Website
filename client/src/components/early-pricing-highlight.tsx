@@ -65,7 +65,7 @@ export default function EarlyPricingHighlight() {
             Plans for Every Size Crew
           </h2>
           <p className="text-xl text-[var(--clr-text-2)] max-w-3xl mx-auto mb-8">
-            Starting at less than a tank of gas, CONSTRUKTR™ pays for itself with your first job.
+            Starting at less than a tank of gas, CONSTRUKTR pays for itself with your first job.
             <br />
             <span className="text-green-600 font-semibold">No setup fees. Cancel anytime. Free forever plan.</span>
           </p>
@@ -163,7 +163,7 @@ export default function EarlyPricingHighlight() {
               Not Sure Which Plan? Start Your Free Trial
             </h3>
             <p className="text-[var(--clr-text-2)] mb-6 max-w-2xl mx-auto">
-              Try CONSTRUKTR™ risk-free for 15 days. No credit card required. 
+              Try CONSTRUKTR risk-free for 15 days. No credit card required. 
               Switch plans anytime or cancel with one click.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

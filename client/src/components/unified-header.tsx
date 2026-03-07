@@ -99,7 +99,7 @@ export default function UnifiedHeader() {
               />
               <span className={`font-extrabold tracking-tight transition-all duration-300 text-[var(--color-text-primary)] ${
                 isScrolled ? "text-2xl" : "text-3xl"
-              }`}>CONSTRUKTR™</span>
+              }`}>CONSTRUKTR</span>
             </motion.div>
           </Link>
 

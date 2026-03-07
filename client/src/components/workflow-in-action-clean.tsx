@@ -68,7 +68,7 @@ export default function WorkflowInAction() {
             📱 How It Works
           </Badge>
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            How CONSTRUKTR™ Works
+            How CONSTRUKTR Works
           </h2>
           <p className="text-xl text-[var(--clr-text-2)] max-w-3xl mx-auto">
             Customer call to payment, complete jobs in minutes, not hours.

@@ -27,11 +27,11 @@ export default function StateTradeHub() {
             </Badge>
             
             <h1 className="text-4xl lg:text-6xl font-black mb-6 tracking-tight">
-              CONSTRUKTR™ Across America
+              CONSTRUKTR Across America
             </h1>
             
             <p className="text-xl text-slate-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Discover how contractors in your state and trade are growing their business with CONSTRUKTR™. 
+              Discover how contractors in your state and trade are growing their business with CONSTRUKTR. 
               From local plumbers to nationwide general contractors, find your specialized solution.
             </p>
 
@@ -93,7 +93,7 @@ export default function StateTradeHub() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl lg:text-5xl font-black text-white mb-6">
-              Why Contractors Choose CONSTRUKTR™
+              Why Contractors Choose CONSTRUKTR
             </h2>
             <p className="text-xl text-[var(--clr-text-2)] max-w-3xl mx-auto">
               Local expertise meets nationwide innovation. Built by contractors, for contractors.
@@ -153,7 +153,7 @@ export default function StateTradeHub() {
               Find Your State & Trade Combination
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Get started with CONSTRUKTR™ today and join contractors in your area who are already growing their business
+              Get started with CONSTRUKTR today and join contractors in your area who are already growing their business
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

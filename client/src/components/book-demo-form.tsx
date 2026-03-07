@@ -183,8 +183,8 @@ UID:demo-${selectedSlotDetails.id}@construktr.com
 DTSTAMP:${formatDate(new Date())}
 DTSTART:${formatDate(startDate)}
 DTEND:${formatDate(endDate)}
-SUMMARY:CONSTRUKTR™ Product Demo
-DESCRIPTION:Your personalized demo of CONSTRUKTR™ contractor management software. We'll show you how to save 8+ hours per week and get paid 3x faster.
+SUMMARY:CONSTRUKTR Product Demo
+DESCRIPTION:Your personalized demo of CONSTRUKTR contractor management software. We'll show you how to save 8+ hours per week and get paid 3x faster.
 LOCATION:Video Call (link will be sent via email)
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -281,7 +281,7 @@ END:VCALENDAR`;
             Book Your Free Demo
           </CardTitle>
           <p className="text-[var(--clr-text-2)]">
-            See how CONSTRUKTR™ can save you 8+ hours per week. Choose a time that works for you.
+            See how CONSTRUKTR can save you 8+ hours per week. Choose a time that works for you.
           </p>
         </CardHeader>
         <CardContent>

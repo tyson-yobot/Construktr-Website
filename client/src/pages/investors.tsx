@@ -284,7 +284,7 @@ export default function Investors() {
                 Our Vision
               </h2>
               <p className="text-lg text-[var(--clr-text-2)] leading-relaxed mb-6">
-                CONSTRUKTR™ is building the operating system for service businesses worldwide. We're not just another SaaS tool, we're creating the infrastructure that will power the next generation of service professionals.
+                CONSTRUKTR is building the operating system for service businesses worldwide. We're not just another SaaS tool, we're creating the infrastructure that will power the next generation of service professionals.
               </p>
               <p className="text-lg text-[var(--clr-text-2)] leading-relaxed mb-8">
                 By 2030, we aim to serve 1M+ service professionals, process $100B+ in transactions annually, and become the default platform for anyone starting or scaling a service business.
@@ -698,7 +698,7 @@ export default function Investors() {
                   value={meetingForm.message}
                   onChange={(e) => setMeetingForm(prev => ({ ...prev, message: e.target.value }))}
                   className="w-full px-3 py-2 bg-[var(--clr-surface)] text-white rounded-lg resize-none"
-                  placeholder="Tell us about your investment focus and what interests you about CONSTRUKTR™..."
+                  placeholder="Tell us about your investment focus and what interests you about CONSTRUKTR..."
                 />
               </div>
               

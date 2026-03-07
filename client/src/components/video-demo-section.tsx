@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Play, Pause, Volume2, VolumeX, CheckCircle, Calendar } from 'lucide-react';
 import StandardizedPhoneMockup from './standardized-phone-mockup';
 import { Button } from '@/components/ui/button';
-import appScreenshotImage from '/screens/dashboard.png';
+const appScreenshotImage = '/screens/dashboard.png';
 
 const videoTimelineSteps = [
   {
@@ -85,7 +85,7 @@ export default function VideoDemoSection() {
           className="text-center section-content-spacing"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            See CONSTRUKTR™ in Action
+            See CONSTRUKTR in Action
           </h2>
           <p className="text-xl text-[var(--clr-text-2)] max-w-3xl mx-auto">
             Watch how contractors transform their business in just 45 seconds. From quote to payment, 

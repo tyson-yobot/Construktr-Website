@@ -13,7 +13,7 @@ const testimonials = [
     title: "Owner, Johnson Plumbing",
     location: "Austin, TX",
     rating: 5,
-    content: "CONSTRUKTR™ transformed my business. I'm booking 40% more jobs and getting paid 3x faster. The AI quotes are incredibly accurate and save me hours every week.",
+    content: "CONSTRUKTR transformed my business. I'm booking 40% more jobs and getting paid 3x faster. The AI quotes are incredibly accurate and save me hours every week.",
     avatar: "SJ",
     photo: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face&auto=format",
     verified: true,
@@ -45,7 +45,7 @@ const testimonials = [
     title: "Elite Cleaning Solutions",
     location: "Seattle, WA",
     rating: 5,
-    content: "From struggling with paper invoices to fully automated billing. CONSTRUKTR™ helped me scale from 50 to 200+ recurring clients in just 8 months.",
+    content: "From struggling with paper invoices to fully automated billing. CONSTRUKTR helped me scale from 50 to 200+ recurring clients in just 8 months.",
     avatar: "JC",
     photo: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=face&auto=format",
     verified: true,
@@ -103,7 +103,7 @@ const testimonials = [
     title: "Mendez Construction Team",
     location: "Los Angeles, CA",
     rating: 5,
-    content: "Managing 12 crew members across multiple job sites was a nightmare. Now everything is coordinated through CONSTRUKTR™. Productivity is up 45%.",
+    content: "Managing 12 crew members across multiple job sites was a nightmare. Now everything is coordinated through CONSTRUKTR. Productivity is up 45%.",
     avatar: "CM",
     category: "Teams",
     metrics: {
@@ -117,7 +117,7 @@ const testimonials = [
     title: "Smith Pressure Washing",
     location: "Nashville, TN",
     rating: 5,
-    content: "Started using CONSTRUKTR™ as a solo operation. The app helped me organize so well that I hired 3 employees and doubled my income.",
+    content: "Started using CONSTRUKTR as a solo operation. The app helped me organize so well that I hired 3 employees and doubled my income.",
     avatar: "RS",
     category: "Small Business",
     metrics: {
@@ -165,7 +165,7 @@ export default function EnhancedTestimonials() {
             Loved by <span className="text-electric-blue">2,500+</span> Businesses
           </h2>
           <p className="text-xl text-[var(--clr-text-2)] max-w-3xl mx-auto">
-            See how service businesses are transforming their operations and growing revenue with CONSTRUKTR™
+            See how service businesses are transforming their operations and growing revenue with CONSTRUKTR
           </p>
         </motion.div>
 

@@ -238,7 +238,7 @@ export default function EnhancedExitIntentPopup() {
                 <div className="space-y-6">
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">
-                      Your Potential Savings with CONSTRUKTR™
+                      Your Potential Savings with CONSTRUKTR
                     </h3>
                     <p className="text-[var(--clr-text-2)]">
                       Based on your {calculatorData.tradeType} business data
@@ -277,7 +277,7 @@ export default function EnhancedExitIntentPopup() {
                         Total Annual Value: ${(results.revenuePotential * 12 + results.costSavings).toLocaleString()}
                       </div>
                       <div className="text-sm text-yellow-700">
-                        Your business could be worth significantly more with CONSTRUKTR™
+                        Your business could be worth significantly more with CONSTRUKTR
                       </div>
                     </div>
                   </div>

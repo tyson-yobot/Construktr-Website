@@ -16,10 +16,10 @@ export default function UnifiedFooter() {
             <div className="flex items-center mb-4">
               <img 
                 src={construktrLogo} 
-                alt="CONSTRUKTR™ Logo" 
+                alt="CONSTRUKTR Logo" 
                 className="h-10 w-auto mr-3"
               />
-              <span className="text-[var(--color-text-primary)] font-bold text-xl">CONSTRUKTR™</span>
+              <span className="text-[var(--color-text-primary)] font-bold text-xl">CONSTRUKTR</span>
             </div>
             <p className="text-[var(--color-text-secondary)] text-sm leading-relaxed mb-6">
               AI-powered job management for contractors. Quote, schedule, get paid, all in one app.

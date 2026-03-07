@@ -9,7 +9,7 @@ const reasons = [
     description: "AI-powered estimates win more business with accurate, professional pricing that customers trust. No more underbidding or losing jobs to competitors.",
     metric: "40%",
     metricLabel: "More Jobs Accepted",
-    testimonial: "CONSTRUKTR™ completely changed how we run our plumbing business. The AI quotes are incredibly accurate, and we've increased our job acceptance rate by 40%.",
+    testimonial: "CONSTRUKTR completely changed how we run our plumbing business. The AI quotes are incredibly accurate, and we've increased our job acceptance rate by 40%.",
     author: "Michael Rodriguez, Rodriguez Plumbing Services"
   },
   {
@@ -36,7 +36,7 @@ const reasons = [
     description: "Designed specifically for contractors, builders, and trade professionals by industry experts who understand your challenges.",
     metric: "2500+",
     metricLabel: "Contractors Trust Us",
-    testimonial: "As a general contractor, I needed something that could handle multiple trades and complex projects. CONSTRUKTR™ does it all.",
+    testimonial: "As a general contractor, I needed something that could handle multiple trades and complex projects. CONSTRUKTR does it all.",
     author: "Maria Santos, Santos Construction Group"
   },
   {
@@ -73,7 +73,7 @@ export default function WhyConstruktr() {
           className="text-center section-content-spacing"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Why Contractors Choose CONSTRUKTR™
+            Why Contractors Choose CONSTRUKTR
           </h2>
           <p className="text-xl text-[var(--clr-text-2)] max-w-3xl mx-auto">
             Join thousands of contractors who've transformed their businesses with increased efficiency, time savings, and improved profitability

@@ -5,8 +5,8 @@ const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "CONSTRUKTR",
-    "url": "https://construktr.ai",
-    "logo": "https://construktr.ai/logo.png",
+    "url": "https://CONSTRUKTR.ai",
+    "logo": "https://CONSTRUKTR.ai/logo.png",
     "description": "Best contractor job management and scheduling app. AI-powered quotes, smart scheduling, and same-day payments for contractors in all 50 states.",
     "foundingDate": "2023",
     "industry": "Construction Management Software",
@@ -33,7 +33,7 @@ const structuredData = {
     "@type": "SoftwareApplication",
     "name": "CONSTRUKTR - Contractor Job Management",
     "description": "Complete contractor business management platform with AI-powered quotes, smart scheduling, and instant payments. Built for HVAC, plumbing, electrical, roofing, and all contractor trades.",
-    "url": "https://construktr.ai",
+    "url": "https://CONSTRUKTR.ai",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "iOS, Android, Web",
     "offers": {
@@ -57,7 +57,7 @@ const structuredData = {
       "https://apps.apple.com/app/construktr",
       "https://play.google.com/store/apps/details?id=com.construktr"
     ],
-    "screenshot": "https://construktr.ai/app-screenshot.png"
+    "screenshot": "https://CONSTRUKTR.ai/app-screenshot.png"
   },
 
   faqPage: {

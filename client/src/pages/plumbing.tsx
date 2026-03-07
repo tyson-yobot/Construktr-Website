@@ -18,7 +18,7 @@ export default function PlumbingLanding() {
   return (
     <div className="min-h-screen bg-[var(--clr-surface)]">
       {/* SEO-optimized meta tags would be handled by a proper head manager */}
-      <title>AI Plumbing Business App | CONSTRUKTR™ - Job Scheduler & Quote Software</title>
+      <title>AI Plumbing Business App | CONSTRUKTR - Job Scheduler & Quote Software</title>
       
       <UrgencyBanner variant="downloads" position="top" />
       <EnhancedNavbar />
@@ -159,7 +159,7 @@ export default function PlumbingLanding() {
               Stop These Plumbing Business Problems
             </h2>
             <p className="text-xl text-[var(--clr-text-2)] max-w-3xl mx-auto">
-              Every plumber faces these daily frustrations. CONSTRUKTR™ solves them all.
+              Every plumber faces these daily frustrations. CONSTRUKTR solves them all.
             </p>
           </motion.div>
 
@@ -280,7 +280,7 @@ export default function PlumbingLanding() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl lg:text-4xl font-black text-white mb-6">
-              Join 1,200+ Plumbers Using CONSTRUKTR™
+              Join 1,200+ Plumbers Using CONSTRUKTR
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Download the app trusted by plumbing contractors nationwide. 

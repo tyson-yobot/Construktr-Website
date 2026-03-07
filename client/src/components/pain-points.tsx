@@ -34,7 +34,7 @@ export default function PainPoints() {
             Stop Losing Money on Simple Mistakes
           </h2>
           <p className="text-xl text-[var(--clr-text-2)] max-w-3xl mx-auto leading-relaxed">
-            Every contractor faces the same problems. CONSTRUKTR™ solves them with AI.
+            Every contractor faces the same problems. CONSTRUKTR solves them with AI.
           </p>
         </motion.div>
 

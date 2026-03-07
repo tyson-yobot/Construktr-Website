@@ -78,7 +78,7 @@ export default function TabbedDemo() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-[var(--color-text-primary)] mb-6">
-            See CONSTRUKTR™ in Action
+            See CONSTRUKTR in Action
           </h2>
           <p className="text-xl text-[var(--color-text-secondary)] max-w-3xl mx-auto">
             Watch real contractors use our app to quote, schedule, and get paid faster than ever.

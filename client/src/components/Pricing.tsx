@@ -23,7 +23,7 @@ export default function Pricing() {
 
   const handleCTA = (tier: typeof tiers[number]) => {
     if (tier.key === "business") {
-      window.location.href = "mailto:support@construktr.ai?subject=Business%20Plan%20Inquiry";
+      window.location.href = "mailto:support@CONSTRUKTR.ai?subject=Business%20Plan%20Inquiry";
     } else {
       navigate("/get");
     }

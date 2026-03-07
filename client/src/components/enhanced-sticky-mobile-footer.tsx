@@ -69,7 +69,7 @@ export default function EnhancedStickyMobileFooter() {
                 >
                   <div className="text-white text-sm mb-2">
                     <div className="flex items-center justify-between mb-1">
-                      <span className="font-semibold">CONSTRUKTR™ Mobile App</span>
+                      <span className="font-semibold">CONSTRUKTR Mobile App</span>
                       <Button
                         variant="ghost"
                         size="sm"

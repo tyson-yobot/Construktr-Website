@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Check, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { content } from "@/lib/content";
-import realAppScreenshot from "/screens/home-screen.png";
+const realAppScreenshot = "/screens/home-screen.png";
 import StandardizedPhoneMockup from "./standardized-phone-mockup";
 
 export default function MobileAppPreview() {

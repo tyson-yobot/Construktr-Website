@@ -8,7 +8,7 @@ export default function PlumberLanding() {
   return (
     <div className="min-h-screen bg-[var(--color-bg)] text-white">
       <Helmet>
-        <title>Best Plumber Business Software | CONSTRUKTR™ - Quote, Schedule, Get Paid</title>
+        <title>Best Plumber Business Software | CONSTRUKTR - Quote, Schedule, Get Paid</title>
         <meta name="description" content="Plumber business management software that automates quoting, scheduling, and payments. Join 1,000+ plumbers saving 8+ hours weekly with AI-powered tools." />
         <meta name="keywords" content="plumber business software, plumbing scheduling app, plumber invoicing, plumbing quotes, plumber CRM, plumbing business management" />
       </Helmet>

@@ -17,7 +17,7 @@ export default function HVACLanding() {
 
   return (
     <div className="min-h-screen bg-[var(--clr-surface)]">
-      <title>HVAC Job Scheduler & Business App | CONSTRUKTR™ - AI Quote Software</title>
+      <title>HVAC Job Scheduler & Business App | CONSTRUKTR - AI Quote Software</title>
       
       <UrgencyBanner variant="downloads" position="top" />
       <EnhancedNavbar />
@@ -158,7 +158,7 @@ export default function HVACLanding() {
               Stop These HVAC Business Problems
             </h2>
             <p className="text-xl text-[var(--clr-text-2)] max-w-3xl mx-auto">
-              Every HVAC contractor deals with these issues. CONSTRUKTR™ eliminates them all.
+              Every HVAC contractor deals with these issues. CONSTRUKTR eliminates them all.
             </p>
           </motion.div>
 
@@ -279,7 +279,7 @@ export default function HVACLanding() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl lg:text-4xl font-black text-white mb-6">
-              Join 800+ HVAC Contractors Using CONSTRUKTR™
+              Join 800+ HVAC Contractors Using CONSTRUKTR
             </h2>
             <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">
               Download the app trusted by heating and cooling professionals nationwide. 

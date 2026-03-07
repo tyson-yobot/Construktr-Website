@@ -440,7 +440,7 @@ export default function Pricing() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Join thousands of service professionals who trust CONSTRUKTR™
+              Join thousands of service professionals who trust CONSTRUKTR
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="bg-[var(--clr-surface)] text-electric-blue px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors duration-200">

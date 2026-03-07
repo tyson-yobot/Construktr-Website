@@ -41,8 +41,8 @@ const cityPageData: Record<string, Record<string, any>> = {
         rating: 5
       },
       seoContent: {
-        title: "Houston Contractor Software | CONSTRUKTR™ - HVAC, Plumbing, Electrical",
-        metaDescription: "Join 3,200+ Houston contractors using CONSTRUKTR™. Perfect for Houston HVAC, plumbing, electrical contractors. AI quotes, smart scheduling for Harris County.",
+        title: "Houston Contractor Software | CONSTRUKTR - HVAC, Plumbing, Electrical",
+        metaDescription: "Join 3,200+ Houston contractors using CONSTRUKTR. Perfect for Houston HVAC, plumbing, electrical contractors. AI quotes, smart scheduling for Harris County.",
         h1: "Houston's Leading Contractor Management Software",
         localKeywords: ["Houston contractor software", "Harris County HVAC app", "Houston plumbing software", "contractor app Houston TX"]
       }
@@ -50,7 +50,7 @@ const cityPageData: Record<string, Record<string, any>> = {
     dallas: {
       name: "Dallas",
       state: "Texas",
-      description: "Big D contractors choose CONSTRUKTR™ for business growth and efficiency",
+      description: "Big D contractors choose CONSTRUKTR for business growth and efficiency",
       contractors: "2,800+",
       population: "1.3M",
       medianIncome: "$54,747",
@@ -77,8 +77,8 @@ const cityPageData: Record<string, Record<string, any>> = {
         rating: 5
       },
       seoContent: {
-        title: "Dallas Contractor Software | CONSTRUKTR™ - Roofing, HVAC, Electrical",
-        metaDescription: "Join 2,800+ Dallas contractors using CONSTRUKTR™. Perfect for Dallas roofing, HVAC, electrical contractors. Storm damage tools for Dallas County.",
+        title: "Dallas Contractor Software | CONSTRUKTR - Roofing, HVAC, Electrical",
+        metaDescription: "Join 2,800+ Dallas contractors using CONSTRUKTR. Perfect for Dallas roofing, HVAC, electrical contractors. Storm damage tools for Dallas County.",
         h1: "Dallas Contractor Software That Works",
         localKeywords: ["Dallas contractor software", "Dallas County roofing app", "Dallas HVAC software", "contractor management Dallas TX"]
       }
@@ -88,7 +88,7 @@ const cityPageData: Record<string, Record<string, any>> = {
     "los-angeles": {
       name: "Los Angeles",
       state: "California", 
-      description: "City of Angels contractors trust CONSTRUKTR™ for premium service delivery",
+      description: "City of Angels contractors trust CONSTRUKTR for premium service delivery",
       contractors: "4,800+",
       population: "3.9M",
       medianIncome: "$62,474",
@@ -115,8 +115,8 @@ const cityPageData: Record<string, Record<string, any>> = {
         rating: 5
       },
       seoContent: {
-        title: "Los Angeles Contractor Software | CONSTRUKTR™ - Solar, Electrical, Pool",
-        metaDescription: "Join 4,800+ Los Angeles contractors using CONSTRUKTR™. Perfect for LA solar, electrical, pool contractors. Premium features for LA County.",
+        title: "Los Angeles Contractor Software | CONSTRUKTR - Solar, Electrical, Pool",
+        metaDescription: "Join 4,800+ Los Angeles contractors using CONSTRUKTR. Perfect for LA solar, electrical, pool contractors. Premium features for LA County.",
         h1: "Los Angeles Contractor Software for Premium Service",
         localKeywords: ["Los Angeles contractor software", "LA County solar app", "Los Angeles electrical software", "contractor app LA California"]
       }
@@ -255,7 +255,7 @@ export default function CityPage() {
               Top {cityData.name} Neighborhoods for Contractors
             </h2>
             <p className="text-xl text-[var(--clr-text-2)] max-w-3xl mx-auto">
-              High-demand areas where CONSTRUKTR™ contractors are thriving
+              High-demand areas where CONSTRUKTR contractors are thriving
             </p>
           </motion.div>
 
@@ -396,7 +396,7 @@ export default function CityPage() {
               Ready to Join {cityData.contractors} {cityData.name} Contractors?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Start your free trial today and see why contractors in {cityData.name} choose CONSTRUKTR™
+              Start your free trial today and see why contractors in {cityData.name} choose CONSTRUKTR
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

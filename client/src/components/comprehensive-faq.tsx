@@ -89,7 +89,7 @@ const faqCategories = [
       },
       {
         q: "Do you offer discounts for annual billing?",
-        a: "Yes. Annual billing saves approximately 20% compared to monthly. Contact support@construktr.ai for Business plan pricing questions."
+        a: "Yes. Annual billing saves approximately 20% compared to monthly. Contact support@CONSTRUKTR.ai for Business plan pricing questions."
       }
     ]
   },
@@ -232,7 +232,7 @@ export default function ComprehensiveFAQ() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:support@construktr.ai"
+              href="mailto:support@CONSTRUKTR.ai"
               className="btn-secondary inline-flex items-center justify-center gap-2"
               data-testid="button-faq-contact"
             >

@@ -8,7 +8,7 @@ const teamMembers = [
   {
     name: "Tyson Mitchell",
     role: "Co-Founder & CEO",
-    bio: "Former construction project manager with 15+ years in the field. Led teams on $50M+ commercial projects before founding CONSTRUKTR™ to solve the industry's biggest pain points.",
+    bio: "Former construction project manager with 15+ years in the field. Led teams on $50M+ commercial projects before founding CONSTRUKTR to solve the industry's biggest pain points.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
     linkedin: "#",
     location: "Austin, TX"
@@ -44,7 +44,7 @@ const milestones = [
     year: "2021",
     quarter: "Q4",
     title: "Company Founded",
-    description: "Tyson and Daniel launch CONSTRUKTR™ with seed funding from leading VCs"
+    description: "Tyson and Daniel launch CONSTRUKTR with seed funding from leading VCs"
   },
   {
     year: "2022",
@@ -102,14 +102,14 @@ const awards = [
     title: "Best Construction Tech Startup",
     organization: "TechCrunch Disrupt",
     year: "2024",
-    recipient: "CONSTRUKTR™",
+    recipient: "CONSTRUKTR",
     logo: "https://techcrunch.com/wp-content/uploads/2022/05/tc-logo.png"
   },
   {
     title: "Small Business Innovation Award",
     organization: "U.S. Chamber of Commerce",
     year: "2023",
-    recipient: "CONSTRUKTR™",
+    recipient: "CONSTRUKTR",
     logo: "https://www.uschamber.com/assets/images/logo.png"
   }
 ];
@@ -169,7 +169,7 @@ export default function About() {
             className="text-4xl md:text-6xl font-bold mb-6"
           >
             About
-            <span className="text-electric-blue"> CONSTRUKTR™</span>
+            <span className="text-electric-blue"> CONSTRUKTR</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -200,7 +200,7 @@ export default function About() {
                 The service industry employs over 130 million Americans and generates $2 trillion annually, yet most businesses still operate with outdated tools and manual processes.
               </p>
               <p className="text-lg text-[var(--clr-text-2)] leading-relaxed">
-                We believe every plumber, electrician, contractor, and service professional deserves enterprise-grade tools to quote accurately, schedule efficiently, and get paid faster. That's why we built CONSTRUKTR™.
+                We believe every plumber, electrician, contractor, and service professional deserves enterprise-grade tools to quote accurately, schedule efficiently, and get paid faster. That's why we built CONSTRUKTR.
               </p>
             </motion.div>
             

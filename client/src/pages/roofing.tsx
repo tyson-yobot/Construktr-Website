@@ -17,7 +17,7 @@ export default function RoofingLanding() {
 
   return (
     <div className="min-h-screen bg-[var(--clr-surface)]">
-      <title>Roofing Business App | CONSTRUKTR™ - Roof Quote & Job Management Software</title>
+      <title>Roofing Business App | CONSTRUKTR - Roof Quote & Job Management Software</title>
       
       <UrgencyBanner variant="downloads" position="top" />
       <EnhancedNavbar />
@@ -154,7 +154,7 @@ export default function RoofingLanding() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl lg:text-4xl font-black text-white mb-6">
-              Join 700+ Roofers Using CONSTRUKTR™
+              Join 700+ Roofers Using CONSTRUKTR
             </h2>
             <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">
               Download the app trusted by roofing contractors nationwide. 

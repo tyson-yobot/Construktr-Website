@@ -10,7 +10,7 @@ export default function Terms() {
       <Helmet>
         <title>Terms of Service — Construktr</title>
         <meta name="description" content="Terms and conditions for using the Construktr contractor management platform." />
-        <link rel="canonical" href="https://construktr.ai/terms" />
+        <link rel="canonical" href="https://CONSTRUKTR.ai/terms" />
       </Helmet>
 
       <main className="pt-32 pb-16">
@@ -23,7 +23,7 @@ export default function Terms() {
 
             <section>
               <p>These Terms of Service ("Terms") govern your use of the Construktr mobile application and website (collectively, "Services") provided by Automate AI LLC ("Construktr," "we," "our," or "us"). By accessing or using our Services, you agree to be bound by these Terms.</p>
-              <p className="mt-3">Company: Automate AI LLC, Scottsdale, AZ<br />Legal contact: <a href="mailto:legal@construktr.ai" className="text-[var(--color-primary)]">legal@construktr.ai</a></p>
+              <p className="mt-3">Company: Automate AI LLC, Scottsdale, AZ<br />Legal contact: <a href="mailto:legal@CONSTRUKTR.ai" className="text-[var(--color-primary)]">legal@CONSTRUKTR.ai</a></p>
             </section>
 
             <section>
@@ -43,7 +43,7 @@ export default function Terms() {
                 <li>Maintaining the confidentiality of your account credentials</li>
                 <li>All activity that occurs under your account</li>
                 <li>Providing accurate and complete account information</li>
-                <li>Notifying us immediately of any unauthorized use of your account at <a href="mailto:support@construktr.ai" className="text-[var(--color-primary)]">support@construktr.ai</a></li>
+                <li>Notifying us immediately of any unauthorized use of your account at <a href="mailto:support@CONSTRUKTR.ai" className="text-[var(--color-primary)]">support@CONSTRUKTR.ai</a></li>
               </ul>
             </section>
 
@@ -131,8 +131,8 @@ export default function Terms() {
               <p>
                 Automate AI LLC<br />
                 Scottsdale, AZ<br />
-                Legal: <a href="mailto:legal@construktr.ai" className="text-[var(--color-primary)]">legal@construktr.ai</a><br />
-                Support: <a href="mailto:support@construktr.ai" className="text-[var(--color-primary)]">support@construktr.ai</a>
+                Legal: <a href="mailto:legal@CONSTRUKTR.ai" className="text-[var(--color-primary)]">legal@CONSTRUKTR.ai</a><br />
+                Support: <a href="mailto:support@CONSTRUKTR.ai" className="text-[var(--color-primary)]">support@CONSTRUKTR.ai</a>
               </p>
               <p className="mt-4">
                 <Link href="/privacy" className="text-[var(--color-primary)] underline">Privacy Policy</Link>

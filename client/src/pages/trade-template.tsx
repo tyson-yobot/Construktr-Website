@@ -194,7 +194,7 @@ export default function TradeTemplate() {
               Features Built for {trade.name} Professionals
             </h2>
             <p className="text-xl text-[var(--clr-text-2)] max-w-3xl mx-auto">
-              Every feature in CONSTRUKTR™ is designed with {trade.name.toLowerCase()} contractors in mind, 
+              Every feature in CONSTRUKTR is designed with {trade.name.toLowerCase()} contractors in mind, 
               helping you manage the specific challenges of your trade.
             </p>
           </motion.div>
@@ -234,7 +234,7 @@ export default function TradeTemplate() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl font-bold text-white mb-6">
-              Why {trade.name} Contractors Choose CONSTRUKTR™
+              Why {trade.name} Contractors Choose CONSTRUKTR
             </h2>
           </motion.div>
 

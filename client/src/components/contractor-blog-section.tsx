@@ -195,7 +195,7 @@ export default function ContractorBlogSection() {
           </h3>
           <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
             Join 2,500+ active contractors getting our weekly newsletter with business tips, 
-            industry insights, and CONSTRUKTR™ feature updates.
+            industry insights, and CONSTRUKTR feature updates.
           </p>
           <Button size="lg" className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold">
             Subscribe to Newsletter
