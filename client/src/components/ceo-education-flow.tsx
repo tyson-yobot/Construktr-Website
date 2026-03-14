@@ -3,9 +3,9 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { FileText, Calendar, CreditCard, Play, ArrowRight } from "lucide-react";
 import { trackVideoPlayed45sDemo, trackCTAStartTrialClicked } from "@/lib/analytics-events";
-const appQuotesImage = "/screens/quote-builder.png";
-const appSchedulingImage = "/screens/schedule-view.png";
-const appPaymentsImage = "/screens/payment-processing.png";
+const appQuotesImage = "/screens/Screenshot_1773334996.png";
+const appSchedulingImage = "/screens/Screenshot_1773335009.png";
+const appPaymentsImage = "/screens/Screenshot_1773335025.png";
 
 // CEO Directive: 3-step flow Quote → Schedule → Get Paid with tiny real app loops
 const educationSteps = [

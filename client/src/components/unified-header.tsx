@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-const construktrLogo = "/construktr-official-logo.svg";
+const construktrLogo = "/construktr-logo-no-bg.jpeg";
 
 export default function UnifiedHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -48,8 +48,8 @@ export default function UnifiedHeader() {
       className={`
         fixed top-0 left-0 right-0 z-50 
         ${isScrolled 
-          ? "bg-white/95 backdrop-blur-md border-b border-[var(--color-border-light)] shadow-sm" 
-          : "bg-white border-b border-[var(--color-border-light)]"
+          ? "bg-black/95 backdrop-blur-md border-b border-gray-800 shadow-sm" 
+          : "bg-black border-b border-gray-800"
         }
         transition-all duration-300
       `}
@@ -86,37 +86,37 @@ export default function UnifiedHeader() {
             <motion.div
               animate={{ scale: isScrolled ? 0.85 : 1 }}
               transition={{ duration: 0.3 }}
-              className="flex items-center gap-3 cursor-pointer"
+              className="flex items-center gap-2 cursor-pointer"
             >
               <img 
                 src={construktrLogo} 
-                alt="CONSTRUKTR Logo" 
+                alt="CONSTRUKTR" 
                 className={`w-auto transition-all duration-300 ${
-                  isScrolled ? "h-8" : "h-10"
+                  isScrolled ? "h-10" : "h-12"
                 }`}
                 loading="eager"
                 decoding="async"
               />
-              <span className="text-2xl font-bold text-[var(--color-primary)] tracking-wide">
-                CONSTRUKTR
-              </span>
+              <span className={`font-extrabold tracking-tight transition-all duration-300 text-white ${
+                isScrolled ? "text-2xl" : "text-3xl"
+              }`}>CONSTRUKTR</span>
             </motion.div>
           </Link>
 
           {/* Desktop Navigation - Canonical Structure */}
           <div className="hidden lg:flex items-center space-x-8">
             <Link href="/features">
-              <span className="text-[var(--color-text-primary)] hover:text-[var(--color-primary)] transition-colors duration-200 font-medium cursor-pointer">
+              <span className="text-white hover:text-[var(--color-primary)] transition-colors duration-200 font-medium cursor-pointer">
                 Features
               </span>
             </Link>
             <Link href="/pricing">
-              <span className="text-[var(--color-text-primary)] hover:text-[var(--color-primary)] transition-colors duration-200 font-medium cursor-pointer">
+              <span className="text-white hover:text-[var(--color-primary)] transition-colors duration-200 font-medium cursor-pointer">
                 Pricing
               </span>
             </Link>
             <Link href="/support">
-              <span className="text-[var(--color-text-primary)] hover:text-[var(--color-primary)] transition-colors duration-200 font-medium cursor-pointer">
+              <span className="text-white hover:text-[var(--color-primary)] transition-colors duration-200 font-medium cursor-pointer">
                 Support
               </span>
             </Link>
@@ -134,7 +134,7 @@ export default function UnifiedHeader() {
               >
                 Get Started Free
               </Button>
-              <span className="text-[10px] text-[var(--color-text-secondary)] mt-1">
+              <span className="text-[10px] text-gray-300 mt-1">
                 iOS & Android · Free Forever
               </span>
             </div>

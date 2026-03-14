@@ -1,23 +1,23 @@
 import { motion } from "framer-motion";
 
 // Real contractor photos from attached assets
-const contractorTruckImage = "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=300&fit=crop";
-const jobSiteImage = "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop";
-const plumberWorkingImage = "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400&h=300&fit=crop";
-const hvacTechImage = "https://images.unsplash.com/photo-1494976754279-185f0d677845?w=400&h=300&fit=crop";
-const electricianImage = "https://images.unsplash.com/photo-1526574080420-c2dd61043d14?w=400&h=300&fit=crop";
-const roofingCrewImage = "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=400&h=300&fit=crop";
+import contractorTruckImage from "@assets/IMG_4328_1754274611769.jpeg";
+import jobSiteImage from "@assets/IMG_4328_1754274611769.jpeg";
+import plumberWorkingImage from "@assets/IMG_4330_1754274611770.jpeg";
+import hvacTechImage from "@assets/IMG_4331_1754274611770.jpeg";
+import electricianImage from "@assets/IMG_4332_1754274611770.jpeg";
+import roofingCrewImage from "@assets/IMG_4333_1754274611770.jpeg";
 import OptimizedImage from "./optimized-image";
-const handymanImage = "https://images.unsplash.com/photo-1582542021865-bde52fd7c3cf?w=400&h=300&fit=crop";
-const appUsageImage = "/screens/dashboard-home.png";
-const contractorPhoneImage = "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop";
-const toolsImage = "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=400&h=300&fit=crop";
-const workTruckImage = "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=300&fit=crop";
-const appScreenImage = "/screens/dashboard-home.png";
-const jobCompleteImage = "/screens/schedule-calendar.png";
-const customerMeetingImage = "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&h=300&fit=crop";
-const dashboardImage = "/screens/dashboard.png";
-const mobileAppImage = "/screens/home-screen.png";
+import handymanImage from "@assets/IMG_4334_1754274611770.jpeg";
+import appUsageImage from "@assets/IMG_4335_1754274611770.jpeg";
+import contractorPhoneImage from "@assets/IMG_4335_1754274611770.jpeg";
+import toolsImage from "@assets/IMG_4337_1754274611770.jpeg";
+import workTruckImage from "@assets/IMG_4338_1754274611770.jpeg";
+import appScreenImage from "@assets/IMG_4330_1754274611770.jpeg";
+import jobCompleteImage from "@assets/IMG_4331_1754274611770.jpeg";
+import customerMeetingImage from "@assets/IMG_4332_1754274611770.jpeg";
+const dashboardImage = "/screens/Screenshot_1773334996.png";
+const mobileAppImage = "/screens/Screenshot_1773335046.png";
 
 interface AuthenticImageProps {
   scenario: "truck" | "jobsite" | "phone-usage" | "tools" | "meeting" | "dashboard" | "app-screen";

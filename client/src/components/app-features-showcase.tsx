@@ -4,12 +4,12 @@ import { Badge } from "@/components/ui/badge";
 import { ChevronLeft, ChevronRight, MessageSquare, Calendar, FileText, MapPin, BarChart3, Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-// Use direct paths to screenshots in public folder
-const quoteScreenshot = "/screens/quote-builder.png";
-const calendarScreenshot = "/screens/schedule-view.png";
-const invoiceScreenshot = "/screens/invoice-view.png";
-const routeScreenshot = "/screens/dashboard.png";
-const insightsScreenshot = "/screens/ai-assistant.png";
+// Use direct paths to new iPhone screenshots in public folder
+const quoteScreenshot = "/screens/Screenshot_1773334996.png";
+const calendarScreenshot = "/screens/Screenshot_1773335009.png";
+const invoiceScreenshot = "/screens/Screenshot_1773335025.png";
+const routeScreenshot = "/screens/Screenshot_1773335046.png";
+const insightsScreenshot = "/screens/Screenshot_1773335052.png";
 
 const features = [
   {
