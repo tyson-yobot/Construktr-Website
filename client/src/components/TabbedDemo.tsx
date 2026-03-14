@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Play, RotateCcw, CheckCircle, Calculator, Navigation, CreditCard } from "lucide-react";
 import StandardizedPhoneMockup from "./standardized-phone-mockup";
 import { Button } from "@/components/ui/button";
-import appImageQuotes from "@assets/IMG_4330_1754274611770.jpeg";
-import appImageScheduling from "@assets/IMG_4331_1754274611770.jpeg";
-import appImagePayments from "@assets/IMG_4332_1754274611770.jpeg";
+import appImageQuotes from "/screens/dashboard-home.png";
+import appImageScheduling from "/screens/schedule-calendar.png";
+import appImagePayments from "/screens/payment-invoice.png";
 import demoData from "../../../content/demo.json";
 
 const demoIcons = {

@@ -18,7 +18,7 @@ const contractorTestimonials = [
       after: "25 quotes/week",
       metric: "Quote Volume"
     },
-    image: "/api/placeholder/60/60"
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face"
   },
   {
     name: "Sarah Chen",
@@ -32,7 +32,7 @@ const contractorTestimonials = [
       after: "Same day",
       metric: "Payment Speed"
     },
-    image: "/api/placeholder/60/60"
+    image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=60&h=60&fit=crop&crop=face"
   },
   {
     name: "Tony Williams",
@@ -46,7 +46,7 @@ const contractorTestimonials = [
       after: "8 reviews/month",
       metric: "Customer Reviews"
     },
-    image: "/api/placeholder/60/60"
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face"
   }
 ];
 
