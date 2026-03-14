@@ -3,7 +3,7 @@ import {
   Download, Settings, Zap, BarChart3, ArrowRight, 
   CheckCircle2, Clock, Smartphone
 } from "lucide-react";
-import aiToolsScreenshot from "@assets/Screenshot_1772186316_1772186345834.png";
+import aiToolsScreenshot from "/screens/Screenshot_1773335046.png";
 
 const steps = [
   {
