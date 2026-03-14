@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-const construktrLogo = "/construktr-logo-no-bg.jpeg";
+const construktrLogo = "/CONSTRUKTR LOGO NO BACKGROUND.jpeg";
 
 export default function UnifiedHeader() {
   const [isScrolled, setIsScrolled] = useState(false);
