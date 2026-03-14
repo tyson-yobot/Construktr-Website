@@ -3,7 +3,11 @@ import {
   Download, Settings, Zap, BarChart3, ArrowRight, 
   CheckCircle2, Clock, Smartphone
 } from "lucide-react";
-import aiToolsScreenshot from "/screens/Screenshot_1773335046.png";
+// Screenshots matched to step descriptions
+const settingsScreenshot = "/screens/Screenshot_1773335057.png"; // Step 01: Setup/Settings
+const aiToolsScreenshot = "/screens/Screenshot_1773335046.png";   // Step 02: AI Tools/Automations  
+const dashboardScreenshot = "/screens/Screenshot_1773334996.png"; // Step 03: Home/Dashboard
+const analyticsScreenshot = "/screens/Screenshot_1773335198.png"; // Step 04: Analytics/Reports
 
 const steps = [
   {
@@ -18,7 +22,7 @@ const steps = [
       "Sync your accounting software"
     ],
     time: "~30 minutes",
-    image: null
+    image: settingsScreenshot
   },
   {
     number: "02",
@@ -46,7 +50,7 @@ const steps = [
       "AI Tools: Advanced features and analytics"
     ],
     time: "Daily workflow",
-    image: null
+    image: dashboardScreenshot
   },
   {
     number: "04",
@@ -60,7 +64,7 @@ const steps = [
       "Cash flow projections"
     ],
     time: "Weekly review",
-    image: null
+    image: analyticsScreenshot
   }
 ];
 
