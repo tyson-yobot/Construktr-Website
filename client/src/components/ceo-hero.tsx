@@ -6,7 +6,7 @@ import { trackCTAStartTrialClicked, trackCTABookDemoClicked, trackTradeChipClick
 import TrustBar from "./TrustBar";
 import DeviceFrame from "./DeviceFrame";
 import AppStoreBadges from "./app-store-badges";
-import appMainImage from "@assets/Screenshot_1772172229_1772186144938.png";
+import appMainImage from "/screens/Screenshot_1773334996.png";
 
 const rotatingMessages = [
   "Photo → quote in under 60 seconds",
