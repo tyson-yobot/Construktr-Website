@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Shield, Award, Clock } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
-const construktrLogo = "/construktr-logo.svg";
+const construktrLogo = "/CONSTRUKTR LOGO NO BACKGROUND.jpeg";
 import AppStoreBadges from "./app-store-badges";
 
 export default function UnifiedFooter() {
@@ -22,7 +22,7 @@ export default function UnifiedFooter() {
               <span className="text-[var(--color-text-primary)] font-bold text-xl">CONSTRUKTR</span>
             </div>
             <p className="text-[var(--color-text-secondary)] text-sm leading-relaxed mb-6">
-              AI-powered job management for contractors. Quote, schedule, get paid, all in one app.
+              The world's most advanced AI-powered construction platform. 17 AI tools powered by GPT-4, Deep Learning, and Computer Vision.
             </p>
             
             {/* Trust Badges */}
