@@ -411,12 +411,25 @@ export default function CompetitiveAIComparison() {
               the AI advantage and are dominating their markets.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-white text-[var(--color-primary)] px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 flex items-center gap-3">
+              <button 
+                onClick={() => window.location.href = '/get'}
+                className="bg-white text-[var(--color-primary)] px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 flex items-center gap-3"
+              >
                 <Zap className="w-5 h-5" />
                 Get AI Advantage Now
                 <ArrowRight className="w-5 h-5" />
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-[var(--color-primary)] transition-all duration-300 flex items-center gap-3">
+              <button 
+                onClick={() => {
+                  const demoSection = document.getElementById('see-in-action');
+                  if (demoSection) {
+                    demoSection.scrollIntoView({ behavior: 'smooth' });
+                  } else {
+                    window.location.href = '/demos';
+                  }
+                }}
+                className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-[var(--color-primary)] transition-all duration-300 flex items-center gap-3"
+              >
                 <Bot className="w-5 h-5" />
                 See AI Demo
               </button>

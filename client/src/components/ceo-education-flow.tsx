@@ -172,14 +172,23 @@ export default function CEOEducationFlow() {
             {/* Auto-Progress Controls */}
             <div className="flex items-center justify-between">
               <div className="flex space-x-2">
-                <button className="btn-ghost text-sm">
+                <button 
+                  onClick={() => {
+                    // Could implement auto-step functionality here
+                    console.log('Auto-play clicked');
+                  }}
+                  className="btn-ghost text-sm"
+                >
                   <Play className="w-4 h-4 mr-1" />
                   Auto-play
                 </button>
               </div>
               
               <button
-                onClick={() => trackCTAStartTrialClicked('hero')}
+                onClick={() => {
+                  trackCTAStartTrialClicked('hero');
+                  window.location.href = '/get';
+                }}
                 className="btn-primary"
               >
                 Start Free Trial

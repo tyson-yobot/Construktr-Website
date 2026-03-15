@@ -289,7 +289,17 @@ export default function AIToolsShowcase() {
             <p className="text-lg text-blue-100 max-w-2xl">
               Book a demo to see how CONSTRUKTR's advanced AI gives you an unfair advantage over competitors still using basic software.
             </p>
-            <button className="bg-white text-[var(--color-primary)] px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+            <button 
+              onClick={() => {
+                const demoSection = document.getElementById('see-in-action');
+                if (demoSection) {
+                  demoSection.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  window.location.href = '/demos';
+                }
+              }}
+              className="bg-white text-[var(--color-primary)] px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
+            >
               Book AI Demo → See the Future
             </button>
           </div>

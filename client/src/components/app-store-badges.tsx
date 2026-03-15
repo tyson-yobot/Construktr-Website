@@ -14,9 +14,7 @@ export default function AppStoreBadges({ variant = 'hero', className = '' }: App
     <div className={`flex flex-wrap items-center justify-center ${containerClass} ${className}`}>
       {/* App Store Badge */}
       <motion.a
-        href={`https://apps.apple.com/app/construktr?utm_source=app-store-badge&utm_medium=site&utm_campaign=homepage`}
-        target="_blank"
-        rel="noopener noreferrer"
+        href="/get"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => {
@@ -49,9 +47,7 @@ export default function AppStoreBadges({ variant = 'hero', className = '' }: App
 
       {/* Google Play Badge */}
       <motion.a
-        href={`https://play.google.com/store/apps/details?id=com.construktr?utm_source=app-store-badge&utm_medium=site&utm_campaign=homepage`}
-        target="_blank"
-        rel="noopener noreferrer"
+        href="/get"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={() => {

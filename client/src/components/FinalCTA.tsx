@@ -42,6 +42,7 @@ export default function FinalCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
+            onClick={() => window.location.href = '/get'}
             className="btn-primary flex items-center gap-3 mx-auto group text-lg px-12 py-4"
             data-testid="button-final-cta-trial"
           >
