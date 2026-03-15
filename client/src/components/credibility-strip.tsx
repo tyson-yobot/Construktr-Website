@@ -45,7 +45,7 @@ export default function CredibilityStrip() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <p className="text-sm font-medium text-[var(--color-text-secondary)] mb-4 uppercase tracking-wide">
+            <p className="text-sm font-bold text-[var(--color-text-primary)] mb-4 uppercase tracking-wide">
               Powered By
             </p>
             <div className="grid grid-cols-3 gap-4">
@@ -56,7 +56,7 @@ export default function CredibilityStrip() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
                   viewport={{ once: true }}
-                  className="flex flex-col items-center p-4 bg-white rounded-xl border border-[rgba(15,23,42,0.08)] shadow-[0_10px_25px_rgba(15,23,42,0.08),0_2px_8px_rgba(15,23,42,0.04)] hover:shadow-[0_16px_32px_rgba(15,23,42,0.12),0_4px_12px_rgba(15,23,42,0.06)] hover:-translate-y-0.5 transition-all duration-300"
+                  className="flex flex-col items-center p-4 bg-white rounded-xl border border-[var(--color-border-card)] shadow-[0_4px_12px_rgba(15,23,42,0.1),0_2px_6px_rgba(15,23,42,0.06)] hover:shadow-[0_8px_20px_rgba(15,23,42,0.15),0_4px_12px_rgba(15,23,42,0.1)] hover:-translate-y-1 transition-all duration-300"
                   data-testid={`integration-logo-${integration.name.toLowerCase()}`}
                 >
                   <span className="text-3xl mb-2">{integration.logo}</span>
@@ -73,7 +73,7 @@ export default function CredibilityStrip() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <p className="text-sm font-medium text-[var(--color-text-secondary)] mb-4 uppercase tracking-wide">
+            <p className="text-sm font-bold text-[var(--color-text-primary)] mb-4 uppercase tracking-wide">
               Security & Compliance
             </p>
             <div className="grid grid-cols-2 gap-4">

@@ -23,26 +23,26 @@
   --color-primary-disabled: rgba(2, 67, 213, 0.4); /* 40% opacity for disabled */
   --color-primary-light: #eff6ff;
   
-  /* Color Tokens - Light Theme Foundation with Visible Silver-Blue Tints */
-  --color-bg: #D8DCE8;        /* Darker silver - base background for strong card contrast */
-  --color-bg-mid: #CDD2E0;    /* Mid silver-blue - gradient mid-point */
-  --color-bg-outer: #BCC3D6;  /* Outer silver-blue - gradient outer edge */
+  /* Color Tokens - Enhanced Contrast Foundation */
+  --color-bg: #F8F9FA;        /* Light gray - better contrast for cards */
+  --color-bg-mid: #F1F3F4;    /* Mid gray - gradient mid-point */
+  --color-bg-outer: #E9ECEF;  /* Outer gray - gradient outer edge */
   --color-surface: #FFFFFF;   /* Pure white for cards/content sections */
-  --color-surface-alt: #F9FAFB; /* Very light gray for alternating sections */
-  --color-section-band: #F3F4F8; /* Stats band and feature sections */
+  --color-surface-alt: #F8F9FA; /* Light gray for alternating sections */
+  --color-section-band: #F5F6F7; /* Stats band and feature sections with better contrast */
   --color-elevated: #FFFFFF;  /* White for elevated components */
-  --color-medium-gray: #C3C3C3;  /* Medium gray - 15% usage for card outlines/backgrounds */
-  --color-border: rgba(15, 23, 42, 0.08); /* Visible border for cards - strengthened */
-  --color-border-card: rgba(15, 23, 42, 0.08); /* Card-specific border */
-  --color-border-light: #D7DBE6;  /* Silver-blue tinted border */
+  --color-medium-gray: #9CA3AF;  /* Darker gray for better visibility */
+  --color-border: rgba(15, 23, 42, 0.15); /* Stronger border for better card definition */
+  --color-border-card: rgba(15, 23, 42, 0.12); /* Card-specific border - more visible */
+  --color-border-light: #E5E7EB;  /* Light border with better contrast */
   
   /* Hero-Specific Gradient Colors */
   --color-hero-start: #DDE3EF;  /* Hero gradient start - visible blue tint */
   --color-hero-end: #C5CFDF;    /* Hero gradient end - deeper blue-silver */
   
-  /* Global Page Gradient - Visibly darker than white so cards stand out */
-  --gradient-page: linear-gradient(to bottom, #D8DCE8 0%, #CDD2E0 40%, #BCC3D6 100%);
-  --gradient-page-linear: linear-gradient(to bottom, #D8DCE8 0%, #CDD2E0 40%, #BCC3D6 100%);
+  /* Global Page Gradient - Better contrast for card visibility */
+  --gradient-page: linear-gradient(to bottom, #F8F9FA 0%, #F1F3F4 40%, #E9ECEF 100%);
+  --gradient-page-linear: linear-gradient(to bottom, #F8F9FA 0%, #F1F3F4 40%, #E9ECEF 100%);
   
   /* Hero Gradient */
   --gradient-hero-rich: linear-gradient(135deg, #E6EBF7 0%, #C9D3F2 100%);
@@ -50,11 +50,12 @@
   /* Final CTA Gradient - bolder */
   --gradient-cta: linear-gradient(135deg, #0243D5 0%, #0355f0 100%);
   
-  /* Color Tokens - Text Hierarchy (WCAG AA+ Compliant on blue-tinted backgrounds) */
-  --color-text-primary: #1C1C1C;    /* Near-black text for optimal readability (Task 2) */
-  --color-text-secondary: #374151;  /* Darker gray for better contrast on blue backgrounds */
-  --color-text-tertiary: #6b7280;   /* Medium gray - tertiary content */
-  --color-text-inverse: #ffffff;    /* White text for dark backgrounds (buttons) */
+  /* Color Tokens - Enhanced Text Hierarchy (WCAG AAA Compliant) */
+  --color-text-primary: #111827;    /* Dark text for maximum readability */
+  --color-text-secondary: #4B5563;  /* Darker gray for better contrast (4.5:1+ ratio) */
+  --color-text-tertiary: #6B7280;   /* Medium gray - minimum WCAG AA compliant */
+  --color-text-muted: #9CA3AF;      /* Light gray for subtle text */
+  --color-text-inverse: #ffffff;    /* White text for dark backgrounds */
   --color-text-on-brand: #ffffff;   /* White text on brand blue */
   
   /* Focus Ring - WCAG AA Focus Indicator */

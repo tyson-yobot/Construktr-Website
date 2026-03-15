@@ -381,10 +381,10 @@ export default function ComprehensiveFeatures() {
               >
                 <div className={`
                   p-6 rounded-2xl border h-full min-h-[200px]
-                  bg-white border-gray-100
-                  shadow-[0_4px_20px_rgba(15,23,42,0.06)]
-                  hover:shadow-[0_8px_30px_rgba(15,23,42,0.12)]
-                  hover:border-[var(--color-primary)]/30
+                  bg-white border-[var(--color-border-card)]
+                  shadow-[0_4px_20px_rgba(15,23,42,0.08)]
+                  hover:shadow-[0_12px_40px_rgba(15,23,42,0.15)]
+                  hover:border-[var(--color-primary)]/40
                   transition-all duration-300
                 `}>
                   {/* Icon */}

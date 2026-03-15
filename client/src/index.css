@@ -144,11 +144,11 @@
   }
   
   .section-bg-alt {
-    background: #F9FAFB;
+    background: var(--color-surface-alt);
   }
   
   .section-bg-band {
-    background: #F3F4F8;
+    background: var(--color-section-band);
   }
   
   .section-bg-gradient {

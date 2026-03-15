@@ -58,7 +58,7 @@ export default function BeforeAfterStory() {
             className="relative"
           >
             <div className="absolute -inset-1 bg-gradient-to-br from-red-100 to-orange-100 rounded-2xl opacity-50"></div>
-            <div className="relative bg-white rounded-2xl p-8 border border-[rgba(15,23,42,0.08)] shadow-[0_10px_25px_rgba(15,23,42,0.08),0_2px_8px_rgba(15,23,42,0.04)]">
+            <div className="relative bg-white rounded-2xl p-8 border border-[var(--color-border-card)] shadow-[0_8px_20px_rgba(15,23,42,0.12),0_4px_10px_rgba(15,23,42,0.08)]">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center">
                   <X className="w-6 h-6 text-red-600" />
@@ -104,7 +104,7 @@ export default function BeforeAfterStory() {
             className="relative"
           >
             <div className="absolute -inset-1 bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl opacity-50"></div>
-            <div className="relative bg-white rounded-2xl p-8 border border-[rgba(15,23,42,0.08)] shadow-[0_10px_25px_rgba(15,23,42,0.08),0_2px_8px_rgba(15,23,42,0.04)]">
+            <div className="relative bg-white rounded-2xl p-8 border border-[var(--color-border-card)] shadow-[0_8px_20px_rgba(15,23,42,0.12),0_4px_10px_rgba(15,23,42,0.08)]">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
                   <Check className="w-6 h-6 text-green-600" />

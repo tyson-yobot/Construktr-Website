@@ -93,11 +93,7 @@ export default function UnifiedFooter() {
                   Mobile App
                 </Link>
               </li>
-              <li>
-                <Link href="/features" className="text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] transition-colors text-sm">
-                  Integrations
-                </Link>
-              </li>
+
             </ul>
           </div>
 
@@ -113,11 +109,6 @@ export default function UnifiedFooter() {
               <li>
                 <Link href="/investors" className="text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] transition-colors text-sm">
                   Investors
-                </Link>
-              </li>
-              <li>
-                <Link href="/support" className="text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] transition-colors text-sm">
-                  Contact
                 </Link>
               </li>
               <li>
@@ -142,11 +133,7 @@ export default function UnifiedFooter() {
                   Privacy Policy
                 </Link>
               </li>
-              <li>
-                <Link href="/privacy" className="text-[var(--color-text-secondary)] hover:text-[var(--color-primary)] transition-colors text-sm">
-                  Cookie Policy
-                </Link>
-              </li>
+
             </ul>
           </div>
 

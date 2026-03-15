@@ -54,7 +54,7 @@ export default function Pricing() {
             <span className={`text-sm font-medium ${!isAnnual ? "text-[var(--color-text-primary)]" : "text-[var(--color-text-secondary)]"}`}>Monthly</span>
             <button
               onClick={() => setIsAnnual(!isAnnual)}
-              className={`relative w-12 h-6 rounded-full transition-colors duration-300 ${isAnnual ? "bg-[var(--color-primary)]" : "bg-gray-300"}`}
+              className={`relative w-12 h-6 rounded-full transition-colors duration-300 ${isAnnual ? "bg-[var(--color-primary)]" : "bg-gray-500"}`}
               aria-label="Toggle annual billing"
             >
               <span className={`absolute top-1 left-1 w-4 h-4 bg-white rounded-full shadow transition-transform duration-300 ${isAnnual ? "translate-x-6" : "translate-x-0"}`} />
