@@ -1,14 +1,15 @@
 // Core sections for single narrative flow - NO DUPLICATES
 // Each section appears exactly once as specified
-import CEOHero from "@/components/ceo-hero";
+// ENHANCED: AI-first positioning with new showcase components
+import EnhancedAIHero from "@/components/enhanced-ai-hero";
 import CredibilityStrip from "@/components/credibility-strip";
 import BeforeAfterStory from "@/components/before-after-story";
-import TabbedDemo from "@/components/TabbedDemo"; // BEST Demo section (Quote/Schedule/Pay tabs)
+import TabbedDemo from "@/components/TabbedDemo";
 import HowItWorks from "@/components/how-it-works";
+import AIToolsShowcase from "@/components/ai-tools-showcase";
 import ComprehensiveFeatures from "@/components/comprehensive-features";
 import RoleBasedSections from "@/components/role-based-sections";
-import AICapabilities from "@/components/ai-capabilities";
-import ComparisonTable from "@/components/comparison-table";
+import CompetitiveAIComparison from "@/components/competitive-ai-comparison";
 import ComprehensiveFAQ from "@/components/comprehensive-faq";
 import Pricing from "@/components/Pricing";
 import FinalCTA from "@/components/FinalCTA";
@@ -74,43 +75,43 @@ export default function Home() {
       
       {/* Main Content Area for Accessibility */}
       <main id="main-content" role="main">
-        {/* SECTION 1: Hero */}
-        <CEOHero />
+        {/* SECTION 1: Enhanced AI Hero - Positions as most advanced platform */}
+        <EnhancedAIHero />
         
         {/* SECTION 2: Credibility Strip - Trust badges, integration logos */}
         <CredibilityStrip />
         
-        {/* SECTION 3: Before/After Story - Transformation visualization */}
-        <BeforeAfterStory />
+        {/* SECTION 3: AI Tools Showcase - 17 Advanced AI capabilities */}
+        <AIToolsShowcase />
+        
+        {/* Gradient Divider */}
+        <SectionDivider variant="light-blue" />
         
         {/* SECTION 4: Tabbed Demo - See It In Action (Quote/Schedule/Pay) */}
         <TabbedDemo />
         
+        {/* SECTION 5: Before/After Story - AI transformation narrative */}
+        <BeforeAfterStory />
+        
         {/* Gradient Divider */}
         <SectionDivider variant="light-blue" />
         
-        {/* SECTION 5: How It Works - 4-step onboarding flow */}
+        {/* SECTION 6: How It Works - 4-step onboarding flow with AI screenshots */}
         <HowItWorks />
         
-        {/* Gradient Divider */}
-        <SectionDivider variant="light-blue" />
-        
-        {/* SECTION 6: Comprehensive Features - 63+ features */}
+        {/* SECTION 7: Comprehensive Features - 63+ features */}
         <ComprehensiveFeatures />
         
-        {/* SECTION 7: Role-Based Sections - For Owners, Dispatch, Techs, Finance */}
+        {/* SECTION 8: Role-Based Sections - AI benefits for each role */}
         <RoleBasedSections />
         
-        {/* SECTION 8: AI Capabilities Deep Dive - Vision, Language, Predictions, Automation, Analytics */}
-        <AICapabilities />
-        
-        {/* SECTION 9: Comparison Table - CONSTRUKTR vs Generic vs Paper */}
-        <ComparisonTable />
+        {/* SECTION 9: Competitive AI Comparison - Shows CONSTRUKTR is 5 years ahead */}
+        <CompetitiveAIComparison />
         
         {/* Gradient Divider */}
         <SectionDivider variant="light-blue" />
         
-        {/* SECTION 10: Comprehensive FAQ - Objection handling */}
+        {/* SECTION 10: Comprehensive FAQ */}
         <ComprehensiveFAQ />
         
         {/* Gradient Divider */}

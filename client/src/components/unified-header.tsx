@@ -143,7 +143,7 @@ export default function UnifiedHeader() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden text-[var(--color-text-primary)] p-2 hover:bg-[var(--color-surface)] rounded-md transition-colors"
+            className="lg:hidden text-white p-2 hover:bg-white/10 rounded-md transition-colors"
             aria-label={isMobileMenuOpen ? "Close mobile menu" : "Open mobile menu"}
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-menu"
@@ -162,7 +162,7 @@ export default function UnifiedHeader() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-white border-t border-[var(--color-border-light)] shadow-lg"
+            className="lg:hidden bg-black border-t border-gray-800 shadow-lg"
             id="mobile-menu"
             role="navigation"
             aria-label="Mobile navigation menu"
@@ -170,22 +170,22 @@ export default function UnifiedHeader() {
             <div className="px-4 py-6 space-y-4">
               {/* Mobile Navigation */}
               <Link href="/features">
-                <span className="block w-full text-left text-[var(--color-text-primary)] hover:text-[var(--color-primary)] py-3 px-4 rounded-md hover:bg-[var(--color-surface)] transition-colors font-medium cursor-pointer">
+                <span className="block w-full text-left text-white hover:text-[var(--color-primary)] py-3 px-4 rounded-md hover:bg-white/10 transition-colors font-medium cursor-pointer">
                   Features
                 </span>
               </Link>
               <Link href="/pricing">
-                <span className="block w-full text-left text-[var(--color-text-primary)] hover:text-[var(--color-primary)] py-3 px-4 rounded-md hover:bg-[var(--color-surface)] transition-colors font-medium cursor-pointer">
+                <span className="block w-full text-left text-white hover:text-[var(--color-primary)] py-3 px-4 rounded-md hover:bg-white/10 transition-colors font-medium cursor-pointer">
                   Pricing
                 </span>
               </Link>
               <Link href="/support">
-                <span className="block w-full text-left text-[var(--color-text-primary)] hover:text-[var(--color-primary)] py-3 px-4 rounded-md hover:bg-[var(--color-surface)] transition-colors font-medium cursor-pointer">
+                <span className="block w-full text-left text-white hover:text-[var(--color-primary)] py-3 px-4 rounded-md hover:bg-white/10 transition-colors font-medium cursor-pointer">
                   Support
                 </span>
               </Link>
               
-              <div className="pt-4 border-t border-[var(--color-border-light)] space-y-3">
+              <div className="pt-4 border-t border-gray-700 space-y-3">
                 {/* Mobile CTAs */}
                 <Button
                   onClick={handleStartTrial}
