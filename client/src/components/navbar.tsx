@@ -86,17 +86,17 @@ export default function Navbar() {
             >
               Reviews
             </button>
-            <Link
-              href="/get"
+            <a
+              href="https://app.construktr.ai/login"
               className="text-white/80 hover:text-electric-blue transition-colors duration-200 text-sm lg:text-base whitespace-nowrap"
             >
-              Login
-            </Link>
-            <Link href="/get">
+              Sign In
+            </a>
+            <a href="https://app.construktr.ai/register">
               <button className="btn btn-primary">
-                Start Free Trial
+                Get Started
               </button>
-            </Link>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -192,18 +192,18 @@ export default function Navbar() {
                 </Link>
               )}
               
-              <Link
-                href="/get"
+              <a
+                href="https://app.construktr.ai/login"
                 className="block text-white/80 hover:text-electric-blue"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Login
-              </Link>
-              <Link href="/get" onClick={() => setIsMobileMenuOpen(false)}>
+                Sign In
+              </a>
+              <a href="https://app.construktr.ai/register" onClick={() => setIsMobileMenuOpen(false)}>
                 <Button className="w-full bg-electric-blue text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 shadow-lg shadow-electric-blue/25">
-                  Start Free Trial
+                  Get Started
                 </Button>
-              </Link>
+              </a>
             </div>
           </motion.div>
         )}
