@@ -18,9 +18,7 @@ export default function Pricing() {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": `CONSTRUKTR ${tier.name} Plan`,
-    "description": `${tier.name === 'starter' ? 'Perfect for solo contractors getting started' :
-                    tier.name === 'pro' ? 'For growing businesses with advanced needs' :
-                    'For teams & agencies with enterprise requirements'}`,
+    "description": tier.tagline,
     "brand": {
       "@type": "Brand",
       "name": "CONSTRUKTR"
@@ -55,8 +53,8 @@ export default function Pricing() {
   return (
     <div className="min-h-screen bg-[var(--color-bg)] text-white">
       <SEOHead 
-        title="CONSTRUKTR Pricing — Free Plan + Starter, Pro & Business Tiers"
-        description="Transparent contractor software pricing. Free forever plan available. Starter ($49/mo), Pro ($89/mo), Business ($199/mo). Annual billing saves ~20%. No credit card required."
+        title="CONSTRUKTR Pricing — Free, Starter, Core, Pro & Business Plans"
+        description="Transparent contractor software pricing. Free forever plan available. Starter ($49/mo), Core ($99/mo), Pro ($199/mo), Business ($349/mo). Annual billing saves ~20%. No credit card required."
         canonical="https://CONSTRUKTR.ai/pricing"
         structuredData={productSchemas}
       />
@@ -560,28 +558,40 @@ export default function Pricing() {
       {/* Pricing Tiers */}
       <section id="pricing" className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {tiers.map((tier, index) => {
-              const IconComponent = tier.key === 'starter' ? Zap : tier.key === 'pro' ? Users : Building;
+              const IconComponent = tier.key === 'free' ? Star : tier.key === 'starter' ? Zap : tier.key === 'core' ? Zap : tier.key === 'pro' ? Users : Building;
               const showPromoPrice = FOUNDERS_PROMO_ENABLED;
-              const realPrice = tier.key === 'starter' ? 49 : tier.key === 'pro' ? 99 : 199;
+              const realPrice = tier.priceMonthly;
               
               // Tier-specific styling
               const getTierStyling = () => {
                 switch (tier.key) {
+                  case 'free':
+                    return {
+                      card: 'border border-gray-700 bg-[var(--color-surface)] shadow-md hover:shadow-lg transition-all duration-300',
+                      button: 'border-2 border-gray-500 text-gray-300 hover:bg-gray-800 hover:text-white bg-transparent',
+                      buttonVariant: 'outline' as const
+                    };
                   case 'starter':
                     return {
                       card: 'border border-gray-600 bg-black shadow-md hover:shadow-lg transition-all duration-300',
                       button: 'border-2 border-gray-400 text-gray-300 hover:bg-gray-800 hover:text-white bg-transparent',
                       buttonVariant: 'outline' as const
                     };
-                  case 'pro':
+                  case 'core':
                     return {
                       card: 'border-2 border-electric-blue bg-gradient-to-br from-electric-blue/15 via-blue-600/10 to-indigo-700/15 shadow-2xl shadow-electric-blue/30 scale-105 ring-4 ring-electric-blue/40 relative overflow-hidden',
                       button: 'bg-electric-blue text-white hover:bg-blue-700 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-200',
                       buttonVariant: 'default' as const
                     };
-                  case 'enterprise':
+                  case 'pro':
+                    return {
+                      card: 'border border-purple-500/50 bg-gradient-to-br from-purple-600/10 via-indigo-600/10 to-blue-600/10 shadow-xl hover:shadow-2xl transition-all duration-300',
+                      button: 'bg-purple-600 text-white hover:bg-purple-700 shadow-lg',
+                      buttonVariant: 'default' as const
+                    };
+                  case 'business':
                     return {
                       card: 'border border-gray-300 bg-gradient-to-br from-slate-200 via-white to-gray-300 shadow-2xl hover:shadow-3xl transition-all duration-300 text-gray-900 relative overflow-hidden',
                       button: 'bg-gradient-to-r from-slate-300 via-gray-200 to-slate-400 text-black hover:from-slate-400 hover:via-gray-300 hover:to-slate-500 shadow-xl font-bold',
@@ -606,13 +616,13 @@ export default function Pricing() {
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   className={`relative p-8 rounded-3xl ${styling.card}`}
                 >
-                  {/* Pro Plan Glow Effect */}
-                  {tier.key === 'pro' && (
+                  {/* Core Plan Glow Effect */}
+                  {tier.key === 'core' && (
                     <div className="absolute inset-0 bg-gradient-to-br from-electric-blue/20 via-transparent to-indigo-600/20 rounded-3xl blur-xl -z-10"></div>
                   )}
-                  
-                  {/* Enterprise Plan Shine Effect */}
-                  {tier.key === 'enterprise' && (
+
+                  {/* Business Plan Shine Effect */}
+                  {tier.key === 'business' && (
                     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white to-transparent opacity-60"></div>
                   )}
                   {tier.isMostPopular && (
@@ -626,43 +636,49 @@ export default function Pricing() {
                   
                   <div className="text-center mb-8">
                     <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 ${
+                      tier.key === 'free' ? 'bg-gray-800' :
                       tier.key === 'starter' ? 'bg-gray-800' :
-                      tier.key === 'pro' ? 'bg-electric-blue/20' :
+                      tier.key === 'core' ? 'bg-electric-blue/20' :
+                      tier.key === 'pro' ? 'bg-purple-600/20' :
                       'bg-gray-300'
                     }`}>
                       <IconComponent className={`w-8 h-8 ${
+                        tier.key === 'free' ? 'text-gray-400' :
                         tier.key === 'starter' ? 'text-gray-300' :
-                        tier.key === 'pro' ? 'text-electric-blue' :
+                        tier.key === 'core' ? 'text-electric-blue' :
+                        tier.key === 'pro' ? 'text-purple-400' :
                         'text-gray-600'
                       }`} />
                     </div>
                     <h3 className={`text-2xl font-bold mb-2 ${
-                      tier.key === 'enterprise' ? 'text-gray-900' : 'text-white'
+                      tier.key === 'business' ? 'text-gray-900' : 'text-white'
                     }`}>{tier.name}</h3>
                     <p className={`mb-6 ${
-                      tier.key === 'enterprise' ? 'text-gray-600' : 'text-[var(--color-text-secondary)]'
+                      tier.key === 'business' ? 'text-gray-600' : 'text-[var(--color-text-secondary)]'
                     }`}>
-                      {tier.key === 'starter' ? 'Perfect for solo contractors getting started' :
-                       tier.key === 'pro' ? 'For growing businesses with advanced needs' :
-                       'For teams & agencies with enterprise requirements'}
+                      {tier.key === 'free' ? 'For solo contractors just getting started' :
+                       tier.key === 'starter' ? 'For growing crews ready to automate' :
+                       tier.key === 'core' ? 'AI-powered quoting, scheduling & accounting' :
+                       tier.key === 'pro' ? 'Full AI power — dispatch, analytics & automations' :
+                       'Enterprise — AI Voice, subcontractors & webhooks'}
                     </p>
                     
                     <div className="mb-6">
                       <div className={`text-5xl font-black mb-2 ${
-                        tier.key === 'enterprise' ? 'text-gray-900' : 'text-white'
+                        tier.key === 'business' ? 'text-gray-900' : 'text-white'
                       }`}>
                         ${tier.priceMonthly}
                         <span className={`text-lg font-normal ${
-                          tier.key === 'enterprise' ? 'text-gray-600' : 'text-[var(--color-text-secondary)]'
+                          tier.key === 'business' ? 'text-gray-600' : 'text-[var(--color-text-secondary)]'
                         }`}>/mo</span>
                       </div>
                       {showPromoPrice && (
                         <div className={`text-sm ${
-                          tier.key === 'enterprise' ? 'text-gray-600' : 'text-[var(--clr-text-2)]'
+                          tier.key === 'business' ? 'text-gray-600' : 'text-[var(--clr-text-2)]'
                         }`}>
                           <span className="line-through">${realPrice}/mo</span>
                           <span className={`ml-2 font-semibold ${
-                            tier.key === 'enterprise' ? 'text-gray-800' : 'text-electric-blue'
+                            tier.key === 'business' ? 'text-gray-800' : 'text-electric-blue'
                           }`}>Save ${realPrice - tier.priceMonthly}/mo</span>
                         </div>
                       )}
@@ -678,9 +694,9 @@ export default function Pricing() {
                   
                   <div className="space-y-4">
                     <h4 className={`font-semibold ${
-                      tier.key === 'enterprise' ? 'text-gray-900' : 'text-white'
+                      tier.key === 'business' ? 'text-gray-900' : 'text-white'
                     }`}>What's included:</h4>
-                    <div className={tier.key === 'enterprise' ? '[&_span]:text-gray-700 [&_svg]:text-gray-600' : ''}>
+                    <div className={tier.key === 'business' ? '[&_span]:text-gray-700 [&_svg]:text-gray-600' : ''}>
                       <FeatureList items={tier.features} />
                     </div>
                   </div>
