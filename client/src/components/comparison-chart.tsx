@@ -121,7 +121,7 @@ export default function ComparisonChart() {
                 Best Value
               </Badge>
               <h4 className="text-white font-bold mb-2 text-lg">CONSTRUKTR</h4>
-              <div className="text-4xl font-bold text-white mb-2">$49<span className="text-sm font-normal">/month</span></div>
+              <div className="text-4xl font-bold text-white mb-2">$99<span className="text-sm font-normal">/month</span></div>
               <p className="text-blue-200 text-sm">All features included</p>
               <Button className="w-full mt-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-blue-500/30 transition-all duration-300">
                 Start Free Trial
@@ -131,7 +131,7 @@ export default function ComparisonChart() {
           
           <div className="bg-slate-800/30 border border-slate-700 rounded-xl p-6 text-center">
             <h4 className="text-slate-300 font-medium mb-2">Jobber</h4>
-            <div className="text-2xl font-bold text-slate-400 mb-2">$89<span className="text-sm font-normal">/month</span></div>
+            <div className="text-2xl font-bold text-slate-400 mb-2">$149<span className="text-sm font-normal">/month</span></div>
             <p className="text-slate-500 text-sm">Missing key features</p>
           </div>
         </div>

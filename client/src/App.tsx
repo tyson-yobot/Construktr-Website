@@ -16,6 +16,9 @@ import About from "@/pages/about";
 import Support from "@/pages/support";
 import Terms from "@/pages/terms";
 import Privacy from "@/pages/privacy";
+import EULA from "@/pages/eula";
+import Disconnect from "@/pages/disconnect";
+import Reconnect from "@/pages/reconnect";
 import Investors from "@/pages/investors";
 import Admin from "@/pages/admin";
 import BlogIndex from "@/pages/blog";
@@ -28,10 +31,15 @@ import HandymanLanding from "@/pages/handyman";
 import RoofingLanding from "@/pages/roofing";
 import RetargetingPixels from "@/components/retargeting-pixels";
 import UnifiedHeader from "@/components/unified-header";
+import { ModernNavigation } from "@/components/modern-navigation";
 import DarkBrandEnforcer from "@/components/dark-brand-enforcer";
 import PerformanceOptimizerEnhanced from "@/components/performance-optimizer-enhanced";
 import AccessibilityEnhancements from "@/components/accessibility-enhancements";
 import AccessibilityTest from "@/components/accessibility-test";
+import { AISupportAgent } from "@/components/ai-support-agent";
+import { EnhancedAnalytics } from "@/components/enhanced-analytics";
+import { SEOOptimizationAdvanced } from "@/components/seo-optimization-advanced";
+import { PerformanceMonitorAdvanced } from "@/components/performance-monitor-advanced";
 
 function Router() {
   return (
@@ -49,6 +57,9 @@ function Router() {
       <Route path="/blog/:slug" component={BlogPost} />
       <Route path="/terms" component={Terms} />
       <Route path="/privacy" component={Privacy} />
+      <Route path="/eula" component={EULA} />
+      <Route path="/disconnect" component={Disconnect} />
+      <Route path="/reconnect" component={Reconnect} />
       <Route path="/investors" component={Investors} />
       <Route path="/admin" component={Admin} />
       
@@ -85,11 +96,15 @@ function App() {
           <AccessibilityEnhancements />
           <DarkBrandEnforcer />
           <PerformanceOptimizerEnhanced />
-          <UnifiedHeader />
-          <main className="pt-[80px] flex-1">
+          <ModernNavigation />
+          <main className="flex-1">
             <Router />
           </main>
         </div>
+        <SEOOptimizationAdvanced />
+        <AISupportAgent />
+        <EnhancedAnalytics />
+        <PerformanceMonitorAdvanced />
         <Toaster />
         <RetargetingPixels />
         {process.env.NODE_ENV === 'development' && <AccessibilityTest />}

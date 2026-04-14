@@ -108,7 +108,7 @@ export default function SEOHead({
         "name": "How much does CONSTRUKTR cost?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Construktr offers four plans: Free ($0), Starter ($49/month), Pro ($89/month), and Business ($199/month). The Free plan is available forever with no credit card required. Annual billing saves approximately 20%."
+          "text": "Construktr offers five plans: Free ($0), Starter ($49/month), Core ($99/month), Pro ($199/month), and Business ($349/month). The Free plan is available forever with no credit card required. Annual billing saves approximately 20%."
         }
       },
       {

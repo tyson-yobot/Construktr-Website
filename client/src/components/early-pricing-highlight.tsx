@@ -5,25 +5,25 @@ import { CheckCircle, DollarSign, Users, Zap } from "lucide-react";
 
 const pricingTiers = [
   {
-    name: "Solo Contractor",
-    price: "$29",
+    name: "Starter",
+    price: "$49",
     period: "/month",
-    description: "Perfect for 1-person crews",
+    description: "For solo contractors",
     features: [
       "Unlimited quotes & estimates",
-      "Smart scheduling calendar", 
+      "Smart scheduling calendar",
       "Payment processing",
       "Customer management"
     ],
     highlight: false
   },
   {
-    name: "Small Crew",
-    price: "$49",
+    name: "Core",
+    price: "$99",
     period: "/month",
-    description: "For 2-5 person teams",
+    description: "For small teams (up to 5)",
     features: [
-      "Everything in Solo",
+      "Everything in Starter",
       "Team scheduling & coordination",
       "Advanced reporting",
       "Priority support"
@@ -32,12 +32,12 @@ const pricingTiers = [
     badge: "Most Popular"
   },
   {
-    name: "Growing Business",
-    price: "$89",
-    period: "/month", 
+    name: "Pro",
+    price: "$199",
+    period: "/month",
     description: "For established contractors",
     features: [
-      "Everything in Small Crew",
+      "Everything in Core",
       "Multi-location management",
       "Custom integrations",
       "Account manager"
@@ -163,7 +163,7 @@ export default function EarlyPricingHighlight() {
               Not Sure Which Plan? Start Your Free Trial
             </h3>
             <p className="text-[var(--clr-text-2)] mb-6 max-w-2xl mx-auto">
-              Try CONSTRUKTR risk-free for 15 days. No credit card required. 
+              Try CONSTRUKTR risk-free for 14 days. No credit card required. 
               Switch plans anytime or cancel with one click.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

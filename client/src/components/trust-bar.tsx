@@ -17,9 +17,9 @@ const trustMetrics = [
   },
   {
     icon: Award,
-    value: "4",
+    value: "5",
     label: "Pricing Plans",
-    tooltip: "Free, Starter ($49/mo), Pro ($89/mo), and Business ($199/mo). No per-user fees. Annual billing saves ~20%."
+    tooltip: "Free, Starter ($49/mo), Core ($99/mo), Pro ($199/mo), and Business ($349/mo). No per-user fees. Annual billing saves ~20%."
   },
   {
     icon: Shield,

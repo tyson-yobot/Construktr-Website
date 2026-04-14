@@ -1,210 +1,173 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import { Smartphone, Download, Star, Shield, Zap, Clock, Users, CheckCircle, QrCode } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Footer from "@/components/footer";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import {
+  Download,
+  Star,
+  QrCode,
+  CheckCircle2,
+  Users,
+  DollarSign,
+  Clock,
+  Bot,
+  Camera,
+  Smartphone,
+  Zap,
+  Shield,
+  Apple,
+  Monitor,
+} from "lucide-react";
+import UnifiedFooter from "@/components/unified-footer";
 
-const appFeatures = [
-  {
-    icon: Zap,
-    title: "AI-Powered Quotes",
-    description: "Generate accurate estimates in minutes, not hours",
-    color: "bg-yellow-500"
-  },
-  {
-    icon: Clock,
-    title: "Smart Scheduling",
-    description: "Optimize routes and prevent double-bookings automatically",
-    color: "bg-blue-500"
-  },
-  {
-    icon: Users,
-    title: "Team Management",
-    description: "Coordinate your crew with real-time updates",
-    color: "bg-green-500"
-  },
-  {
-    icon: Shield,
-    title: "Secure Payments",
-    description: "Accept payments on-site with military-grade security",
-    color: "bg-purple-500"
-  },
-  {
-    icon: Smartphone,
-    title: "Offline Mode",
-    description: "Work without internet, sync when connected",
-    color: "bg-orange-500"
-  },
-  {
-    icon: CheckCircle,
-    title: "Job Tracking",
-    description: "Track progress from quote to completion",
-    color: "bg-teal-500"
-  }
+const appStats = [
+  { icon: Users, label: "Active Users", value: "1,000+" },
+  { icon: Star, label: "App Rating", value: "4.9/5" },
+  { icon: DollarSign, label: "Monthly Processing", value: "$2.5M+" },
+  { icon: Clock, label: "Time Saved", value: "25+ hrs/week" },
 ];
 
-const testimonials = [
-  {
-    name: "Mike Rodriguez",
-    company: "Rodriguez Plumbing",
-    location: "Austin, TX",
-    rating: 5,
-    quote: "This app completely transformed how I run my business. I'm booking 40% more jobs and my customers love the professional experience.",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=64&h=64&fit=crop&crop=face"
-  },
-  {
-    name: "Sarah Chen",
-    company: "Elite HVAC Services",
-    location: "Denver, CO",
-    rating: 5,
-    quote: "The AI quotes are incredibly accurate. I used to spend hours on estimates, now it takes 5 minutes and customers approve instantly.",
-    avatar: "https://images.unsplash.com/photo-1494790108755-2616b332e9a3?w=64&h=64&fit=crop&crop=face"
-  },
-  {
-    name: "David Thompson",
-    company: "Thompson Construction",
-    location: "Phoenix, AZ",
-    rating: 5,
-    quote: "My team loves how easy it is to update job status on-site. Customers always know what's happening and we look incredibly professional.",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=64&h=64&fit=crop&crop=face"
-  },
-  {
-    name: "Jennifer Martinez",
-    company: "Green Thumb Landscaping",
-    location: "Miami, FL",
-    rating: 5,
-    quote: "The scheduling optimization saved me 2 hours of drive time per day. That's 10 extra hours a week I can spend with my family or taking on more jobs.",
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=64&h=64&fit=crop&crop=face"
-  }
+const keyFeatures = [
+  { icon: Bot, title: "AI-Powered Quoting", description: "Generate accurate quotes in seconds using AI analysis of project photos", highlight: "30-second estimates" },
+  { icon: Camera, title: "Business Card Scanner", description: "Instantly scan and digitize business cards with OCR technology", highlight: "No manual entry" },
+  { icon: Smartphone, title: "Mobile-First Design", description: "Every tool optimized for mobile with offline sync capabilities", highlight: "Works without internet" },
+  { icon: DollarSign, title: "Payment Processing", description: "Accept payments on-site with integrated Stripe and digital receipts", highlight: "Get paid 40% faster" },
+  { icon: Clock, title: "Smart Scheduling", description: "AI optimizes your schedule considering weather, crew, and travel time", highlight: "Save 2+ hours daily" },
+  { icon: Shield, title: "Enterprise Security", description: "Bank-level security with 256-bit encryption and data at rest protection", highlight: "Your data is protected" },
 ];
 
-const downloadStats = [
-  {
-    number: "50K+",
-    label: "Active Users"
-  },
-  {
-    number: "4.9",
-    label: "App Store Rating"
-  },
-  {
-    number: "$2.5M+",
-    label: "Processed Monthly"
-  },
-  {
-    number: "99.9%",
-    label: "Uptime"
-  }
+const sellingPoints = [
+  { icon: CheckCircle2, text: "Free to start, no credit card" },
+  { icon: Zap, text: "Set up in under 5 minutes" },
+  { icon: Bot, text: "Your first AI estimate in 30 seconds" },
 ];
+
+const downloadOptions = [
+  { platform: "iOS", icon: Apple, title: "Download for iPhone", subtitle: "iOS 14.0 or later", url: "https://apps.apple.com/app/construktr" },
+  { platform: "Android", icon: Monitor, title: "Download for Android", subtitle: "Android 8.0 or later", url: "https://play.google.com/store/apps/details?id=com.construktr.app" },
+];
+
+declare function gtag(...args: unknown[]): void;
 
 export default function GetApp() {
-  const [showQR, setShowQR] = useState(false);
+  const [showQR, setShowQR] = useState<string | null>(null);
+  const [selectedPlatform, setSelectedPlatform] = useState<"ios" | "android" | null>(null);
+
+  useEffect(() => {
+    const ua = navigator.userAgent.toLowerCase();
+    if (/iphone|ipad|ipod/.test(ua)) setSelectedPlatform("ios");
+    else if (/android/.test(ua)) setSelectedPlatform("android");
+  }, []);
+
+  const handleDownload = (platform: string, url: string) => {
+    if (typeof gtag !== "undefined") {
+      gtag("event", "app_download_click", { event_category: "conversion", event_label: platform, value: 1 });
+    }
+    window.open(url, "_blank");
+  };
 
   return (
-    <div className="min-h-screen bg-[var(--clr-surface)]">
-      
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 gradient-hero text-white overflow-hidden">
-        <div className="absolute inset-0 dot-pattern opacity-40"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-[var(--color-bg)]">
+      <Helmet>
+        <title>Get the App — Construktr</title>
+        <meta name="description" content="Download Construktr for iOS or Android. Free to start, no credit card. AI-powered quoting, scheduling, and invoicing for contractors." />
+        <link rel="canonical" href="https://construktr.ai/get" />
+        <meta property="og:title" content="Get the Construktr App — Free Download" />
+        <meta property="og:description" content="AI-powered business management for contractors. Free to start. iOS and Android." />
+        <meta property="og:url" content="https://construktr.ai/get" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Get the Construktr App" />
+        <meta name="twitter:description" content="Free AI business manager for contractors. iOS and Android." />
+      </Helmet>
+
+      {/* Hero */}
+      <section className="pt-24 pb-16 relative overflow-hidden" style={{ background: "var(--gradient-cta)" }}>
+        <div className="absolute inset-0 bg-black/10" />
+        <div className="relative z-10 max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Run Your Business
-                <span className="text-electric-blue"> From Your Phone</span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Join 50,000+ service professionals who've transformed their business with the CONSTRUKTR mobile app. Everything you need to quote, schedule, and get paid - all in your pocket.
-              </p>
-              
-              {/* Download Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 mb-6">
-                <a href="https://apps.apple.com/app/construktr" target="_blank" rel="noopener noreferrer">
-                  <Button className="bg-black text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-800 transition-colors duration-200 flex items-center justify-center space-x-3">
-                    <img src="https://developer.apple.com/assets/elements/icons/app-store/app-store-128x128_2x.png" alt="App Store" className="w-6 h-6" width="24" height="24" loading="lazy" decoding="async" />
-                    <div className="text-left">
-                      <div className="text-xs">Download on the</div>
-                      <div className="text-lg font-bold">App Store</div>
-                    </div>
-                  </Button>
-                </a>
-                
-                <a href="https://play.google.com/store/apps/details?id=com.construktr.app" target="_blank" rel="noopener noreferrer">
-                  <Button className="bg-black text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-800 transition-colors duration-200 flex items-center justify-center space-x-3">
-                    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Google Play" className="w-6 h-6" width="24" height="24" loading="lazy" decoding="async" />
-                    <div className="text-left">
-                      <div className="text-xs">Get it on</div>
-                      <div className="text-lg font-bold">Google Play</div>
-                    </div>
-                  </Button>
-                </a>
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="space-y-8">
+              <div>
+                <Badge className="bg-white/10 text-white border-white/20 mb-4">
+                  <Download className="h-4 w-4 mr-2" />
+                  Free Mobile App
+                </Badge>
+                <h1 className="text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white">
+                  Run Your Business <span className="block text-yellow-400">From Anywhere</span>
+                </h1>
+                <p className="text-xl text-blue-100 leading-relaxed max-w-2xl">
+                  The complete CONSTRUKTR experience in your pocket. AI-powered quoting, smart scheduling, and instant invoicing — all with offline sync.
+                </p>
               </div>
-              
-              {/* Trust Line */}
-              <p className="text-gray-300 text-sm mb-8">Cancel anytime · No setup fees · Free plan available</p>
-              
-              {/* QR Code Toggle */}
-              <button
-                onClick={() => setShowQR(!showQR)}
-                className="flex items-center space-x-2 text-electric-blue hover:text-blue-300 transition-colors duration-200"
-              >
-                <QrCode className="w-5 h-5" />
-                <span>Scan QR Code to Download</span>
-              </button>
-              
-              {showQR && (
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="mt-4 p-4 bg-[var(--clr-surface)] rounded-xl inline-block"
-                >
-                  <div className="w-32 h-32 bg-gray-900 rounded-lg flex items-center justify-center">
-                    <QrCode className="w-16 h-16 text-white" />
-                  </div>
-                  <p className="text-[var(--clr-text-2)] text-sm mt-2 text-center">QR Code Placeholder</p>
-                </motion.div>
-              )}
-            </motion.div>
-            
-            {/* Phone Mockup */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
-            >
-              <div className="relative mx-auto w-64 h-96 bg-gray-900 rounded-3xl p-2 shadow-2xl">
-                <div className="w-full h-full bg-[var(--clr-surface)] rounded-2xl overflow-hidden">
-                  <div className="h-full bg-gradient-to-b from-electric-blue to-blue-600 p-6 text-white">
-                    <div className="text-center mb-6">
-                      <div className="w-16 h-16 bg-[var(--clr-surface)]/20 rounded-2xl mx-auto mb-3 flex items-center justify-center">
-                        <Smartphone className="w-8 h-8" />
-                      </div>
-                      <h3 className="font-bold text-lg">CONSTRUKTR</h3>
-                      <p className="text-sm opacity-80">Pro Dashboard</p>
+
+              {/* Selling points */}
+              <div className="space-y-3">
+                {sellingPoints.map((pt, i) => {
+                  const Icon = pt.icon;
+                  return (
+                    <div key={i} className="flex items-center gap-3 text-white">
+                      <Icon className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      <span className="text-lg">{pt.text}</span>
                     </div>
-                    <div className="space-y-3">
-                      <div className="bg-[var(--clr-surface)]/10 rounded-xl p-3">
-                        <div className="flex justify-between items-center">
-                          <span className="text-sm">Today's Jobs</span>
-                          <span className="font-bold">12</span>
+                  );
+                })}
+              </div>
+
+              {/* Download buttons */}
+              <div className="space-y-4">
+                <div className="flex flex-col sm:flex-row gap-4">
+                  {downloadOptions.map((opt) => {
+                    const Ico = opt.icon;
+                    const isPrimary = selectedPlatform === opt.platform.toLowerCase();
+                    return (
+                      <Button key={opt.platform} onClick={() => handleDownload(opt.platform, opt.url)} size="lg"
+                        className={`${isPrimary ? "bg-white text-[#0243D5] hover:bg-gray-100" : "bg-black/50 text-white hover:bg-black/70"} px-6 py-4 rounded-xl font-semibold text-lg transition-all flex items-center justify-center gap-3 flex-1`}
+                      >
+                        <Ico className="h-6 w-6" />
+                        <div className="text-left">
+                          <div className="text-sm opacity-80">{opt.subtitle}</div>
+                          <div className="font-bold">{opt.platform}</div>
                         </div>
+                      </Button>
+                    );
+                  })}
+                </div>
+                <Button onClick={() => setShowQR(showQR ? null : "both")} variant="outline" className="border-white/30 text-white hover:bg-white/10 w-full sm:w-auto">
+                  <QrCode className="h-4 w-4 mr-2" />
+                  {showQR ? "Hide QR Codes" : "Show QR Codes"}
+                </Button>
+              </div>
+
+              <div className="flex items-center gap-6 text-blue-200 text-sm flex-wrap">
+                <span className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-green-400" />Free download</span>
+                <span className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-green-400" />Works offline</span>
+                <span className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-green-400" />Instant sync</span>
+              </div>
+            </motion.div>
+
+            {/* Phone mockup */}
+            <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative hidden lg:block">
+              <div className="relative mx-auto w-80 h-96">
+                <div className="absolute inset-0 bg-gray-900 rounded-[3rem] shadow-2xl transform rotate-6 opacity-60" />
+                <div className="absolute inset-0 bg-gray-800 rounded-[3rem] shadow-2xl transform rotate-3 opacity-80" />
+                <div className="relative bg-gray-900 rounded-[3rem] p-2 shadow-2xl">
+                  <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden">
+                    <div className="h-full bg-gradient-to-b from-[#0243D5] to-blue-600 p-6 text-white relative">
+                      <div className="flex justify-between items-center mb-6">
+                        <span className="text-sm font-medium">9:41 AM</span>
+                        <div className="flex items-center gap-1"><div className="w-4 h-2 bg-white/60 rounded-sm" /><div className="w-6 h-3 bg-white rounded-sm" /></div>
                       </div>
-                      <div className="bg-[var(--clr-surface)]/10 rounded-xl p-3">
-                        <div className="flex justify-between items-center">
-                          <span className="text-sm">Revenue</span>
-                          <span className="font-bold">$4,250</span>
-                        </div>
+                      <div className="text-center mb-8">
+                        <div className="w-16 h-16 bg-white/20 rounded-2xl mx-auto mb-3 flex items-center justify-center"><span className="text-2xl font-bold">C</span></div>
+                        <h3 className="font-bold text-xl">CONSTRUKTR</h3>
+                        <p className="text-sm opacity-80">Mobile Dashboard</p>
                       </div>
-                      <div className="bg-[var(--clr-surface)]/10 rounded-xl p-3">
-                        <div className="flex justify-between items-center">
-                          <span className="text-sm">Active Quotes</span>
-                          <span className="font-bold">8</span>
-                        </div>
+                      <div className="space-y-3">
+                        {[["Today's Revenue", "$4,850"], ["Active Projects", "12"], ["Pending Quotes", "8"]].map(([label, val]) => (
+                          <div key={label} className="bg-white/10 backdrop-blur-sm rounded-xl p-4"><div className="flex justify-between items-center"><span className="text-sm">{label}</span><span className="font-bold text-lg">{val}</span></div></div>
+                        ))}
                       </div>
                     </div>
                   </div>
@@ -212,73 +175,34 @@ export default function GetApp() {
               </div>
             </motion.div>
           </div>
+
+          {showQR && (
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
+              {downloadOptions.map((opt) => (
+                <Card key={opt.platform} className="bg-white/10 backdrop-blur-sm border-white/20">
+                  <CardContent className="p-6 text-center">
+                    <h4 className="font-semibold text-white mb-4">{opt.title}</h4>
+                    <div className="w-32 h-32 bg-white rounded-xl mx-auto mb-4 flex items-center justify-center"><QrCode className="w-16 h-16 text-gray-400" /></div>
+                    <p className="text-blue-200 text-sm">Scan to download for {opt.platform}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </motion.div>
+          )}
         </div>
       </section>
 
-      {/* Download Stats */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {downloadStats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="text-4xl font-bold text-electric-blue mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-[var(--clr-text-2)] font-medium">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* What You Get Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl font-bold text-white mb-4">
-              What You Get With The App
-            </h2>
-            <p className="text-xl text-[var(--clr-text-2)] max-w-3xl mx-auto">
-              Everything you need to run your service business professionally, right from your smartphone
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {appFeatures.map((feature, index) => {
-              const IconComponent = feature.icon;
+      {/* Stats */}
+      <section className="py-12" style={{ background: "var(--color-surface)" }}>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            {appStats.map((stat, i) => {
+              const Ico = stat.icon;
               return (
-                <motion.div
-                  key={feature.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-[var(--clr-surface)] p-8 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100"
-                >
-                  <div className={`w-16 h-16 ${feature.color} rounded-2xl flex items-center justify-center mb-6`}>
-                    <IconComponent className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-[var(--clr-text-2)] leading-relaxed">
-                    {feature.description}
-                  </p>
+                <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: i * 0.1 }} viewport={{ once: true }} className="text-center">
+                  <Ico className="h-8 w-8 mx-auto mb-2 text-[var(--color-primary)]" />
+                  <div className="text-2xl font-black text-[var(--color-text-primary)]">{stat.value}</div>
+                  <div className="text-sm text-[var(--color-text-secondary)]">{stat.label}</div>
                 </motion.div>
               );
             })}
@@ -286,108 +210,55 @@ export default function GetApp() {
         </div>
       </section>
 
-      {/* User Testimonials */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Loved by Service Professionals
-            </h2>
-            <p className="text-xl text-[var(--clr-text-2)]">
-              See what real users say about the CONSTRUKTR mobile app
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={testimonial.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                className="bg-[var(--clr-surface)] p-8 rounded-3xl shadow-lg"
-              >
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                
-                <blockquote className="text-gray-800 text-lg leading-relaxed mb-6">
-                  "{testimonial.quote}"
-                </blockquote>
-                
-                <div className="flex items-center">
-                  <img
-                    src={testimonial.avatar}
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full mr-4"
-                  />
-                  <div>
-                    <div className="font-bold text-white">
-                      {testimonial.name}
-                    </div>
-                    <div className="text-[var(--clr-text-2)] text-sm">
-                      {testimonial.company} • {testimonial.location}
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+      {/* Features */}
+      <section className="py-20 section-bg-alt">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-[var(--color-text-primary)] mb-4">Everything You Need in One App</h2>
+            <p className="text-xl text-[var(--color-text-secondary)] max-w-3xl mx-auto">All CONSTRUKTR tools optimized for mobile with exclusive mobile-only capabilities</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {keyFeatures.map((f, i) => {
+              const Ico = f.icon;
+              return (
+                <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: i * 0.08 }} viewport={{ once: true }}>
+                  <Card className="border border-[var(--color-border)] bg-[var(--color-surface)] shadow-lg hover:shadow-xl transition-shadow h-full">
+                    <CardContent className="p-6">
+                      <div className="w-14 h-14 bg-[var(--color-primary)]/10 rounded-xl flex items-center justify-center mb-4"><Ico className="h-7 w-7 text-[var(--color-primary)]" /></div>
+                      <h3 className="text-xl font-bold text-[var(--color-text-primary)] mb-2">{f.title}</h3>
+                      <Badge className="bg-green-100 text-green-800 border-green-200 mb-3">{f.highlight}</Badge>
+                      <p className="text-[var(--color-text-secondary)] leading-relaxed">{f.description}</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 gradient-electric text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-bold mb-6">
-              Download Now, Transform Tomorrow
-            </h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Join thousands of successful service professionals. Free to download, easy to use.
-            </p>
-            
-            {/* Large Download Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
-              <Button className="bg-black text-white px-12 py-6 rounded-2xl font-semibold text-xl hover:bg-gray-800 transition-colors duration-200 flex items-center justify-center space-x-4 shadow-2xl">
-                <img src="https://developer.apple.com/assets/elements/icons/app-store/app-store-128x128_2x.png" alt="App Store" className="w-8 h-8" width="32" height="32" loading="lazy" decoding="async" />
-                <div className="text-left">
-                  <div className="text-sm">Download on the</div>
-                  <div className="text-2xl font-bold">App Store</div>
-                </div>
+      <section className="py-20" style={{ background: "var(--gradient-cta)" }}>
+        <div className="max-w-4xl mx-auto px-6 text-center text-white">
+          <h2 className="text-4xl font-bold mb-6">Download Now, Start Saving Time Today</h2>
+          <p className="text-xl text-blue-100 mb-8">Join 1,000+ contractors who've transformed their business with CONSTRUKTR</p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
+            {downloadOptions.map((opt) => (
+              <Button key={opt.platform} onClick={() => handleDownload(opt.platform, opt.url)} size="lg" className="bg-white text-[#0243D5] hover:bg-gray-100 px-12 py-6 rounded-2xl font-semibold text-xl flex items-center justify-center gap-4 shadow-2xl">
+                <Download className="h-6 w-6" />
+                <div className="text-left"><div className="text-sm">Get it on</div><div className="font-bold">{opt.platform}</div></div>
               </Button>
-              
-              <Button className="bg-black text-white px-12 py-6 rounded-2xl font-semibold text-xl hover:bg-gray-800 transition-colors duration-200 flex items-center justify-center space-x-4 shadow-2xl">
-                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Google Play" className="w-8 h-8" width="32" height="32" loading="lazy" decoding="async" />
-                <div className="text-left">
-                  <div className="text-sm">Get it on</div>
-                  <div className="text-2xl font-bold">Google Play</div>
-                </div>
-              </Button>
-            </div>
-            
-            <p className="text-blue-100 text-lg">
-              📱 Free download • ⚡ 2-minute setup • 🚀 Transform your business today
-            </p>
-          </motion.div>
+            ))}
+          </div>
+          <div className="flex items-center justify-center gap-8 text-blue-200 text-sm flex-wrap">
+            <span className="flex items-center gap-2"><Shield className="h-4 w-4" />Bank-level security</span>
+            <span className="flex items-center gap-2"><Zap className="h-4 w-4" />Instant setup</span>
+            <span className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4" />Free forever plan</span>
+          </div>
         </div>
       </section>
 
-      <Footer />
+      <UnifiedFooter />
     </div>
   );
 }

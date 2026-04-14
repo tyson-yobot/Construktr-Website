@@ -282,7 +282,7 @@ export default function HVACLanding() {
             </h2>
             <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">
               Download the app trusted by heating and cooling professionals nationwide. 
-              Start your 15-day free trial - no credit card required.
+              Start your 14-day free trial - no credit card required.
             </p>
             
             <div className="mb-8">

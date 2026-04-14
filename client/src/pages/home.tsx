@@ -1,22 +1,17 @@
-// Core sections for single narrative flow - NO DUPLICATES
-// Each section appears exactly once as specified
-import CEOHero from "@/components/ceo-hero";
-import CredibilityStrip from "@/components/credibility-strip";
-import BeforeAfterStory from "@/components/before-after-story";
-import TabbedDemo from "@/components/TabbedDemo"; // BEST Demo section (Quote/Schedule/Pay tabs)
-import HowItWorks from "@/components/how-it-works";
-import ComprehensiveFeatures from "@/components/comprehensive-features";
+// Homepage — Pain → Promise → Proof → Push conversion framework
+import ConversionHero from "@/components/conversion-hero";
+import PainPoints from "@/components/pain-points";
+import TabbedDemo from "@/components/TabbedDemo";
 import RoleBasedSections from "@/components/role-based-sections";
-import AICapabilities from "@/components/ai-capabilities";
-import ComparisonTable from "@/components/comparison-table";
-import ComprehensiveFAQ from "@/components/comprehensive-faq";
+import CompetitorComparison from "@/components/competitor-comparison";
 import Pricing from "@/components/Pricing";
+import SocialProof from "@/components/social-proof";
+import ComprehensiveFAQ from "@/components/comprehensive-faq";
 import FinalCTA from "@/components/FinalCTA";
 import StickyMobileCTA from "@/components/sticky-mobile-cta";
 import SectionDivider from "@/components/section-divider";
 import AppDownloadSection from "@/components/app-download-section";
 
-// Infrastructure components
 import UnifiedFooter from "@/components/unified-footer";
 import PerformanceOptimizer from "@/components/PerformanceOptimizer";
 import SEOHead from "@/components/seo-head";
@@ -26,7 +21,6 @@ import StructuredData from "@/components/structured-data";
 import { initializeAnalytics } from "@/lib/analytics-events";
 import React from "react";
 
-// SEO Ecosystem Components
 import ProductGrid from "@/components/seo/ProductGrid";
 
 const ecosystemProducts = [
@@ -44,98 +38,67 @@ const ecosystemProducts = [
   }
 ];
 
-
 export default function Home() {
-  // Initialize analytics on component mount
   React.useEffect(() => {
     initializeAnalytics();
   }, []);
 
-  // Enhanced Structured Data is now handled in SEOHead component
-
   return (
     <div className="min-h-screen" style={{ background: 'transparent' }}>
-      {/* Accessibility Skip Link */}
       <SkipLink />
-      
-      {/* Performance Optimization */}
       <PerformanceOptimizer />
-      
-      {/* Enhanced SEO Head with Complete Schema */}
       <SEOHead />
-      
-      {/* Performance Monitoring */}
       <PerformanceMonitor />
-      
-      {/* Skip to main content link for screen readers */}
+
       <a href="#main-content" className="skip-link">
         Skip to main content
       </a>
-      
-      {/* Main Content Area for Accessibility */}
+
       <main id="main-content" role="main">
-        {/* SECTION 1: Hero */}
-        <CEOHero />
-        
-        {/* SECTION 2: Credibility Strip - Trust badges, integration logos */}
-        <CredibilityStrip />
-        
-        {/* SECTION 3: Before/After Story - Transformation visualization */}
-        <BeforeAfterStory />
-        
-        {/* SECTION 4: Tabbed Demo - See It In Action (Quote/Schedule/Pay) */}
+        {/* 1. Hero — Hook them with the headline + rotating scenario quotes */}
+        <ConversionHero />
+
+        {/* 2. Pain Points — 3-column: chasing payments, double-bookings, slow estimates */}
+        <PainPoints />
+
+        <SectionDivider variant="light-blue" />
+
+        {/* 3. Feature Showcase — Interactive tabs: Quote/Schedule/Pay */}
         <TabbedDemo />
-        
-        {/* Gradient Divider */}
+
         <SectionDivider variant="light-blue" />
-        
-        {/* SECTION 5: How It Works - 4-step onboarding flow */}
-        <HowItWorks />
-        
-        {/* Gradient Divider */}
-        <SectionDivider variant="light-blue" />
-        
-        {/* SECTION 6: Comprehensive Features - 63+ features */}
-        <ComprehensiveFeatures />
-        
-        {/* SECTION 7: Role-Based Sections - For Owners, Dispatch, Techs, Finance */}
+
+        {/* 4. Role-Based — For Owners, Dispatchers, Field Techs */}
         <RoleBasedSections />
-        
-        {/* SECTION 8: AI Capabilities Deep Dive - Vision, Language, Predictions, Automation, Analytics */}
-        <AICapabilities />
-        
-        {/* SECTION 9: Comparison Table - CONSTRUKTR vs Generic vs Paper */}
-        <ComparisonTable />
-        
-        {/* Gradient Divider */}
+
+        {/* 5. Competitor Comparison — The killer section */}
+        <CompetitorComparison />
+
         <SectionDivider variant="light-blue" />
-        
-        {/* SECTION 10: Comprehensive FAQ - Objection handling */}
-        <ComprehensiveFAQ />
-        
-        {/* Gradient Divider */}
-        <SectionDivider variant="light-blue" />
-        
-        {/* SECTION 11: Pricing */}
+
+        {/* 6. Pricing Preview */}
         <Pricing />
-        
-        {/* SECTION 12: Final CTA */}
+
+        {/* 7. Social Proof — Testimonials */}
+        <SocialProof />
+
+        <SectionDivider variant="light-blue" />
+
+        {/* 8. FAQ */}
+        <ComprehensiveFAQ />
+
+        {/* 9. Final CTA */}
         <FinalCTA />
-        
-        {/* Ecosystem Product Grid */}
+
+        {/* Ecosystem */}
         <ProductGrid products={ecosystemProducts} currentProduct="Construktr" />
-        
-        {/* Prominent App Download Section */}
+
+        {/* App Download */}
         <AppDownloadSection />
       </main>
-      
-      {/* Sticky Mobile CTA for conversion - floating download button */}
-      <StickyMobileCTA />
-      
-      {/* Unified Footer */}
-      <UnifiedFooter />
 
-      {/* Structured Data for SEO */}
+      <StickyMobileCTA />
+      <UnifiedFooter />
       <StructuredData />
     </div>
   );

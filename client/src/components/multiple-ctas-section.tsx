@@ -74,7 +74,7 @@ export default function MultipleCTAsSection() {
             
             <h3 className="text-2xl font-bold text-white mb-4">Start Free Trial</h3>
             <p className="text-[var(--clr-text-2)] mb-6">
-              Full access to all features for 15 days. No commitments, no hidden fees.
+              Full access to all features for 14 days. No commitments, no hidden fees.
             </p>
             
             <ul className="text-sm text-[var(--clr-text-2)] space-y-2 mb-6">

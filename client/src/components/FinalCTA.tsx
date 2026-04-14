@@ -1,91 +1,72 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Shield, Award, Lock } from "lucide-react";
+import { ArrowRight, Shield, Lock, Wifi } from "lucide-react";
+import { useLocation } from "wouter";
+import AppStoreBadges from "./app-store-badges";
 
 const securityBadges = [
-  {
-    icon: Lock,
-    text: "256-bit SSL"
-  },
-  {
-    icon: Shield,
-    text: "Payments by Stripe"
-  },
-  {
-    icon: Award,
-    text: "Offline-First Architecture"
-  }
+  { icon: Lock, text: "256-bit SSL encryption" },
+  { icon: Shield, text: "Payments by Stripe" },
+  { icon: Wifi, text: "Offline-first architecture" },
 ];
 
 export default function FinalCTA() {
+  const [, navigate] = useLocation();
+
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20" style={{ background: 'var(--gradient-cta)' }}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        
-        {/* Main CTA */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-12"
+          className="mb-10"
         >
-          <h2 className="text-4xl lg:text-5xl font-black text-[var(--color-text-primary)] mb-6">
-            Try Your AI Business Manager Free
+          <h2 className="text-4xl lg:text-5xl font-black text-white mb-4">
+            Your competitors are still doing paperwork by hand.
           </h2>
-          <p className="text-xl text-[var(--color-text-secondary)] mb-8 max-w-2xl mx-auto">
-            Designed to eliminate hours of weekly admin, from first photo to final payment. Free forever to start.
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            You don't have to. Start free today — no credit card, no commitment, no per-user fees.
           </p>
-          
-          {/* Primary CTA Button */}
-          <motion.button
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="btn-primary flex items-center gap-3 mx-auto group text-lg px-12 py-4"
-            data-testid="button-final-cta-trial"
+
+          <button
+            onClick={() => navigate("/get")}
+            className="inline-flex items-center gap-3 px-12 py-4 bg-white text-[var(--color-primary)] font-bold text-lg rounded-xl hover:bg-blue-50 transition-colors shadow-xl group"
           >
-            Get Your AI Business Manager
+            Start Free — No Credit Card
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </motion.button>
-          
-          {/* Trust Line */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="text-[var(--color-text-secondary)] text-sm mt-4"
-          >
-            Free forever · No credit card required · Cancel anytime
-          </motion.p>
+          </button>
+
+          <p className="text-blue-200 text-sm mt-4">
+            Free forever plan &middot; 14-day trial on paid plans &middot; Cancel anytime
+          </p>
         </motion.div>
 
-        {/* Security Badges */}
+        {/* App Store Badges */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="mb-10 flex justify-center"
+        >
+          <AppStoreBadges />
+        </motion.div>
+
+        {/* Security badges */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="border-t border-[var(--color-border-light)] pt-8"
+          className="border-t border-white/20 pt-8"
         >
-          <p className="text-[var(--color-text-secondary)] text-sm mb-6">
-            Trusted by contractors nationwide • Enterprise-grade security
-          </p>
-          
           <div className="flex flex-wrap justify-center items-center gap-8">
-            {securityBadges.map((badge, index) => (
-              <motion.div
-                key={badge.text}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: 0.8 + index * 0.1 }}
-                viewport={{ once: true }}
-                className="flex items-center gap-2 text-[var(--color-text-secondary)]"
-              >
-                <badge.icon className="w-4 h-4 text-[var(--color-primary)]" />
+            {securityBadges.map((badge) => (
+              <div key={badge.text} className="flex items-center gap-2 text-blue-200">
+                <badge.icon className="w-4 h-4" />
                 <span className="text-sm font-medium">{badge.text}</span>
-              </motion.div>
+              </div>
             ))}
           </div>
         </motion.div>

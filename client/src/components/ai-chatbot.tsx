@@ -33,7 +33,7 @@ const quickResponses = {
     suggestions: ["Yes, show me a demo", "What about scheduling features?", "How accurate are the quotes?"]
   },
   "Show me pricing plans": {
-    content: "CONSTRUKTR starts at $49/month for the Starter plan with unlimited jobs, AI quotes, mobile apps, and support. Pro plan is $89/month with advanced AI features. Ready to start your free trial?",
+    content: "CONSTRUKTR starts at $49/month for the Starter plan with unlimited jobs, AI quotes, mobile apps, and support. Core is $99/month, Pro is $199/month with advanced AI features, and Business is $349/month for unlimited everything. Ready to start your free trial?",
     suggestions: ["Start free trial", "What's included?", "Compare to other tools"]
   },
   "Schedule a demo": {

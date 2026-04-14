@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import UnifiedFooter from "@/components/unified-footer";
 
 export default function Terms() {
-  const effectiveDate = "February 27, 2026";
+  const effectiveDate = "April 5, 2026";
 
   return (
     <div className="min-h-screen bg-[var(--color-bg)]">
@@ -49,12 +49,13 @@ export default function Terms() {
 
             <section>
               <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-4">4. Subscription Terms</h2>
-              <p>Construktr offers four subscription tiers:</p>
+              <p>Construktr offers five subscription tiers:</p>
               <ul className="list-disc pl-6 mt-3 space-y-1">
                 <li><strong>Free:</strong> $0/month, 1 user, limited features — free forever</li>
-                <li><strong>Starter:</strong> $49/month (or $39/month billed annually), up to 5 users</li>
-                <li><strong>Pro:</strong> $89/month (or $69/month billed annually), up to 15 users</li>
-                <li><strong>Business:</strong> $199/month (or $159/month billed annually), unlimited users</li>
+                <li><strong>Starter:</strong> $49/month (or $39/month billed annually), up to 2 users</li>
+                <li><strong>Core:</strong> $99/month (or $79/month billed annually), up to 5 users</li>
+                <li><strong>Pro:</strong> $199/month (or $159/month billed annually), up to 15 users</li>
+                <li><strong>Business:</strong> $349/month (or $279/month billed annually), unlimited users</li>
               </ul>
               <p className="mt-3">Pricing is subject to change with 30 days' notice. You will always retain access to your paid tier through the end of the billing period if you choose not to accept a price change.</p>
             </section>
@@ -96,18 +97,23 @@ export default function Terms() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-4">9. Limitation of Liability</h2>
+              <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-4">9. AI-Generated Content</h2>
+              <p>Construktr uses artificial intelligence to generate estimates, optimize routes, provide business intelligence, and assist with various operational tasks. AI-generated content is provided as a tool to assist your decision-making. You are solely responsible for reviewing, verifying, and approving all AI-generated estimates, routes, recommendations, and other outputs before acting on them. Automate AI LLC does not guarantee the accuracy of AI-generated content and shall not be liable for decisions made based on AI outputs.</p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-4">10. Limitation of Liability</h2>
               <p>The Services are provided "as is" without warranties of any kind, express or implied. Automate AI LLC does not guarantee uninterrupted access, error-free operation, or specific business outcomes from use of the Services.</p>
               <p className="mt-3">To the maximum extent permitted by law, Automate AI LLC's total liability for any claim arising from these Terms or your use of the Services is limited to the amount you paid us in the 12 months preceding the claim. We are not liable for indirect, incidental, special, consequential, or punitive damages, including loss of profits or business opportunities.</p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-4">10. Indemnification</h2>
+              <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-4">11. Indemnification</h2>
               <p>You agree to defend, indemnify, and hold harmless Automate AI LLC and its officers, directors, employees, and agents from any claims, damages, losses, liabilities, and expenses (including attorneys' fees) arising from your use of the Services, violation of these Terms, or misrepresentation of your identity or business.</p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-4">11. Termination</h2>
+              <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-4">12. Termination</h2>
               <p>Either party may terminate the account at any time. We reserve the right to suspend or terminate accounts that violate these Terms without notice. Upon termination:</p>
               <ul className="list-disc pl-6 mt-3 space-y-1">
                 <li>Access to the Services ends immediately (or at the end of the paid billing period for voluntary cancellations)</li>
@@ -117,17 +123,17 @@ export default function Terms() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-4">12. Dispute Resolution</h2>
+              <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-4">13. Dispute Resolution</h2>
               <p>These Terms are governed by the laws of the State of Arizona, without regard to conflict of law principles. Any disputes arising from these Terms or your use of the Services shall be resolved in the state or federal courts located in Maricopa County, Arizona. You consent to the personal jurisdiction of such courts.</p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-4">13. Modifications to Terms</h2>
+              <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-4">14. Modifications to Terms</h2>
               <p>Automate AI LLC may modify these Terms at any time. We will provide at least 30 days' notice of material changes via email or in-app notification. Your continued use of the Services after the effective date of changes constitutes acceptance of the updated Terms.</p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-4">14. Contact</h2>
+              <h2 className="text-2xl font-bold text-[var(--color-text-primary)] mb-4">15. Contact</h2>
               <p>
                 Automate AI LLC<br />
                 Scottsdale, AZ<br />

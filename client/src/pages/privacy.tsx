@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import UnifiedFooter from "@/components/unified-footer";
 
 export default function Privacy() {
-  const effectiveDate = "February 27, 2026";
+  const effectiveDate = "April 5, 2026";
 
   return (
     <div className="min-h-screen bg-[var(--color-bg)]">
@@ -80,10 +80,11 @@ export default function Privacy() {
                 <li><strong>Supabase</strong> — Database, authentication, and file storage (hosted on AWS). Your data is stored in Supabase's secure infrastructure.</li>
                 <li><strong>Stripe</strong> — Payment processing. Stripe is PCI-DSS Level 1 compliant. We do not store full card numbers.</li>
                 <li><strong>Intuit / QuickBooks</strong> — Accounting sync (bidirectional, only when you connect your QuickBooks account).</li>
-                <li><strong>AI/ML Services</strong> — Photo analysis for estimation. Photos are processed server-side for analysis purposes and are not permanently stored by the AI provider.</li>
+                <li><strong>OpenAI (GPT-4)</strong> — AI-powered estimation, business intelligence, and voice assistant. Job site photos and text prompts are sent to OpenAI for processing. OpenAI does not use your data for training.</li>
+                <li><strong>SendGrid</strong> — Transactional email delivery for invoices, notifications, and account communications.</li>
                 <li><strong>Sentry</strong> — Crash reporting and error tracking to help us fix bugs.</li>
                 <li><strong>Expo / EAS</strong> — Push notification delivery (Apple APNs and Google FCM).</li>
-                <li><strong>Twilio</strong> — SMS messaging for job reminders and crew communication.</li>
+                <li><strong>Twilio</strong> — SMS messaging and voice communication for job reminders, crew coordination, and the AI receptionist feature.</li>
                 <li><strong>Google Maps</strong> — Route optimization and mapping features.</li>
               </ul>
               <p className="mt-3">We do not sell your personal information to third parties.</p>
@@ -95,6 +96,7 @@ export default function Privacy() {
               <ul className="list-disc pl-6 mt-3 space-y-1">
                 <li><strong>Free:</strong> 7 days of job history</li>
                 <li><strong>Starter:</strong> 1 year</li>
+                <li><strong>Core:</strong> 1 year</li>
                 <li><strong>Pro:</strong> 2 years</li>
                 <li><strong>Business:</strong> Unlimited</li>
               </ul>
